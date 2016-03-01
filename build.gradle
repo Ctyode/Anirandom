@@ -11,6 +11,9 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'application'
+
+mainClassName = 'org.flamierawieo.anirandom.Anirandom'
 
 jar {
     baseName = 'gs-rest-service'
@@ -27,6 +30,11 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("junit:junit")
+}
+
+task staticResources(type: Copy) {
+    from 'src/main/resources/*'
+    into 'build/resources/main/static/'
 }
 
 task wrapper(type: Wrapper) {
