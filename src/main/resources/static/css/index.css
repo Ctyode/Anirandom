@@ -1,13 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 
 body {
     margin: 0;
     max-width: 1366px;
+    font-family: Lato, sans-serif;
 }
 
 h1 {
     position: absolute;
-    font-family: Lato-Black;
     top: 20px;
     margin: 0;
     left: 30px;
@@ -27,7 +27,6 @@ h1 {
     width: 226px;
     background: #64D08F;
     border-radius: 3px;
-    font-family: Lato-Medium;
     font-size: 26px;
     color: #FFFFFF;
     letter-spacing: 0.5px;
@@ -38,8 +37,7 @@ h1 {
     padding: 0;
     box-sizing: border-box;
     line-height: 60px;
-    font-family: Lato-Regular;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 18px;
     color: #5B5B5B;
     top: 160px;
@@ -62,6 +60,12 @@ h1 {
     padding: 0;
 }
 
+@-moz-document url-prefix() {
+  .drop-down-menu ul {
+    width: 400px;
+  }
+}
+
 .drop-down-menu ul::-webkit-scrollbar {
     width: 6px;
 }
@@ -79,10 +83,21 @@ h1 {
 }
 
 .drop-down-menu .title {
+    position: relative;
     padding-left: 20px;
     box-sizing: border-box;
     height: 64px;
     border-bottom: 1px solid #D5D4D4;
+}
+
+.drop-down-menu .title::after {
+    content: ' ';
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    border-width: 6px;
+    border-color: #5B5B5B rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
+    border-style: solid;
 }
 
 .drop-down-menu.open {
