@@ -1,3 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 body {
-    font-family: "Roboto", sans-serif;
+    margin: 0;
+    max-width: 1366px;
+}
+
+h1 {
+    position: absolute;
+    font-family: Lato-Black;
+    top: 20px;
+    margin: 0;
+    left: 30px;
+    font-weight: 900;
+    font-size: 60px;
+    color: #64D08F;
+}
+
+.button {
+    box-sizing: border-box;
+    padding-left: 33px;
+    line-height: 67px;
+    top: 500px;
+    margin: auto;
+    position: absolute;
+    height: 69px;
+    width: 226px;
+    background: #64D08F;
+    border-radius: 3px;
+    font-family: Lato-Medium;
+    font-size: 26px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
+
+.drop-down-menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 60px;
+    font-family: Lato-Regular;
+    font-weight: 400;
+    font-size: 18px;
+    color: #5B5B5B;
+    top: 160px;
+    position: absolute;
+    width: 296px;
+    height: 63px;
+    background: #FCFCFC;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 3px 0px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.drop-down-menu ul {
+    width: 292px;
+    height: 292px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+.drop-down-menu ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.drop-down-menu ul::-webkit-scrollbar-thumb {
+    background-color: #BABABA;
+    border-top: 3px solid white;
+    border-bottom: 4px solid white;
+}
+
+.drop-down-menu ul li {
+    height: 57px;
+    padding-left: 20px;
+    display: block;
+}
+
+.drop-down-menu .title {
+    padding-left: 20px;
+    box-sizing: border-box;
+    height: 64px;
+    border-bottom: 1px solid #D5D4D4;
+}
+
+.drop-down-menu.open {
+    height: 355px;
+}
+
+#genre {
+    position: absolute;
+    left: 217px;
+}
+
+#year {
+    position: absolute;
+    left: 535px;
+}
+
+#rating {
+    position: absolute;
+    left: 854px;
 }
