@@ -129,7 +129,8 @@ main {
 }
 
 .info .image {
-    background-image: url("http://cdn.myanimelist.net/images/anime/4/19644.jpg");
+    background-size: cover;
+    background-position: center;
     width: 186px;
     height: 289px;
     position: absolute;
