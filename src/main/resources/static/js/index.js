@@ -16,19 +16,19 @@ $(function () {
         var genre = $("#genre").find(".title").text();
         var year = $("#year").find(".title").text();
         var rating = $("#rating").find(".title").text();
-        if(genre != "Genre" && year != "Year" && rating != "Rating") {
-            $.getJSON("/anirandom.json", {"genre": genre,
-                                          "year": year,
-                                          "rating": rating}, function(data) {
+        $(".info").removeClass("show");
+        setTimeout(function() {
+            $.getJSON("/anirandom.json", {"genre": (genre == "Genre") ? "undefined" : genre,
+                                          "year": (year == "Year") ? "undefined" : year,
+                                          "rating": (rating == "Rating") ? "undefined" : rating}, function(data) {
                 (function($info) {
+                    $info.addClass("show");
                     $info.find(".image").css("background-image", "url(\"" + data["image"] + "\")");
                     $info.find(".title").text(data["title"]);
                     $info.find(".synopsis").text(data["synopsis"]);
                     $info.find(".rating").text(data["rating"].toString());
                 })($(".info"));
             });
-        } else {
-            // TODO: подсвечивать невыбраные параметры красным
-        }
+        }, 300);
     });
 });

@@ -128,6 +128,15 @@ main {
     left: 572px;
 }
 
+.info {
+    transition: 0.3s ease;
+    opacity: 0.0;
+}
+
+.info.show {
+    opacity: 1.0;
+}
+
 .info .image {
     background-size: cover;
     background-position: center;
