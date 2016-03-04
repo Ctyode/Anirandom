@@ -28,7 +28,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    compile 'com.googlecode.json-simple:json-simple:1.1'
+    compile 'org.springframework.boot:spring-boot-starter-web'
     testCompile("junit:junit")
 }
 
