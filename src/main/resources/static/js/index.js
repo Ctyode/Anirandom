@@ -1,5 +1,5 @@
 $(function () {
-    $(".drop-down-menu").click(function () {
+    $(".drop-down-menu").click(function() {
 
         var hasClass = $(this).hasClass("open");
 
@@ -7,5 +7,13 @@ $(function () {
         if(!hasClass) {
             $(this).addClass("open");
         }
+    })
+
+    $(".button").click(function() {
+        $.getJSON("/anirandom.json", {}, function(data) {
+            console.log(data)
+        })
+
+
     })
 });
