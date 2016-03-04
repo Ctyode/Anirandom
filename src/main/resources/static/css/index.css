@@ -1,12 +1,32 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+/*@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);*/
+
+@font-face {
+    font-family: Lato-Light;
+    src: url('../lato/fonts/Lato-Light.woff');
+}
+
+@font-face {
+    font-family: Lato-Regular;
+    src: url('../lato/fonts/Lato-Regular.woff');
+}
+
+@font-face {
+    font-family: Lato-Medium;
+    src: url('../lato/fonts/Lato-Medium.woff');
+}
+
+@font-face {
+    font-family: Lato-Black;
+    src: url('../lato/fonts/Lato-Black.woff');
+}
 
 body {
     margin: 0;
     max-width: 1366px;
-    font-family: Lato, sans-serif;
 }
 
 h1 {
+    font-family: Lato-Black;
     margin-bottom: 70px;
     line-height: 53px;
     margin-top: 18px;
@@ -26,31 +46,34 @@ main {
 }
 
 .button {
+    font-family: Lato-Medium;
+    /*font-weight: 700;*/
     box-sizing: border-box;
-    padding-left: 33px;
-    line-height: 67px;
+    padding-left: 30px;
+    line-height: 61px;
     top: 429px;
     left: 317px;
     margin: auto;
     position: absolute;
-    height: 69px;
-    width: 226px;
+    height: 61px;
+    width: 203px;
     background: #64D08F;
     border-radius: 3px;
-    font-size: 26px;
+    font-size: 23px;
     color: #FFFFFF;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
 }
 
 .drop-down-menu {
+    font-family: Lato-Medium;
+    font-weight: 700;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    line-height: 53px;
-    font-weight: 400;
+    line-height: 56px;
     font-size: 18px;
-    color: #5B5B5B;
-    /* top: 160px; */
+    color: #6e6e6e;
     position: absolute;
     width: 266px;
     height: 56px;
@@ -59,6 +82,7 @@ main {
     border-radius: 4px;
     transition: 0.3s ease;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .drop-down-menu ul {
@@ -129,7 +153,7 @@ main {
 }
 
 .info {
-    transition: 0.3s ease;
+    transition: 0.5s ease;
     opacity: 0.0;
 }
 
@@ -148,6 +172,7 @@ main {
 }
 
 .info .title {
+    font-family: Lato-Regular;
     position: absolute;
     left: 260px;
     top: 98px;
@@ -158,6 +183,7 @@ main {
 }
 
 .info .synopsis {
+    font-family: Lato-Light;
     position: absolute;
     left: 260px;
     top: 153px;
