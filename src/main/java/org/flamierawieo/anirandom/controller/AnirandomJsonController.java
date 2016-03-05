@@ -35,7 +35,8 @@ public class AnirandomJsonController {
                 String image = (String) jsonObject.get("image");
                 JSONArray genres = (JSONArray) jsonObject.get("genres");
                 Double rating = (Double) jsonObject.get("rating");
-                animePool.add(new Anime(title, synopsis, image, rating, genres));
+                Integer year = ((Long) jsonObject.get("year")).intValue();
+                animePool.add(new Anime(title, synopsis, image, rating, year, genres));
             });
         } catch (IOException | ParseException e) {
             Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
@@ -65,6 +66,10 @@ public class AnirandomJsonController {
         if(!"undefined".equals(rating)) {
             Double r = Double.parseDouble(rating);
             pool = pool.stream().filter(a -> a.getRating() >= r).collect(Collectors.toSet());
+        }
+        if(!"undefined".equals(year)) {
+            Integer y = Integer.parseInt(year);
+            pool = pool.stream().filter(a -> a.getYear() >= y).collect(Collectors.toSet());
         }
         return anirandom(pool);
     }

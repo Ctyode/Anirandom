@@ -14,6 +14,7 @@ $(function () {
     });
     var randomizing = false;
     $(".button").click(function() {
+        $(".select").removeClass("show");
         if(!randomizing) {
             randomizing = true;
             var genre = $("#genre").find(".title").text();

@@ -10,13 +10,15 @@ public class Anime {
     private String synopsis;
     private String image;
     private Double rating;
+    private Integer year;
     private List<String> genres;
 
-    public Anime(String title, String synopsis, String image, Double rating, Collection<String> genres) {
+    public Anime(String title, String synopsis, String image, Double rating, Integer year, Collection<String> genres) {
         this.title = title;
         this.synopsis = synopsis;
         this.image = image;
         this.rating = rating;
+        this.year = year;
         this.genres = new ArrayList<>(genres);
     }
 
@@ -34,6 +36,10 @@ public class Anime {
 
     public Double getRating() {
         return rating;
+    }
+
+    public Integer getYear() {
+        return year;
     }
 
     public List<String> getGenres() {
@@ -55,7 +61,7 @@ public class Anime {
             List<String> genres = new ArrayList<>();
             this.genres.stream().filter(genre -> !genres.contains(genre)).forEach(genres::add);
             o.getGenres().stream().filter(genre -> !genres.contains(genre)).forEach(genres::add);
-            return new Anime(title, synopsis, image, rating, genres);
+            return new Anime(title, synopsis, image, rating, year, genres);
         } else {
             throw new RuntimeException("Not equals");
         }
