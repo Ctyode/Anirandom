@@ -22,18 +22,23 @@ $(function () {
             var rating = $("#rating").find(".title").text();
             $(".info").removeClass("show");
             setTimeout(function() {
-                $.getJSON("/anirandom.json", {"genre": (genre == "Genre") ? "undefined" : genre,
+                $.getJSON("/anirandom.json", {
+                    "genre": (genre == "Genre") ? "undefined" : genre,
                     "year": (year == "Year") ? "undefined" : year,
-                    "rating": (rating == "Rating") ? "undefined" : rating}, function(data) {
-                    (function($info) {
+                    "rating": (rating == "Rating") ? "undefined" : rating
+                }, (function($info) {
+                        return function(data) {
+                            randomizing = false;
+                            $info.addClass("show");
+                            $info.find(".image").css("background-image", "url(\"" + data["image"] + "\")");
+                            $info.find(".title").text(data["title"]);
+                            $info.find(".synopsis").text(data["synopsis"]);
+                            $info.find(".rating").text(data["rating"].toString());
+                        };
+                    })($(".info"))).fail(function() {
                         randomizing = false;
-                        $info.addClass("show");
-                        $info.find(".image").css("background-image", "url(\"" + data["image"] + "\")");
-                        $info.find(".title").text(data["title"]);
-                        $info.find(".synopsis").text(data["synopsis"]);
-                        $info.find(".rating").text(data["rating"].toString());
-                    })($(".info"));
-                });
+                        console.log("fail");
+                    });
             }, 300);
         }
     });

@@ -1,20 +1,20 @@
 @font-face {
-    font-family: Lato-Light;
+    font-family: "Lato-Light";
     src: url('../lato/fonts/Lato-Light.woff');
 }
 
 @font-face {
-    font-family: Lato-Regular;
+    font-family: "Lato-Regular";
     src: url('../lato/fonts/Lato-Regular.woff');
 }
 
 @font-face {
-    font-family: Lato-Medium;
+    font-family: "Lato-Medium";
     src: url('../lato/fonts/Lato-Medium.woff');
 }
 
 @font-face {
-    font-family: Lato-Black;
+    font-family: "Lato-Black";
     src: url('../lato/fonts/Lato-Black.woff');
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-    font-family: Lato-Black;
+    font-family: "Lato-Black";
     margin-bottom: 70px;
     line-height: 53px;
     margin-top: 18px;
@@ -47,7 +47,7 @@ main {
     text-align: center;
     left: 0;
     top: 195px;
-    font-family: Lato-Light;
+    font-family: "Lato-Light";
     font-size: 36px;
     color: #6e6e6e;
     width: 838px;
@@ -57,7 +57,7 @@ main {
 }
 
 .select span {
-    font-family: Lato-Regular;
+    font-family: "Lato-Regular";
 }
 
 .select.show {
@@ -65,7 +65,7 @@ main {
 }
 
 .button {
-    font-family: Lato-Medium;
+    font-family: "Lato-Medium";
     box-sizing: border-box;
     padding-left: 30px;
     line-height: 61px;
@@ -84,7 +84,7 @@ main {
 }
 
 .drop-down-menu {
-    font-family: Lato-Medium;
+    font-family: "Lato-Medium";
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -190,7 +190,7 @@ main {
 }
 
 .info .title {
-    font-family: Lato-Regular;
+    font-family: "Lato-Regular";
     position: absolute;
     left: 260px;
     top: 98px;
@@ -200,14 +200,13 @@ main {
 }
 
 .info .synopsis {
-    font-family: Lato-Light;
+    font-family: "Lato-Light";
     position: absolute;
     left: 260px;
     top: 153px;
     width: 547px;
     height: 168px;
     color: #626262;
-    font-family: Lato;
     font-size: 18px;
     font-weight: 300;
 }
@@ -220,7 +219,7 @@ main {
     padding-left: 49px;
     width: 101px;
     height: 39px;
-    font-family: Lato-Medium;
+    font-family: "Lato-Medium";
     font-size: 27px;
     position: absolute;
     left: 260px;
@@ -241,7 +240,7 @@ main {
 .info .love {
     color: #5B5B5B;
     font-size: 27px;
-    font-family: Lato-Medium;
+    font-family: "Lato-Medium";
     position: absolute;
     left: 728px;
     top: 361px;

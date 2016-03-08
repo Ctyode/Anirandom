@@ -45,12 +45,14 @@ public class AnirandomJsonController {
 
     private static Anime anirandom(Set<Anime> pool) {
         int size = pool.size();
-        int item = new Random().nextInt(size); // In real life, the Random object should be rather more shared than this
-        int i = 0;
-        for(Anime obj : pool) {
-            if (i == item)
-                return obj;
-            i = i + 1;
+        if(size > 0) {
+            int item = new Random().nextInt(size);
+            int i = 0;
+            for (Anime obj : pool) {
+                if (i == item)
+                    return obj;
+                i = i + 1;
+            }
         }
         return null; // ??
     }
