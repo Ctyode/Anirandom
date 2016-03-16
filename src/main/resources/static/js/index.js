@@ -29,6 +29,7 @@ $(function () {
                 }, (function($info) {
                         return function(data) {
                             randomizing = false;
+                            $(".error").removeClass("show");
                             $info.addClass("show");
                             $info.find(".image").css("background-image", "url(\"" + data["image"] + "\")");
                             $info.find(".title").text(data["title"]);
@@ -37,7 +38,7 @@ $(function () {
                         };
                     })($(".info"))).fail(function() {
                         randomizing = false;
-                        console.log("fail");
+                        $(".error").addClass("show");
                     });
             }, 300);
         }

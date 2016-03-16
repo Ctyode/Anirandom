@@ -42,7 +42,7 @@ main {
     margin-top: 0;
 }
 
-.select {
+.gray_text {
     position: absolute;
     text-align: center;
     left: 0;
@@ -56,11 +56,7 @@ main {
     opacity: 0.0;
 }
 
-.select span {
-    font-family: "Lato-Regular";
-}
-
-.select.show {
+.gray_text.show {
     opacity: 1.0;
 }
 
