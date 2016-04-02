@@ -41,3 +41,11 @@ task staticResources(type: Copy) {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
+
+processResources {
+    expand(project.properties)
+}
+
+run {
+    jvmArgs = ['-Dspring.config.name=application.properties']
+}
