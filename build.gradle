@@ -42,8 +42,11 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
 
-processResources {
-    expand(project.properties)
+task mongo {
+    def localProperties = new Properties()
+    localProperties.load(new FileInputStream("local.properties"))
+    def processBuilder = new ProcessBuilder(localProperties['mongo'].split('\\s+'))
+    processBuilder.start()
 }
 
 run {
