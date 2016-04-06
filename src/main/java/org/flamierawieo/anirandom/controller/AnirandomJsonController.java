@@ -1,6 +1,10 @@
 package org.flamierawieo.anirandom.controller;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
 import org.flamierawieo.anirandom.Anime;
+import org.flamierawieo.anirandom.mongo.MongoConfig;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -16,7 +20,6 @@ import java.util.Random;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 @RestController
 public class AnirandomJsonController {
@@ -43,37 +46,26 @@ public class AnirandomJsonController {
         }
     }
 
-    private static Anime anirandom(Set<Anime> pool) {
-        int size = pool.size();
-        if(size > 0) {
-            int item = new Random().nextInt(size);
-            int i = 0;
-            for (Anime obj : pool) {
-                if (i == item)
-                    return obj;
-                i = i + 1;
-            }
-        }
-        return null; // ??
-    }
-
     @RequestMapping("/anirandom.json")
     public Anime handle(@RequestParam(value = "genre", defaultValue = "undefined") String genre,
                         @RequestParam(value = "year", defaultValue = "undefined") String year,
                         @RequestParam(value = "rating", defaultValue = "undefined") String rating) {
-        Set<Anime> pool = new HashSet<>(animePool);
-        if(!"undefined".equals(genre)) {
-            pool = pool.stream().filter(a -> a.getGenres().contains(genre)).collect(Collectors.toSet());
-        }
+        DBCollection dbCollection = MongoConfig.mongoDatabase.getCollection("animes");
+        BasicDBObject filter = new BasicDBObject();
         if(!"undefined".equals(rating)) {
             Double r = Double.parseDouble(rating);
-            pool = pool.stream().filter(a -> a.getRating() >= r).collect(Collectors.toSet());
+            filter.append("rating", new BasicDBObject("$gt", r));
         }
         if(!"undefined".equals(year)) {
             Integer y = Integer.parseInt(year);
-            pool = pool.stream().filter(a -> a.getYear() >= y).collect(Collectors.toSet());
+            filter.append("year", new BasicDBObject("$gt", y));
         }
-        return anirandom(pool);
+        if(!"undefined".equals(genre)) {
+            filter.append("genre", genre);
+        }
+        DBCursor cursor = dbCollection.find(filter);
+        cursor.skip(new Random().nextInt(cursor.count()));
+        return Anime.generateByDocument(cursor.next());
     }
 
 }

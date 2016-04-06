@@ -1,8 +1,13 @@
 package org.flamierawieo.anirandom;
 
+import com.mongodb.BasicDBList;
+import com.mongodb.DBObject;
+import org.bson.BsonDocument;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Anime {
 
@@ -65,6 +70,15 @@ public class Anime {
         } else {
             throw new RuntimeException("Not equals");
         }
+    }
+
+    public static Anime generateByDocument(DBObject document) {
+        return new Anime((String) document.get("title"),
+                         (String) document.get("synopsis"),
+                         (String) document.get("image"),
+                         (double) document.get("rating"),
+                         (int) document.get("year"),
+                         ((BasicDBList) document.get("genres")).stream().map(o -> (String) o).collect(Collectors.toList()));
     }
 
 }
