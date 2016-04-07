@@ -1,6 +1,7 @@
 package org.flamierawieo.anirandom.controller;
 
 import com.mongodb.BasicDBObject;
+import org.flamierawieo.anirandom.Validation;
 import org.flamierawieo.anirandom.mongo.MongoConfig;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @RestController
 public class RegisterController {
@@ -18,13 +20,16 @@ public class RegisterController {
                        @RequestParam("password_c") String passwordConfirmation,
                        @RequestParam("email") String email,
                        @RequestParam("back") String back,
-                       HttpServletResponse response) {
-        // TODO: params validation
-        // TODO: availability test
-        MongoConfig.mongoDatabase.getCollection("users").insert(new BasicDBObject()
-            .append("username", username)
-            .append("password", password) // TODO: password encryption
-            .append("email", email));
+                       HttpServletResponse response) throws IOException {
+        if(new Validation().registrationData(username, password, passwordConfirmation, email)) {
+            MongoConfig.mongoDatabase.getCollection("users").insert(new BasicDBObject()
+                    .append("username", username)
+                    .append("password", password) // TODO: password encryption
+                    .append("email", email));
+            response.sendRedirect("/");
+        } else {
+            response.sendRedirect(back);
+        }
     }
 
 }
