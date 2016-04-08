@@ -1,6 +1,7 @@
 package org.flamierawieo.anirandom.controller;
 
 import com.mongodb.BasicDBObject;
+import org.flamierawieo.anirandom.AvailabilityCheck;
 import org.flamierawieo.anirandom.Validation;
 import org.flamierawieo.anirandom.mongo.MongoConfig;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,8 @@ public class RegisterController {
                        @RequestParam("email") String email,
                        @RequestParam("back") String back,
                        HttpServletResponse response) throws IOException {
-        if(new Validation().registrationData(username, password, passwordConfirmation, email)) {
+        if(new Validation().registrationData(username, password, passwordConfirmation, email) &&
+           new AvailabilityCheck().availabilityCheck(username, email)) {
             MongoConfig.mongoDatabase.getCollection("users").insert(new BasicDBObject()
                     .append("username", username)
                     .append("password", password) // TODO: password encryption
