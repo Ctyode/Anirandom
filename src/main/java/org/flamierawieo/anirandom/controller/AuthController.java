@@ -1,5 +1,9 @@
 package org.flamierawieo.anirandom.controller;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
+import org.flamierawieo.anirandom.mongo.MongoConfig;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +20,13 @@ public class AuthController {
                        @RequestParam("password") String password,
                        @RequestParam("back") String back,
                        HttpServletResponse response) {
-        if("flamie".equals(username) && "sasihui".equals(password)) {
+        DBCollection dbCollection = MongoConfig.mongoDatabase.getCollection("users");
+        BasicDBObject filter = new BasicDBObject();
+        filter.append("username", username);
+        DBObject user = dbCollection.findOne(filter);
+
+        // TODO: SHA512 PBKDF2 HMAC hashing x-d-d-d-d-d
+        if(user != null && user.get("password").equals(password)) {
             response.addCookie(new Cookie("accesstoken", "8344531aa151a97f714c695bb1f1f8ee"));
             response.setHeader("Location", "/");
         } else {
