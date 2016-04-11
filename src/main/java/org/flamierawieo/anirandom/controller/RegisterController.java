@@ -15,7 +15,7 @@ import java.io.IOException;
 @RestController
 public class RegisterController {
 
-    @RequestMapping(value = "/auth", method = RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
     public void handle(@RequestParam("username") String username,
                        @RequestParam("password") String password,
                        @RequestParam("password_c") String passwordConfirmation,

@@ -1,4 +1,18 @@
 $(function () {
+    $(".login-text").click(function() {
+        $(".login").toggleClass("show");
+        if($(".login").hasClass("show")) {
+            return false;
+        }
+    });
+    $(".login").click(function() {
+        if($(this).hasClass("show")) {
+            return false;
+        }
+    });
+    $("body").click(function() {
+        $(".login").removeClass("show");
+    });
     $(".drop-down-menu").each(function() {
         var $title = $(this).find(".title");
         $(this).click(function() {
