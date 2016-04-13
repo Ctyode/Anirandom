@@ -1,18 +1,24 @@
 $(function () {
-    $(".login-text").click(function() {
-        $(".login").toggleClass("show");
-        if($(".login").hasClass("show")) {
-            return false;
-        }
-    });
-    $(".login").click(function() {
-        if($(this).hasClass("show")) {
-            return false;
-        }
-    });
-    $("body").click(function() {
-        $(".login").removeClass("show");
-    });
+    (function($login) {
+        $login.click(function() {
+            if($(this).attr("section") !== undefined) {
+                return false;
+            }
+        });
+        $login.find(".login-text").click(function() {
+            if($login.attr("section") === undefined) {
+                $login.attr("section", "sign-in");
+            } else {
+                $login.removeAttr("section");
+            }
+        });
+        $login.find(".goto-button").click(function() {
+            $login.attr("section", $(this).attr("target"));
+        });
+        $("body").click(function() {
+            $login.removeAttr("section");
+        });
+    })($(".login"));
     $(".drop-down-menu").each(function() {
         var $title = $(this).find(".title");
         $(this).click(function() {
