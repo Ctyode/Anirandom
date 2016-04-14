@@ -13,7 +13,7 @@ import java.io.IOException;
 @RestController
 public class AuthController {
 
-    @RequestMapping(value = "/auth", method = RequestMethod.POST)
+    @RequestMapping(value = "/sign-in", method = RequestMethod.POST)
     public void handle(@RequestParam("username") String username,
                        @RequestParam("password") String password,
                        @RequestParam("back") String back,

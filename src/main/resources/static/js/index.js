@@ -1,10 +1,10 @@
 $(function () {
     (function($login) {
-        $login.click(function() {
-            if($(this).attr("section") !== undefined) {
-                return false;
-            }
-        });
+        // $login.click(function() {
+        //     if($(this).attr("section") !== undefined) {
+        //         return false;
+        //     }
+        // });
         $login.find(".login-text").click(function() {
             if($login.attr("section") === undefined) {
                 $login.attr("section", "sign-in");
@@ -15,9 +15,9 @@ $(function () {
         $login.find(".goto-button").click(function() {
             $login.attr("section", $(this).attr("target"));
         });
-        $("body").click(function() {
-            $login.removeAttr("section");
-        });
+        // $("body").click(function() {
+        //     $login.removeAttr("section");
+        // });
     })($(".login"));
     $(".drop-down-menu").each(function() {
         var $title = $(this).find(".title");
