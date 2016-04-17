@@ -1,9 +1,10 @@
-package org.flamierawieo.anirandom.controller;
+package org.flamierawieo.anirandom.controller.json;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import org.flamierawieo.anirandom.Anime;
+import org.flamierawieo.anirandom.controller.IndexController;
 import org.flamierawieo.anirandom.mongo.MongoConfig;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -46,7 +47,7 @@ public class AnirandomJsonController {
         }
     }
 
-    @RequestMapping("/anirandom.json")
+    @RequestMapping("/json/anirandom.json")
     public Anime handle(@RequestParam(value = "genre", defaultValue = "undefined") String genre,
                         @RequestParam(value = "year", defaultValue = "undefined") String year,
                         @RequestParam(value = "rating", defaultValue = "undefined") String rating) {

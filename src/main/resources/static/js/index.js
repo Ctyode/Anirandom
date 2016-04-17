@@ -42,7 +42,7 @@ $(function () {
             var rating = $("#rating").find(".title").text();
             $(".info").removeClass("show");
             setTimeout(function() {
-                $.getJSON("/anirandom.json", {
+                $.getJSON("/json/anirandom.json", {
                     "genre": (genre == "Genre") ? "undefined" : genre,
                     "year": (year == "Year") ? "undefined" : year,
                     "rating": (rating == "Rating") ? "undefined" : rating
