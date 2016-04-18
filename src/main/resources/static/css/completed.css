@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "Lato-Light";
+    src: url('../lato/fonts/Lato-Light.woff');
+}
+
+@font-face {
+    font-family: "Lato-Regular";
+    src: url('../lato/fonts/Lato-Regular.woff');
+}
+
+@font-face {
+    font-family: "Lato-Medium";
+    src: url('../lato/fonts/Lato-Medium.woff');
+}
+
+@font-face {
+    font-family: "Lato-Black";
+    src: url('../lato/fonts/Lato-Black.woff');
+}
+
+body {
+    margin: 0;
+    max-width: 1366px;
+}
+
+h1 {
+    font-family: "Lato-Black";
+    margin-bottom: 70px;
+    line-height: 53px;
+    margin-top: 18px;
+    margin-left: 30px;
+    font-weight: 900;
+    font-size: 53px;
+    color: #64D08F;
+}
+
+main {
+    position: relative;
+    height: 498px;
+    width: 838px;
+    margin: 0 auto auto;
+}
+
+.completed {
+    top: 165px;
+    font-family: "Lato-Regular";
+    font-size: 30px;
+    color: #5B5B5B;
+    line-height: 36px;
+    margin-bottom: 12px;
+}
+
+section {
+    width: 833px;
+    height: 179px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+
+.info {
+    float: left;
+    width: 707px;
+}
+
+.cover {
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    float: left;
+    width: 126px;
+    height: 179px;
+    background-color: #64D08F;
+}
+
+.anime-title {
+    padding-left: 24px;
+    padding-top: 30px;
+    font-family: "Lato-Regular";
+    font-size: 24px;
+    color: #5B5B5B;
+    line-height: 0.75em;
+    margin-bottom: 16px;
+}
+
+.synopsis {
+    padding-left: 24px;
+    font-family: "Lato-Light";
+    font-size: 18px;
+    width: 618px;
+    color: #626262;
+    line-height: 22px;
+}
