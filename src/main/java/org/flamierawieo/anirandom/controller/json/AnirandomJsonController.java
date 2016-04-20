@@ -62,10 +62,14 @@ public class AnirandomJsonController {
             filter.append("year", new BasicDBObject("$gt", y));
         }
         if(!"undefined".equals(genre)) {
-            filter.append("genre", genre);
+            filter.append("genres", genre);
         }
         DBCursor cursor = dbCollection.find(filter);
-        cursor.skip(new Random().nextInt(cursor.count()));
+        if(cursor.count() > 0) {
+            cursor.skip(new Random().nextInt(cursor.count()));
+        } else {
+            return null;
+        }
         return Anime.generateByDocument(cursor.next());
     }
 

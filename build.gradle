@@ -28,6 +28,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    compile 'com.hubspot.jinjava:jinjava:2.1.7'
     compile 'com.googlecode.json-simple:json-simple:1.1'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.mongodb:mongo-java-driver:3.2.2'

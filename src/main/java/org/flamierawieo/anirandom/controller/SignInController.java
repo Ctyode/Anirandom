@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
@@ -22,11 +23,9 @@ public class SignInController {
     public void handle(@RequestParam("username") String username,
                        @RequestParam("password") String password,
                        @RequestParam("back") String back,
-                       HttpServletResponse response) throws InvalidKeySpecException, NoSuchAlgorithmException {
+                       HttpServletResponse response) throws InvalidKeySpecException, NoSuchAlgorithmException, IOException {
         DBCollection dbCollection = MongoConfig.mongoDatabase.getCollection("users");
-        BasicDBObject filter = new BasicDBObject();
-        filter.append("username", username);
-        DBObject user = dbCollection.findOne(filter);
+        DBObject user = dbCollection.findOne(new BasicDBObject("username", username));
         if(user != null && pbkdf2WithHmacSHA1(password).equals(user.get("password"))) {
             String accessToken = randomAccessToken();
             List<String> accessTokens = (List) user.get("access_tokens");
@@ -40,9 +39,9 @@ public class SignInController {
             user.put("access_tokens", accessTokens);
             dbCollection.update(new BasicDBObject("_id", user.get("_id")), user);
             response.addCookie(new Cookie("access_token", accessToken));
-            response.setHeader("Location", "/");
+            response.sendRedirect("/");
         } else {
-            response.setHeader("Location", back);
+            response.sendRedirect(back);
         }
     }
 
