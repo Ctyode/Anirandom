@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/completed.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <title>Plan to watch</title>
+    <title>Completed</title>
     <script src="../js/completed.js"></script>
 </head>
 <body>
     <h1>Anirandom</h1>
     <main>
-        <div class="completed">Completed</div>
-        <section>
-            <div class="cover"></div>
-            <div class="info">
-                <div class="anime-title">Test</div>
-                <div class="synopsis">Самое лютое говнище, которое я смотрел, не тратьте впустую время. Хотя серия 222 ничего. </div>
-                <div class="stars"></div>
-            </div>
-        </section>
-        <section>
-            <div class="cover"></div>
-        </section>
+        {% if authorized %}
+            {% if list %}
+                <div class="completed">Completed</div>
+                <section>
+                    <div class="cover"></div>
+                    <div class="info">
+                        <div class="anime-title">Test</div>
+                        <div class="synopsis">Самое лютое говнище, которое я смотрел, не тратьте впустую время. Хотя серия 222 ничего. </div>
+                        <div class="stars"></div>
+                    </div>
+                </section>
+            {% else %}
+                <div class="search"><div class="search-icon"></div></div>
+                <div class="no-text">Ty pidor i nichego ne dobavil</div>
+                <div class="no-image"></div>
+            {% endif %}
+        {% else %}
+            <div class="no-auth-text"></div>
+            <div class="no-auth-image"></div>
+        {% endif %}
     </main>
-
 </body>
 </html>

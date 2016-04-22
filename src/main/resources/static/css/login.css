@@ -6,6 +6,7 @@
 }
 
 .auth .auth-text {
+    width: 400px;
     font-family: "Lato-Regular";
     color: #6D6D6D;
     font-size: 22px;

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/plan_to_watch.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <title>Plan to watch</title>
+        <script src="../js/plan_to_watch.js"></script>
+    </head>
+    <body>
+        <h1>Anirandom</h1>
+        <main>
+            {% if authorized %}
+                {% if plan_to_watch_list %}
+                    <div class="plan_to_watch">Plan to watch</div>
+                    <section>
+                        <div class="cover"></div>
+                        <div class="info">
+                            <div class="anime-title">Test</div>
+                            <div class="stars"></div>
+                        </div>
+                    </section>
+                {% else %}
+                    <div class="search"><div class="search-icon"></div></div>
+                    <div class="no-text">Ty pidor i nichego ne dobavil</div>
+                    <div class="no-image"></div>
+                {% endif %}
+            {% else %}
+                <div class="no-auth-text"></div>
+                <div class="no-auth-image"></div>
+            {% endif %}
+        </main>
+    </body>
+</html>

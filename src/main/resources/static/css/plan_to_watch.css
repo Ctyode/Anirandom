@@ -41,7 +41,7 @@ main {
     margin: 0 auto auto;
 }
 
-.completed {
+.plan_to_watch {
     top: 165px;
     font-family: "Lato-Regular";
     font-size: 30px;
@@ -81,15 +81,6 @@ section {
     color: #5B5B5B;
     line-height: 0.75em;
     margin-bottom: 16px;
-}
-
-.synopsis {
-    padding-left: 24px;
-    font-family: "Lato-Light";
-    font-size: 18px;
-    width: 618px;
-    color: #626262;
-    line-height: 22px;
 }
 
 .search {
