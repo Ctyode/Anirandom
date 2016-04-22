@@ -1,11 +1,22 @@
-.login {
+.auth {
     position: absolute;
     top: 15px;
     right: 20px;
     text-align: right;
 }
 
-a {
+.auth .auth-text {
+    font-family: "Lato-Regular";
+    color: #6D6D6D;
+    font-size: 22px;
+    line-height: 22px;
+    z-index: 101;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.auth .auth-text a {
     top: 15px;
     text-decoration: none;
     font-family: "Lato-Regular";
@@ -17,20 +28,11 @@ a {
     cursor: pointer;
 }
 
-.login .login-text {
-    font-family: "Lato-Regular";
-    color: #6D6D6D;
-    font-size: 22px;
-    line-height: 22px;
-    z-index: 101;
-    cursor: pointer;
-}
-
-.login .login-text:hover {
+.auth .auth-text a:hover {
     color: #020202;
 }
 
-.login .login-bubble {
+.auth .auth-bubble {
     position: relative;
     top: 40px;
     left: 0;
@@ -43,20 +45,20 @@ a {
     box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.10), 0px 14px 30px 0px rgba(52,52,52,0.12), 0px 5px 12px 0px rgba(52,52,52,0.03);
 }
 
-.login[section] .login-bubble {
+.auth[section] .auth-bubble {
     opacity: 1.0;
     background: #FCFCFC;
 }
 
-.login[section=sign-in] .login-bubble {
+.auth[section=sign-in] .auth-bubble {
     height: 250px;
 }
 
-.login[section=sign-up] .login-bubble {
+.auth[section=sign-up] .auth-bubble {
     height: 360px;
 }
 
-.login .login-bubble .section {
+.auth .auth-bubble .section {
     transition: 0.5s ease;
     position: absolute;
     overflow: hidden;
@@ -68,57 +70,57 @@ a {
     z-index: -100;
 }
 
-.login[section=sign-in] .login-bubble .section.sign-in,
-.login[section=sign-up] .login-bubble .section.sign-up {
+.auth[section=sign-in] .auth-bubble .section.sign-in,
+.auth[section=sign-up] .auth-bubble .section.sign-up {
     opacity: 1.0;
     z-index: 0;
 }
 
-.login .login-bubble .section .sign-in {
-    position: relative;
-    top: 23px;
+.auth .auth-bubble .section .title {
+    margin-top: 20px;
     font-family: "Lato-Medium";
-    color: #6D6D6D;
     font-size: 24px;
-    text-align: center;
     line-height: 24px;
+    color: #6D6D6D;
+    text-align: center;
 }
 
-.login .login-bubble .section form input[type="text"],
-.login .login-bubble .section form input[type="email"],
-.login .login-bubble .section form input[type="password"] {
+.auth .auth-bubble .section form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.auth .auth-bubble .section form input[type="text"],
+.auth .auth-bubble .section form input[type="email"],
+.auth .auth-bubble .section form input[type="password"] {
     width: 230px;
     height: 37px;
+    border-radius: 3px;
+    margin-bottom: 13px;
+    padding-left: 10px;
     background-color: #fffdfe;
     font-family: "Lato-Light";
     font-size: 18px;
     font-weight: 100;
-    padding-left: 10px;
     color: #cecece;
-    border-radius: 3px;
     border: 1px solid #E7E7E7;
-    position: relative;
-    margin-bottom: 13px;
-    left: 26px;
-    top: 40px;
 }
 
-.login .login-bubble .section form input[type="submit"] {
-    position: relative;
-    left: 26px;
-    top: 40px;
+.auth .auth-bubble .section form input[type="submit"] {
     width: 243px;
     height: 35px;
     border: none;
     border-radius: 3px;
-    color: white;
+    background-color: #809BBD;
     font-size: 18px;
     font-family: "Lato-Light";
-    background-color: #809BBD;
+    color: white;
     cursor: pointer;
 }
 
-.login .login-bubble .section .goto-button {
+.auth .auth-bubble .section .goto-button {
     position: absolute;
     right: 28px;
     bottom: 13px;
@@ -130,11 +132,11 @@ a {
     opacity: 0.8;
 }
 
-.login .login-bubble .section .goto-button:hover {
+.auth .auth-bubble .section .goto-button:hover {
     opacity: 1.0;
 }
 
-.login .login-bubble .triangle {
+.auth .auth-bubble .triangle {
     position: absolute;
     overflow: hidden;
     top: -75px;
@@ -143,7 +145,7 @@ a {
     height: 75px;
 }
 
-.login .login-bubble .triangle::after {
+.auth .auth-bubble .triangle::after {
     content: "";
     position: absolute;
     width: 50px;

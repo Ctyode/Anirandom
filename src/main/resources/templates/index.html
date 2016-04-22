@@ -17,30 +17,34 @@
                 <a>{{ username }}</a>
             </div>
         {% else %}
-            <div class="login">
-                <div class="login-text">Login</div>
-                <div class="login-bubble">
-                    <div class="section sign-in">
-                        <div class="sign-in">Sign in</div>
-                        <form action="/sign-in" method="post">
-                            <input type="text" name="username" placeholder="Username" pattern="[_\w]{4,16}">
-                            <input type="password" name="password" placeholder="Password">
-                            <input type="submit" value="Dai uzhe anime smotret">
-                            <input type="hidden" name="back" value="/">
-                        </form>
-                        <div class="goto-button" target="sign-up">Sign up</div>
-                    </div>
-                    <div class="section sign-up">
-                        <div class="sign-in">Sign up</div>
-                        <form action="/sign-up" method="post">
-                            <input type="text" name="username" placeholder="Username" pattern="[_\w]{4,16}">
-                            <input type="email" name="email" placeholder="Email">
-                            <input type="password" name="password" placeholder="Password" pattern=".{6,}">
-                            <input type="password" name="password_c" placeholder="Confirm password" pattern=".{6,}">
-                            <input type="submit" value="Dai uzhe anime smotret">
-                            <input type="hidden" name="back" value="/">
-                        </form>
-                        <div class="goto-button" target="sign-in">Sign in</div>
+            <div class="auth">
+                <div class="auth-text">
+                    <a class="auth-button">Login</a>
+                </div>
+                <div class="auth-bubble">
+                    <div class="wrap">
+                        <div class="section sign-in">
+                            <div class="title">Sign in</div>
+                            <form action="/sign-in" method="post">
+                                <input type="text" name="username" placeholder="Username" pattern="[_\w]{4,16}">
+                                <input type="password" name="password" placeholder="Password">
+                                <input type="submit" value="Dai uzhe anime smotret">
+                                <input type="hidden" name="back" value="/">
+                            </form>
+                            <div class="goto-button" target="sign-up">Sign up</div>
+                        </div>
+                        <div class="section sign-up">
+                            <div class="title">Sign up</div>
+                            <form action="/sign-up" method="post">
+                                <input type="text" name="username" placeholder="Username" pattern="[_\w]{4,16}">
+                                <input type="email" name="email" placeholder="Email">
+                                <input type="password" name="password" placeholder="Password" pattern=".{6,}">
+                                <input type="password" name="password_c" placeholder="Confirm password" pattern=".{6,}">
+                                <input type="submit" value="Dai uzhe anime smotret">
+                                <input type="hidden" name="back" value="/">
+                            </form>
+                            <div class="goto-button" target="sign-in">Sign in</div>
+                        </div>
                     </div>
                     <div class="triangle"></div>
                 </div>
