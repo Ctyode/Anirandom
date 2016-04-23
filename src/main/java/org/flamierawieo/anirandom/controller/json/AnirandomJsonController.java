@@ -48,7 +48,7 @@ public class AnirandomJsonController {
     }
 
     @RequestMapping("/json/anirandom.json")
-    public Anime handle(@RequestParam(value = "genre", defaultValue = "undefined") String genre,
+    public String handle(@RequestParam(value = "genre", defaultValue = "undefined") String genre,
                         @RequestParam(value = "year", defaultValue = "undefined") String year,
                         @RequestParam(value = "rating", defaultValue = "undefined") String rating) {
         DBCollection dbCollection = MongoConfig.mongoDatabase.getCollection("animes");
@@ -70,7 +70,8 @@ public class AnirandomJsonController {
         } else {
             return null;
         }
-        return Anime.generateByDocument(cursor.next());
+        return JSONObject.toJSONString(cursor.next().toMap());
+        //        return Anime.generateByDocument(cursor.next());
     }
 
 }

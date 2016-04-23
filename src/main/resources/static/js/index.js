@@ -24,6 +24,14 @@ $(function () {
             $title.text($(this).text());
         });
     });
+    $(".love-button").click(function () {
+        $(".love").toggleClass("show");
+    });
+    $(".add-to-plan-to-watch").click(function () {
+        $.ajax({url:"/love_plan_to_watch"}).done(function () {
+            console.log("peezda");
+        });
+    });
     var randomizing = false;
     $(".button").click(function() {
         $(".select").removeClass("show");

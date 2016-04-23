@@ -223,22 +223,37 @@ main {
     top: 358px;
 }
 
-.info .heart {
+.info .love {
+    position: absolute;
+    left: 728px;
+    top: 361px;
+}
+
+.love-button {
+    position: relative;
+    color: #5B5B5B;
+    font-size: 27px;
+    font-family: "Lato-Medium";
+}
+
+.info .love .love-button::before {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../images/heart.svg");
     width: 39px;
     height: 39px;
     position: absolute;
-    left: 680px;
-    top: 358px;
+    left: -45px;
+    top: -3px;
+    content: " ";
 }
 
-.info .love {
-    color: #5B5B5B;
-    font-size: 27px;
-    font-family: "Lato-Medium";
-    position: absolute;
-    left: 728px;
-    top: 361px;
+.info .love .bubble {
+    height: 0;
+    overflow: hidden;
+}
+
+.info .love.show .bubble {
+    height: 50px;
+    width: 100px;
 }
