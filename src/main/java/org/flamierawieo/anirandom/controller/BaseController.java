@@ -1,15 +1,15 @@
 package org.flamierawieo.anirandom.controller;
 
 import com.hubspot.jinjava.Jinjava;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBCollection;
-import com.mongodb.DBObject;
-import org.flamierawieo.anirandom.mongo.MongoConfig;
+import org.flamierawieo.anirandom.orm.User;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import static org.flamierawieo.anirandom.mongo.MongoConfig.datastore;
 
 public class BaseController {
 
@@ -21,12 +21,15 @@ public class BaseController {
     public Map<String, Object> getContext(HttpServletRequest request) {
         Map<String, Object> context = new HashMap<>();
         String accessToken = getCookies(request).get("access_token");
-        boolean authorized = accessToken != null;
-        context.put("authorized", authorized);
-        if(authorized) {
-            DBCollection dbCollection = MongoConfig.mongoDatabase.getCollection("users");
-            DBObject user = dbCollection.findOne(new BasicDBObject("access_tokens", accessToken));
-            context.put("username", user.get("username"));
+        boolean tryingToAuthorize = accessToken != null;
+        if(tryingToAuthorize) {
+            List<User> queryList = datastore.createQuery(User.class).filter("accessTokens", accessToken).asList();
+            if(queryList.size() > 0) {
+                context.put("authorized", true);
+                context.put("username", queryList.get(0).username); // i guess??
+            } else {
+                context.put("authorized", false);
+            }
         }
         return context;
     }

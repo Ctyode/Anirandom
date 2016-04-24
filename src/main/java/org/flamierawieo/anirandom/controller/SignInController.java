@@ -1,9 +1,9 @@
 package org.flamierawieo.anirandom.controller;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.DBCollection;
-import com.mongodb.DBObject;
-import org.flamierawieo.anirandom.mongo.MongoConfig;
+import org.flamierawieo.anirandom.orm.User;
+import org.mongodb.morphia.query.Query;
+import org.mongodb.morphia.query.UpdateOperations;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.flamierawieo.anirandom.Security.*;
+import static org.flamierawieo.anirandom.mongo.MongoConfig.datastore;
 
 @RestController
 public class SignInController {
@@ -24,22 +25,18 @@ public class SignInController {
                        @RequestParam("password") String password,
                        @RequestParam("back") String back,
                        HttpServletResponse response) throws InvalidKeySpecException, NoSuchAlgorithmException, IOException {
-        DBCollection dbCollection = MongoConfig.mongoDatabase.getCollection("users");
-        DBObject user = dbCollection.findOne(new BasicDBObject("username", username));
-        if(user != null && pbkdf2WithHmacSHA1(password).equals(user.get("password"))) {
-            String accessToken = randomAccessToken();
-            List<String> accessTokens = (List) user.get("access_tokens");
-            if(accessTokens == null) {
-                accessTokens = new ArrayList<>();
+        Query<User> query = datastore.createQuery(User.class).filter("username", username);
+        List<User> queryList = query.asList();
+        if(queryList.size() > 0) {
+            User user = queryList.get(0); // i guess??
+            if(user.password.equals(pbkdf2WithHmacSHA1(password))) {
+                String accessToken = randomAccessToken();
+                datastore.update(datastore.createQuery(User.class).filter("username", username), datastore.createUpdateOperations(User.class).add("accessTokens", accessToken));
+                response.addCookie(new Cookie("access_token", accessToken));
+                response.sendRedirect("/");
+            } else {
+                response.sendRedirect(back);
             }
-            accessTokens.add(accessToken);
-            while(accessTokens.size() > 10) {
-                accessTokens.remove(0);
-            }
-            user.put("access_tokens", accessTokens);
-            dbCollection.update(new BasicDBObject("_id", user.get("_id")), user);
-            response.addCookie(new Cookie("access_token", accessToken));
-            response.sendRedirect("/");
         } else {
             response.sendRedirect(back);
         }

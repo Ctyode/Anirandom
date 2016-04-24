@@ -36,7 +36,7 @@ public class IndexController extends BaseController {
     public void addToPlanToWatch(HttpServletRequest request,
                                  @RequestParam(value = "anime_id", defaultValue = "undefined") String animeId) {
         // TODO optimize and validate
-        if(!"undefined".equals(animeId)) {
+        /*if(!"undefined".equals(animeId)) {
             DBCollection dbCollection = MongoConfig.mongoDatabase.getCollection("users");
             String accessToken = getCookies(request).get("access_token");
             if (accessToken != null) {
@@ -52,7 +52,7 @@ public class IndexController extends BaseController {
                 user.put("plan_to_watch_list", planToWatchList);
                 dbCollection.update(new BasicDBObject("_id", user.get("_id")), user);
             }
-        }
+        }*/
     }
 
     @RequestMapping("/")
