@@ -25,12 +25,11 @@ public class SignInController {
                        @RequestParam("password") String password,
                        @RequestParam("back") String back,
                        HttpServletResponse response) throws InvalidKeySpecException, NoSuchAlgorithmException, IOException {
-        Query<User> query = datastore.createQuery(User.class).filter("username", username);
-        List<User> queryList = query.asList();
-        if(queryList.size() > 0) {
-            User user = queryList.get(0); // i guess??
+        User user = datastore.createQuery(User.class).filter("username", username).get();
+        if(user != null) {
             if(user.password.equals(pbkdf2WithHmacSHA1(password))) {
                 String accessToken = randomAccessToken();
+                // TODO: can be optimized
                 datastore.update(datastore.createQuery(User.class).filter("username", username), datastore.createUpdateOperations(User.class).add("accessTokens", accessToken));
                 response.addCookie(new Cookie("access_token", accessToken));
                 response.sendRedirect("/");
