@@ -1,11 +1,7 @@
 package org.flamierawieo.anirandom.controller;
 
-import com.mongodb.BasicDBObject;
-import org.flamierawieo.anirandom.Security;
 import org.flamierawieo.anirandom.Validation;
-import org.flamierawieo.anirandom.mongo.MongoConfig;
 import org.flamierawieo.anirandom.orm.User;
-import org.mongodb.morphia.query.Query;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

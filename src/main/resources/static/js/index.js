@@ -32,6 +32,11 @@ $(function () {
             console.log(data);
         });
     });
+    $(".add-to-completed").click(function () {
+        $.getJSON("/anime/add_to_completed_list", {anime: $(".info").attr("anime_id")}, function (data) {
+            console.log(data);
+        });
+    });
     var randomizing = false;
     $(".button").click(function() {
         $(".select").removeClass("show");

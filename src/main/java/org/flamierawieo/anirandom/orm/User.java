@@ -16,7 +16,11 @@ public class User {
     public String email;
     public String password;
     public List<String> accessTokens;
+
     @Reference
     public List<Anime> planToWatchList;
+
+    @Reference
+    public List<Anime> completedList;
 
 }

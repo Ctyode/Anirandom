@@ -2,7 +2,6 @@ package org.flamierawieo.anirandom;
 
 import com.mongodb.BasicDBList;
 import com.mongodb.DBObject;
-import org.bson.BsonDocument;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -2,12 +2,10 @@ package org.flamierawieo.anirandom.controller;
 
 import com.hubspot.jinjava.Jinjava;
 import org.flamierawieo.anirandom.orm.User;
-import org.json.simple.JSONObject;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static org.flamierawieo.anirandom.mongo.MongoConfig.datastore;

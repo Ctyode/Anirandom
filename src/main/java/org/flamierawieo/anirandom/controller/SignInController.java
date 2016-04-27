@@ -1,9 +1,6 @@
 package org.flamierawieo.anirandom.controller;
 
-import com.mongodb.BasicDBObject;
 import org.flamierawieo.anirandom.orm.User;
-import org.mongodb.morphia.query.Query;
-import org.mongodb.morphia.query.UpdateOperations;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
@@ -11,8 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.flamierawieo.anirandom.Security.*;
 import static org.flamierawieo.anirandom.mongo.MongoConfig.datastore;
