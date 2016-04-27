@@ -28,8 +28,8 @@ $(function () {
         $(".love").toggleClass("show");
     });
     $(".add-to-plan-to-watch").click(function () {
-        $.ajax({url:"/love_plan_to_watch"}).done(function () {
-            console.log("peezda");
+        $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".info").attr("anime_id")}, function (data) {
+            console.log(data);
         });
     });
     var randomizing = false;
@@ -55,6 +55,7 @@ $(function () {
                             $info.find(".title").text(data["title"]);
                             $info.find(".synopsis").text(data["synopsis"]);
                             $info.find(".rating").text(data["rating"].toString());
+                            $info.attr("anime_id", data["_id"]);
                         };
                     })($(".info"))).fail(function() {
                         randomizing = false;

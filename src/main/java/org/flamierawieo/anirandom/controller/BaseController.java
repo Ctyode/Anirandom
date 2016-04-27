@@ -39,16 +39,12 @@ public class BaseController {
 
     public Map<String, Object> getContext(HttpServletRequest request) {
         Map<String, Object> context = new HashMap<>();
-        String accessToken = getCookies(request).get("access_token");
-        boolean tryingToAuthorize = accessToken != null;
-        if(tryingToAuthorize) {
-            List<User> queryList = datastore.createQuery(User.class).filter("accessTokens", accessToken).asList();
-            if(queryList.size() > 0) {
-                context.put("authorized", true);
-                context.put("username", queryList.get(0).username); // i guess??
-            } else {
-                context.put("authorized", false);
-            }
+        User user = getAuthorizedUser(request);
+        if(user != null) {
+            context.put("authorized", true);
+            context.put("username", user.username);
+        } else {
+            context.put("authorized", false);
         }
         return context;
     }

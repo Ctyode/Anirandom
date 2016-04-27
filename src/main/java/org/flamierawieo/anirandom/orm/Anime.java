@@ -33,4 +33,15 @@ public class Anime {
         return JSONObject.toJSONString(map);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Anime anime = (Anime) o;
+
+        return id != null ? id.equals(anime.id) : anime.id == null;
+
+    }
+
 }

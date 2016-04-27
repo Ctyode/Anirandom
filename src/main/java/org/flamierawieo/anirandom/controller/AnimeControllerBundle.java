@@ -21,15 +21,6 @@ import static org.flamierawieo.anirandom.Util.jsonify;
 @RestController
 public class AnimeControllerBundle extends BaseController {
 
-    /**
-     * Adds anime to user's plan-to-watch list
-     * If anime is already in list doesn't do anything
-     * If anime doesn't exists doesn't do anything as well
-     *
-     * @param request   http request
-     * @param animeId   ObjectId of anime (hex string)
-     * @return some json i dunno lol
-     */
     @RequestMapping("/anime/add_to_plan_to_watch_list")
     public String addAnimeToUsersPlanToWatchList(HttpServletRequest request,
                                                  @RequestParam(value = "anime") String animeId) {
