@@ -86,27 +86,36 @@ section {
 .search {
     position: absolute;
     width: 842px;
-    height: 63px;
+    height: 52px;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
     border-radius: 6px;
 }
 
 .search-icon {
-    width: 26px;
-    height: 26px;
-    background: url("../images/search.svg") no-repeat;
-    padding-left: 18px;
-    padding-top: 18px;
-    color: #5B5B5B;
+    background: url("../images/search.svg");
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 37px;
+    background-size: cover;
+    height: 37px;
+    background-repeat: no-repeat;
 }
 
 .no-image {
+    margin: auto;
+    margin-top: 180px;
     background-color: #64D08F;
     width: 300px;
     height: 150px;
 }
 
 .no-text {
-
+    width: 700px;
+    font-family: "Lato-Light";
+    top: 124px;
+    left: 101px;
+    position: relative;
+    color: #757575;
+    font-size: 30px;
 }

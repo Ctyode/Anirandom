@@ -197,15 +197,27 @@ main {
 }
 
 .info .synopsis {
+    overflow-y: scroll;
     font-family: "Lato-Light";
     position: absolute;
     left: 260px;
     top: 153px;
-    width: 547px;
+    width: 543px;
     height: 168px;
     color: #626262;
     font-size: 18px;
     font-weight: 300;
+    padding-right: 10px;
+}
+
+.info .synopsis::-webkit-scrollbar {
+    width: 6px;
+}
+
+.info .synopsis::-webkit-scrollbar-thumb {
+    background-color: #BABABA;
+    border-top: 3px solid white;
+    border-bottom: 4px solid white;
 }
 
 .info .rating {
@@ -254,6 +266,31 @@ main {
 }
 
 .info .love.show .bubble {
-    height: 50px;
-    width: 100px;
+    margin-top: 12px;
+    height: 71px;
+    width: 158px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
+    margin-left: -74px;
+}
+
+.add-to {
+    font-family: "Lato-Regular";
+    margin-left: 12px;
+    font-size: 17px;
+    color: #6D6D6D;
+    cursor: pointer;
+}
+
+.add-to-plan-to-watch {
+    margin-top: 11px;
+}
+
+.add-to-completed {
+    margin-top: 7px;
+}
+
+.add-to:hover {
+    color: #020202;
 }

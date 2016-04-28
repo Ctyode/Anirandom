@@ -1,9 +1,9 @@
 package org.flamierawieo.anirandom.controller;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -11,7 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-public class PlanToWatchController {
+public class PlanToWatchController extends BaseController  {
 
     private static String template;
 
@@ -25,8 +25,8 @@ public class PlanToWatchController {
     }
 
     @RequestMapping("/plan_to_watch")
-    public void handle(HttpRequest httpRequest) {
-
+    public String handle(HttpServletRequest request) {
+        return render(template, getContext(request));
     }
 
 }
