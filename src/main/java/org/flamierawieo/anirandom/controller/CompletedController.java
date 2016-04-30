@@ -1,5 +1,6 @@
 package org.flamierawieo.anirandom.controller;
 
+import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,8 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 @RestController
 public class CompletedController extends BaseController {
@@ -22,6 +25,14 @@ public class CompletedController extends BaseController {
             Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
             template = "Can someone unfuck the situation, please?";
         }
+    }
+
+    @Override
+    public Map<String, Object> getContext(HttpServletRequest request) {
+        Map<String, Object> context = super.getContext(request);
+        User user = getAuthorizedUser(request);
+        context.put("completed_list", user.completedList.stream().map(anime -> anime.toMap()).collect(Collectors.toList()));
+        return context;
     }
 
     @RequestMapping("/completed")

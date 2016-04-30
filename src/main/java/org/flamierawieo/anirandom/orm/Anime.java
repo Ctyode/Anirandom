@@ -21,7 +21,7 @@ public class Anime {
     public Integer year;
     public List<String> genres;
 
-    public String jsonify() {
+    public Map<String, Object> toMap() {
         Map<String, Object> map = new LinkedHashMap<>();
         map.put("_id", id.toHexString());
         map.put("title", title);
@@ -30,7 +30,11 @@ public class Anime {
         map.put("rating", rating);
         map.put("year", year);
         map.put("genres", genres);
-        return JSONObject.toJSONString(map);
+        return map;
+    }
+
+    public String jsonify() {
+        return JSONObject.toJSONString(toMap());
     }
 
     @Override

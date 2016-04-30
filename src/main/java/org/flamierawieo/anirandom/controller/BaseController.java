@@ -53,7 +53,9 @@ public class BaseController {
             Cookie[] requestCookies = request.getCookies();
             if (requestCookies != null) {
                 for (Cookie cookie : requestCookies) {
-                    cookies.put(cookie.getName(), cookie.getValue());
+                    if(cookie.getValue() != null) {
+                        cookies.put(cookie.getName(), cookie.getValue());
+                    }
                 }
             }
         }

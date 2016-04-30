@@ -17,7 +17,15 @@
                 <div class="auth-text">
                     <a href="/completed">Completed</a>
                     <a href="/plan_to_watch">Plan to watch</a>
-                    <a>{{ username }}</a>
+                    <a class="auth-button">{{ username }}</a>
+                </div>
+                <div class="auth-bubble logout-bubble">
+                    <div class="wrap">
+                        <form action="/logout" method="post">
+                            <input type="submit" value="Log out">
+                        </form>
+                    </div>
+                    <div class="triangle"></div>
                 </div>
             </div>
         {% else %}
