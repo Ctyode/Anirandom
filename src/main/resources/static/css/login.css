@@ -51,11 +51,11 @@
     background: #FCFCFC;
 }
 
-.auth[section=sign-in] .auth-bubble {
+.auth[section=login] .auth-bubble {
     height: 250px;
 }
 
-.auth[section=sign-up] .auth-bubble {
+.auth[section=signup] .auth-bubble {
     height: 360px;
 }
 
@@ -71,8 +71,8 @@
     z-index: -100;
 }
 
-.auth[section=sign-in] .auth-bubble .section.sign-in,
-.auth[section=sign-up] .auth-bubble .section.sign-up {
+.auth[section=login] .auth-bubble .section.login,
+.auth[section=signup] .auth-bubble .section.signup {
     opacity: 1.0;
     z-index: 0;
 }

@@ -17,7 +17,7 @@
                 <div class="auth-text">
                     <a href="/completed">Completed</a>
                     <a href="/plan_to_watch">Plan to watch</a>
-                    <a class="auth-button">{{ username }}</a>
+                    <a class="auth-button" data-target="logout">{{ username }}</a>
                 </div>
                 <div class="auth-bubble logout-bubble">
                     <div class="wrap">
@@ -31,11 +31,11 @@
         {% else %}
             <div class="auth">
                 <div class="auth-text">
-                    <a class="auth-button">Login</a>
+                    <a class="auth-button" data-target="login">Login</a>
                 </div>
                 <div class="auth-bubble">
                     <div class="wrap">
-                        <div class="section sign-in">
+                        <div class="section login">
                             <div class="title">Sign in</div>
                             <form action="/login" method="post">
                                 <input type="text" name="username" placeholder="Username" pattern="[_\w]{4,16}">
@@ -43,9 +43,9 @@
                                 <input type="submit" value="Dai uzhe anime smotret">
                                 <input type="hidden" name="back" value="/">
                             </form>
-                            <div class="goto-button" target="sign-up">Sign up</div>
+                            <div class="goto-button" data-target="signup">Sign up</div>
                         </div>
-                        <div class="section sign-up">
+                        <div class="section signup">
                             <div class="title">Sign up</div>
                             <form action="/signup" method="post">
                                 <input type="text" name="username" placeholder="Username" pattern="[_\w]{4,16}">
@@ -55,7 +55,7 @@
                                 <input type="submit" value="Dai uzhe anime smotret">
                                 <input type="hidden" name="back" value="/">
                             </form>
-                            <div class="goto-button" target="sign-in">Sign in</div>
+                            <div class="goto-button" data-target="login">Sign in</div>
                         </div>
                     </div>
                     <div class="triangle"></div>
