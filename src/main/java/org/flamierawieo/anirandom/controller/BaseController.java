@@ -1,18 +1,27 @@
 package org.flamierawieo.anirandom.controller;
 
 import com.hubspot.jinjava.Jinjava;
+import com.mongodb.MongoClient;
 import org.flamierawieo.anirandom.orm.User;
+import org.mongodb.morphia.Datastore;
+import org.mongodb.morphia.Morphia;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.flamierawieo.anirandom.mongo.MongoConfig.datastore;
-
 public class BaseController {
 
-    private Map<String, String> cookies;
+    public static final Morphia morphia;
+    public static final Datastore datastore;
+
+    static {
+        morphia = new Morphia();
+        morphia.mapPackage("org.flamierawieo.anirandom.orm");
+        datastore = morphia.createDatastore(new MongoClient(), "anirandom");
+        datastore.ensureIndexes();
+    }
 
     public String render(String template, Map<String, Object> config) {
         Jinjava jinjava = new Jinjava();
@@ -22,14 +31,7 @@ public class BaseController {
     public User getAuthorizedUser(HttpServletRequest request) {
         Map<String, String> cookies = getCookies(request);
         if(cookies.containsKey("access_token")) {
-            User user = datastore.createQuery(User.class).filter("accessTokens", cookies.get("access_token")).get();
-            // WARNING: dum code up ahead
-            // FIXME: pls fix this shit
-            if(user != null) {
-                return user;
-            } else {
-                return null;
-            }
+            return datastore.createQuery(User.class).filter("accessTokens", cookies.get("access_token")).get();
         } else {
             return null;
         }
@@ -48,14 +50,12 @@ public class BaseController {
     }
 
     public Map<String, String> getCookies(HttpServletRequest request) {
-        if(cookies == null) {
-            cookies = new HashMap<>();
-            Cookie[] requestCookies = request.getCookies();
-            if (requestCookies != null) {
-                for (Cookie cookie : requestCookies) {
-                    if(cookie.getValue() != null) {
-                        cookies.put(cookie.getName(), cookie.getValue());
-                    }
+        Map<String, String> cookies = new HashMap<>();
+        Cookie[] requestCookies = request.getCookies();
+        if (requestCookies != null) {
+            for (Cookie cookie : requestCookies) {
+                if(cookie.getValue() != null) {
+                    cookies.put(cookie.getName(), cookie.getValue());
                 }
             }
         }

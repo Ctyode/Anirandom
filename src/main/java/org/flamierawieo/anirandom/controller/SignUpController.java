@@ -15,12 +15,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.flamierawieo.anirandom.Security.*;
-import static org.flamierawieo.anirandom.mongo.MongoConfig.datastore;
 
 @RestController
-public class SignUpController {
+public class SignUpController extends BaseController {
 
-    @RequestMapping(value = "/sign-up", method = RequestMethod.POST)
+    @RequestMapping(value = "/signup", method = RequestMethod.POST)
     public void handle(@RequestParam("username") String username,
                        @RequestParam("password") String password,
                        @RequestParam("password_c") String passwordConfirmation,

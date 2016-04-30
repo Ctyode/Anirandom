@@ -1,4 +1,4 @@
-package org.flamierawieo.anirandom.controller.json;
+package org.flamierawieo.anirandom.controller;
 
 import org.flamierawieo.anirandom.orm.Anime;
 import org.mongodb.morphia.query.Query;
@@ -9,10 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Random;
 
-import static org.flamierawieo.anirandom.mongo.MongoConfig.datastore;
-
 @RestController
-public class AnirandomJsonController {
+public class AnirandomController extends BaseController {
 
     @RequestMapping("/json/anirandom.json")
     public String handle(@RequestParam(value = "genre", defaultValue = "undefined") String genre,

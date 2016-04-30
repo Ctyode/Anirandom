@@ -10,12 +10,11 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 
 import static org.flamierawieo.anirandom.Security.*;
-import static org.flamierawieo.anirandom.mongo.MongoConfig.datastore;
 
 @RestController
-public class SignInController {
+public class LogInController extends BaseController {
 
-    @RequestMapping(value = "/sign-in", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public void handle(@RequestParam("username") String username,
                        @RequestParam("password") String password,
                        @RequestParam("back") String back,
