@@ -11,18 +11,19 @@ import java.util.LinkedHashMap;
 
 import static org.flamierawieo.anirandom.Util.jsonify;
 
-public class AddAnimeToUsersCompletedListController extends BaseController {
+@RequestMapping
+public class AddToPlanToWatchListController extends BaseController {
 
-    @RequestMapping("/anime/add_to_completed_list")
-    public String addAnimeToUsersCompletedList(HttpServletRequest request,
-                                               @RequestParam(value = "anime") String animeId) {
+    @RequestMapping("/anime/add_to_plan_to_watch_list")
+    public String addAnimeToUsersPlanToWatchList(HttpServletRequest request,
+                                                 @RequestParam(value = "anime") String animeId) {
         // TODO: can be optimized
         User user = getAuthorizedUser(request);
         if(user != null) {
             Anime anime = datastore.get(Anime.class, new ObjectId(animeId));
             if(anime != null) {
-                if(!user.completedList.contains(anime) && !user.planToWatchList.contains(anime)) {
-                    datastore.update(user, datastore.createUpdateOperations(User.class).add("completedList", anime));
+                if(!user.planToWatchList.contains(anime) && !user.completedList.contains(anime)) {
+                    datastore.update(user, datastore.createUpdateOperations(User.class).add("planToWatchList", anime));
                     return jsonify(new LinkedHashMap() {{
                         put("status", "success");
                         put("info", "nice!");

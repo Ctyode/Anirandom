@@ -37,13 +37,20 @@
     position: relative;
     top: 40px;
     left: 0;
-    width: 297px;
     height: 0;
     z-index: 100;
     opacity: 0.0;
     transition: 0.3s ease;
     border-radius: 3px;
     box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.10), 0px 14px 30px 0px rgba(52,52,52,0.12), 0px 5px 12px 0px rgba(52,52,52,0.03);
+}
+
+.auth .auth-bubble.initial-width-297px {
+    width: 297px;
+}
+
+.auth .auth-bubble.initial-width-180px {
+    width: 180px;
 }
 
 .auth[section] .auth-bubble {
@@ -57,6 +64,10 @@
 
 .auth[section=signup] .auth-bubble {
     height: 360px;
+}
+
+.auth[section=logout] .auth-bubble {
+    height: 50px;
 }
 
 .auth .auth-bubble .section {
@@ -141,7 +152,7 @@
     position: absolute;
     overflow: hidden;
     top: -75px;
-    left: 225px;
+    right: 5px;
     width: 75px;
     height: 75px;
 }
@@ -156,4 +167,21 @@
     top: 75px;
     left: 25px;
     box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.10);
+}
+
+.logout-text {
+    text-align: left;
+    position: absolute;
+    font-family: "Lato-Regular";
+    font-size: 18px;
+    color: #6D6D6D;
+    line-height: 20px;
+    text-decoration: none;
+    width: 100px;
+    left: 14px;
+    top: 13px;
+}
+
+.logout-text:hover {
+    color: #292929;
 }
