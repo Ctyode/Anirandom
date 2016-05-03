@@ -1,22 +1,4 @@
 $(function () {
-    var update_marquee = function(hold_time, speed) {
-        var title_width = $(".info .title").width();
-        var span_width = $(".info .title span").width();
-        var slide = span_width - title_width;
-        
-        var $wrap = $(".title .wrap");
-        var transition_duration = slide / speed;
-        $wrap.css("transition", "all " + transition_duration + "s linear 0s");
-        var marquee = function() {
-            $wrap.css("left", -slide + "px");
-            setTimeout(function() {
-              $wrap.css("left", "0px");
-            }, transition_duration * 1000 + hold_time);
-            setTimeout(marquee, transition_duration * 1000 * 2 + hold_time * 2);
-        };
-        setTimeout(marquee, hold_time);
-    };
-
     (function($auth) {
         $auth.find(".auth-button").click(function() {
             if($auth.attr("section") === undefined) {
@@ -79,7 +61,29 @@ $(function () {
                             $info.find(".synopsis").text(data["synopsis"]);
                             $info.find(".rating").text(data["rating"].toString());
                             $info.attr("data-anime-id", data["_id"]);
-                            update_marquee(2000, 50);
+                            (function(hold_time, speed) {
+                                var $wrap = $info.find(".title .wrap");
+                                $wrap.css("transition", "none");
+                                $wrap.css("left", "0px");
+                                clearTimeout($wrap.attr("data-timeout-id"));
+                                var title_width = $(".info .title").width();
+                                var span_width = $(".info .title .wrap span").width();
+                                var slide = span_width - title_width;
+                                var $wrap = $(".title .wrap");
+                                var transition_duration = slide / speed;
+                                if(slide > 0) {
+                                    $wrap.css("transition", "all " + transition_duration + "s linear 0s");
+                                    var marquee = function() {
+                                        slide = slide > 0 ? slide : 0;
+                                        $wrap.css("left", -slide + "px");
+                                        setTimeout(function() {
+                                          $wrap.css("left", "0px");
+                                        }, transition_duration * 1000 + hold_time);
+                                        $wrap.attr("data-timeout-id", setTimeout(marquee, transition_duration * 1000 * 2 + hold_time * 2));
+                                    };
+                                    $wrap.attr("data-timeout-id", setTimeout(marquee, hold_time));
+                                }
+                            })(2000, 50);
                         };
                     })($(".info"))).fail(function() {
                         randomizing = false;
