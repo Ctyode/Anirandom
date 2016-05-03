@@ -28,17 +28,17 @@ $(function () {
         $(".love").toggleClass("show");
     });
     $(".add-to-plan-to-watch").click(function () {
-        $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".info").attr("anime_id")}, function (data) {
+        $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".info").attr("data-anime-id")}, function (data) {
             console.log(data);
         });
     });
     $(".add-to-completed").click(function () {
-        $.getJSON("/anime/add_to_completed_list", {anime: $(".info").attr("anime_id")}, function (data) {
+        $.getJSON("/anime/add_to_completed_list", {anime: $(".info").attr("data-anime-id")}, function (data) {
             console.log(data);
         });
     });
     var randomizing = false;
-    $(".button").click(function() {
+    $(".randomize-button").click(function() {
         $(".select").removeClass("show");
         if(!randomizing) {
             randomizing = true;
@@ -60,7 +60,7 @@ $(function () {
                             $info.find(".title").text(data["title"]);
                             $info.find(".synopsis").text(data["synopsis"]);
                             $info.find(".rating").text(data["rating"].toString());
-                            $info.attr("anime_id", data["_id"]);
+                            $info.attr("data-anime-id", data["_id"]);
                         };
                     })($(".info"))).fail(function() {
                         randomizing = false;
