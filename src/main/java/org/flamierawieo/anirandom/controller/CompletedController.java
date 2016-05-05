@@ -1,5 +1,6 @@
 package org.flamierawieo.anirandom.controller;
 
+import org.flamierawieo.anirandom.orm.Anime;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,7 +32,7 @@ public class CompletedController extends BaseController {
     public Map<String, Object> getContext(HttpServletRequest request) {
         Map<String, Object> context = super.getContext(request);
         User user = getAuthorizedUser(request);
-        context.put("completed_list", user.completedList.stream().map(anime -> anime.toMap()).collect(Collectors.toList()));
+        context.put("completed_list", user.completedList.stream().map(Anime::toMap).collect(Collectors.toList()));
         return context;
     }
 

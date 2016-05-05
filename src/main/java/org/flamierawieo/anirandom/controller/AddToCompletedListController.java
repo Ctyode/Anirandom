@@ -5,12 +5,14 @@ import org.flamierawieo.anirandom.orm.Anime;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.LinkedHashMap;
 
 import static org.flamierawieo.anirandom.Util.jsonify;
 
+@RestController
 public class AddToCompletedListController extends BaseController {
 
     @RequestMapping("/anime/add_to_completed_list")

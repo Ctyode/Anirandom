@@ -187,13 +187,14 @@ main .info .image {
 }
 
 main .info .title {
+    color: #383838;
     font-family: "Lato-Regular";
     position: absolute;
     top: 98px;
-    left: 260px;
-    right: 0px;
-    height: 40px;
-    overflow: hidden;
+    left: 257px;
+    right: 27px;
+    height: 50px;
+    /* overflow: hidden; */
 }
 
 main .info .title .wrap {
@@ -213,9 +214,9 @@ main .info .synopsis {
     font-family: "Lato-Light";
     position: absolute;
     left: 260px;
-    top: 153px;
+    top: 155px;
     width: 543px;
-    height: 168px;
+    height: 176px;
     color: #626262;
     font-size: 18px;
     font-weight: 300;
@@ -305,4 +306,35 @@ main .info .love.show .bubble .add-to.add-to-plan-to-watch {
 
 main .info .love.show .bubble .add-to.add-to-completed {
     margin-top: 7px;
+}
+
+main .info .title span {
+    display: block;
+    width: 540px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 40px;
+}
+
+main .info .title span::after {
+    z-index: 105;
+	font-size: 15px;
+	background: #FDFDF6;
+	border-radius: 3px;
+	padding: 4px 6px;
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+	color: #1B1B1B;
+	left: 335px;
+	margin-top: 55px;
+	opacity: 0;
+	content: attr(anime-title);
+	position: absolute;
+	visibility: hidden;
+	transition: 0.5s ease 1.5s;
+}
+
+main .info .title span:hover::after {
+	opacity: 1;
+	visibility: visible;
 }

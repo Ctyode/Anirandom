@@ -1,5 +1,6 @@
 package org.flamierawieo.anirandom.controller;
 
+import org.flamierawieo.anirandom.orm.Anime;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,7 +33,7 @@ public class PlanToWatchController extends BaseController  {
         Map<String, Object> context = super.getContext(request);
         User user = getAuthorizedUser(request);
         if(user.planToWatchList != null) {
-            context.put("plan_to_watch_list", user.planToWatchList.stream().map(anime -> anime.toMap()).collect(Collectors.toList()));
+            context.put("plan_to_watch_list", user.planToWatchList.stream().map(Anime::toMap).collect(Collectors.toList()));
         }
         return context;
     }
