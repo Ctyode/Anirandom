@@ -62,8 +62,14 @@ $(function () {
                             $info.find(".rating").text(data["rating"].toString());
                             $info.attr("data-anime-id", data["_id"]);
                             (function() {
-                                var $title = $info.find(".title span").html();
-                                $info.find(".title span").attr('anime-title', $title);
+//                                var $titleWidth = $(".title span").width();
+//                                console.log($titleWidth);
+//                                var $containerWidth = $(".title").width();
+//                                console.log($containerWidth);
+//                                if($titleWidth > $containerWidth) {
+                                    var $title = $info.find(".title span").html();
+                                    $info.find(".title span").attr('anime-title', $title);
+//                                }
                             })();
                         };
                     })($(".info"))).fail(function() {

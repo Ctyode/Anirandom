@@ -23,9 +23,14 @@ body {
     max-width: 1366px;
 }
 
-h1 {
+a {
+	text-decoration: none;
+	color: #64D08F;
+}
+
+.anirandom-title {
     font-family: "Lato-Black";
-    margin-bottom: 70px;
+    margin-bottom: 90px;
     line-height: 53px;
     margin-top: 18px;
     margin-left: 30px;
@@ -74,7 +79,7 @@ section {
 
 .anime-title {
     padding-left: 24px;
-    padding-top: 30px;
+    padding-top: 25px;
     font-family: "Lato-Regular";
     font-size: 24px;
     color: #5B5B5B;
@@ -83,12 +88,14 @@ section {
 }
 
 .synopsis {
+    overflow-y: scroll; /* убрать */
     font-family: Lato-Light;
     font-size: 18px;
     width: 622px;
     padding-left: 24px;
     color: #626262;
-    line-height: 21.5px;
+    height: 72px;
+    line-height: 21.5px; /* и это */
 }
 
 .search {

@@ -25,7 +25,12 @@ body {
     max-width: 1366px;
 }
 
-h1.anirandom-title {
+a {
+	text-decoration: none;
+	color: #64D08F;
+}
+
+.anirandom-title {
     font-family: "Lato-Black";
     margin-bottom: 90px;
     line-height: 53px;
@@ -194,7 +199,6 @@ main .info .title {
     left: 257px;
     right: 27px;
     height: 50px;
-    /* overflow: hidden; */
 }
 
 main .info .title .wrap {
@@ -202,7 +206,7 @@ main .info .title .wrap {
     left: 0px;
 }
 
-main .info .title .wrap span {
+main .info .title span {
     white-space: nowrap;
     font-weight: 400;
     font-size: 40px;
@@ -310,7 +314,6 @@ main .info .love.show .bubble .add-to.add-to-completed {
 
 main .info .title span {
     display: block;
-    width: 540px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
