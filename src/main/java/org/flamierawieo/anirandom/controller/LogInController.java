@@ -23,7 +23,6 @@ public class LogInController extends BaseController {
         if(user != null) {
             if(user.password.equals(pbkdf2WithHmacSHA1(password))) {
                 String accessToken = randomAccessToken();
-                // TODO: can be optimized
                 datastore.update(datastore.createQuery(User.class).filter("username", username), datastore.createUpdateOperations(User.class).add("accessTokens", accessToken));
                 response.addCookie(new Cookie("access_token", accessToken));
                 response.sendRedirect("/");

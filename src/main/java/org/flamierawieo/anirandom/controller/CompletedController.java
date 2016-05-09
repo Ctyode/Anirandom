@@ -32,7 +32,7 @@ public class CompletedController extends BaseController {
     public Map<String, Object> getContext(HttpServletRequest request) {
         Map<String, Object> context = super.getContext(request);
         User user = getAuthorizedUser(request);
-        if (user.completedList != null) {
+        if(user != null && user.completedList != null) {
             context.put("completed_list", user.completedList.stream().map(Review::toMap).collect(Collectors.toList()));
         }
         return context;

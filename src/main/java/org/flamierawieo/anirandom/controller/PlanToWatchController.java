@@ -32,7 +32,7 @@ public class PlanToWatchController extends BaseController  {
     public Map<String, Object> getContext(HttpServletRequest request) {
         Map<String, Object> context = super.getContext(request);
         User user = getAuthorizedUser(request);
-        if(user.planToWatchList != null) {
+        if(user != null && user.planToWatchList != null) {
             context.put("plan_to_watch_list", user.planToWatchList.stream().map(Anime::toMap).collect(Collectors.toList()));
         }
         return context;

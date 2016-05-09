@@ -23,33 +23,39 @@ public class EditCompletedListItem extends BaseController {
                                         @RequestParam(value = "anime") String animeId,
                                         @RequestParam(value = "review") String review,
                                         @RequestParam(value = "rating") String rating) {
-        // FIXME
         User user = getAuthorizedUser(request);
-        if(user != null) {
-            ObjectId animeObjectId = new ObjectId(animeId);
-            List<Review> reviews = user.completedList.stream().filter(r -> !r.anime.id.equals(animeObjectId)).collect(Collectors.toList());
-            Review updatedReview = new Review();
-            updatedReview.anime = datastore.get(Anime.class, animeObjectId);
-            updatedReview.review = review;
-            int r = Integer.parseInt(rating);
-            if(r > 10) {
-                r = 10;
-            } else if(r < 0) {
-                r = 0;
-            }
-            updatedReview.rating = r;
-            reviews.add(updatedReview);
-            datastore.update(user, datastore.createUpdateOperations(User.class).add("completedList", reviews));
-            return jsonify(new LinkedHashMap() {{
-                put("status", "success");
-                put("info", "nice!");
-            }});
-        } else {
+        if(user == null) {
             return jsonify(new LinkedHashMap() {{
                 put("status", "fail");
                 put("error", "not authorized");
             }});
         }
+        ObjectId animeObjectId = new ObjectId(animeId);
+        Anime anime = datastore.get(Anime.class, animeObjectId);
+        List<Review> reviews = user.completedList.stream().filter(r -> !r.anime.equals(anime)).collect(Collectors.toList());
+        Review updatedReview = new Review();
+        updatedReview.anime = anime;
+        updatedReview.review = review;
+        int r = Integer.parseInt(rating);
+        if(r > 10) {
+            r = 10;
+        } else if(r < 0) {
+            r = 0;
+        }
+        updatedReview.rating = r;
+        if(anime == null) {
+            return jsonify(new LinkedHashMap() {{
+                put("status", "questionable");
+                put("info", "nonexistent anime, removing from list");
+            }});
+        } else {
+            reviews.add(updatedReview);
+        }
+        datastore.update(user, datastore.createUpdateOperations(User.class).add("completedList", reviews));
+        return jsonify(new LinkedHashMap() {{
+            put("status", "success");
+            put("info", "nice!");
+        }});
     }
 
 }

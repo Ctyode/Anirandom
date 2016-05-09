@@ -18,7 +18,6 @@ public class RemoveFromCompleted extends BaseController {
     @RequestMapping("/anime/remove_from_completed")
     public String removeFromCompletedList(HttpServletRequest request,
                                           @RequestParam(value = "anime") String animeId) {
-        // TODO: can be optimized
         User user = getAuthorizedUser(request);
         if(user != null) {
             ObjectId animeObjectId = new ObjectId(animeId);
