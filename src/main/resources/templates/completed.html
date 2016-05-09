@@ -15,13 +15,13 @@
         {% if authorized %}
             {% if completed_list %}
                 <div class="completed">Completed</div>
-                {% for anime in completed_list %}
+                {% for review in completed_list %}
                     <section>
-                        <div class="cover" style="background-image:url({{ anime.image }})"></div>
+                        <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
                         <div class="info">
-                            <div class="anime-title">{{ anime.title }}</div>
-                            <div class="synopsis">{{ anime.synopsis }}</div>
-                            <div class="stars"></div>
+                            <div class="anime-title">{{ review.anime.title }}</div>
+                            <div class="synopsis">{{ review.review }}</div>
+                            <div class="stars">{{ review.anime.rating }}</div>
                         </div>
                     </section>
                 {% endfor %}
