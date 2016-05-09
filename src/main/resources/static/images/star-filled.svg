@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="36px" height="35px" viewBox="0 0 36 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
-    <title>Star 2 Copy 2</title>
+    <title>Star 2</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="List" sketch:type="MSArtboardGroup" transform="translate(-721.000000, -329.000000)" stroke-width="2" stroke="#64D08F">
+        <g id="List" sketch:type="MSArtboardGroup" transform="translate(-630.000000, -329.000000)" fill="#64D08F">
             <g id="Group" sketch:type="MSLayerGroup" transform="translate(266.000000, 205.000000)">
-                <polygon id="Star-2-Copy-2" sketch:type="MSShapeGroup" points="473 152.54 462.125973 158.256814 464.202727 146.148407 455.405454 137.573186 467.562986 135.806593 473 124.79 478.437014 135.806593 490.594546 137.573186 481.797273 146.148407 483.874027 158.256814 "></polygon>
+                <polygon id="Star-2" sketch:type="MSShapeGroup" points="382 152.54 371.125973 158.256814 373.202727 146.148407 364.405454 137.573186 376.562986 135.806593 382 124.79 387.437014 135.806593 399.594546 137.573186 390.797273 146.148407 392.874027 158.256814 "></polygon>
             </g>
         </g>
     </g>

@@ -20,7 +20,9 @@
                             <div class="cover" style="background-image:url({{ anime.image }})"></div>
                             <div class="info">
                                 <div class="anime-title">{{ anime.title }}</div>
-                                <div class="stars"></div>
+                                <div class="stars">
+                                    <div class="stars-fill" style="width: {{ anime.rating * 10 }}%"></div>
+                                </div>
                             </div>
                         </section>
                     {% endfor %}

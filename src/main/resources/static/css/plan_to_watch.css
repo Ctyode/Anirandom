@@ -124,3 +124,16 @@ section {
     color: #757575;
     font-size: 30px;
 }
+
+.stars {
+    background-repeat: repeat-x;
+    background-image: url("../images/star.svg");
+    width: 400px;
+    height: 50px;
+}
+
+.stars-fill {
+    background-repeat: repeat-x;
+    background-image: url("../images/star-filled.svg");
+    height: 100%;
+}
