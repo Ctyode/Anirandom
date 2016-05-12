@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/completed.css">
+    <link rel="stylesheet" href="../css/login.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <title>Completed</title>
     <script src="../js/completed.js"></script>
+    <script src="../js/login.js"></script>
 </head>
 <body>
     <div class="anirandom-title">
         <a href="/">Anirandom</a>
     </div>
-    <main>
         {% if authorized %}
+            <div class="auth">
+                <div class="auth-text">
+                    <a href="/plan_to_watch">Plan to watch</a>
+                    <a class="auth-button" data-target="logout">{{ username }}</a>
+                </div>
+                <div class="auth-bubble initial-width-180px">
+                    <div class="wrap">
+                        <a class="logout-text" href="/logout">Log out</a>
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+            </div>
+        <main>
             {% if completed_list %}
                 <div class="completed">Completed</div>
                 {% for review in completed_list %}
                     <section>
                         <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
                         <div class="info">
+                            <div class="drop-down-more">
+                                <div class="more"></div>
+                                <div class="bubble">
+                                    <div class="options edit">Edit review</div>
+                                    <div class="options remove">Remove from list</div>
+                                </div>
+                            </div>
                             <div class="anime-title">{{ review.anime.title }}</div>
                             <div class="synopsis">{{ review.review }}</div>
                             <div class="stars">{{ review.anime.rating }}</div>

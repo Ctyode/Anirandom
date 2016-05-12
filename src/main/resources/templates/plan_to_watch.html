@@ -3,16 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/plan_to_watch.css">
+        <link rel="stylesheet" href="../css/login.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <title>Plan to watch</title>
         <script src="../js/plan_to_watch.js"></script>
+        <script src="../js/login.js"></script>
     </head>
     <body>
         <div class="anirandom-title">
             <a href="/">Anirandom</a>
         </div>
-        <main>
             {% if authorized %}
+                <div class="auth">
+                    <div class="auth-text">
+                        <a href="/completed">Completed</a>
+                        <a class="auth-button" data-target="logout">{{ username }}</a>
+                    </div>
+                    <div class="auth-bubble initial-width-180px">
+                        <div class="wrap">
+                            <a class="logout-text" href="/logout">Log out</a>
+                        </div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+            <main>
                 {% if plan_to_watch_list %}
                     <div class="plan_to_watch">Plan to watch</div>
                     {% for anime in plan_to_watch_list %}
@@ -23,6 +37,7 @@
                                 <div class="stars">
                                     <div class="stars-fill" style="width: {{ anime.rating * 10 }}%"></div>
                                 </div>
+                                <div class="rating">{{ anime.rating }}</div>
                             </div>
                         </section>
                     {% endfor %}

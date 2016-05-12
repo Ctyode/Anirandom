@@ -240,7 +240,7 @@ main .info .synopsis::-webkit-scrollbar-thumb {
 main .info .rating {
     padding-top: 3px;
     color: #5B5B5B;
-    background-image: url("../images/star.svg");
+    background-image: url("../images/index-star.svg");
     background-repeat: no-repeat;
     padding-left: 49px;
     width: 101px;
@@ -269,8 +269,20 @@ main .info .love .love-button::before {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../images/heart.svg");
-    width: 39px;
-    height: 39px;
+    width: 35px;
+    height: 31px;
+    position: absolute;
+    left: -45px;
+    top: -3px;
+    content: " ";
+}
+
+main .info .love .love-button:hover::before {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/heart-fill.svg");
+    width: 35px;
+    height: 31px;
     position: absolute;
     left: -45px;
     top: -3px;

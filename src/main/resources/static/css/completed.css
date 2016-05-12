@@ -134,3 +134,52 @@ section {
     color: #757575;
     font-size: 30px;
 }
+
+.drop-down-more .more {
+    position: absolute;
+    left: 780px;
+    background: url("../images/more.svg");
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 37px;
+    background-size: cover;
+    height: 37px;
+    background-repeat: no-repeat;
+}
+
+.drop-down-more .bubble {
+    height: 0;
+    overflow: hidden;
+}
+
+.drop-down-more.show .bubble {
+    right: 50px;
+    position: absolute;
+    margin-top: 40px;
+    height: 71px;
+    width: 158px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
+    margin-left: -74px;
+}
+
+.drop-down-more.show .bubble .options {
+    font-family: "Lato-Regular";
+    margin-left: 12px;
+    font-size: 17px;
+    color: #6D6D6D;
+    cursor: pointer;
+}
+
+.drop-down-more.show .bubble .options:hover {
+    color: #020202;
+}
+
+.drop-down-more.show .bubble .options.edit {
+    margin-top: 11px;
+}
+
+.drop-down-menu.show .bubble .options.remove {
+    margin-top: 7px;
+}

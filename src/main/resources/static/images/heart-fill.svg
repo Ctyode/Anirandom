@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="31px" viewBox="0 0 34 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_favorite_black_48px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Random" sketch:type="MSArtboardGroup" transform="translate(-947.000000, -503.000000)">
+            <g id="ic_favorite_black_48px" sketch:type="MSLayerGroup" transform="translate(943.750000, 498.000000)">
+                <path d="M0,0 L40,0 L40,40 L0,40 L0,0 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                <path d="M20,35.5833333 L17.5833333,33.3833333 C9,25.6 3.33333333,20.4666667 3.33333333,14.1666667 C3.33333333,9.03333333 7.36666667,5 12.5,5 C15.4,5 18.1833333,6.35 20,8.48333333 C21.8166667,6.35 24.6,5 27.5,5 C32.6333333,5 36.6666667,9.03333333 36.6666667,14.1666667 C36.6666667,20.4666667 31,25.6 22.4166667,33.4 L20,35.5833333 L20,35.5833333 Z" id="Shape" fill="#64D08F" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
