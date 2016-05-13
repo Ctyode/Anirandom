@@ -263,7 +263,13 @@ main .info .love .love-button {
     color: #5B5B5B;
     font-size: 27px;
     font-family: "Lato-Medium";
+    transition: 0.2s ease;
 }
+
+main .info .love .love-button:hover {
+    color: #232323;
+}
+
 
 main .info .love .love-button::before {
     background-size: cover;
@@ -273,8 +279,8 @@ main .info .love .love-button::before {
     height: 31px;
     position: absolute;
     left: -45px;
-    top: -3px;
     content: " ";
+    transition: 0.2s ease;
 }
 
 main .info .love .love-button:hover::before {
@@ -285,7 +291,6 @@ main .info .love .love-button:hover::before {
     height: 31px;
     position: absolute;
     left: -45px;
-    top: -3px;
     content: " ";
 }
 
