@@ -22,7 +22,8 @@ public class RemoveFromPlanToWatch extends BaseController {
         User user = getAuthorizedUser(request);
         if(user != null) {
             ObjectId animeObjectId = new ObjectId(animeId);
-            datastore.update(user, datastore.createUpdateOperations(User.class).add("planToWatchList", user.planToWatchList.stream().filter(a -> !a.id.equals(animeObjectId)).collect(Collectors.toList())));
+            datastore.update(user, datastore.createUpdateOperations(User.class).set("planToWatchList", user.planToWatchList.stream()
+                                            .filter(a -> !a.id.equals(animeObjectId)).collect(Collectors.toList())));
             return jsonify(new LinkedHashMap() {{
                 put("status", "success");
                 put("info", "nice!");

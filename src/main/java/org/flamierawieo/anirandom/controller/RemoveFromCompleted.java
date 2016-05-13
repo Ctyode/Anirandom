@@ -21,7 +21,7 @@ public class RemoveFromCompleted extends BaseController {
         User user = getAuthorizedUser(request);
         if(user != null) {
             ObjectId animeObjectId = new ObjectId(animeId);
-            datastore.update(user, datastore.createUpdateOperations(User.class).add("completedList", user.completedList.stream()
+            datastore.update(user, datastore.createUpdateOperations(User.class).set("completedList", user.completedList.stream()
                                             .filter(r -> !r.anime.id.equals(animeObjectId)).collect(Collectors.toList())));
             return jsonify(new LinkedHashMap() {{
                 put("status", "success");
