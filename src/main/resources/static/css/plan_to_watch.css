@@ -78,7 +78,7 @@ section.hidden {
 }
 
 .cover {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     float: left;
     width: 80px;

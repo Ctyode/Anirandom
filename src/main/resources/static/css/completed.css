@@ -70,7 +70,7 @@ section {
 }
 
 .cover {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     float: left;
     width: 126px;
@@ -78,17 +78,17 @@ section {
 }
 
 .anime-title {
+    width: 600px;
     padding-left: 24px;
     padding-top: 25px;
     font-family: "Lato-Regular";
     font-size: 24px;
     color: #5B5B5B;
     line-height: 0.75em;
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
 }
 
 .synopsis {
-    overflow-y: scroll; /* убрать */
     font-family: Lato-Light;
     font-size: 18px;
     width: 622px;
@@ -182,4 +182,59 @@ section {
 
 .drop-down-menu.show .bubble .options.remove {
     margin-top: 7px;
+}
+
+.stars {
+    margin-top: -3px;
+    margin-left: 15px;
+    background-repeat: repeat-x;
+    background-image: url("../images/star.svg");
+    width: 436px;
+    height: 44px;
+}
+
+.stars-fill {
+    background-repeat: repeat-x;
+    background-image: url("../images/star-filled.svg");
+    height: 100%;
+}
+
+.rating {
+    margin-top: -33px;
+    margin-left: 463px;
+    font-family: "Lato-Regular";
+    font-size: 27px;
+    color: #5B5B5B;
+    line-height: 27px;
+}
+
+main .info .anime-title span {
+    height: 24px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* font-size: 40px; */
+}
+
+main .info .anime-title span::after {
+    z-index: 105;
+    font-size: 15px;
+    background: #FDFDF6;
+    border-radius: 3px;
+    padding: 4px 6px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    color: #1B1B1B;
+    left: 500px;
+    margin-top: 25px;
+    opacity: 0;
+    content: attr(data-anime-title);
+    position: absolute;
+    visibility: hidden;
+    transition: 0.5s ease 1.5s;
+}
+
+main .info .anime-title span:hover::after {
+	opacity: 1;
+	visibility: visible;
 }

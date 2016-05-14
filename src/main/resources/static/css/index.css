@@ -182,7 +182,7 @@ main .info.show {
 }
 
 main .info .image {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     width: 186px;
     height: 289px;

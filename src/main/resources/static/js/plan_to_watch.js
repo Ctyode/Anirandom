@@ -15,6 +15,17 @@ $(function() {
                 }
             });
         });
+        $drop_down.find(".move").click(function() {
+            $.getJSON("/anime/move_to_completed", {anime: $(this).attr("data-anime-id")}, function (data) {
+                if(data["status"] === "success") {
+                    console.log("blablabla")
+                    $section.addClass("hidden");
+                    setTimeout(function() {
+                        $section.remove();
+                    }, 300);
+                }
+            });
+        });
     });
 
 });

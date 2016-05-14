@@ -40,9 +40,14 @@
                                     <div class="options remove">Remove from list</div>
                                 </div>
                             </div>
-                            <div class="anime-title">{{ review.anime.title }}</div>
+                            <div class="anime-title">
+                                <span>{{ review.anime.title }}</span>
+                            </div>
                             <div class="synopsis">{{ review.review }}</div>
-                            <div class="stars">{{ review.anime.rating }}</div>
+                            <div class="stars">
+                                <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                            </div>
+                            <div class="rating">{{ review.rating }}</div>
                         </div>
                     </section>
                 {% endfor %}
