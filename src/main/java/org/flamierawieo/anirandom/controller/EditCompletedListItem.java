@@ -5,6 +5,7 @@ import org.flamierawieo.anirandom.orm.Anime;
 import org.flamierawieo.anirandom.orm.Review;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,7 @@ import static org.flamierawieo.anirandom.Util.jsonify;
 @RestController
 public class EditCompletedListItem extends BaseController {
 
-    @RequestMapping("/anime/edit_completed_list")
+    @RequestMapping(value = "/anime/edit_completed_list", method = RequestMethod.POST)
     public String editCompletedListItem(HttpServletRequest request,
                                         @RequestParam(value = "anime") String animeId,
                                         @RequestParam(value = "review") String review,
@@ -30,13 +31,14 @@ public class EditCompletedListItem extends BaseController {
                 put("error", "not authorized");
             }});
         }
+        System.out.println(animeId);
         ObjectId animeObjectId = new ObjectId(animeId);
         Anime anime = datastore.get(Anime.class, animeObjectId);
         List<Review> reviews = user.completedList.stream().filter(r -> !r.anime.equals(anime)).collect(Collectors.toList());
         Review updatedReview = new Review();
         updatedReview.anime = anime;
         updatedReview.review = review;
-        int r = Integer.parseInt(rating);
+        int r = (int) Float.parseFloat(rating);
         if(r > 10) {
             r = 10;
         } else if(r < 0) {
@@ -51,7 +53,7 @@ public class EditCompletedListItem extends BaseController {
         } else {
             reviews.add(updatedReview);
         }
-        datastore.update(user, datastore.createUpdateOperations(User.class).add("completedList", reviews));
+        datastore.update(user, datastore.createUpdateOperations(User.class).set("completedList", reviews));
         return jsonify(new LinkedHashMap() {{
             put("status", "success");
             put("info", "nice!");
