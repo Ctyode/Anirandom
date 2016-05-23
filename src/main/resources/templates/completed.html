@@ -49,12 +49,10 @@
                             </div>
                             <div class="rating">{{ review.rating }}</div>
                             <div class="hidden-edit">
-                                <form action="/anime/edit_completed_list" method="post">
-                                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
-                                    <input type="submit" value="Blyad">
-                                </form>
+                                <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                                <input type="hidden" name="rating" value="{{ review.anime.rating }}">
+                                <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                                <input type="submit" value="Blyad">
                             </div>
                         </div>
                     </section>

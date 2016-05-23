@@ -1,25 +1,31 @@
 $(function() {
-    $(".drop-down-more").each(function() {
-        var $drop_down = $(this);
+    $("section").each(function() {
+        $section = $(this);
+        var $drop_down = $section.find(".drop-down-more");
         $drop_down.find(".more").click(function() {
             $drop_down.toggleClass("show");
         });
-        $(".info").each(function() {
-            var $info = $(this);
-            var $title = $info.find(".anime-title span").html();
-            $info.find(".anime-title span").attr('data-anime-title', $title);
-
-            $drop_down.find(".edit").click(function() {
-                $info.find(".hidden-edit").css('visibility', 'visible');
-    //            $.getJSON("/anime/edit_completed_list", {anime: $("input").attr("data-anime-id")}, function (data) {
-    //                if(data["status"] === "success") {
-    //                    console.log("nya");
-    ////                    $section.addClass("hidden");
-    ////                    setTimeout(function() {
-    ////                        $section.remove();
-    ////                    }, 300);
-    //                }
-    //            });
+        var $hidden_edit = $section.find(".hidden-edit");
+        $drop_down.find(".edit").click(function() {
+            $hidden_edit.css('visibility', 'visible');
+        });
+        var $title_span = $section.find(".anime-title span");
+        $title_span.attr("data-anime-title", $title_span.html());
+        $hidden_edit.find("input[type=submit]").click(function() {
+            var anime = $hidden_edit.find("input[name=anime]").val();
+            var rating = $hidden_edit.find("input[name=rating]").val();
+            var review = $hidden_edit.find("textarea").val();
+            console.log({
+                anime:  anime,
+                rating: rating,
+                review: review
+            });
+            $.getJSON("/anime/edit_completed_list", {
+                anime:  anime,
+                rating: rating,
+                review: review
+            }, function(data) {
+                console.log(data);
             });
         });
     });

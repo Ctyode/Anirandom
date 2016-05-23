@@ -19,7 +19,7 @@ import static org.flamierawieo.anirandom.Util.jsonify;
 @RestController
 public class EditCompletedListItem extends BaseController {
 
-    @RequestMapping(value = "/anime/edit_completed_list", method = RequestMethod.POST)
+    @RequestMapping(value = "/anime/edit_completed_list")
     public String editCompletedListItem(HttpServletRequest request,
                                         @RequestParam(value = "anime") String animeId,
                                         @RequestParam(value = "review") String review,
@@ -34,6 +34,12 @@ public class EditCompletedListItem extends BaseController {
         System.out.println(animeId);
         ObjectId animeObjectId = new ObjectId(animeId);
         Anime anime = datastore.get(Anime.class, animeObjectId);
+        if(anime == null) {
+            return jsonify(new LinkedHashMap() {{
+                put("status", "questionable");
+                put("info", "nonexistent anime, removing from list");
+            }});
+        }
         List<Review> reviews = user.completedList.stream().filter(r -> !r.anime.equals(anime)).collect(Collectors.toList());
         Review updatedReview = new Review();
         updatedReview.anime = anime;
@@ -45,14 +51,7 @@ public class EditCompletedListItem extends BaseController {
             r = 0;
         }
         updatedReview.rating = r;
-        if(anime == null) {
-            return jsonify(new LinkedHashMap() {{
-                put("status", "questionable");
-                put("info", "nonexistent anime, removing from list");
-            }});
-        } else {
-            reviews.add(updatedReview);
-        }
+        reviews.add(updatedReview);
         datastore.update(user, datastore.createUpdateOperations(User.class).set("completedList", reviews));
         return jsonify(new LinkedHashMap() {{
             put("status", "success");
