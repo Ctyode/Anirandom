@@ -38,7 +38,6 @@ a {
     margin-left: 30px;
     font-weight: 900;
     font-size: 53px;
-    color: #64D08F;
 }
 
 main {
@@ -189,6 +188,7 @@ main .info .image {
     position: absolute;
     left: 19px;
     top: 101px;
+    background-repeat: no-repeat;
 }
 
 main .info .title {
