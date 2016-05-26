@@ -13,7 +13,7 @@
     <div class="anirandom-title">
         <a href="/">Anirandom</a>
     </div>
-        {% if authorized %}
+        {% if authorized == true %}
             <div class="auth">
                 <div class="auth-text">
                     <a href="/plan_to_watch">Plan to watch</a>
@@ -27,37 +27,67 @@
                 </div>
             </div>
         <main>
-            {% if completed_list %}
+            {% if completed_list == true %}
                 <div class="completed">Completed</div>
-                {% for review in completed_list %}
-                    <section>
-                        <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
-                        <div class="info">
-                            <div class="drop-down-more">
-                                <div class="more"></div>
-                                <div class="bubble">
-                                    <div class="options edit">Edit review</div>
-                                    <div class="options remove">Remove from list</div>
+                        {% if review.review|length < 1 %}
+                            {% for review in completed_list %}
+                            <section>
+                                <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
+                                <div class="info">
+                                    <div class="drop-down-more">
+                                        <div class="more"></div>
+                                        <div class="bubble">
+                                            <div class="options edit">Edit review</div>
+                                            <div class="options remove">Remove from list</div>
+                                        </div>
+                                    </div>
+                                    <div class="anime-title">
+                                        <span>{{ review.anime.title }}</span>
+                                    </div>
+                                    <div class="synopsis">{{ review.review }}</div>
+                                    <div class="stars">
+                                        <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                                    </div>
+                                    <div class="rating">{{ review.rating }}</div>
+                                    <div class="hidden-edit">
+                                        <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                                        <input type="hidden" name="rating" value="{{ review.anime.rating }}">
+                                        <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                                        <input type="submit" value="Blyad">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="anime-title">
-                                <span>{{ review.anime.title }}</span>
-                            </div>
-                            <div class="synopsis">{{ review.review }}</div>
-                            <div class="stars">
-                                <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
-                            </div>
-                            <div class="rating">{{ review.rating }}</div>
-                            <div class="hidden-edit">
-                                <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                                <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                                <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
-                                <input type="submit" value="Blyad">
-                            </div>
-                        </div>
-                    </section>
-                {% endfor %}
-            {% else %}
+                            </section>
+                            {% endfor %}
+                            {% else %}
+                            {% for review in completed_list %}
+                            <section>
+                                <div class="cover-without-review" style="background-image:url({{ review.anime.image }})"></div>
+                                <div class="info">
+                                    <div class="drop-down-more">
+                                        <div class="more"></div>
+                                        <div class="bubble">
+                                            <div class="options edit">Edit review</div>
+                                            <div class="options remove">Remove from list</div>
+                                        </div>
+                                    </div>
+                                    <div class="anime-title">
+                                        <span>{{ review.anime.title }}</span>
+                                    </div>
+                                    <div class="stars">
+                                        <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                                    </div>
+                                    <div class="rating">{{ review.rating }}</div>
+                                    <div class="hidden-edit">
+                                        <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                                        <input type="hidden" name="rating" value="{{ review.anime.rating }}">
+                                        <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                                        <input type="submit" value="Blyad">
+                                    </div>
+                                </div>
+                            </section>
+                            {% endfor %}
+                            {% endif %}
+                        {% else %}
                 <div class="search"><div class="search-icon"></div></div>
                 <div class="no-text">Ty pidor i nichego ne dobavil. Kogda reshish chtot zahuyarit' v spisok, ne petushis', skin' druziashkam, chtoby posmotreli i zasrali tvoi ubogie vkusi. Prosto skin' im svoi id, i oni smogut nachat' vyebyvat'sya.</div>
                 <div class="no-image"></div>

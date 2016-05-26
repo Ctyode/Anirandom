@@ -1,6 +1,9 @@
 package org.flamierawieo.anirandom.controller;
 
-import com.hubspot.jinjava.Jinjava;
+//import com.hubspot.jinjava.Jinjava;
+import com.mitchellbosecke.pebble.PebbleEngine;
+import com.mitchellbosecke.pebble.error.PebbleException;
+import com.mitchellbosecke.pebble.template.PebbleTemplate;
 import com.mongodb.MongoClient;
 import org.flamierawieo.anirandom.orm.User;
 import org.mongodb.morphia.Datastore;
@@ -8,6 +11,9 @@ import org.mongodb.morphia.Morphia;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,9 +29,16 @@ public class BaseController {
         datastore.ensureIndexes();
     }
 
-    public String render(String template, Map<String, Object> config) {
-        Jinjava jinjava = new Jinjava();
-        return jinjava.render(template, config);
+    public String render(String template, Map<String, Object> config) throws PebbleException, IOException {
+        PebbleEngine engine = new PebbleEngine.Builder().build();
+        PebbleTemplate compiledTemplate = engine.getTemplate(template);
+        Writer writer = new StringWriter();
+        compiledTemplate.evaluate(writer, config);
+
+        return writer.toString();
+
+//        Jinjava jinjava = new Jinjava();/
+//        return jinjava.render(template, config);
     }
 
     public User getAuthorizedUser(HttpServletRequest request) {

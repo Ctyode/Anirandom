@@ -13,7 +13,7 @@
         <div class="anirandom-title">
             <a href="/">Anirandom</a>
         </div>
-            {% if authorized %}
+            {% if authorized == true %}
                 <div class="auth">
                     <div class="auth-text">
                         <a href="/completed">Completed</a>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             <main>
-                {% if plan_to_watch_list %}
+                {% if plan_to_watch_list == true %}
                     <div class="plan_to_watch">Plan to watch</div>
                     {% for anime in plan_to_watch_list %}
                         <section>
