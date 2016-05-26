@@ -9,54 +9,54 @@
         <script src="../js/plan_to_watch.js"></script>
         <script src="../js/login.js"></script>
     </head>
-    <body>
-        <div class="anirandom-title">
-            <a href="/">Anirandom</a>
-        </div>
-            {% if authorized == true %}
-                <div class="auth">
-                    <div class="auth-text">
-                        <a href="/completed">Completed</a>
-                        <a class="auth-button" data-target="logout">{{ username }}</a>
-                    </div>
-                    <div class="auth-bubble initial-width-180px">
-                        <div class="wrap">
-                            <a class="logout-text" href="/logout">Log out</a>
-                        </div>
-                        <div class="triangle"></div>
-                    </div>
+<body>
+    <div class="anirandom-title">
+        <a href="/">Anirandom</a>
+    </div>
+        {% if authorized %}
+            <div class="auth">
+                <div class="auth-text">
+                    <a href="/completed">Completed</a>
+                    <a class="auth-button" data-target="logout">{{ username }}</a>
                 </div>
-            <main>
-                {% if plan_to_watch_list == true %}
-                    <div class="plan_to_watch">Plan to watch</div>
-                    {% for anime in plan_to_watch_list %}
-                        <section>
-                            <div class="cover" style="background-image:url({{ anime.image }})"></div>
-                            <div class="info">
-                                <div class="drop-down-more">
-                                    <div class="more"></div>
-                                    <div class="bubble">
-                                        <div class="options move" data-anime-id="{{ anime._id }}">Move to completed</div>
-                                        <div class="options remove" data-anime-id="{{ anime._id }}">Remove from list</div>
-                                    </div>
+                <div class="auth-bubble initial-width-180px">
+                    <div class="wrap">
+                        <a class="logout-text" href="/logout">Log out</a>
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+            </div>
+        <main>
+            {% if plan_to_watch_list is not empty %}
+                <div class="plan_to_watch">Plan to watch</div>
+                {% for anime in plan_to_watch_list %}
+                    <section>
+                        <div class="cover" style="background-image:url({{ anime.image }})"></div>
+                        <div class="info">
+                            <div class="drop-down-more">
+                                <div class="more"></div>
+                                <div class="bubble">
+                                    <div class="options move" data-anime-id="{{ anime._id }}">Move to completed</div>
+                                    <div class="options remove" data-anime-id="{{ anime._id }}">Remove from list</div>
                                 </div>
-                                <div class="anime-title">{{ anime.title }}</div>
-                                <div class="stars">
-                                    <div class="stars-fill" style="width: {{ anime.rating * 10 }}%"></div>
-                                </div>
-                                <div class="rating">{{ anime.rating }}</div>
                             </div>
-                        </section>
-                    {% endfor %}
-                {% else %}
-                    <div class="search"><div class="search-icon"></div></div>
-                    <div class="no-text">Ty pidor i nichego ne dobavil</div>
-                    <div class="no-image"></div>
-                {% endif %}
+                            <div class="anime-title">{{ anime.title }}</div>
+                            <div class="stars">
+                                <div class="stars-fill" style="width: {{ anime.rating * 10 }}%"></div>
+                            </div>
+                            <div class="rating">{{ anime.rating }}</div>
+                        </div>
+                    </section>
+                {% endfor %}
             {% else %}
-                <div class="no-auth-text"></div>
-                <div class="no-auth-image"></div>
+                <div class="search"><div class="search-icon"></div></div>
+                <div class="no-text">Ty pidor i nichego ne dobavil</div>
+                <div class="no-image"></div>
             {% endif %}
-        </main>
-    </body>
+        {% else %}
+            <div class="no-auth-text"></div>
+            <div class="no-auth-image"></div>
+        {% endif %}
+    </main>
+</body>
 </html>
