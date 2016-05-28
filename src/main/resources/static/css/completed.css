@@ -47,6 +47,7 @@ main {
 }
 
 .completed {
+    overflow: hidden;
     top: 165px;
     font-family: "Lato-Regular";
     font-size: 30px;
@@ -241,6 +242,7 @@ main .info .anime-title span:hover::after {
 }
 
 .hidden-edit {
+    position: relative;
     visibility: hidden;
 }
 
@@ -249,9 +251,9 @@ textarea {
     border-radius: 3px;
     /* margin-top: 1px; */
     position: absolute;
-    top: 108px;
-    left: 167px;
-    width: 600px;
+    top: -120px;
+    left: 23px;
+    width: 605px;
     height: 75px;
     border: 1px solid #E7E7E7;
     background-color: #fffdfe;
@@ -264,8 +266,8 @@ textarea {
 }
 
 input[type="submit"] {
-    top: 200px;
-    left: 700px;
+    top: -28px;
+    left: 543px;
     position: absolute;
     width: 100px;
     height: 35px;
@@ -278,7 +280,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.cover-without-review {
+.cover-no-review {
     background-size: contain;
     background-position: center;
     float: left;
@@ -287,11 +289,44 @@ input[type="submit"] {
     background-color: #64D08F;
 }
 
-.section-without-review {
+section.no-review {
     width: 833px;
     height: 113px;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
     border-radius: 4px;
     margin-bottom: 18px;
+}
+
+.stars-no-review {
+    margin-top: 13px;
+    margin-left: 19px;
+    background-repeat: repeat-x;
+    background-image: url("../images/star.svg");
+    width: 399px;
+    height: 40px;
+}
+
+li.menuElement {
+    margin-left: 17px;
+    display: block;
+    float: right;
+    font-family: "Lato-Medium";
+    font-size: 30px;
+    /* position: absolute; */
+    /* margin-top: -33px; */
+}
+
+/* .slider {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #ffb367;
+    transition: all 0.5s;
+} */
+
+ul {
+    margin-top: -35px;
 }

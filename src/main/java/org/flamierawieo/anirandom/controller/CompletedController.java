@@ -35,7 +35,6 @@ public class CompletedController extends BaseController {
         Map<String, Object> context = super.getContext(request);
         User user = getAuthorizedUser(request);
         if(user != null && user.completedList != null) {
-            System.out.println(user.completedList.stream().map(Review::toMap).collect(Collectors.toList()));
             context.put("completed_list", user.completedList.stream().map(Review::toMap).collect(Collectors.toList()));
         }
         return context;
