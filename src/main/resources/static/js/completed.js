@@ -8,7 +8,8 @@ $(function() {
         var $hidden_edit = $section.find(".hidden-edit");
         console.log($hidden_edit);
         $drop_down.find(".edit").click(function() {
-            $hidden_edit.css('visibility', 'visible');
+//            $hidden_edit.css('visibility', 'visible');
+            $section.addClass("edit");
         });
         var $title_span = $section.find(".anime-title span");
         $title_span.attr("data-anime-title", $title_span.html());

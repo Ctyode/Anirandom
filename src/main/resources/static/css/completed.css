@@ -57,6 +57,7 @@ main {
 }
 
 section {
+    overflow: hidden;
     width: 833px;
     height: 197px;
     background: #FFFFFF;
@@ -246,16 +247,24 @@ main .info .anime-title span:hover::after {
     visibility: hidden;
 }
 
+section.edit .hidden-edit {
+    visibility: visible;
+}
+
+section.edit.no-review {
+    height: 197px;
+}
+
 textarea {
     z-index: 0;
     border-radius: 3px;
-    /* margin-top: 1px; */
+    margin-top: 1px;
     position: absolute;
     top: -120px;
-    left: 23px;
+    left: 25px;
     width: 605px;
     height: 75px;
-    border: 1px solid #E7E7E7;
+    /* border: 1px solid #E7E7E7; */
     background-color: #fffdfe;
     font-family: "Lato-Light";
     font-size: 18px;
@@ -287,6 +296,22 @@ input[type="submit"] {
     width: 80px;
     height: 113px;
     background-color: #64D08F;
+    transition: 0.5s ease;
+    opacity: 1.0;
+}
+
+section.no-review.edit .cover-no-review-large {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    /* float: left; */
+    width: 145px;
+    height: 197px;
+    transition: 0.5s ease;
+}
+
+section.no-review.edit .cover-no-review {
+    opacity: 0.0;
 }
 
 section.no-review {
@@ -296,6 +321,16 @@ section.no-review {
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
     border-radius: 4px;
     margin-bottom: 18px;
+    transition: 0.5s ease;
+}
+
+section.no-review .info {
+    transition: 0.5s ease;
+    opacity: 1.0;
+}
+
+section.no-review.edit .info {
+    opacity: 0.0;
 }
 
 .stars-no-review {
