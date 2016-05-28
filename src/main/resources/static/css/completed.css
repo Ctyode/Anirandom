@@ -57,6 +57,7 @@ main {
 }
 
 section {
+    position: relative;
     overflow: hidden;
     width: 833px;
     height: 197px;
@@ -243,7 +244,7 @@ main .info .anime-title span:hover::after {
 }
 
 .hidden-edit {
-    position: relative;
+    /* position: relative; */
     visibility: hidden;
 }
 
@@ -260,8 +261,8 @@ textarea {
     border-radius: 3px;
     margin-top: 1px;
     position: absolute;
-    top: -120px;
-    left: 25px;
+    top: 56px;
+    left: 167px;
     width: 605px;
     height: 75px;
     /* border: 1px solid #E7E7E7; */
@@ -275,8 +276,8 @@ textarea {
 }
 
 input[type="submit"] {
-    top: -28px;
-    left: 543px;
+    top: 148px;
+    left: 686px;
     position: absolute;
     width: 100px;
     height: 35px;
