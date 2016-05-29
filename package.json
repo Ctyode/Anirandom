@@ -1,0 +1,22 @@
+{
+  "name": "anirandom",
+  "version": "0.0.0",
+  "description": "pure autism",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ctyode/Anirandom.git"
+  },
+  "author": "Ctyode, Rawieo",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Ctyode/Anirandom/issues"
+  },
+  "homepage": "https://github.com/Ctyode/Anirandom#readme",
+  "devDependencies": {
+    "baconjs": "^0.7.84",
+    "jquery": "^2.2.4"
+  }
+}
