@@ -42,23 +42,21 @@
                         {% if review.review is not empty %}
                             <section>
                                 <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
-                                <div class="info">
-                                    <div class="drop-down-more">
-                                        <div class="more"></div>
-                                        <div class="bubble">
-                                            <div class="options edit">Edit review</div>
-                                            <div class="options remove">Remove from list</div>
-                                        </div>
+                                <div class="drop-down-more">
+                                    <div class="more"></div>
+                                    <div class="bubble">
+                                        <div class="options edit">Edit review</div>
+                                        <div class="options remove">Remove from list</div>
                                     </div>
-                                    <div class="anime-title">
-                                        <span>{{ review.anime.title }}</span>
-                                    </div>
-                                    <div class="synopsis">{{ review.review }}</div>
-                                    <div class="stars">
-                                        <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
-                                    </div>
-                                    <div class="rating">{{ review.rating }}</div>
                                 </div>
+                                <div class="anime-title">
+                                    <span>{{ review.anime.title }}</span>
+                                </div>
+                                <div class="synopsis">{{ review.review }}</div>
+                                <div class="stars">
+                                    <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                                </div>
+                                <div class="rating">{{ review.rating }}</div>
                                 <div class="hidden-edit">
                                     <input type="hidden" name="anime" value="{{ review.anime._id }}">
                                     <input type="hidden" name="rating" value="{{ review.anime.rating }}">
@@ -70,12 +68,11 @@
                     {% endfor %}
                 </div>
                 <div id="unreviewed">
-                {% for review in completed_list %}
-                    {% if review.review is empty %}
-                        <section class="no-review">
-                            <div class="cover-no-review" style="background-image:url({{ review.anime.image }})"></div>
-                            <div class="cover-no-review-large" style="background-image:url({{ review.anime.image }})"></div>
-                            <div class="info">
+                    {% for review in completed_list %}
+                        {% if review.review is empty %}
+                            <section class="no-review">
+                                <div class="cover-no-review" style="background-image:url({{ review.anime.image }})"></div>
+                                <div class="cover-no-review-large" style="background-image:url({{ review.anime.image }})"></div>
                                 <div class="drop-down-more">
                                     <div class="more"></div>
                                     <div class="bubble">
@@ -86,20 +83,19 @@
                                 <div class="anime-title">
                                     <span>{{ review.anime.title }}</span>
                                 </div>
-                                <div class="stars-no-review">
+                                <div class="stars stars-no-review">
                                     <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
                                 </div>
                                 <div class="rating">{{ review.rating }}</div>
-                            </div>
-                            <div class="hidden-edit">
-                                <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                                <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                                <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
-                                <input type="submit" value="Blyad">
-                            </div>
-                        </section>
-                    {% endif %}
-                {% endfor %}
+                                <div class="hidden-edit">
+                                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
+                                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                                    <input type="submit" value="Blyad">
+                                </div>
+                            </section>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
             {% else %}

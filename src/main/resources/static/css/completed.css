@@ -34,7 +34,7 @@ a {
     line-height: 53px;
     margin-top: 18px;
     margin-left: 30px;
-    font-weight: 900;
+    /*font-weight: 900;*/
     font-size: 53px;
     color: #64D08F;
 }
@@ -46,7 +46,7 @@ main {
     margin: 0 auto auto;
 }
 
-.completed {
+main .completed {
     overflow: hidden;
     top: 165px;
     font-family: "Lato-Regular";
@@ -56,7 +56,21 @@ main {
     margin-bottom: 12px;
 }
 
-section {
+main .completed ul {
+    margin-top: -35px;
+}
+
+main .completed ul li.menuElement {
+    margin-left: 17px;
+    display: block;
+    float: right;
+    font-family: "Lato-Medium";
+    font-size: 30px;
+    /* position: absolute; */
+    /* margin-top: -33px; */
+}
+
+main section {
     position: relative;
     overflow: hidden;
     width: 833px;
@@ -67,12 +81,7 @@ section {
     margin-bottom: 18px;
 }
 
-.info {
-    float: left;
-    width: 687px;
-}
-
-.cover {
+main section .cover {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
@@ -81,64 +90,7 @@ section {
     height: 197px;
 }
 
-.anime-title {
-    width: 600px;
-    padding-left: 24px;
-    padding-top: 25px;
-    font-family: "Lato-Regular";
-    font-size: 24px;
-    color: #5B5B5B;
-    line-height: 0.75em;
-    /* margin-bottom: 16px; */
-}
-
-.synopsis {
-    font-family: Lato-Light;
-    font-size: 18px;
-    width: 622px;
-    padding-left: 24px;
-    color: #626262;
-    line-height: 21.5px; /* и это */
-}
-
-.search {
-    position: absolute;
-    width: 842px;
-    height: 52px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 6px;
-}
-
-.search-icon {
-    background: url("../images/search.svg");
-    margin-left: 10px;
-    margin-top: 8px;
-    width: 37px;
-    background-size: cover;
-    height: 37px;
-    background-repeat: no-repeat;
-}
-
-.no-image {
-    margin: auto;
-    margin-top: 180px;
-    background-color: #64D08F;
-    width: 300px;
-    height: 150px;
-}
-
-.no-text {
-    width: 700px;
-    font-family: "Lato-Light";
-    top: 124px;
-    left: 101px;
-    position: relative;
-    color: #757575;
-    font-size: 30px;
-}
-
-.drop-down-more .more {
+main section .drop-down-more .more {
     position: absolute;
     left: 780px;
     background: url("../images/more.svg");
@@ -150,13 +102,13 @@ section {
     background-repeat: no-repeat;
 }
 
-.drop-down-more .bubble {
+main section .drop-down-more .bubble {
     height: 0;
     overflow: hidden;
     z-index: 100;
 }
 
-.drop-down-more.show .bubble {
+main section .drop-down-more.show .bubble {
     right: 50px;
     position: absolute;
     margin-top: 40px;
@@ -168,7 +120,7 @@ section {
     margin-left: -74px;
 }
 
-.drop-down-more.show .bubble .options {
+main section .drop-down-more.show .bubble .options {
     font-family: "Lato-Regular";
     margin-left: 12px;
     font-size: 17px;
@@ -176,52 +128,38 @@ section {
     cursor: pointer;
 }
 
-.drop-down-more.show .bubble .options:hover {
+main section .drop-down-more.show .bubble .options:hover {
     color: #020202;
 }
 
-.drop-down-more.show .bubble .options.edit {
+main section .drop-down-more.show .bubble .options.edit {
     margin-top: 11px;
 }
 
-.drop-down-menu.show .bubble .options.remove {
+main section .drop-down-more.show .bubble .options.remove {
     margin-top: 7px;
 }
 
-.stars {
-    margin-top: 73px;
-    margin-left: 19px;
-    background-repeat: repeat-x;
-    background-image: url("../images/star.svg");
-    width: 399px;
-    height: 40px;
-}
-
-.stars-fill {
-    background-repeat: repeat-x;
-    background-image: url("../images/star-filled.svg");
-    height: 100%;
-}
-
-.rating {
-    margin-top: -33px;
-    margin-left: 430px;
+main section .anime-title {
+    position: absolute;
+    top: 14px;
+    left: 154px;
+    width: 600px;
     font-family: "Lato-Regular";
-    font-size: 27px;
+    font-size: 24px;
     color: #5B5B5B;
-    line-height: 27px;
+    line-height: 0.75em;
 }
 
-main .info .anime-title span {
+main section .anime-title span {
     height: 24px;
     display: block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    /* font-size: 40px; */
 }
 
-main .info .anime-title span::after {
+main section .anime-title span::after {
     z-index: 105;
     font-size: 15px;
     background: #FDFDF6;
@@ -238,25 +176,53 @@ main .info .anime-title span::after {
     transition: 0.5s ease 1.5s;
 }
 
-main .info .anime-title span:hover::after {
+main section .anime-title span:hover::after {
 	opacity: 1;
 	visibility: visible;
 }
 
-.hidden-edit {
-    /* position: relative; */
+main section .synopsis {
+    position: absolute;
+    top: 38px;
+    left: 154px;
+    font-family: Lato-Light;
+    font-size: 18px;
+    width: 622px;
+    color: #626262;
+    line-height: 21.5px;
+}
+
+main section .stars {
+    position: absolute;
+    top: 146px;
+    left: 154px;
+    background-repeat: repeat-x;
+    background-image: url("../images/star.svg");
+    width: 399px;
+    height: 40px;
+}
+
+main section .stars .stars-fill {
+    background-repeat: repeat-x;
+    background-image: url("../images/star-filled.svg");
+    height: 100%;
+}
+
+main section .rating {
+    position: absolute;
+    top: 154px;
+    left: 570px;
+    font-family: "Lato-Regular";
+    font-size: 27px;
+    color: #5B5B5B;
+    line-height: 27px;
+}
+
+main section .hidden-edit {
     visibility: hidden;
 }
 
-section.edit .hidden-edit {
-    visibility: visible;
-}
-
-section.edit.no-review {
-    height: 197px;
-}
-
-textarea {
+main section .hidden-edit textarea {
     z-index: 0;
     border-radius: 3px;
     margin-top: 1px;
@@ -275,7 +241,7 @@ textarea {
     padding-left: 10px;
 }
 
-input[type="submit"] {
+main section .hidden-edit input[type="submit"] {
     top: 148px;
     left: 686px;
     position: absolute;
@@ -290,7 +256,45 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.cover-no-review {
+.search {
+    position: absolute;
+    width: 842px;
+    height: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+    border-radius: 6px;
+}
+
+main section.edit .hidden-edit {
+    visibility: visible;
+}
+
+main section.no-review {
+    width: 833px;
+    height: 113px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+    border-radius: 4px;
+    margin-bottom: 18px;
+    transition: 0.5s ease;
+}
+
+main section.no-review.edit {
+    height: 197px;
+}
+
+main section.no-review .anime-title {
+    top: 14px;
+    left: 92px;
+    transition: 0.2s ease;
+}
+
+main section.no-review.edit .anime-title {
+    top: 14px;
+    left: 154px;
+}
+
+main section.no-review .cover-no-review {
     background-size: contain;
     background-position: center;
     float: left;
@@ -301,68 +305,73 @@ input[type="submit"] {
     opacity: 1.0;
 }
 
-section.no-review.edit .cover-no-review-large {
+main section.no-review.edit .cover-no-review {
+    opacity: 0.0;
+}
+
+main section.no-review.edit .cover-no-review-large {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
-    /* float: left; */
     width: 145px;
     height: 197px;
     transition: 0.5s ease;
 }
 
-section.no-review.edit .cover-no-review {
-    opacity: 0.0;
-}
-
-section.no-review {
-    width: 833px;
-    height: 113px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 4px;
-    margin-bottom: 18px;
-    transition: 0.5s ease;
-}
-
-section.no-review .info {
+main section.no-review .info {
     transition: 0.5s ease;
     opacity: 1.0;
 }
 
-section.no-review.edit .info {
+main section.no-review.edit .info {
     opacity: 0.0;
 }
 
-.stars-no-review {
-    margin-top: 13px;
-    margin-left: 19px;
-    background-repeat: repeat-x;
-    background-image: url("../images/star.svg");
-    width: 399px;
-    height: 40px;
+main section.no-review .stars.stars-no-review {
+    top: 70px;
+    left: 90px;
+    transition: 0.2s ease;
 }
 
-li.menuElement {
-    margin-left: 17px;
-    display: block;
-    float: right;
-    font-family: "Lato-Medium";
+main section.no-review.edit .stars.stars-no-review {
+    top: 146px;
+    left: 154px;
+}
+
+main section.no-review .rating {
+    top: 80px;
+    left: 505px;
+}
+
+main section.no-review.edit .rating {
+    top: 154px;
+    left: 570px;
+}
+
+main .search-icon {
+    background: url("../images/search.svg");
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 37px;
+    background-size: cover;
+    height: 37px;
+    background-repeat: no-repeat;
+}
+
+main .no-image {
+    margin: auto;
+    margin-top: 180px;
+    background-color: #64D08F;
+    width: 300px;
+    height: 150px;
+}
+
+main .no-text {
+    width: 700px;
+    font-family: "Lato-Light";
+    top: 124px;
+    left: 101px;
+    position: relative;
+    color: #757575;
     font-size: 30px;
-    /* position: absolute; */
-    /* margin-top: -33px; */
-}
-
-/* .slider {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
-    background: #ffb367;
-    transition: all 0.5s;
-} */
-
-ul {
-    margin-top: -35px;
 }
