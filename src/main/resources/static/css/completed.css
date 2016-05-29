@@ -66,8 +66,6 @@ main .completed ul li.menuElement {
     float: right;
     font-family: "Lato-Medium";
     font-size: 30px;
-    /* position: absolute; */
-    /* margin-top: -33px; */
 }
 
 main section {
@@ -79,6 +77,14 @@ main section {
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
     border-radius: 4px;
     margin-bottom: 18px;
+    transition: 0.3s ease;
+}
+
+main section.hidden {
+    opacity: 0.0;
+    overflow: hidden;
+    height: 0;
+    margin-bottom: 0;
 }
 
 main section .cover {

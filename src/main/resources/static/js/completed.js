@@ -6,10 +6,18 @@ $(function() {
             $drop_down.toggleClass("show");
         });
         var $hidden_edit = $section.find(".hidden-edit");
-        console.log($hidden_edit);
         $drop_down.find(".edit").click(function() {
-//            $hidden_edit.css('visibility', 'visible');
             $section.addClass("edit");
+        });
+        $drop_down.find(".remove").click(function() {
+            $.getJSON("/anime/remove_from_completed", {anime: $(this).attr("data-anime-id")}, function (data) {
+                if(data["status"] === "success") {
+                    $section.addClass("hidden");
+                    setTimeout(function() {
+                        $section.remove();
+                    }, 300);
+                }
+            });
         });
         var $title_span = $section.find(".anime-title span");
         $title_span.attr("data-anime-title", $title_span.html());
