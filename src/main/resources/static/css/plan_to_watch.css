@@ -96,26 +96,8 @@ section.hidden {
     margin-bottom: 16px;
 }
 
-.search {
-    position: absolute;
-    width: 842px;
-    height: 52px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 6px;
-}
-
-.search-icon {
-    background: url("../images/search.svg");
-    margin-left: 10px;
-    margin-top: 8px;
-    width: 37px;
-    background-size: cover;
-    height: 37px;
-    background-repeat: no-repeat;
-}
-
 .no-image {
+    position: absolute;
     margin: auto;
     margin-top: 180px;
     background-color: #64D08F;
@@ -133,7 +115,7 @@ section.hidden {
     font-size: 30px;
 }
 
-.stars {
+section .stars {
     margin-top: -3px;
     margin-left: 15px;
     background-repeat: repeat-x;
@@ -142,13 +124,13 @@ section.hidden {
     height: 44px;
 }
 
-.stars-fill {
+section .stars-fill {
     background-repeat: repeat-x;
     background-image: url("../images/star-filled.svg");
     height: 100%;
 }
 
-.rating {
+section .rating {
     margin-top: -33px;
     margin-left: 463px;
     font-family: "Lato-Regular";
@@ -204,4 +186,112 @@ section.hidden {
 
 .drop-down-menu.show .bubble .options.remove {
     margin-top: 7px;
+}
+
+.search {
+    overflow: hidden;
+    position: absolute;
+    width: 842px;
+    height: 52px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+    border-radius: 3px;
+}
+
+.search.open {
+    height: 360px;
+}
+
+.search-icon {
+    background: url("../images/search.svg");
+    margin-left: 10px;
+    margin-top: -46px;
+    width: 37px;
+    background-size: cover;
+    height: 37px;
+    background-repeat: no-repeat;
+}
+
+.search ul li .image {
+    left: 0px;
+    width: 57px;
+    height: 74px;
+    background-color: #6D6D6D;
+    position: absolute;
+    border: solid;
+}
+
+.search ul li .title {
+    padding-top: 8px;
+    top: 65px;
+    font-family: "Lato-Regular";
+    margin-left: 56px;
+    font-size: 22px;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.search ul li .rating {
+    margin-top: 8px;
+    margin-left: 399px;
+    font-family: "Lato-Regular";
+    font-size: 21px;
+    color: black;
+}
+
+.search ul li .year {
+    margin-top: 1px;
+    float: right;
+    font-family: "Lato-Regular";
+    color: black;
+}
+
+.search ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.search ul::-webkit-scrollbar-thumb {
+    background-color: #BABABA;
+    border-top: 3px solid white;
+    border-bottom: 4px solid white;
+}
+
+.search ul li {
+    position: relative;
+    height: 57px;
+    padding-left: 20px;
+    display: block;
+    margin-bottom: 17px;
+}
+
+.search .tip {
+    position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+    height: 57px;
+    border-bottom: 1px solid #D5D4D4;
+}
+
+.search .stars {
+    position: absolute;
+    margin-left: 51px;
+    background-repeat: repeat-x;
+    background-image: url("../images/star.svg");
+    width: 340px;
+    height: 34px;
+}
+
+.search .stars-fill {
+    background-repeat: repeat-x;
+    background-image: url("../images/star-filled.svg");
+    height: 100%;
+}
+
+.search ul {
+    margin-top: 8px;
+    margin-right: 5px;
+    height: 304px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0;
 }

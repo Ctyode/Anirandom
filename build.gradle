@@ -39,7 +39,9 @@ dependencies {
 }
 
 task staticResources(type: Copy) {
-    from 'src/main/resources/*'
+    from 'src/main/resources'
+    from 'node_modules/baconjs/dist/Bacon.min.js'
+    from 'node_modules/jquery/dist/jquery.min.js'
     into 'build/resources/main/static/'
 }
 

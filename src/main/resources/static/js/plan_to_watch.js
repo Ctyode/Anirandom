@@ -29,3 +29,13 @@ $(function() {
     });
 
 });
+
+$(function() {
+    $(".search").click(function() {
+        var hasClass = $(this).hasClass("open");
+        $("this").removeClass("open");
+        if(!hasClass) {
+            $(this).addClass("open");
+        }
+    });
+});

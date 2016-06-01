@@ -381,3 +381,7 @@ main .no-text {
     color: #757575;
     font-size: 30px;
 }
+
+.search.open {
+    height: 500px;
+}
