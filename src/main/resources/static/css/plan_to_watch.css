@@ -203,13 +203,14 @@ section .rating {
 }
 
 .search-icon {
-    background: url("../images/search.svg");
+    background-image: url("../images/search.svg");
     margin-left: 10px;
-    margin-top: -46px;
+    top: 8px;
     width: 37px;
     background-size: cover;
     height: 37px;
     background-repeat: no-repeat;
+    position: absolute;
 }
 
 .search ul li .image {
@@ -268,7 +269,6 @@ section .rating {
     position: relative;
     padding-left: 20px;
     box-sizing: border-box;
-    height: 57px;
     border-bottom: 1px solid #D5D4D4;
 }
 
@@ -288,10 +288,21 @@ section .rating {
 }
 
 .search ul {
-    margin-top: 8px;
+    margin-top: 0;
     margin-right: 5px;
     height: 304px;
     overflow-x: hidden;
     overflow-y: scroll;
     padding: 0;
+}
+
+.search input[type="text"] {
+    font-family: "Lato-Light";
+    border: none;
+    width: 789px;
+    margin-left: 52px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 8px;
+    outline: none;
 }

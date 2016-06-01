@@ -31,11 +31,20 @@ $(function() {
 });
 
 $(function() {
-    $(".search").click(function() {
+    var $search = $(".search");
+    $search.click(function() {
         var hasClass = $(this).hasClass("open");
         $("this").removeClass("open");
         if(!hasClass) {
             $(this).addClass("open");
         }
+    });
+    var searchString = $search.find("input[type=text]")
+        .asEventStream("keyup")
+        .map(function(e) {
+            return $(e.target).val();
+        }).toProperty("");
+    searchString.onValue(function(v) {
+        console.log(v);
     });
 });
