@@ -41,8 +41,9 @@ $(function() {
     });
 
     function search(query) {
-      if (query.length < 3)
+      if (query.length < 3) {
         return Bacon.once([]);
+      }
       return Bacon.fromPromise($.getJSON("/search", {s: query}));
     }
 
