@@ -39,12 +39,26 @@ $(function() {
             $(this).addClass("open");
         }
     });
-    var searchString = $search.find("input[type=text]")
-        .asEventStream("keyup")
-        .map(function(e) {
-            return $(e.target).val();
-        }).toProperty("");
-    searchString.onValue(function(v) {
+
+    function search(query) {
+      if (query.length < 3)
+        return Bacon.once([]);
+      return Bacon.fromPromise($.getJSON("/search", {s: query}));
+    }
+
+    var text = $search.find("input[type=text]")
+      .asEventStream('keydown')
+      .debounce(300)
+      .map(function(event) {
+        return event.target.value;
+      }).skipDuplicates();
+
+    var suggestions = text.flatMapLatest(search);
+//    text.awaiting(suggestions).onValue(function(x) {
+//      if (x) $('#results').html('Searching...');
+//    });
+
+    suggestions.onValue(function(v) {
         console.log(v);
     });
 });
