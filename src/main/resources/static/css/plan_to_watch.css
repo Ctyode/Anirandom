@@ -219,7 +219,8 @@ section .rating {
     height: 74px;
     background-color: #6D6D6D;
     position: absolute;
-    border: solid;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .search ul li .title {

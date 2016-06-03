@@ -42,7 +42,7 @@ $(function() {
 
     function search(query) {
       if (query.length < 3) {
-        return Bacon.once([]);
+        return Bacon.once({results: []});
       }
       return Bacon.fromPromise($.getJSON("/search", {s: query}));
     }
@@ -55,11 +55,21 @@ $(function() {
       }).skipDuplicates();
 
     var suggestions = text.flatMapLatest(search);
-//    text.awaiting(suggestions).onValue(function(x) {
-//      if (x) $('#results').html('Searching...');
-//    });
 
+    // what the fuck am i doing?
+    var item = function(p) {
+        return '<li>' +
+               '<div class="image" style="background-image:url('+ p["image"] +')"></div>' +
+               '<div class="title">' + p["title"] + '<div class="year">'+ p["year"] +'</div></div>' +
+               '<div class="stars"><div class="stars-fill" style="width: ' + (p["rating"] * 10) +'%"></div></div>' +
+               '<div class="rating">' + p["rating"] + '</div>' +
+               '</li>'
+    }
     suggestions.onValue(function(v) {
-        console.log(v);
+        var $list = $(".search ul");
+        $list.html("")
+        for(var i = 0; i < v.results.length; i++) {
+            $list.append(item(v.results[i]));
+        }
     });
 });
