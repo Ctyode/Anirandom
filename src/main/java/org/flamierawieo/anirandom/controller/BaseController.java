@@ -3,6 +3,8 @@ package org.flamierawieo.anirandom.controller;
 //import com.hubspot.jinjava.Jinjava;
 import com.mitchellbosecke.pebble.PebbleEngine;
 import com.mitchellbosecke.pebble.error.PebbleException;
+import com.mitchellbosecke.pebble.loader.FileLoader;
+import com.mitchellbosecke.pebble.loader.Loader;
 import com.mitchellbosecke.pebble.template.PebbleTemplate;
 import com.mongodb.MongoClient;
 import org.flamierawieo.anirandom.orm.User;
@@ -30,7 +32,9 @@ public class BaseController {
     }
 
     public String render(String template, Map<String, Object> config) throws PebbleException, IOException {
-        PebbleEngine engine = new PebbleEngine.Builder().build();
+        FileLoader loader = new FileLoader();
+        loader.setPrefix("src/main/resources/templates/");
+        PebbleEngine engine = new PebbleEngine.Builder().loader(loader).build();
         PebbleTemplate compiledTemplate = engine.getTemplate(template);
         Writer writer = new StringWriter();
         compiledTemplate.evaluate(writer, config);

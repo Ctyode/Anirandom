@@ -22,7 +22,7 @@ public class CompletedController extends BaseController {
 
     static {
 //        try {
-            template = "src/main/resources/templates/completed.html";
+            template = "completed.html";
 //            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/completed.html")), "UTF-8");
 //        } catch (IOException e) {
 //            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);

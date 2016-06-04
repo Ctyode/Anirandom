@@ -19,7 +19,7 @@ public class IndexController extends BaseController {
 
     static {
 //        try {
-        template = "src/main/resources/templates/index.html";
+        template = "index.html";
 //            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/index.html")), "UTF-8");
 //        } catch (IOException e) {
 //            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);

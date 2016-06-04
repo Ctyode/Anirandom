@@ -22,7 +22,7 @@ public class PlanToWatchController extends BaseController  {
 
     static {
 //        try {
-        template = "src/main/resources/templates/plan_to_watch.html";
+        template = "plan_to_watch.html";
 //            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/plan_to_watch.html")), "UTF-8");
 //        } catch (IOException e) {
 //            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
