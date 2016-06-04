@@ -1,70 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/plan_to_watch.css">
-        <link rel="stylesheet" href="../css/login.css">
-        <script src="../jquery.min.js"></script>
-        <script src="../Bacon.min.js"></script>
-        <title>Plan to watch</title>
-        <script src="../js/plan_to_watch.js"></script>
-        <script src="../js/login.js"></script>
-    </head>
-<body>
-    <div class="anirandom-title">
-        <a href="/">Anirandom</a>
-    </div>
-        {% if authorized %}
-            <div class="auth">
-                <div class="auth-text">
-                    <a href="/completed">Completed</a>
-                    <a class="auth-button" data-target="logout">{{ username }}</a>
-                </div>
-                <div class="auth-bubble initial-width-180px">
-                    <div class="wrap">
-                        <a class="logout-text" href="/logout">Log out</a>
-                    </div>
-                    <div class="triangle"></div>
-                </div>
+{% extends "base.html" %}
+
+{% block css %}
+  {{ parent() }}
+  <link rel="stylesheet" href="/css/plan_to_watch.css">
+{% endblock %}
+
+{% block main %}
+  {% if authorized %}
+    {% if plan_to_watch_list is not empty %}
+      <div class="plan_to_watch">Plan to watch</div>
+      {% for anime in plan_to_watch_list %}
+        <section>
+          <div class="cover" style="background-image:url({{ anime.image }})"></div>
+          <div class="info">
+            <div class="drop-down-more">
+              <div class="more"></div>
+              <div class="bubble">
+                <div class="options move" data-anime-id="{{ anime._id }}">Move to completed</div>
+                <div class="options remove" data-anime-id="{{ anime._id }}">Remove from list</div>
+              </div>
             </div>
-        <main>
-            {% if plan_to_watch_list is not empty %}
-                <div class="plan_to_watch">Plan to watch</div>
-                {% for anime in plan_to_watch_list %}
-                    <section>
-                        <div class="cover" style="background-image:url({{ anime.image }})"></div>
-                        <div class="info">
-                            <div class="drop-down-more">
-                                <div class="more"></div>
-                                <div class="bubble">
-                                    <div class="options move" data-anime-id="{{ anime._id }}">Move to completed</div>
-                                    <div class="options remove" data-anime-id="{{ anime._id }}">Remove from list</div>
-                                </div>
-                            </div>
-                            <div class="anime-title">{{ anime.title }}</div>
-                            <div class="stars">
-                                <div class="stars-fill" style="width: {{ anime.rating * 10 }}%"></div>
-                            </div>
-                            <div class="rating">{{ anime.rating }}</div>
-                        </div>
-                    </section>
-                {% endfor %}
-            {% else %}
-                <div class="no-text">Ty pidor i nichego ne dobavil</div>
-                <div class="no-image"></div>
-                <form class="search">
-                    <div class="search-icon"></div>
-                    <input type="text" placeholder="priv kak dela suchki">
-                    <div class="tip"></div>
-                    <div class="search-icon"></div>
-                    <ul>
-                    </ul>
-                </form>
-            {% endif %}
-        {% else %}
-            <div class="no-auth-text"></div>
-            <div class="no-auth-image"></div>
-        {% endif %}
-    </main>
-</body>
-</html>
+            <div class="anime-title">{{ anime.title }}</div>
+            <div class="stars">
+              <div class="stars-fill" style="width: {{ anime.rating * 10 }}%"></div>
+            </div>
+            <div class="rating">{{ anime.rating }}</div>
+          </div>
+        </section>
+      {% endfor %}
+    {% else %}
+      <div class="no-text">Ty pidor i nichego ne dobavil</div>
+      <div class="no-image"></div>
+      <form class="search">
+        <div class="search-icon"></div>
+        <input type="text" placeholder="priv kak dela suchki">
+        <div class="tip"></div>
+        <div class="search-icon"></div>
+        <ul>
+        </ul>
+      </form>
+    {% endif %}
+  {% else %}
+    <div class="no-auth-text"></div>
+    <div class="no-auth-image"></div>
+  {% endif %}
+{% endblock %}
+
+{% block js %}
+  {{ parent() }}
+  <script src="/js/plan_to_watch.js"></script>
+{% endblock %}

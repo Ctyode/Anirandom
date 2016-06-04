@@ -1,113 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/completed.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Completed</title>
-    <script src="../jquery.min.js"></script>
-    <script src="../Bacon.min.js"></script>
-    <script src="../js/completed.js"></script>
-    <script src="../js/login.js"></script>
-</head>
-<body>
-    <div class="anirandom-title">
-        <a href="/">Anirandom</a>
-    </div>
-    {% if authorized %}
-        <div class="auth">
-            <div class="auth-text">
-                <a href="/plan_to_watch">Plan to watch</a>
-                <a class="auth-button" data-target="logout">{{ username }}</a>
-            </div>
-            <div class="auth-bubble initial-width-180px">
-                <div class="wrap">
-                    <a class="logout-text" href="/logout">Log out</a>
+{% extends "base.html" %}
+
+{% block css %}
+  {{ parent() }}
+  <link rel="stylesheet" href="/css/completed.css">
+{% endblock %}
+
+{% block main %}
+  {% if authorized %}
+    {% if completed_list is not empty %}
+      <div class="completed">
+        Completed
+        <ul>
+          <li class="active menuElement" data-tab="reviewed">Reviewed</li>
+          <li class="menuElement" data-tab="unreviewed">Unreviewed</li>
+          <!--<li class="slider"></li>-->
+        </ul>
+      </div>
+      <div id="container">
+        <div id="reviewed">
+          {% for review in completed_list %}
+            {% if review.review is not empty %}
+              <section>
+                <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
+                <div class="drop-down-more">
+                  <div class="more"></div>
+                  <div class="bubble">
+                    <div class="options edit">Edit review</div>
+                    <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
+                  </div>
                 </div>
-                <div class="triangle"></div>
-            </div>
-        </div>
-    <main>
-        {% if completed_list is not empty %}
-            <div class="completed">
-                Completed
-                <ul>
-                    <li class="active menuElement" data-tab="reviewed">Reviewed</li>
-                    <li class="menuElement" data-tab="unreviewed">Unreviewed</li>
-                    <!--<li class="slider"></li>-->
-                </ul>
-            </div>
-            <div id="container">
-                <div id="reviewed">
-                    {% for review in completed_list %}
-                        {% if review.review is not empty %}
-                            <section>
-                                <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
-                                <div class="drop-down-more">
-                                    <div class="more"></div>
-                                    <div class="bubble">
-                                        <div class="options edit">Edit review</div>
-                                        <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
-                                    </div>
-                                </div>
-                                <div class="anime-title">
-                                    <span>{{ review.anime.title }}</span>
-                                </div>
-                                <div class="synopsis">{{ review.review }}</div>
-                                <div class="stars">
-                                    <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
-                                </div>
-                                <div class="rating">{{ review.rating }}</div>
-                                <div class="hidden-edit">
-                                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
-                                    <input type="submit" value="Blyad">
-                                </div>
-                            </section>
-                        {% endif %}
-                    {% endfor %}
+                <div class="anime-title">
+                  <span>{{ review.anime.title }}</span>
                 </div>
-                <div id="unreviewed">
-                    {% for review in completed_list %}
-                        {% if review.review is empty %}
-                            <section class="no-review">
-                                <div class="cover-no-review" style="background-image:url({{ review.anime.image }})"></div>
-                                <div class="cover-no-review-large" style="background-image:url({{ review.anime.image }})"></div>
-                                <div class="drop-down-more">
-                                    <div class="more"></div>
-                                    <div class="bubble">
-                                        <div class="options edit">Edit review</div>
-                                        <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
-                                    </div>
-                                </div>
-                                <div class="anime-title">
-                                    <span>{{ review.anime.title }}</span>
-                                </div>
-                                <div class="stars stars-no-review">
-                                    <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
-                                </div>
-                                <div class="rating">{{ review.rating }}</div>
-                                <div class="hidden-edit">
-                                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
-                                    <input type="submit" value="Blyad">
-                                </div>
-                            </section>
-                        {% endif %}
-                    {% endfor %}
+                <div class="synopsis">{{ review.review }}</div>
+                <div class="stars">
+                  <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
                 </div>
-            </div>
-            {% else %}
-                <div class="search"><div class="search-icon"></div></div>
-                <div class="no-text">Ty pidor i nichego ne dobavil. Kogda reshish chtot zahuyarit' v spisok, ne petushis', skin' druziashkam, chtoby posmotreli i zasrali tvoi ubogie vkusi. Prosto skin' im svoi id, i oni smogut nachat' vyebyvat'sya.</div>
-                <div class="no-image"></div>
+                <div class="rating">{{ review.rating }}</div>
+                <div class="hidden-edit">
+                  <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                  <input type="hidden" name="rating" value="{{ review.anime.rating }}">
+                  <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                  <input type="submit" value="Blyad">
+                </div>
+              </section>
             {% endif %}
-        {% else %}
-            <div class="no-auth-text"></div>
-            <div class="no-auth-image"></div>
-        {% endif %}
-    </main>
-</body>
-</html>
+          {% endfor %}
+        </div>
+        <div id="unreviewed">
+          {% for review in completed_list %}
+            {% if review.review is empty %}
+              <section class="no-review">
+                <div class="cover-no-review" style="background-image:url({{ review.anime.image }})"></div>
+                <div class="cover-no-review-large" style="background-image:url({{ review.anime.image }})"></div>
+                <div class="drop-down-more">
+                  <div class="more"></div>
+                  <div class="bubble">
+                    <div class="options edit">Edit review</div>
+                    <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
+                  </div>
+                </div>
+                <div class="anime-title">
+                  <span>{{ review.anime.title }}</span>
+                </div>
+                <div class="stars stars-no-review">
+                  <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                </div>
+                <div class="rating">{{ review.rating }}</div>
+                <div class="hidden-edit">
+                  <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                  <input type="hidden" name="rating" value="{{ review.anime.rating }}">
+                  <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                  <input type="submit" value="Blyad">
+                </div>
+              </section>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <div class="search"><div class="search-icon"></div></div>
+      <div class="no-text">Ty pidor i nichego ne dobavil. Kogda reshish chtot zahuyarit' v spisok, ne petushis', skin' druziashkam, chtoby posmotreli i zasrali tvoi ubogie vkusi. Prosto skin' im svoi id, i oni smogut nachat' vyebyvat'sya.</div>
+      <div class="no-image"></div>
+    {% endif %}
+  {% else %}
+      <div class="no-auth-text"></div>
+      <div class="no-auth-image"></div>
+  {% endif %}
+{% endblock %}
+
+{% block js %}
+  {{ parent() }}
+  <script src="/js/completed.js"></script>
+{% endblock %}
