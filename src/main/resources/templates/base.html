@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anirandom</title>
+    <meta charset="utf-8">
+    {% block css %}
+      <link rel="stylesheet" href="/css/base.css">
+    {% endblock %}
+    <meta name="description" content="Anime randomizer">
+    <meta name="keywords" content="anime, anime random, anime list, random, animelist">
+  </head>
+  <body>
+    <div class="anirandom-title">
+      <a href="/">Anirandom</a>
+    </div>
+    {% if authorized %}
+      <div class="auth">
+        <div class="auth-text">
+          <a href="/completed">Completed</a>
+          <a href="/plan_to_watch">Plan to watch</a>
+          <a class="auth-button" data-target="logout">{{ username }}</a>
+        </div>
+        <div class="auth-bubble initial-width-180px">
+          <div class="wrap">
+            <a class="logout-text" href="/logout">Log out</a>
+          </div>
+          <div class="triangle"></div>
+        </div>
+      </div>
+    {% else %}
+      <div class="auth">
+        <div class="auth-text">
+          <a class="auth-button" data-target="login">Login</a>
+        </div>
+        <div class="auth-bubble initial-width-297px">
+          <div class="wrap">
+            <div class="section login">
+              <div class="title">Sign in</div>
+              <form action="/login" method="post">
+                <input type="text" name="username" placeholder="Username" pattern="[_\w]{4,16}">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" value="Dai uzhe anime smotret">
+                <input type="hidden" name="back" value="/">
+              </form>
+              <div class="goto-button" data-target="signup">Sign up</div>
+            </div>
+            <div class="section signup">
+              <div class="title">Sign up</div>
+              <form action="/signup" method="post">
+                <input type="text" name="username" placeholder="Username" pattern="[_\w]{4,16}">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password" pattern=".{6,}">
+                <input type="password" name="password_c" placeholder="Confirm password" pattern=".{6,}">
+                <input type="submit" value="Dai uzhe anime smotret">
+                <input type="hidden" name="back" value="/">
+              </form>
+              <div class="goto-button" data-target="login">Sign in</div>
+            </div>
+          </div>
+          <div class="triangle"></div>
+        </div>
+      </div>
+    {% endif %}
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    {% block js%}
+      <script src="/jquery.min.js"></script>
+      <script src="/js/login.js"></script>
+    {% endblock %}
+  </body>
+</html>
