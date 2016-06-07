@@ -2,5 +2,6 @@
 .gradle
 build
 *.iml
-local.properties
-db/
+data/
+node_modules/
+.DS_Store

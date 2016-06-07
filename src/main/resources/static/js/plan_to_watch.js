@@ -29,3 +29,47 @@ $(function() {
     });
 
 });
+
+$(function() {
+    var $search = $(".search");
+    $search.click(function() {
+        var hasClass = $(this).hasClass("open");
+        $("this").removeClass("open");
+        if(!hasClass) {
+            $(this).addClass("open");
+        }
+    });
+
+    function search(query) {
+      if (query.length < 3) {
+        return Bacon.once({results: []});
+      }
+      return Bacon.fromPromise($.getJSON("/search", {s: query}));
+    }
+
+    var text = $search.find("input[type=text]")
+      .asEventStream('keydown')
+      .debounce(300)
+      .map(function(event) {
+        return event.target.value;
+      }).skipDuplicates();
+
+    var suggestions = text.flatMapLatest(search);
+
+    // what the fuck am i doing?
+    var item = function(p) {
+        return '<li>' +
+               '<div class="image" style="background-image:url('+ p["image"] +')"></div>' +
+               '<div class="title">' + p["title"] + '<div class="year">'+ p["year"] +'</div></div>' +
+               '<div class="stars"><div class="stars-fill" style="width: ' + (p["rating"] * 10) +'%"></div></div>' +
+               '<div class="rating">' + p["rating"] + '</div>' +
+               '</li>'
+    }
+    suggestions.onValue(function(v) {
+        var $list = $(".search ul");
+        $list.html("")
+        for(var i = 0; i < v.results.length; i++) {
+            $list.append(item(v.results[i]));
+        }
+    });
+});

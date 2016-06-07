@@ -1,5 +1,6 @@
 package org.flamierawieo.anirandom.controller;
 
+import com.mitchellbosecke.pebble.error.PebbleException;
 import org.flamierawieo.anirandom.orm.Anime;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,12 +21,13 @@ public class PlanToWatchController extends BaseController  {
     private static String template;
 
     static {
-        try {
-            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/plan_to_watch.html")), "UTF-8");
-        } catch (IOException e) {
-            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
-            template = "Can someone unfuck the situation, please?";
-        }
+//        try {
+        template = "plan_to_watch.html";
+//            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/plan_to_watch.html")), "UTF-8");
+//        } catch (IOException e) {
+//            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
+//            template = "Can someone unfuck the situation, please?";
+//        }
     }
 
     @Override
@@ -39,7 +41,7 @@ public class PlanToWatchController extends BaseController  {
     }
 
     @RequestMapping("/plan_to_watch")
-    public String handle(HttpServletRequest request) {
+    public String handle(HttpServletRequest request) throws IOException, PebbleException {
         return render(template, getContext(request));
     }
 

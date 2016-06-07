@@ -28,7 +28,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile 'com.hubspot.jinjava:jinjava:2.1.7'
+//    compile 'com.hubspot.jinjava:jinjava:2.1.7'
+    compile group: 'com.mitchellbosecke', name: 'pebble', version: '2.2.1'
     compile 'com.googlecode.json-simple:json-simple:1.1'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.mongodb:mongo-java-driver:3.2.2'
@@ -38,19 +39,14 @@ dependencies {
 }
 
 task staticResources(type: Copy) {
-    from 'src/main/resources/*'
+    from 'src/main/resources'
+    from 'node_modules/baconjs/dist/Bacon.min.js'
+    from 'node_modules/jquery/dist/jquery.min.js'
     into 'build/resources/main/static/'
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
-}
-
-task mongo {
-    def localProperties = new Properties()
-    localProperties.load(new FileInputStream("local.properties"))
-    def processBuilder = new ProcessBuilder(localProperties['mongo'].split('\\s+'))
-    processBuilder.start()
 }
 
 run {

@@ -1,5 +1,6 @@
 package org.flamierawieo.anirandom.controller;
 
+import com.mitchellbosecke.pebble.error.PebbleException;
 import org.flamierawieo.anirandom.orm.Review;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,12 +21,13 @@ public class CompletedController extends BaseController {
     private static String template;
 
     static {
-        try {
-            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/completed.html")), "UTF-8");
-        } catch (IOException e) {
-            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
-            template = "Can someone unfuck the situation, please?";
-        }
+//        try {
+            template = "completed.html";
+//            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/completed.html")), "UTF-8");
+//        } catch (IOException e) {
+//            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
+//            template = "Can someone unfuck the situation, please?";
+//        }
     }
 
     @Override
@@ -39,7 +41,7 @@ public class CompletedController extends BaseController {
     }
 
     @RequestMapping("/completed")
-    public String handle(HttpServletRequest request) {
+    public String handle(HttpServletRequest request) throws IOException, PebbleException {
         return render(template, getContext(request));
     }
 

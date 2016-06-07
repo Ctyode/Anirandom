@@ -1,13 +1,23 @@
 $(function() {
     $("section").each(function() {
-        $section = $(this);
+        var $section = $(this);
         var $drop_down = $section.find(".drop-down-more");
         $drop_down.find(".more").click(function() {
             $drop_down.toggleClass("show");
         });
         var $hidden_edit = $section.find(".hidden-edit");
         $drop_down.find(".edit").click(function() {
-            $hidden_edit.css('visibility', 'visible');
+            $section.addClass("edit");
+        });
+        $drop_down.find(".remove").click(function() {
+            $.getJSON("/anime/remove_from_completed", {anime: $(this).attr("data-anime-id")}, function (data) {
+                if(data["status"] === "success") {
+                    $section.addClass("hidden");
+                    setTimeout(function() {
+                        $section.remove();
+                    }, 300);
+                }
+            });
         });
         var $title_span = $section.find(".anime-title span");
         $title_span.attr("data-anime-title", $title_span.html());
@@ -29,4 +39,39 @@ $(function() {
             });
         });
     });
+});
+
+$(function() {
+//    $("ul li").click(function() {
+//
+//        var tab = $(this).index();
+//        var position = 273.2 * tab;
+//
+//        if($(this).hasClass('slider')) {
+//            return;
+//        }
+//
+//        $(".slider").css({
+//            left: position + "px"
+//        });
+//
+//        $('li').removeClass('active');
+//        $(this).addClass('active');
+//        $(this).find('li').addClass('active');
+//    });
+
+    if($) {
+
+        $('#container > *').hide(0);
+        $('#container #reviewed').show(0);
+
+        $(".menuElement").click(function() {
+
+            $('#container > *').hide(0)
+
+            var tabID = $(this).data("tab");
+            $('#' + tabID).show(0);
+
+        });
+    }
 });
