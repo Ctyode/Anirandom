@@ -1,35 +1,44 @@
 main .completed {
     overflow: hidden;
-    top: 165px;
+    /* top: 165px; */
+    /* top: 10vh; */
     font-family: "Lato-Regular";
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 4.3vh;
     color: #5B5B5B;
-    line-height: 36px;
-    margin-bottom: 12px;
+    /* line-height: 36px; */
+    /* line-height: 6vh; */
+    /* margin-bottom: 12px; */
+    margin-bottom: 1.8vh;
 }
 
 main .completed ul {
-    margin-top: -35px;
+    /* margin-top: -35px; */
+    margin-top: -5vh;
 }
 
 main .completed ul li.menuElement {
-    margin-left: 17px;
+    /* margin-left: 17px; */
+    margin-left: 2.4vh;
     display: block;
     float: right;
     font-family: "Lato-Medium";
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 4.3vh;
 }
 
 main section {
     position: relative;
     overflow: hidden;
-    width: 833px;
-    height: 197px;
+    /* width: 833px; */
+    width: 119vh;
+    /* height: 197px; */
+    height: 28vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 4px;
+    /* border-radius: 4px; */
     margin-bottom: 18px;
-    transition: 0.3s ease;
+    /* transition: 0.3s ease; */
 }
 
 main section.hidden {
@@ -44,19 +53,26 @@ main section .cover {
     background-size: contain;
     background-position: left;
     float: left;
-    width: 145px;
-    height: 197px;
+    /* width: 145px; */
+    width: 20.1vh;
+    /* height: 197px; */
+    height: 28vh;
 }
 
 main section .drop-down-more .more {
     position: absolute;
-    left: 780px;
+    /* left: 780px; */
+    left: 113.5vh;
+    top: 0;
     background: url("../images/more.svg");
-    margin-left: 10px;
-    margin-top: 8px;
-    width: 37px;
+    /* margin-left: 10px; */
+    /* margin-top: 8px; */
+    margin-top: 1vh;
+    /* width: 37px; */
+    width: 5vh;
     background-size: cover;
     height: 37px;
+    height: 5vh;
     background-repeat: no-repeat;
 }
 
@@ -100,13 +116,17 @@ main section .drop-down-more.show .bubble .options.remove {
 
 main section .anime-title {
     position: absolute;
-    top: 14px;
-    left: 154px;
-    width: 600px;
+    /* top: 14px; */
+    top: 3vh;
+    /* left: 154px; */
+    left: 22.3vh;
+    /* width: 600px; */
+    width: 90vh;
     font-family: "Lato-Regular";
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 3.5vh;
     color: #5B5B5B;
-    line-height: 0.75em;
+    line-height: 0.8em;
 }
 
 main section .anime-title span {
@@ -141,23 +161,32 @@ main section .anime-title span:hover::after {
 
 main section .synopsis {
     position: absolute;
-    top: 38px;
-    left: 154px;
+    /* top: 38px; */
+    top: 6.4vh;
+    /* left: 154px; */
+    left: 22.4vh;
     font-family: Lato-Light;
-    font-size: 18px;
-    width: 622px;
+    /* font-size: 18px; */
+    font-size: 2.58vh;
+    /* width: 622px; */
+    width: 91vh;
     color: #626262;
-    line-height: 21.5px;
+    /* line-height: 21.5px; */
+    line-height: 3.2vh;
 }
 
 main section .stars {
     position: absolute;
-    top: 146px;
-    left: 154px;
+    /* top: 146px; */
+    top: 20vh;
+    /* left: 154px; */
+    left: 22vh;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 399px;
-    height: 40px;
+    /* width: 399px; */
+    width: 59vh;
+    /* height: 40px; */
+    height: 6vh;
 }
 
 main section .stars .stars-fill {
@@ -168,12 +197,16 @@ main section .stars .stars-fill {
 
 main section .rating {
     position: absolute;
-    top: 154px;
-    left: 570px;
+    /* top: 154px; */
+    top: 21.3vh;
+    /* left: 570px; */
+    left: 82vh;
     font-family: "Lato-Regular";
-    font-size: 27px;
+    /* font-size: 27px; */
+    font-size: 4vh;
     color: #5B5B5B;
-    line-height: 27px;
+    /* line-height: 27px; */
+    line-height: 4vh;
 }
 
 main section .hidden-edit {
@@ -228,37 +261,50 @@ main section.edit .hidden-edit {
 }
 
 main section.no-review {
-    width: 833px;
-    height: 113px;
+    /* width: 833px; */
+    width: 119.5vh;
+    /* height: 113px; */
+    height: 16.2vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 4px;
-    margin-bottom: 18px;
+    /* border-radius: 4px; */
+    /* border-radius: 0.4vh; */
+    /* margin-bottom: 18px; */
+    margin-bottom: 2.6vh;
     transition: 0.5s ease;
 }
 
 main section.no-review.edit {
-    height: 197px;
+    /* height: 197px; */
+    height: 28.4vh;
 }
 
 main section.no-review .anime-title {
     top: 14px;
+    top: 2.9vh;
     left: 92px;
-    transition: 0.2s ease;
+    left: 14vh;
+    transition: 0.4s ease;
 }
 
 main section.no-review.edit .anime-title {
     top: 14px;
+    top: 2.5vh;
     left: 154px;
+    left: 23.5vh;
 }
 
 main section.no-review .cover-no-review {
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     float: left;
     width: 80px;
-    height: 113px;
-    background-color: #64D08F;
+    width: 11.5vh;
+    /* height: 113px; */
+    height: 16.2vh;
+    /* border: solid 1px #F5F5F5; */
+    /* background-color: #64D08F; */
     transition: 0.5s ease;
     opacity: 1.0;
 }
@@ -271,8 +317,10 @@ main section.no-review.edit .cover-no-review-large {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
-    width: 145px;
-    height: 197px;
+    /* width: 145px; */
+    width: 21vh;
+    /* height: 197px; */
+    height: 28.5vh;
     transition: 0.5s ease;
 }
 
@@ -286,8 +334,12 @@ main section.no-review.edit .info {
 }
 
 main section.no-review .stars.stars-no-review {
-    top: 70px;
-    left: 90px;
+    /* top: 70px; */
+    width: 70vh;
+    height: 7vh;
+    top: 8vh;
+    /* left: 90px; */
+    left: 13.5vh;
     transition: 0.2s ease;
 }
 
@@ -297,8 +349,11 @@ main section.no-review.edit .stars.stars-no-review {
 }
 
 main section.no-review .rating {
-    top: 80px;
-    left: 505px;
+    /* top: 80px; */
+    top: 10vh;
+    /* left: 505px; */
+    left: 84.5vh;
+    font-size: 4.5vh;
 }
 
 main section.no-review.edit .rating {
