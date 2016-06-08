@@ -32,24 +32,16 @@ a {
 
 .anirandom-title {
   font-family: "Lato-Black";
-  /* margin-bottom: 90px; */
   margin-bottom: 13vh;
-  /* line-height: 53px; */
   line-height: 7.5vh;
-  /* margin-top: 18px; */
   margin-top: 2.5vh;
-  /* margin-left: 30px; */
   margin-left: 4.3vh;
-  /* font-weight: 900; */
-  /* font-size: 53px; */
   font-size: 7.6vh;
 }
 
 main {
   position: relative;
-  /* height: 498px; */
   height: 71.6vh;
-  /* width: 838px; */
   width: 120.5vh;
   margin: auto;
   margin-top: 0;
@@ -61,21 +53,16 @@ main {
 
 .auth {
   position: absolute;
-  /* top: 15px; */
   top: 2.2vh;
-  /* right: 20px; */
   right: 2.8vh;
   text-align: right;
 }
 
 .auth .auth-text {
-  /* width: 400px; */
   width: 59vh;
   font-family: "Lato-Regular";
   color: #6D6D6D;
-  /* font-size: 22px; */
   font-size: 3vh;
-  /* line-height: 22px; */
   line-height: 3vh;
   z-index: 101;
   cursor: pointer;
@@ -84,16 +71,10 @@ main {
 }
 
 .auth .auth-text a {
-  /* top: 15px; */
-  /* top: 1vh; */
   text-decoration: none;
   font-family: "Lato-Regular";
   color: #6D6D6D;
-  /* margin-left: 25px; */
   margin-left: 2vh;
-  /* font-size: 22px; */
-  /* font-size: 3vh; */
-  /* line-height: 22px; */
   z-index: 101;
   cursor: pointer;
 }
@@ -104,25 +85,21 @@ main {
 
 .auth .auth-bubble {
   position: relative;
-  /* top: 40px; */
   top: 6vh;
   left: 0;
   height: 0;
   z-index: 100;
   opacity: 0.0;
   transition: 0.3s ease;
-  /* border-radius: 3px; */
   border-radius: 0.2vh;
   box-shadow: 0vh 0.1vh 1vh 0vh rgba(0,0,0,0.10), 0vh 1vh 2vh 0vh rgba(52,52,52,0.06), 0vh 1vh 2vh 0vh rgba(52,52,52,0.03);
 }
 
 .auth .auth-bubble.initial-width-297px {
-  /* width: 297px; */
   width: 42.8vh;
 }
 
 .auth .auth-bubble.initial-width-180px {
-  /* width: 180px; */
   width: 19vh;
 }
 
@@ -137,12 +114,10 @@ main {
 }
 
 .auth[section=signup] .auth-bubble {
-  /* height: 360px; */
   height: 51.7vh;
 }
 
 .auth[section=logout] .auth-bubble {
-  /* height: 50px; */
   height: 7vh;
 }
 
@@ -165,12 +140,9 @@ main {
 }
 
 .auth .auth-bubble .section .title {
-  /* margin-top: 20px; */
   margin-top: 2.8vh;
   font-family: "Lato-Medium";
-  /* font-size: 24px; */
   font-size: 3.5vh;
-  /* line-height: 24px; */
   line-height: 3.5vh;
   color: #6D6D6D;
   text-align: center;
@@ -180,22 +152,16 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* margin-top: 20px; */
   margin-top: 2.6vh;
 }
 
 .auth .auth-bubble .section form input[type="text"],
 .auth .auth-bubble .section form input[type="email"],
 .auth .auth-bubble .section form input[type="password"] {
-  /* width: 230px; */
   width: 33.2vh;
-  /* height: 37px; */
   height: 5.4vh;
-  /* border-radius: 3px; */
   border-radius: 0.2vh;
-  /* margin-bottom: 13px; */
   margin-bottom: 1.9vh;
-  /* padding-left: 10px; */
   padding-left: 1.3vh;
   background-color: #fffdfe;
   font-family: "Lato-Light";
@@ -207,15 +173,11 @@ main {
 }
 
 .auth .auth-bubble .section form input[type="submit"] {
-  /* width: 243px; */
   width: 35vh;
-  /* height: 35px; */
   height: 5vh;
   border: none;
-  /* border-radius: 3px; */
   border-radius: 0.2vh;
   background-color: #809BBD;
-  /* font-size: 18px; */
   font-size: 2.5vh;
   font-family: "Lato-Light";
   color: white;
@@ -224,16 +186,12 @@ main {
 
 .auth .auth-bubble .section .goto-button {
   position: absolute;
-  /* right: 28px; */
   right: 4vh;
-  /* bottom: 13px; */
-  bottom: 2.75vh;
+  bottom: 3vh;
   font-family: "Lato-Medium";
   color: #6D6D6D;
-  /* font-size: 14px; */
   font-size: 2vh;
-  /* line-height: 24px; */
-  line-height: 2.5vh;
+  line-height: 1vh;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -245,28 +203,20 @@ main {
 .auth .auth-bubble .triangle {
   position: absolute;
   overflow: hidden;
-  /* top: -75px; */
   top: -10.8vh;
-  /* right: 5px; */
   right: 0.8vh;
-  /* width: 75px; */
   width: 11vh;
-  /* height: 75px; */
   height: 10.8vh;
 }
 
 .auth .auth-bubble .triangle::after {
   content: "";
   position: absolute;
-  /* width: 50px; */
   width: 7vh;
-  /* height: 50px; */
   height: 7vh;
   background: white;
   transform: rotate(45deg);
-  /* top: 75px; */
   top: 10.8vh;
-  /* left: 25px; */
   left: 4vh;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.10);
 }
@@ -275,16 +225,12 @@ main {
   text-align: left;
   position: absolute;
   font-family: "Lato-Regular";
-  /* font-size: 18px; */
   font-size: 2.6vh;
   color: #6D6D6D;
-  /* line-height: 18px; */
   line-height: 3.1vh;
   text-decoration: none;
   width: 100px;
-  /* left: 14px; */
   left: 2vh;
-  /* top: 13px; */
   top: 1.9vh;
 }
 

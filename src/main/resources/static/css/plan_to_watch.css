@@ -1,25 +1,17 @@
 main .plan_to_watch {
-    /* top: 161px; */
     font-family: "Lato-Regular";
-    /* font-size: 30px; */
     font-size: 4.3vh;
     color: #5B5B5B;
-    /* line-height: 36px; */
     line-height: 5.2vh;
-    /* margin-bottom: 12px; */
     margin-bottom: 1.8vh;
 }
 
 main section {
-    /* width: 833px; */
     width: 120vh;
-    /* height: 113px; */
     height: 16vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    /* border-radius: 4px; */
     border-radius: 0.4vh;
-    /* margin-bottom: 18px; */
     margin-bottom: 2.5vh;
     transition: 0.3s ease;
 }
@@ -38,24 +30,19 @@ main section .cover {
     float: left;
     width: 80px;
     width: 11.5vh;
-    /* height: 113px; */
     height: 16.2vh;
-    /* border: solid 1px #F5F5F5; */
-    /* background-color: #64D08F; */
     transition: 0.5s ease;
     opacity: 1.0;
 }
 
 main section .info {
     float: left;
-    /* width: 707px; */
     width: 101vh;
 }
 
 
 main section .info .drop-down-more .more {
     position: absolute;
-    /* left: 780px; */
     left: 115vh;
     background: url("../images/more.svg");
     margin-top: 8px;
@@ -71,27 +58,19 @@ main section .info .drop-down-more .bubble {
 }
 
 main section .info .drop-down-more.show .bubble {
-    /* right: 50px; */
     right: 4.5vh;
     position: absolute;
-    /* margin-top: 40px; */
     margin-top: 5vh;
-    /* height: 71px; */
     height: 9vh;
-    /* width: 158px; */
     width: 25vh;
     background: white;
-    /* border-radius: 4px; */
     border-radius: 0.4vh;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
-    /* margin-left: -74px; */
 }
 
 main section .info .drop-down-more.show .bubble .options {
     font-family: "Lato-Regular";
-    /* margin-left: 12px; */
     margin-left: 1.4vh;
-    /* font-size: 17px; */
     font-size: 2.4vh;
     margin-bottom: 0.2vh;
     color: #6D6D6D;
@@ -103,7 +82,6 @@ main section .info .drop-down-more.show .bubble .options:hover {
 }
 
 main section .info .drop-down-more.show .bubble .options.move {
-    /* margin-top: 11px; */
     margin-top: 1.4vh;
 }
 
@@ -114,11 +92,8 @@ main section .info .drop-down-menu.show .bubble .options.remove {
 main section .info .anime-title {
     padding-left: 2.4vh;
     margin-top: 3vh;
-    /* left: 154px; */
-    /* width: 600px; */
     width: 90vh;
     font-family: "Lato-Regular";
-    /* font-size: 24px; */
     font-size: 3.5vh;
     color: #5B5B5B;
     line-height: 0.8em;
@@ -142,7 +117,6 @@ main section .info .stars .stars-fill {
 }
 
 main section .info .rating {
-    /* margin-top: -36px; */
     margin-top: -5.2vh;
     margin-left: 463px;
     margin-left: 71vh;
@@ -156,51 +130,65 @@ main section .info .rating {
 main .no-image {
     position: absolute;
     margin: auto;
-    margin-top: 180px;
+    /* margin-top: 180px; */
+    margin-top: 26vh;
     background-color: #64D08F;
-    width: 300px;
-    height: 150px;
+    /* width: 300px; */
+    width: 44vh;
+    /* height: 150px; */
+    height: 24vh;
 }
 
 main .no-text {
-    width: 700px;
+    /* width: 700px; */
+    width: 100vh;
     font-family: "Lato-Light";
-    top: 124px;
-    left: 101px;
+    /* top: 124px; */
+    top: 18vh;
+    /* left: 101px; */
+    left: 15vh;
     position: relative;
     color: #757575;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 4.4vh;
 }
 
 .search {
     overflow: hidden;
     position: absolute;
-    width: 842px;
-    height: 52px;
+    /* width: 842px; */
+    width: 121vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 3px;
+    /* border-radius: 3px; */
+    border-radius: 0.2vh;
 }
 
 .search.open {
-    height: 360px;
+    height: auto;
 }
 
 .search-icon {
     background-image: url("../images/search.svg");
-    margin-left: 10px;
-    top: 8px;
-    width: 37px;
+    /* margin-left: 10px; */
+    margin-left: 1.9vh;
+    /* top: 8px; */
+    top: 1.5vh;
+    /* width: 37px; */
+    width: 4.5vh;
     background-size: cover;
-    height: 37px;
+    /* height: 37px; */
+    height: 4.5vh;
     background-repeat: no-repeat;
     position: absolute;
 }
 
 .search ul li .image {
-    left: 0px;
-    width: 57px;
-    height: 74px;
+    left: 0;
+    /* width: 57px; */
+    width: 8vh;
+    /* height: 74px; */
+    height: 10.9vh;
     background-color: #6D6D6D;
     position: absolute;
     background-size: cover;
@@ -208,25 +196,31 @@ main .no-text {
 }
 
 .search ul li .title {
-    padding-top: 8px;
-    top: 65px;
+    /* padding-top: 8px; */
+    padding-top: 1.1vh;
     font-family: "Lato-Regular";
-    margin-left: 56px;
-    font-size: 22px;
+    /* margin-left: 56px; */
+    margin-left: 8vh;
+    /* font-size: 22px; */
+    font-size: 3.1vh;
     color: black;
     margin-bottom: 3px;
 }
 
 .search ul li .rating {
-    margin-top: 8px;
-    margin-left: 399px;
+    /* margin-top: 8px; */
+    margin-top: 1.2vh;
+    /* margin-left: 399px; */
+    margin-left: 57.5vh;
     font-family: "Lato-Regular";
-    font-size: 21px;
+    /* font-size: 21px; */
+    font-size: 3vh;
     color: black;
 }
 
 .search ul li .year {
-    margin-top: 1px;
+    /* margin-top: 1px; */
+    margin-top: 0.2vh;
     float: right;
     font-family: "Lato-Regular";
     color: black;
@@ -244,26 +238,32 @@ main .no-text {
 
 .search ul li {
     position: relative;
-    height: 57px;
-    padding-left: 20px;
+    /* height: 57px; */
+    height: 8.7vh;
+    /* padding-left: 20px; */
+    padding-left: 2.8vh;
     display: block;
-    margin-bottom: 17px;
+    /* margin-bottom: 17px; */
+    margin-bottom: 2.3vh;
 }
 
 .search .tip {
     position: relative;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     box-sizing: border-box;
     border-bottom: 1px solid #D5D4D4;
 }
 
 .search .stars {
     position: absolute;
-    margin-left: 51px;
+    /* margin-left: 51px; */
+    margin-left: 7.5vh;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 340px;
-    height: 34px;
+    /* width: 340px; */
+    width: 48.5vh;
+    /* height: 34px; */
+    height: 5vh;
 }
 
 .search .stars-fill {
@@ -274,20 +274,31 @@ main .no-text {
 
 .search ul {
     margin-top: 0;
-    margin-right: 5px;
-    height: 304px;
+    overflow: auto;
+    /* margin-right: 5px; */
+    /* margin-right: 0.6vh; */
+    /* max-height: 304px; */
+    max-height: 48vh;
+    height: auto;
+    /* height: 304px; */
     overflow-x: hidden;
     overflow-y: scroll;
     padding: 0;
+    margin: 0;
 }
 
 .search input[type="text"] {
     font-family: "Lato-Light";
     border: none;
     width: 789px;
-    margin-left: 52px;
-    height: 50px;
-    font-size: 20px;
-    padding-left: 8px;
-    outline: none;
+    width: 112vh;
+    /* margin-left: 52px; */
+    margin-left: 7.8vh;
+    /* height: 50px; */
+    height: 7vh;
+    /* font-size: 20px; */
+    font-size: 2.8vh;
+    /* padding-left: 8px; */
+    padding-left: 1.2vh;
+    /* outline: none; */
 }
