@@ -1,19 +1,26 @@
 main .plan_to_watch {
-    top: 165px;
+    /* top: 161px; */
     font-family: "Lato-Regular";
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 4.3vh;
     color: #5B5B5B;
-    line-height: 36px;
-    margin-bottom: 12px;
+    /* line-height: 36px; */
+    line-height: 5.2vh;
+    /* margin-bottom: 12px; */
+    margin-bottom: 1.8vh;
 }
 
 main section {
-    width: 833px;
-    height: 113px;
+    /* width: 833px; */
+    width: 120vh;
+    /* height: 113px; */
+    height: 16vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 4px;
-    margin-bottom: 18px;
+    /* border-radius: 4px; */
+    border-radius: 0.4vh;
+    /* margin-bottom: 18px; */
+    margin-bottom: 2.5vh;
     transition: 0.3s ease;
 }
 
@@ -26,28 +33,35 @@ main section.hidden {
 
 main section .cover {
     background-size: contain;
+    background-repeat: repeat-y;
     background-position: center;
     float: left;
     width: 80px;
-    height: 113px;
-    background-color: #64D08F;
+    width: 11.5vh;
+    /* height: 113px; */
+    height: 16.2vh;
+    /* border: solid 1px #F5F5F5; */
+    /* background-color: #64D08F; */
+    transition: 0.5s ease;
+    opacity: 1.0;
 }
 
 main section .info {
     float: left;
-    width: 707px;
+    /* width: 707px; */
+    width: 101vh;
 }
 
 
 main section .info .drop-down-more .more {
     position: absolute;
-    left: 780px;
+    /* left: 780px; */
+    left: 115vh;
     background: url("../images/more.svg");
-    margin-left: 10px;
     margin-top: 8px;
-    width: 37px;
+    width: 4vh;
     background-size: cover;
-    height: 37px;
+    height: 4vh;
     background-repeat: no-repeat;
 }
 
@@ -57,21 +71,29 @@ main section .info .drop-down-more .bubble {
 }
 
 main section .info .drop-down-more.show .bubble {
-    right: 50px;
+    /* right: 50px; */
+    right: 4.5vh;
     position: absolute;
-    margin-top: 40px;
-    height: 71px;
-    width: 158px;
+    /* margin-top: 40px; */
+    margin-top: 5vh;
+    /* height: 71px; */
+    height: 9vh;
+    /* width: 158px; */
+    width: 25vh;
     background: white;
-    border-radius: 4px;
+    /* border-radius: 4px; */
+    border-radius: 0.4vh;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
-    margin-left: -74px;
+    /* margin-left: -74px; */
 }
 
 main section .info .drop-down-more.show .bubble .options {
     font-family: "Lato-Regular";
-    margin-left: 12px;
-    font-size: 17px;
+    /* margin-left: 12px; */
+    margin-left: 1.4vh;
+    /* font-size: 17px; */
+    font-size: 2.4vh;
+    margin-bottom: 0.2vh;
     color: #6D6D6D;
     cursor: pointer;
 }
@@ -81,7 +103,8 @@ main section .info .drop-down-more.show .bubble .options:hover {
 }
 
 main section .info .drop-down-more.show .bubble .options.move {
-    margin-top: 11px;
+    /* margin-top: 11px; */
+    margin-top: 1.4vh;
 }
 
 main section .info .drop-down-menu.show .bubble .options.remove {
@@ -89,22 +112,27 @@ main section .info .drop-down-menu.show .bubble .options.remove {
 }
 
 main section .info .anime-title {
-    padding-left: 21px;
-    padding-top: 23px;
+    padding-left: 2.4vh;
+    margin-top: 3vh;
+    /* left: 154px; */
+    /* width: 600px; */
+    width: 90vh;
     font-family: "Lato-Regular";
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 3.5vh;
     color: #5B5B5B;
-    line-height: 0.75em;
-    margin-bottom: 16px;
+    line-height: 0.8em;
 }
 
 main section .info .stars {
-    margin-top: -3px;
-    margin-left: 15px;
+    margin-top: 1.5vh;
+    margin-left: 1.6vh;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 436px;
-    height: 44px;
+    width: 68.3vh;
+    height: 7vh;
+    left: 13.5vh;
+    transition: 0.2s ease;
 }
 
 main section .info .stars .stars-fill {
@@ -114,10 +142,13 @@ main section .info .stars .stars-fill {
 }
 
 main section .info .rating {
-    margin-top: -33px;
+    /* margin-top: -36px; */
+    margin-top: -5.2vh;
     margin-left: 463px;
+    margin-left: 71vh;
     font-family: "Lato-Regular";
     font-size: 27px;
+    font-size: 3.9vh;
     color: #5B5B5B;
     line-height: 27px;
 }

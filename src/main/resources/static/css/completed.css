@@ -37,8 +37,9 @@ main section {
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
     /* border-radius: 4px; */
-    margin-bottom: 18px;
-    /* transition: 0.3s ease; */
+    /* margin-bottom: 18px; */
+    margin-bottom: 2.4vh;
+    transition: 0.3s ease;
 }
 
 main section.hidden {
@@ -62,17 +63,17 @@ main section .cover {
 main section .drop-down-more .more {
     position: absolute;
     /* left: 780px; */
-    left: 113.5vh;
+    left: 114.5vh;
     top: 0;
     background: url("../images/more.svg");
     /* margin-left: 10px; */
     /* margin-top: 8px; */
     margin-top: 1vh;
     /* width: 37px; */
-    width: 5vh;
+    width: 4vh;
     background-size: cover;
     height: 37px;
-    height: 5vh;
+    height: 4vh;
     background-repeat: no-repeat;
 }
 
@@ -83,21 +84,29 @@ main section .drop-down-more .bubble {
 }
 
 main section .drop-down-more.show .bubble {
-    right: 50px;
+    /* right: 50px; */
+    right: 4.5vh;
     position: absolute;
-    margin-top: 40px;
-    height: 71px;
-    width: 158px;
+    /* margin-top: 40px; */
+    margin-top: 5.2vh;
+    /* height: 71px; */
+    height: 9.5vh;
+    /* width: 158px; */
+    width: 23vh;
     background: white;
     border-radius: 4px;
+    border-radius: 0.4vh;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
-    margin-left: -74px;
+    /* margin-left: -74px; */
+    /* margin-left: -10.5vh; */
 }
 
 main section .drop-down-more.show .bubble .options {
     font-family: "Lato-Regular";
-    margin-left: 12px;
-    font-size: 17px;
+    /* margin-left: 12px; */
+    margin-left: 1.8vh;
+    /* font-size: 17px; */
+    font-size: 2.4vh;
     color: #6D6D6D;
     cursor: pointer;
 }
@@ -107,11 +116,13 @@ main section .drop-down-more.show .bubble .options:hover {
 }
 
 main section .drop-down-more.show .bubble .options.edit {
-    margin-top: 11px;
+    /* margin-top: 11px; */
+    margin-top: 1.3vh;
 }
 
 main section .drop-down-more.show .bubble .options.remove {
-    margin-top: 7px;
+    /* margin-top: 7px; */
+    margin-top: 1vh;
 }
 
 main section .anime-title {
@@ -162,7 +173,7 @@ main section .anime-title span:hover::after {
 main section .synopsis {
     position: absolute;
     /* top: 38px; */
-    top: 6.4vh;
+    top: 6.8vh;
     /* left: 154px; */
     left: 22.4vh;
     font-family: Lato-Light;
@@ -215,33 +226,47 @@ main section .hidden-edit {
 
 main section .hidden-edit textarea {
     z-index: 0;
-    border-radius: 3px;
-    margin-top: 1px;
+    /* border-radius: 3px; */
+    border-radius: 0.2vh;
+    /* margin-top: 1px; */
     position: absolute;
-    top: 56px;
-    left: 167px;
-    width: 605px;
-    height: 75px;
+    /* top: 56px; */
+    top: 7.5vh;
+    /* left: 167px; */
+    left: 23.5vh;
+    /* width: 605px; */
+    width: 87.5vh;
+    /* height: 75px; */
+    height: 11vh;
     /* border: 1px solid #E7E7E7; */
     background-color: #fffdfe;
     font-family: "Lato-Light";
     font-size: 18px;
+    font-size: 2.6vh;
     font-weight: 100;
     color: #cecece;
     border: 1px solid #E7E7E7;
-    padding-left: 10px;
+    padding-left: 8px;
+    padding-top: 0.5vh;
+    resize: none;
 }
 
 main section .hidden-edit input[type="submit"] {
     top: 148px;
+    top: 21.5vh;
     left: 686px;
+    left: 98.5vh;
     position: absolute;
-    width: 100px;
-    height: 35px;
+    /* width: 100px; */
+    width: 14vh;
+    /* height: 35px; */
+    height: 5vh;
     border: none;
-    border-radius: 3px;
+    /* border-radius: 3px; */
+    border-radius: 0.2vh;
     background-color: #809BBD;
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 2.5vh;
     font-family: "Lato-Light";
     color: white;
     cursor: pointer;
@@ -295,8 +320,8 @@ main section.no-review.edit .anime-title {
 }
 
 main section.no-review .cover-no-review {
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat-y;
     background-position: center;
     float: left;
     width: 80px;
@@ -345,7 +370,11 @@ main section.no-review .stars.stars-no-review {
 
 main section.no-review.edit .stars.stars-no-review {
     top: 146px;
+    top: 20.5vh;
+    width: 64vh;
+    height: 6.5vh;
     left: 154px;
+    left: 23vh;
 }
 
 main section.no-review .rating {
@@ -358,7 +387,9 @@ main section.no-review .rating {
 
 main section.no-review.edit .rating {
     top: 154px;
+    top: 22vh;
     left: 570px;
+    left: 89vh;
 }
 
 main .search-icon {

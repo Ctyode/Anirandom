@@ -212,7 +212,7 @@ main .info .synopsis {
     /* width: 543px; */
     width: 78vh;
     height: 176px;
-    height: 25.6vh;
+    height: 25vh;
     color: #626262;
     font-size: 18px;
     font-size: 2.58vh;
@@ -241,7 +241,7 @@ main .info .rating {
     font-size: 4vh;
     position: absolute;
     left: 37.3vh;
-    top: 51.5vh;
+    top: 50vh;
 }
 
 main .info .rating::before {
@@ -262,7 +262,7 @@ main .info .love {
     /* left: 728px; */
     left: 104.5vh;
     /* top: 361px; */
-    top: 52vh;
+    top: 50vh;
 }
 
 main .info .love .love-button {
