@@ -1,7 +1,11 @@
 $(function () {
+    $(document.body).click(function() {
+        $(".drop-down-menu").removeClass("open");
+    });
     $(".drop-down-menu").each(function() {
         var $title = $(this).find(".title");
-        $(this).click(function() {
+        $(this).click(function(e) {
+            e.stopPropagation();
             var hasClass = $(this).hasClass("open");
             $(".drop-down-menu").removeClass("open");
             if(!hasClass) {

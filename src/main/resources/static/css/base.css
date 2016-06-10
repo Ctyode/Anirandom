@@ -59,24 +59,27 @@ main {
 }
 
 .auth .auth-text {
-  width: 59vh;
   font-family: "Lato-Regular";
   color: #6D6D6D;
   font-size: 3vh;
   line-height: 3vh;
   z-index: 101;
-  cursor: pointer;
   position: absolute;
+  float: right;
   right: 0;
+  white-space: nowrap;
 }
 
 .auth .auth-text a {
   text-decoration: none;
   font-family: "Lato-Regular";
   color: #6D6D6D;
-  margin-left: 2vh;
   z-index: 101;
   cursor: pointer;
+}
+
+.auth .auth-text a:not(:first-child) {
+  margin-left: 2vh;
 }
 
 .auth .auth-text a:hover {
