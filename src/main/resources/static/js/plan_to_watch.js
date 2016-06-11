@@ -68,7 +68,7 @@ $(function() {
                '</div>' +
                '<div class="drop-down-search">' +
                '<div class="more"></div>' +
-               '<div class="bubble-search">' +
+               '<div class="bubble-search" data-anime-id=' + p["_id"] + '>' +
                '<div class="search-add-to add-to-plan-to-watch">Plan to watch</div>' +
                '<div class="search-add-to add-to-completed">Completed</div>' +
                '</div></div>' + '</li>'
@@ -87,12 +87,12 @@ $(function() {
               $drop_down_search.toggleClass("show");
             });
             $(".add-to-plan-to-watch").click(function () {
-                $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".info").attr("data-anime-id")}, function (data) {
+                $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".bubble-search").attr("data-anime-id")}, function (data) {
                     console.log(data);
                 });
             });
             $(".add-to-completed").click(function () {
-                $.getJSON("/anime/add_to_completed_list", {anime: $(".info").attr("data-anime-id")}, function (data) {
+                $.getJSON("/anime/add_to_completed_list", {anime: $(".bubble-search").attr("data-anime-id")}, function (data) {
                     console.log(data);
                 });
             });

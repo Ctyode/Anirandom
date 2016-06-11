@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 @RestController
-public class Anirandom extends Base {
+public class Randomizer extends Base {
 
     @RequestMapping("/json/anirandom.json")
     public String get(@RequestParam(value = "genre", defaultValue = "undefined") String genre,
