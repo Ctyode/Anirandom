@@ -16,7 +16,7 @@ package org.flamierawieo.anirandom.controller;
 //import java.util.stream.Collectors;
 
 //@RestController
-public class PlanToWatchList extends BaseController {
+public class PlanToWatchList extends Base {
 
 //    private static String template;
 //
@@ -24,7 +24,7 @@ public class PlanToWatchList extends BaseController {
 //        try {
 //            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/plan_to_watch.html")), "UTF-8");
 //        } catch (IOException e) {
-//            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
+//            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, "", e);
 //            template = "Can someone unfuck the situation, please?";
 //        }
 //    }

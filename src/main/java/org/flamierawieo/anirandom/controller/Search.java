@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 import static org.flamierawieo.anirandom.Util.jsonify;
 
 @RestController
-public class SearchController extends BaseController {
+public class Search extends Base {
 
     @RequestMapping("/search")
     public String get(@RequestParam(value = "s") String searchString) {

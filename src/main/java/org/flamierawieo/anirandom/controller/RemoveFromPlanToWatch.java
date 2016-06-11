@@ -1,7 +1,6 @@
 package org.flamierawieo.anirandom.controller;
 
 import org.bson.types.ObjectId;
-import org.flamierawieo.anirandom.orm.Anime;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,11 +13,11 @@ import java.util.stream.Collectors;
 import static org.flamierawieo.anirandom.Util.jsonify;
 
 @RestController
-public class RemoveFromPlanToWatch extends BaseController {
+public class RemoveFromPlanToWatch extends Base {
 
     @RequestMapping("/anime/remove_from_plan_to_watch")
-    public String removeFromPlanToWatchList(HttpServletRequest request,
-                                            @RequestParam(value = "anime") String animeId) {
+    public String get(HttpServletRequest request,
+                      @RequestParam(value = "anime") String animeId) {
         User user = getAuthorizedUser(request);
         if(user != null) {
             ObjectId animeObjectId = new ObjectId(animeId);

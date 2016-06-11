@@ -1,4 +1,4 @@
-package org.flamierawieo.anirandom.controller;
+package org.flamierawieo.anirandom.controller.auth;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @RestController
-public class LogOutController {
+public class LogOut {
 
     @RequestMapping("/logout")
-    public void handle(HttpServletResponse response) throws IOException {
+    public void get(HttpServletResponse response) throws IOException {
         response.addCookie(new Cookie("access_token", null));
         response.sendRedirect("/");
     }

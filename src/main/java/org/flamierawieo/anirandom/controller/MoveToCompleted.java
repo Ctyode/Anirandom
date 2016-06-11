@@ -16,11 +16,11 @@ import java.util.stream.Collectors;
 import static org.flamierawieo.anirandom.Util.jsonify;
 
 @RestController
-public class MoveToCompleted extends BaseController {
+public class MoveToCompleted extends Base {
 
     @RequestMapping("/anime/move_to_completed")
-    public String moveToCompleted(HttpServletRequest request,
-                                  @RequestParam(value = "anime") String animeId) {
+    public String get(HttpServletRequest request,
+                      @RequestParam(value = "anime") String animeId) {
         User user = getAuthorizedUser(request);
         if(user != null) {
             ObjectId animeObjectId = new ObjectId(animeId);

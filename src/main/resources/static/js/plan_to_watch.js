@@ -58,12 +58,20 @@ $(function() {
 
     // what the fuck am i doing?
     var item = function(p) {
-        return '<li>' +
-               '<div class="image" style="background-image:url('+ p["image"] +')"></div>' +
-               '<div class="title">' + p["title"] + '<div class="year">'+ p["year"] +'</div></div>' +
+        return '<li>' + '<div class="image" style="background-image:url('+ p["image"] +')"></div>' +
+               '<div class="title-container">' +
+               '<div class="title">' + p["title"] + '</div>' +
+               '<div class="year">('+ p["year"] + ')</div>' +
+               '</div>' +
                '<div class="stars"><div class="stars-fill" style="width: ' + (p["rating"] * 10) +'%"></div></div>' +
                '<div class="rating">' + p["rating"] + '</div>' +
-               '</li>'
+               '</div>' +
+               '<div class="drop-down-search">' +
+               '<div class="more"></div>' +
+               '<div class="bubble-search">' +
+               '<div class="search-add-to add-to-plan-to-watch">Plan to watch</div>' +
+               '<div class="search-add-to add-to-completed">Completed</div>' +
+               '</div></div>' + '</li>'
     }
     suggestions.onValue(function(v) {
         var $list = $(".search ul");
@@ -71,5 +79,24 @@ $(function() {
         for(var i = 0; i < v.results.length; i++) {
             $list.append(item(v.results[i]));
         }
+
+        $list.find("li").each(function() {
+            var $li = $(this);
+            var $drop_down_search = $li.find(".drop-down-search");
+              $drop_down_search.find(".more").click(function() {
+              $drop_down_search.toggleClass("show");
+            });
+            $(".add-to-plan-to-watch").click(function () {
+                $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".info").attr("data-anime-id")}, function (data) {
+                    console.log(data);
+                });
+            });
+            $(".add-to-completed").click(function () {
+                $.getJSON("/anime/add_to_completed_list", {anime: $(".info").attr("data-anime-id")}, function (data) {
+                    console.log(data);
+                });
+            });
+        });
     });
+
 });

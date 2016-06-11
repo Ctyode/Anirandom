@@ -13,11 +13,11 @@ import java.util.stream.Collectors;
 import static org.flamierawieo.anirandom.Util.jsonify;
 
 @RestController
-public class RemoveFromCompleted extends BaseController {
+public class RemoveFromCompleted extends Base {
 
     @RequestMapping("/anime/remove_from_completed")
-    public String removeFromCompletedList(HttpServletRequest request,
-                                          @RequestParam(value = "anime") String animeId) {
+    public String get(HttpServletRequest request,
+                      @RequestParam(value = "anime") String animeId) {
         User user = getAuthorizedUser(request);
         if(user != null) {
             ObjectId animeObjectId = new ObjectId(animeId);
