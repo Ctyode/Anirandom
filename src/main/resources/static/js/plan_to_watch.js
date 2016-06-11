@@ -86,13 +86,13 @@ $(function() {
               $drop_down_search.find(".more").click(function() {
               $drop_down_search.toggleClass("show");
             });
-            $(".add-to-plan-to-watch").click(function () {
-                $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".bubble-search").attr("data-anime-id")}, function (data) {
+            $drop_down_search.find(".add-to-plan-to-watch").click(function () {
+                $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $drop_down_search.find(".bubble-search").attr("data-anime-id")}, function (data) {
                     console.log(data);
                 });
             });
-            $(".add-to-completed").click(function () {
-                $.getJSON("/anime/add_to_completed_list", {anime: $(".bubble-search").attr("data-anime-id")}, function (data) {
+            $drop_down_search.find(".add-to-completed").click(function () {
+                $.getJSON("/anime/add_to_completed_list", {anime: $drop_down_search.find(".bubble-search").attr("data-anime-id")}, function (data) {
                     console.log(data);
                 });
             });
