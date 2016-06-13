@@ -25,18 +25,18 @@ body {
   max-width: 1366px;
 }
 
-a {
-  text-decoration: none;
-  color: #64D08F;
-}
-
 .anirandom-title {
   font-family: "Lato-Black";
   margin-bottom: 13vh;
   line-height: 7.5vh;
   margin-top: 2.5vh;
-  margin-left: 4.3vh;
+  margin-left: 2.3vh;
   font-size: 7.6vh;
+}
+
+.anirandom-title a {
+  text-decoration: none;
+  color: #64D08F;
 }
 
 main {

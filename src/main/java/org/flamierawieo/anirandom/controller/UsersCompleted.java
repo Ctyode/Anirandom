@@ -32,6 +32,11 @@ public class UsersCompleted extends Base {
         User user = getAuthorizedUser(request);
         if(user != null && user.completedList != null) {
             context.put("completed_list", user.completedList.stream().map(Review::toMap).collect(Collectors.toList()));
+            context.put("has_unreviewed_animes", user.completedList.stream().filter(a -> a.review == null).findFirst().isPresent());
+            context.put("has_reviewed_animes", user.completedList.stream().filter(a -> a.review != null && a.review.length() > 0).findFirst().isPresent());
+
+//            System.out.println("has unreviewed" + user.completedList.stream().filter(a -> a.review == null).findFirst().isPresent());
+//            System.out.println("has reviewed" + user.completedList.stream().filter(a -> a.review != null && a.review.length() > 0).findFirst().isPresent());
         }
         return context;
     }

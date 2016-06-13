@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/search.css">
+{% endblock %}
+
+{% block main %}
+    {% if authorized %}
+        <div class="no-text">You didn't add anything yet. <br> You're a bad person and you should be ashamed! When you decide to add something to the list, send it to your friends for them to laugh at how much <br> of a pleb you are, just tell them your username.</div>
+        <div class="no-image"></div>
+        <div class="search">
+            <div class="search-icon"></div>
+            <input type="text" placeholder="priv kak dela suchki">
+            <div class="search-icon"></div>
+            <ul>
+            </ul>
+        </div>
+    {% else %}
+        <div class="no-auth-text"></div>
+        <div class="no-auth-image"></div>
+    {% endif %}
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script src="/js/search.js"></script>
+{% endblock %}

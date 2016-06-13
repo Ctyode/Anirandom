@@ -18,64 +18,72 @@
       </div>
       <div id="container">
         <div id="reviewed">
-          {% for review in completed_list %}
-            {% if review.review is not empty %}
-              <section>
-                <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
-                <div class="drop-down-more">
-                  <div class="more"></div>
-                  <div class="bubble">
-                    <div class="options edit">Edit review</div>
-                    <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
-                </div>
-                </div>
-                <div class="anime-title">
-                  <span>{{ review.anime.title }}</span>
-                </div>
-                <div class="synopsis">{{ review.review }}</div>
-                <div class="stars">
-                  <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
-                </div>
-                <div class="rating">{{ review.rating }}</div>
-                <div class="hidden-edit">
-                  <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                  <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                  <textarea name="review" placeholder="napishi svoe voshititelnoe mnenie"></textarea>
-                  <input type="submit" value="Davai">
-                </div>
-              </section>
-            {% endif %}
-          {% endfor %}
+          {% if has_reviewed_animes %}
+            {% for review in completed_list %}
+              {% if review.review is not empty %}
+                <section>
+                  <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
+                  <div class="drop-down-more">
+                    <div class="more"></div>
+                    <div class="bubble">
+                      <div class="options edit">Edit review</div>
+                      <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
+                  </div>
+                  </div>
+                  <div class="anime-title">
+                    <span>{{ review.anime.title }}</span>
+                  </div>
+                  <div class="synopsis">{{ review.review }}</div>
+                  <div class="stars">
+                    <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                  </div>
+                  <div class="rating">{{ review.rating }}</div>
+                  <div class="hidden-edit">
+                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
+                    <textarea name="review" placeholder="napishi svoe voshititelnoe mnenie"></textarea>
+                    <input type="submit" value="Davai">
+                  </div>
+                </section>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            <p>peedor</p>
+          {% endif %}
         </div>
         <div id="unreviewed">
-          {% for review in completed_list %}
-            {% if review.review is empty %}
-              <section class="no-review">
-                <div class="cover-no-review" style="background-image:url({{ review.anime.image }})"></div>
-                <div class="cover-no-review-large" style="background-image:url({{ review.anime.image }})"></div>
-                <div class="drop-down-more">
-                  <div class="more"></div>
-                  <div class="bubble">
-                    <div class="options edit">Edit review</div>
-                    <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
+          {% if has_unreviewed_animes %}
+            {% for review in completed_list %}
+              {% if review.review is empty %}
+                <section class="no-review">
+                  <div class="cover-no-review" style="background-image:url({{ review.anime.image }})"></div>
+                  <div class="cover-no-review-large" style="background-image:url({{ review.anime.image }})"></div>
+                  <div class="drop-down-more">
+                    <div class="more"></div>
+                    <div class="bubble">
+                      <div class="options edit">Edit review</div>
+                      <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
+                    </div>
                   </div>
-                </div>
-                <div class="anime-title">
-                  <span>{{ review.anime.title }}</span>
-                </div>
-                <div class="stars stars-no-review">
-                  <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
-                </div>
-                <div class="rating">{{ review.rating }}</div>
-                <div class="hidden-edit">
-                  <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                  <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                  <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
-                  <input type="submit" value="Blyad">
-                </div>
-              </section>
-            {% endif %}
-          {% endfor %}
+                  <div class="anime-title">
+                    <span>{{ review.anime.title }}</span>
+                  </div>
+                  <div class="stars stars-no-review">
+                    <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                  </div>
+                  <div class="rating">{{ review.rating }}</div>
+                  <div class="hidden-edit">
+                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
+                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                    <input type="submit" value="Blyad">
+                  </div>
+                </section>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            <p>peeeeeedor</p>
+          {% endif %}
         </div>
       </div>
     {% else %}

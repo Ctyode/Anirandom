@@ -127,210 +127,36 @@ main section .info .rating {
     line-height: 27px;
 }
 
-main .no-image {
-    position: absolute;
-    margin-top: 47vh;
-    background-color: #64D08F;
-    width: 44vh;
-    height: 24vh;
-    left: 38vh;
+.go_to_search {
+    margin: 21vh auto 0 auto;
+    line-height: 6.5vh;
+    text-align: center;
+    border-radius: 0.3vh;
+    width: 18vh;
+    height: 6.5vh;
+    background: #64D08F;
+    color: white;
+    font-family: "Lato-Regular";
+    display: block;
+    font-size: 2.5vh;
+    text-decoration: none;
 }
 
-main .no-text {
+.no-image {
+    margin: -5vh auto;
+    height: 28vh;
+    width: 30vh;
+    background-size: cover;
+    background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+}
+
+.no-text {
     text-align: center;
     position: absolute;
-    width: 99vh;
-    font-family: "Lato-Light";
-    top: 15vh;
-    left: 11vh;
-    color: #757575;
-    font-size: 4.4vh;
-}
-
-.search {
-    overflow: hidden;
-    position: absolute;
-    /* width: 842px; */
-    width: 121vh;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    /* border-radius: 3px; */
-    border-radius: 0.2vh;
-}
-
-.search.open {
-}
-
-.search-icon {
-    background-image: url("../images/search.svg");
-    /* margin-left: 10px; */
-    margin-left: 1.9vh;
-    /* top: 8px; */
-    top: 1.5vh;
-    /* width: 37px; */
-    width: 4.5vh;
-    background-size: cover;
-    /* height: 37px; */
-    height: 4.5vh;
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-.search ul li .image {
-    width: 8vh;
-    float: left;
-    height: 11vh;
-    background-color: #6D6D6D;
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.search ul li .title {overflow: hidden;max-width: 95vh;white-space: nowrap;text-overflow: ellipsis;margin-left: 10vh;float: left;}
-
-.search ul li .rating {
-    top: 5.8vh;
-    left: 59.5vh;
-    font-family: "Lato-Regular";
-    font-size: 3vh;
-    color: #2D2D2D;
-    position: absolute;
-}
-
-.search ul li .year {width: 8vh;float: left;margin-left: 1vh;}
-
-.search ul::-webkit-scrollbar {
-    width: 6px;
-}
-
-.search ul::-webkit-scrollbar-thumb {
-    background-color: #BABABA;
-    border-top: 3px solid white;
-    border-bottom: 4px solid white;
-}
-
-.search ul li {
-    position: relative;
-    height: 11vh;
-    width: 117vh;
-    display: block;
-}
-
-.search .tip {
-}
-
-.search .stars {
-    position: absolute;
-    left: 9.5vh;
-    top: 5vh;
-    background-repeat: repeat-x;
-    background-image: url("../images/star.svg");
-    width: 48.5vh;
-    height: 5vh;
-}
-
-.search .stars-fill {
-    background-repeat: repeat-x;
-    background-image: url("../images/star-filled.svg");
-    height: 100%;
-}
-
-.search ul {
-    position: relative;
-    border-top: 1px solid #DEDEDE;
-    top: 1px;
-    overflow: auto;
-    max-height: 48vh;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding: 0;
-    margin: 0;
-}
-
-.search input[type="text"] {
-    font-family: "Lato-Light";
-    border: none;
-    width: 789px;
     width: 112vh;
-    /* margin-left: 52px; */
-    margin-left: 7.8vh;
-    /* height: 50px; */
-    height: 7vh;
-    /* font-size: 20px; */
-    font-size: 2.8vh;
-    /* padding-left: 8px; */
-    padding-left: 1.2vh;
-    /* outline: none; */
-}
-
-.title-container {
-    color: #2D2D2D;
-    display: inline-block;
-    width: 119vh;
-    font-family: "Lato-Regular";
-    font-size: 3vh;
-    cursor: pointer;
-    position: absolute;
-    top: 1vh;
-}
-
-ul li .drop-down-search .more {
-    left: 114.5vh;
-    top: 0;
-    background: url("../images/more.svg");
-    margin-top: 1vh;
-    width: 4vh;
-    background-size: cover;
-    height: 37px;
-    height: 4vh;
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-
-ul li .drop-down-search .bubble-search {
-    height: 0;
-    overflow: hidden;
-}
-
-ul li .drop-down-search.show .bubble-search {
-    right: 4.5vh;
-    position: absolute;
-    margin-top: 5vh;
-    height: 9vh;
-    width: 25vh;
-    background: white;
-    border-radius: 0.4vh;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
-}
-
-ul li .drop-down-search.show .bubble-search {
-    margin-top: 1.2vh;
-    height: 9.2vh;
-    width: 18.5vh;
-    background: white;
-    border-radius: 0.2vh;
-    box-shadow: 0vh 0.2vh 0.8vh 0vh rgba(0,0,0,0.10), 0vh 0.5vh 1.1vh 0vh rgba(52,52,52,0.12);
-    margin-left: -10.4vh;
-}
-
-ul li .drop-down-search.show .bubble-search .search-add-to {
-    font-family: "Lato-Regular";
-    margin-left: 1.4vh;
-    font-size: 2.4vh;
-    color: #6D6D6D;
-    cursor: pointer;
-}
-
-ul li .drop-down-search.show .bubble-search .search-add-to:hover {
-    color: #020202;
-}
-
-ul li .drop-down-search.show .bubble-search .search-add-to.add-to-plan-to-watch {
-    margin-top: 1.2vh;
-}
-
-ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed {
-    margin-top: 0.8vh;
+    font-family: "Lato-Light";
+    margin-top: 26.5vh;
+    left: 4vh;
+    color: #777777;
+    font-size: 3.4vh;
 }
