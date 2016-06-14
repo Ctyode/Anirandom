@@ -317,21 +317,10 @@ main section.no-review.edit .info {
     opacity: 0.0;
 }
 
-main section.no-review .stars.stars-no-review {
-    width: 70vmin;
-    height: 7vmin;
-    top: 8vmin;
-    left: 13.5vmin;
+main section.no-review .stars {
+    top: 20vmin;
+    left: 21.5vmin;
     transition: 0.2s ease;
-}
-
-main section.no-review.edit .stars.stars-no-review {
-    top: 146px;
-    top: 20.5vmin;
-    width: 64vmin;
-    height: 6.5vmin;
-    left: 154px;
-    left: 23vmin;
 }
 
 main section.no-review .rating {

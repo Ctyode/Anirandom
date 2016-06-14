@@ -35,7 +35,7 @@ $(function() {
         });
         $hidden_edit.find("input[type=submit]").click(function() {
             var anime = $hidden_edit.find("input[name=anime]").val();
-            var rating = $hidden_edit.find("input[name=rating]").val();
+            var rating = $stars.attr("data-checked");
             var review = $hidden_edit.find("textarea").val();
             console.log({
                 anime:  anime,
@@ -49,6 +49,7 @@ $(function() {
             }, function(data) {
                 console.log(data);
             });
+            return false;
         });
     });
 });
