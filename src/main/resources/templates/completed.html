@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block main %}
-  {% if authorized %}
+  {% if authorized or other %}
     {% if completed_list is not empty %}
       <div class="completed">
         Completed
