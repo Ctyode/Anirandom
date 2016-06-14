@@ -44,6 +44,11 @@ $(function() {
     suggestions.onValue(function(v) {
         var $list = $(".search ul");
         $list.html("")
+        if(v.results.length == 0) {
+            $list.css("display", "none");
+        } else {
+            $list.css("display", "block");
+        }
         for(var i = 0; i < v.results.length; i++) {
             $list.append(item(v.results[i]));
         }

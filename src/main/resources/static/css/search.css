@@ -19,6 +19,10 @@
     position: absolute;
 }
 
+.search ul {
+    display: none;
+}
+
 .search ul li .image {
     width: 8vh;
     float: left;
@@ -106,7 +110,13 @@
     height: 7vh;
     font-size: 2.8vh;
     padding-left: 1.2vh;
+    background: none;
 }
+
+::-webkit-input-placeholder { color: black; }
+::-moz-placeholder          { color: black; }
+:-moz-placeholder           { color: black; }
+:-ms-input-placeholder      { color: black; }
 
 .title-container {
     color: #2D2D2D;
