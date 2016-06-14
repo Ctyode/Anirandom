@@ -166,33 +166,35 @@ main section .stars {
     height: 6vh;
 }
 
-main section .stars input { opacity: 0.0; }
-
-main section .stars[data-checked="1"] input:nth-child(-n+1) { opacity: 1.0; }
-
-main section .stars[data-checked="2"] input:nth-child(-n+2) { opacity: 1.0; }
-
-main section .stars[data-checked="3"] input:nth-child(-n+3) { opacity: 1.0; }
-
-main section .stars[data-checked="4"] input:nth-child(-n+4) { opacity: 1.0; }
-
-main section .stars[data-checked="5"] input:nth-child(-n+5) { opacity: 1.0; }
-
-main section .stars[data-checked="6"] input:nth-child(-n+6) { opacity: 1.0; }
-
-main section .stars[data-checked="7"] input:nth-child(-n+7) { opacity: 1.0; }
-
-main section .stars[data-checked="8"] input:nth-child(-n+8) { opacity: 1.0; }
-
-main section .stars[data-checked="9"] input:nth-child(-n+9) { opacity: 1.0; }
-
-main section .stars[data-checked="10"] input:nth-child(-n+10) { opacity: 1.0; }
+main section .stars input {
+    opacity: 0.0;
+}
 
 main section .stars .stars-fill {
     background-repeat: repeat-x;
     background-image: url("../images/star-filled.svg");
     height: 100%;
 }
+
+main section .stars[data-checked="1"] .stars-fill { width: 10%; }
+
+main section .stars[data-checked="2"] .stars-fill { width: 20%; }
+
+main section .stars[data-checked="3"] .stars-fill { width: 30%; }
+
+main section .stars[data-checked="4"] .stars-fill { width: 40%; }
+
+main section .stars[data-checked="5"] .stars-fill { width: 50%; }
+
+main section .stars[data-checked="6"] .stars-fill { width: 60%; }
+
+main section .stars[data-checked="7"] .stars-fill { width: 70%; }
+
+main section .stars[data-checked="8"] .stars-fill { width: 80%; }
+
+main section .stars[data-checked="9"] .stars-fill { width: 90%; }
+
+main section .stars[data-checked="10"] .stars-fill { width: 100%; }
 
 main section .rating {
     position: absolute;

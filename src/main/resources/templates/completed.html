@@ -41,12 +41,24 @@
                     <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
                   </div>
                   <div class="rating">{{ review.rating }}</div>
-                  <div class="hidden-edit">
+                  <form class="hidden-edit">
+                    <div class="stars stars-no-review" data-checked="{{ review.rating }}">
+                      <div class="stars-fill"></div>
+                      <input type="radio" name="rating" value="1">
+                      <input type="radio" name="rating" value="2">
+                      <input type="radio" name="rating" value="3">
+                      <input type="radio" name="rating" value="4">
+                      <input type="radio" name="rating" value="5">
+                      <input type="radio" name="rating" value="6">
+                      <input type="radio" name="rating" value="7">
+                      <input type="radio" name="rating" value="8">
+                      <input type="radio" name="rating" value="9">
+                      <input type="radio" name="rating" value="10">
+                    </div>
                     <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
                     <textarea name="review" placeholder="napishi svoe voshititelnoe mnenie"></textarea>
                     <input type="submit" value="Davai">
-                  </div>
+                  </form>
                 </section>
               {% endif %}
             {% endfor %}
@@ -76,6 +88,7 @@
                   <div class="rating">{{ review.rating }}</div>
                   <form class="hidden-edit">
                     <div class="stars stars-no-review" data-checked="{{ review.rating }}">
+                      <div class="stars-fill"></div>
                       <input type="radio" name="rating" value="1">
                       <input type="radio" name="rating" value="2">
                       <input type="radio" name="rating" value="3">
