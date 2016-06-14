@@ -51,8 +51,12 @@ $(function() {
         $list.find("li").each(function() {
             var $li = $(this);
             var $drop_down_search = $li.find(".drop-down-search");
-              $drop_down_search.find(".more").click(function() {
+            $(document.body).click(function(e) {
+              $drop_down_search.removeClass("show");
+            });
+            $drop_down_search.find(".more").click(function(e) {
               $drop_down_search.toggleClass("show");
+              e.stopPropagation();
             });
             $drop_down_search.find(".add-to-plan-to-watch").click(function () {
                 $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $drop_down_search.find(".bubble-search").attr("data-anime-id")}, function (data) {

@@ -2,8 +2,12 @@ $(function() {
     $("section").each(function() {
         var $section = $(this);
         var $drop_down = $section.find(".drop-down-more");
-        $drop_down.find(".more").click(function() {
+        $(document.body).click(function() {
+            $drop_down.removeClass("show");
+        });
+        $drop_down.find(".more").click(function(e) {
             $drop_down.toggleClass("show");
+            e.stopPropagation();
         });
         var $hidden_edit = $section.find(".hidden-edit");
         $drop_down.find(".edit").click(function() {
