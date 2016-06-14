@@ -164,10 +164,17 @@ main section .stars {
     background-image: url("../images/star.svg");
     width: 59vh;
     height: 6vh;
+    white-space: nowrap;
 }
 
 main section .stars input {
     opacity: 0.0;
+    position: relative;
+    top: -5.4vmin;
+    left: 0.5vmin;
+    width: 5vmin;
+    height: 5vmin;
+    margin: 0 0.4vmin 0 0;
 }
 
 main section .stars .stars-fill {
