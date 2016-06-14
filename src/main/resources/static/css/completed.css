@@ -7,6 +7,7 @@ main .completed {
 }
 
 main .completed ul {
+    margin-right: 7vh;
     margin-top: -5vh;
 }
 
@@ -51,10 +52,10 @@ main section .drop-down-more .more {
     top: 0;
     background: url("../images/more.svg");
     margin-top: 1vh;
-    width: 4vh;х
+    width: 4vh;
     background-size: cover;
-    height: 37px;
     height: 4vh;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -71,7 +72,6 @@ main section .drop-down-more.show .bubble {
     height: 9.5vh;
     width: 23vh;
     background: white;
-    border-radius: 4px;
     border-radius: 0.4vh;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
 }
@@ -188,20 +188,17 @@ main section .hidden-edit textarea {
     height: 11vh;
     background-color: #fffdfe;
     font-family: "Lato-Light";
-    font-size: 18px;
     font-size: 2.6vh;
     font-weight: 100;
     color: #cecece;
     border: 1px solid #E7E7E7;
-    padding-left: 8px;
+    padding-left: 1.4vh;
     padding-top: 0.5vh;
     resize: none;
 }
 
 main section .hidden-edit input[type="submit"] {
-    top: 148px;
     top: 21.5vh;
-    left: 686px;
     left: 98.5vh;
     position: absolute;
     width: 14vh;
@@ -213,15 +210,6 @@ main section .hidden-edit input[type="submit"] {
     font-family: "Lato-Light";
     color: white;
     cursor: pointer;
-}
-
-.search {
-    position: absolute;
-    width: 842px;
-    height: 52px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 6px;
 }
 
 main section.edit .hidden-edit {
@@ -320,34 +308,48 @@ main section.no-review.edit .rating {
     left: 89vh;
 }
 
-main .search-icon {
-    background: url("../images/search.svg");
-    margin-left: 10px;
-    margin-top: 8px;
-    width: 37px;
+.go_to_search {
+    margin: 4vh auto 0 auto;
+    line-height: 6.5vh;
+    text-align: center;
+    border-radius: 0.3vh;
+    width: 18vh;
+    height: 6.5vh;
+    background: #64D08F;
+    color: white;
+    font-family: "Lato-Regular";
+    display: block;
+    font-size: 2.5vh;
+    text-decoration: none;
+}
+
+.no-image {
+    margin: -2vh auto;
+    height: 28vh;
+    width: 29vh;
     background-size: cover;
-    height: 37px;
-    background-repeat: no-repeat;
+    background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
 }
 
-main .no-image {
-    margin: auto;
-    margin-top: 180px;
-    background-color: #64D08F;
-    width: 300px;
-    height: 150px;
-}
-
-main .no-text {
-    width: 700px;
+.no-text {
+    margin: 4.5vh auto 0 auto;
+    text-align: center;
+    width: 106vh;
     font-family: "Lato-Light";
-    top: 124px;
-    left: 101px;
-    position: relative;
-    color: #757575;
-    font-size: 30px;
+    color: #777777;
+    font-size: 3.4vh;
 }
 
-.search.open {
-    height: 500px;
+.plus {
+    background-image: url("../images/plus.svg");
+    width: 4vh;
+    height: 4vh;
+    top: 6px;
+    right: 1vh;
+    position: absolute;
+    background-size: cover;
+}
+
+#unreviewed {
+    visibility: hidden;
 }

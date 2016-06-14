@@ -9,6 +9,9 @@
   {% if authorized %}
     {% if plan_to_watch_list is not empty %}
       <div class="plan_to_watch">Plan to watch</div>
+      <a href="/search">
+        <div class="plus"></div>
+      </a>
       {% for anime in plan_to_watch_list %}
         <section>
           <div class="cover" style="background-image:url({{ anime.image }})"></div>
@@ -30,9 +33,9 @@
       {% endfor %}
     {% else %}
       <div class="plan_to_watch">Plan to watch</div>
-      <div class="no-text">You haven't added anything to the "Plan to watch" list. You're not a true weeb! A true weeb should watch at least one title a day. Just use the search.</div>
       <div class="no-image" style="background-image: url(http://data.whicdn.com/images/11666052/original.jpg)"></div>
-      <a href="/search" class="go_to_search">Search</a>
+      <div class="no-text">You haven't added anything to the "Plan to watch" list. You're not a true weeb! A true weeb should watch at least one title a day. Just use the search.</div>
+      <a href="/search" class="go_to_search">SEARCH</a>
     {% endif %}
   {% else %}
     <div class="no-auth-text"></div>

@@ -11,11 +11,14 @@
       <div class="completed">
         Completed
         <ul>
-          <li class="active menuElement" data-tab="reviewed">Reviewed</li>
-          <li class="menuElement" data-tab="unreviewed">Unreviewed</li>
+          <li class="menuElement" data-tab="reviewed">Reviewed</li>
+          <li class="active menuElement" data-tab="unreviewed">Unreviewed</li>
           <!--<li class="slider"></li>-->
         </ul>
       </div>
+      <a href="/search">
+        <div class="plus"></div>
+      </a>
       <div id="container">
         <div id="reviewed">
           {% if has_reviewed_animes %}
@@ -48,7 +51,9 @@
               {% endif %}
             {% endfor %}
           {% else %}
-            <p>peedor</p>
+          <div class="no-image"></div>
+          <div class="no-text">You don't have any reviews! You can change that by adding a comment in the Unreviewed section. Your friends should know your opinion!</div>
+          <a href="/search" class="go_to_search">SEARCH</a>
           {% endif %}
         </div>
         <div id="unreviewed">
@@ -82,14 +87,17 @@
               {% endif %}
             {% endfor %}
           {% else %}
-            <p>peeeeeedor</p>
+            <div class="no-image"></div>
+            <div class="no-text">Your unreviewed list is empty! Either you were a good boy and left a comment about every single title, or you just haven't added anything yet. If you want to add something here, use the search function.</div>
+            <a href="/search" class="go_to_search">SEARCH</a>
           {% endif %}
         </div>
       </div>
     {% else %}
-      <div class="search"><div class="search-icon"></div></div>
-      <div class="no-text">Ty nehoroshii i nichego ne dobavil. Kogda reshish chtot dobavit' v spisok, skin' druziashkam, chtoby posmotreli i porugali tvoi unylie vkusi. Prosto skin' im svoi username, i oni smogut nachat' vypendrivat'sya.</div>
+      <div class="completed">Completed</div>
       <div class="no-image"></div>
+      <div class="no-text">You haven't added anything to the "Plan to watch" list. You're not a true weeb! A true weeb should watch at least one title a day. Just use the search.</div>
+      <a href="/search" class="go_to_search">SEARCH</a>
     {% endif %}
   {% else %}
       <div class="no-auth-text"></div>

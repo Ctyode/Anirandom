@@ -7,8 +7,6 @@
 
 {% block main %}
     {% if authorized %}
-        <div class="no-text">You didn't add anything yet. <br> You're a bad person and you should be ashamed! When you decide to add something to the list, send it to your friends for them to laugh at how much <br> of a pleb you are, just tell them your username.</div>
-        <div class="no-image"></div>
         <div class="search">
             <div class="search-icon"></div>
             <input type="text" placeholder="priv kak dela suchki">
@@ -16,6 +14,8 @@
             <ul>
             </ul>
         </div>
+        <div class="no-image"></div>
+        <div class="no-text">You didn't add anything yet. You're a bad person and you should be ashamed! When you decide to add something to the list, send it to your friends for them to laugh at how much of a pleb you are, just tell them your username.</div>
     {% else %}
         <div class="no-auth-text"></div>
         <div class="no-auth-image"></div>

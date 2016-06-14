@@ -67,8 +67,8 @@ $(function() {
 
         $(".menuElement").click(function() {
 
-            $('#container > *').hide(0)
-
+            $('#container > *').hide(0);
+            $('#unreviewed').css("visibility", "visible");
             var tabID = $(this).data("tab");
             $('#' + tabID).show(0);
 

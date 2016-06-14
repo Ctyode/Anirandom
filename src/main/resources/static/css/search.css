@@ -1,24 +1,19 @@
 .search {
+    z-index: 100500;
     overflow: hidden;
     position: absolute;
-    /* width: 842px; */
     width: 121vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    /* border-radius: 3px; */
     border-radius: 0.2vh;
 }
 
 .search-icon {
     background-image: url("../images/search.svg");
-    /* margin-left: 10px; */
     margin-left: 1.9vh;
-    /* top: 8px; */
     top: 1.5vh;
-    /* width: 37px; */
     width: 4.5vh;
     background-size: cover;
-    /* height: 37px; */
     height: 4.5vh;
     background-repeat: no-repeat;
     position: absolute;
@@ -106,17 +101,11 @@
 .search input[type="text"] {
     font-family: "Lato-Light";
     border: none;
-    width: 789px;
     width: 112vh;
-    /* margin-left: 52px; */
     margin-left: 7.8vh;
-    /* height: 50px; */
     height: 7vh;
-    /* font-size: 20px; */
     font-size: 2.8vh;
-    /* padding-left: 8px; */
     padding-left: 1.2vh;
-    /* outline: none; */
 }
 
 .title-container {
@@ -131,13 +120,12 @@
 }
 
 ul li .drop-down-search .more {
-    left: 114.5vh;
+    left: 115.5vh;
     top: 0;
     background: url("../images/more.svg");
     margin-top: 1vh;
     width: 4vh;
     background-size: cover;
-    height: 37px;
     height: 4vh;
     background-repeat: no-repeat;
     position: absolute;
@@ -189,11 +177,23 @@ ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed {
     margin-top: 0.8vh;
 }
 
-main .no-image {
+.no-image {
     position: absolute;
-    margin-top: 47vh;
-    background-color: #64D08F;
-    width: 44vh;
-    height: 24vh;
-    left: 38vh;
+    top: 13vh;
+    left: 45vh;
+    height: 28vh;
+    width: 29vh;
+    background-size: cover;
+    background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+}
+
+.no-text {
+    text-align: center;
+    width: 114vh;
+    font-family: "Lato-Light";
+    color: #777777;
+    font-size: 3.4vh;
+    position: absolute;
+    top: 43vh;
+    left: 3vh;
 }

@@ -6,9 +6,7 @@ main .gray_text {
     font-family: "Lato-Light";
     font-size: 5.2vh;
     color: #6e6e6e;
-    width: 838px;
     width: 121vh;
-    height: 76px;
     height: 10vh;
     transition: 0.3s ease;
     opacity: 0.0;
@@ -33,7 +31,6 @@ main .randomize-button {
     border-radius: 0.5vh;
     font-size: 3.3vh;
     color: #FFFFFF;
-    letter-spacing: 0.2px;
     letter-spacing: 0.03vh;
     cursor: pointer;
 }
@@ -58,7 +55,6 @@ main .drop-down-menu {
 
 main .drop-down-menu ul {
     width: 37.6vh;
-    height: 292px;
     height: 42vh;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -101,7 +97,6 @@ main .drop-down-menu .title::after {
     position: absolute;
     right: 3vh;
     top: 3.6vh;
-    border-width: 6px;
     border-width: 1.0vh;
     border-color: #5B5B5B rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
     border-style: solid;
@@ -150,15 +145,13 @@ main .info .title {
     font-family: "Lato-Regular";
     position: absolute;
     top: 14.1vh;
-    left: 257px;
     left: 36.9vh;
     right: 4vh;
-    height: 50px;
 }
 
 main .info .title .wrap {
     position: relative;
-    left: 0px;
+    left: 0;
 }
 
 main .info .title span {
@@ -175,10 +168,8 @@ main .info .synopsis {
     left: 37.2vh;
     top: 22.5vh;
     width: 78vh;
-    height: 176px;
     height: 25vh;
     color: #626262;
-    font-size: 18px;
     font-size: 2.58vh;
     font-weight: 300;
     padding-right: 1.5vh;
@@ -198,8 +189,6 @@ main .info .rating {
     color: #5B5B5B;
     padding-left: 7vh;
     background-repeat: no-repeat;
-    width: 101px;
-    height: 39px;
     font-family: "Lato-Medium";
     font-size: 4vh;
     position: absolute;
@@ -244,7 +233,6 @@ main .info .love .love-button::before {
     background-repeat: no-repeat;
     background-image: url("../images/heart.svg");
     width: 5vh;
-    height: 31px;
     height: 4.5vh;
     position: absolute;
     left: -6.6vh;
