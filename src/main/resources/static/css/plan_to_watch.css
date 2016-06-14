@@ -47,6 +47,13 @@ main section .info .drop-down-more .more {
     background-size: cover;
     height: 4vh;
     background-repeat: no-repeat;
+    transition: 0.2s ease;
+    cursor: pointer;
+    opacity: 0.0;
+}
+
+main section:hover .info .drop-down-more .more {
+    opacity: 1.0;
 }
 
 main section .info .drop-down-more .bubble {

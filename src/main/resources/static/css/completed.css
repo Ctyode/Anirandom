@@ -17,6 +17,7 @@ main .completed ul li.menuElement {
     float: right;
     font-family: "Lato-Medium";
     font-size: 4.3vh;
+    cursor: pointer;
 }
 
 main section {
@@ -57,6 +58,13 @@ main section .drop-down-more .more {
     height: 4vh;
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.2s ease;
+    opacity: 0.0;
+}
+
+main section:hover .drop-down-more .more {
+    opacity: 1.0;
 }
 
 main section .drop-down-more .bubble {

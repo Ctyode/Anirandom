@@ -213,6 +213,7 @@ main .info .love {
     position: absolute;
     left: 104.5vh;
     top: 50vh;
+    cursor: pointer;
 }
 
 main .info .love .love-button {
