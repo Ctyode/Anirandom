@@ -183,6 +183,8 @@ main section .stars .stars-fill {
     height: 100%;
 }
 
+main section .stars[data-checked="0"] .stars-fill { width: 0%; }
+
 main section .stars[data-checked="1"] .stars-fill { width: 10%; }
 
 main section .stars[data-checked="2"] .stars-fill { width: 20%; }
@@ -308,12 +310,12 @@ main section.no-review.edit .cover-no-review-large {
     transition: 0.5s ease;
 }
 
-main section.no-review .info {
+main section.no-review .rating {
     transition: 0.5s ease;
     opacity: 1.0;
 }
 
-main section.no-review.edit .info {
+main section.no-review.edit .rating {
     opacity: 0.0;
 }
 

@@ -30,7 +30,6 @@ public class EditCompletedListItem extends Base {
                 put("error", "not authorized");
             }});
         }
-        System.out.println(animeId);
         ObjectId animeObjectId = new ObjectId(animeId);
         Anime anime = datastore.get(Anime.class, animeObjectId);
         if(anime == null) {
