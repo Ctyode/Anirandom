@@ -2,12 +2,12 @@ main .gray_text {
     position: absolute;
     text-align: center;
     left: 0;
-    top: 28.1vh;
+    top: 28.1vmin;
     font-family: "Lato-Light";
-    font-size: 5.2vh;
+    font-size: 5.2vmin;
     color: #6e6e6e;
-    width: 121vh;
-    height: 10vh;
+    width: 121vmin;
+    height: 10vmin;
     transition: 0.3s ease;
     opacity: 0.0;
 }
@@ -19,19 +19,19 @@ main .gray_text.show {
 main .randomize-button {
     font-family: "Lato-Medium";
     box-sizing: border-box;
-    padding-left: 4.3vh;
-    line-height: 8.8vh;
-    top: 61.5vh;
-    left: 45.5vh;
+    padding-left: 4.3vmin;
+    line-height: 8.8vmin;
+    top: 61.5vmin;
+    left: 45.5vmin;
     margin: auto;
     position: absolute;
-    height: 8.75vh;
-    width: 29vh;
+    height: 8.75vmin;
+    width: 29vmin;
     background: #64D08F;
-    border-radius: 0.5vh;
-    font-size: 3.3vh;
+    border-radius: 0.5vmin;
+    font-size: 3.3vmin;
     color: #FFFFFF;
-    letter-spacing: 0.03vh;
+    letter-spacing: 0.03vmin;
     cursor: pointer;
 }
 
@@ -40,22 +40,22 @@ main .drop-down-menu {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    line-height: 8vh;
-    font-size: 2.6vh;
+    line-height: 8vmin;
+    font-size: 2.6vmin;
     color: #6e6e6e;
-    width: 38.2vh;
-    height: 8vh;
+    width: 38.2vmin;
+    height: 8vmin;
     background: #FCFCFC;
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 3px 0px rgba(0, 0, 0, 0.24);
-    border-radius: 0.4vh;
+    border-radius: 0.4vmin;
     transition: 0.3s ease;
     overflow: hidden;
     cursor: pointer;
 }
 
 main .drop-down-menu ul {
-    width: 37.6vh;
-    height: 42vh;
+    width: 37.6vmin;
+    height: 42vmin;
     overflow-x: hidden;
     overflow-y: scroll;
     margin: 0;
@@ -69,7 +69,7 @@ main .drop-down-menu ul {
 }
 
 main .drop-down-menu ul::-webkit-scrollbar {
-    width: 0.9vh;
+    width: 0.9vmin;
 }
 
 main .drop-down-menu ul::-webkit-scrollbar-thumb {
@@ -79,31 +79,31 @@ main .drop-down-menu ul::-webkit-scrollbar-thumb {
 }
 
 main .drop-down-menu ul li {
-    height: 8.2vh;
-    padding-left: 3.1vh;
+    height: 8.2vmin;
+    padding-left: 3.1vmin;
     display: block;
 }
 
 main .drop-down-menu .title {
     position: relative;
-    padding-left: 3vh;
+    padding-left: 3vmin;
     box-sizing: border-box;
-    height: 8.3vh;
+    height: 8.3vmin;
     border-bottom: 1px solid #D5D4D4;
 }
 
 main .drop-down-menu .title::after {
     content: ' ';
     position: absolute;
-    right: 3vh;
-    top: 3.6vh;
-    border-width: 1.0vh;
+    right: 3vmin;
+    top: 3.6vmin;
+    border-width: 1.0vmin;
     border-color: #5B5B5B rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
     border-style: solid;
 }
 
 main .drop-down-menu.open {
-    height: 50vh;
+    height: 50vmin;
 }
 
 main /*.drop-down-menu*/ #genre {
@@ -112,12 +112,12 @@ main /*.drop-down-menu*/ #genre {
 
 main /*.drop-down-menu*/ #year {
     position: absolute;
-    left: 41vh;
+    left: 41vmin;
 }
 
 main /*.drop-down-menu*/ #rating {
     position: absolute;
-    left: 82vh;
+    left: 82vmin;
 }
 
 main .info {
@@ -132,11 +132,11 @@ main .info.show {
 main .info .image {
     background-size: contain;
     background-position: center;
-    width: 26.8vh;
-    height: 38vh;
+    width: 26.8vmin;
+    height: 38vmin;
     position: absolute;
-    left: 2.7vh;
-    top: 15vh;
+    left: 2.7vmin;
+    top: 15vmin;
     background-repeat: no-repeat;
 }
 
@@ -144,9 +144,9 @@ main .info .title {
     color: #383838;
     font-family: "Lato-Regular";
     position: absolute;
-    top: 14.1vh;
-    left: 36.9vh;
-    right: 4vh;
+    top: 14.1vmin;
+    left: 36.9vmin;
+    right: 4vmin;
 }
 
 main .info .title .wrap {
@@ -165,14 +165,14 @@ main .info .synopsis {
     overflow-y: scroll;
     font-family: "Lato-Light";
     position: absolute;
-    left: 37.2vh;
-    top: 22.5vh;
-    width: 78vh;
-    height: 25vh;
+    left: 37.2vmin;
+    top: 22.5vmin;
+    width: 78vmin;
+    height: 25vmin;
     color: #626262;
-    font-size: 2.58vh;
+    font-size: 2.58vmin;
     font-weight: 300;
-    padding-right: 1.5vh;
+    padding-right: 1.5vmin;
 }
 
 main .info .synopsis::-webkit-scrollbar {
@@ -187,39 +187,39 @@ main .info .synopsis::-webkit-scrollbar-thumb {
 
 main .info .rating {
     color: #5B5B5B;
-    padding-left: 7vh;
+    padding-left: 7vmin;
     background-repeat: no-repeat;
     font-family: "Lato-Medium";
-    font-size: 4vh;
+    font-size: 4vmin;
     position: absolute;
-    left: 37.3vh;
-    top: 50vh;
+    left: 37.3vmin;
+    top: 50vmin;
 }
 
 main .info .rating::before {
 	background-size: cover;
 	background-repeat: no-repeat;
-	top: -0.5vh;
+	top: -0.5vmin;
 	position: absolute;
-	left: 0.4vh;
+	left: 0.4vmin;
 	content: " ";
 	transition: 0.2s ease;
 	background-image: url("../images/index-star.svg");
-	width: 5vh;
-	height: 5vh;
+	width: 5vmin;
+	height: 5vmin;
 }
 
 main .info .love {
     position: absolute;
-    left: 104.5vh;
-    top: 50vh;
+    left: 104.5vmin;
+    top: 50vmin;
     cursor: pointer;
 }
 
 main .info .love .love-button {
     position: relative;
     color: #5B5B5B;
-    font-size: 4vh;
+    font-size: 4vmin;
     font-family: "Lato-Medium";
     transition: 0.2s ease;
 }
@@ -233,10 +233,10 @@ main .info .love .love-button::before {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../images/heart.svg");
-    width: 5vh;
-    height: 4.5vh;
+    width: 5vmin;
+    height: 4.5vmin;
     position: absolute;
-    left: -6.6vh;
+    left: -6.6vmin;
     content: " ";
     transition: 0.2s ease;
 }
@@ -245,10 +245,10 @@ main .info .love .love-button:hover::before {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../images/heart-fill.svg");
-    width: 5vh;
-    height: 4.5vh;
+    width: 5vmin;
+    height: 4.5vmin;
     position: absolute;
-    left: -6.6vh;
+    left: -6.6vmin;
     content: " ";
 }
 
@@ -258,19 +258,19 @@ main .info .love .bubble {
 }
 
 main .info .love.show .bubble {
-    margin-top: 1.2vh;
-    height: 10.2vh;
-    width: 22.5vh;
+    margin-top: 1.2vmin;
+    height: 10.2vmin;
+    width: 22.5vmin;
     background: white;
-    border-radius: 0.2vh;
-    box-shadow: 0vh 0.2vh 1vh 0vh rgba(0,0,0,0.10), 0vh 0.5vh 1.1vh 0vh rgba(52,52,52,0.12);
-    margin-left: -10.4vh;
+    border-radius: 0.2vmin;
+    box-shadow: 0vmin 0.2vmin 1vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
+    margin-left: -10.4vmin;
 }
 
 main .info .love.show .bubble .add-to {
     font-family: "Lato-Regular";
-    margin-left: 1.7vh;
-    font-size: 2.5vh;
+    margin-left: 1.7vmin;
+    font-size: 2.5vmin;
     color: #6D6D6D;
     cursor: pointer;
 }
@@ -280,11 +280,11 @@ main .info .love.show .bubble .add-to:hover {
 }
 
 main .info .love.show .bubble .add-to.add-to-plan-to-watch {
-    margin-top: 1.5vh;
+    margin-top: 1.5vmin;
 }
 
 main .info .love.show .bubble .add-to.add-to-completed {
-    margin-top: 1vh;
+    margin-top: 1vmin;
 }
 
 main .info .title span {
@@ -292,7 +292,7 @@ main .info .title span {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: 5.7vh;
+    font-size: 5.7vmin;
 }
 
 main .info .title span::after {
