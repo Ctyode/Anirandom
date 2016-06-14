@@ -5,7 +5,6 @@ import org.flamierawieo.anirandom.orm.Anime;
 import org.flamierawieo.anirandom.orm.Review;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,13 +16,13 @@ import java.util.stream.Collectors;
 import static org.flamierawieo.anirandom.Util.jsonify;
 
 @RestController
-public class EditCompletedListItem extends BaseController {
+public class EditCompletedListItem extends Base {
 
     @RequestMapping(value = "/anime/edit_completed_list")
-    public String editCompletedListItem(HttpServletRequest request,
-                                        @RequestParam(value = "anime") String animeId,
-                                        @RequestParam(value = "review") String review,
-                                        @RequestParam(value = "rating") String rating) {
+    public String get(HttpServletRequest request,
+                      @RequestParam(value = "anime") String animeId,
+                      @RequestParam(value = "review") String review,
+                      @RequestParam(value = "rating") String rating) {
         User user = getAuthorizedUser(request);
         if(user == null) {
             return jsonify(new LinkedHashMap() {{

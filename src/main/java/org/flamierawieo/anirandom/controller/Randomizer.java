@@ -10,12 +10,12 @@ import java.util.List;
 import java.util.Random;
 
 @RestController
-public class AnirandomController extends BaseController {
+public class Randomizer extends Base {
 
     @RequestMapping("/json/anirandom.json")
-    public String handle(@RequestParam(value = "genre", defaultValue = "undefined") String genre,
-                         @RequestParam(value = "year", defaultValue = "undefined") String year,
-                         @RequestParam(value = "rating", defaultValue = "undefined") String rating) {
+    public String get(@RequestParam(value = "genre", defaultValue = "undefined") String genre,
+                      @RequestParam(value = "year", defaultValue = "undefined") String year,
+                      @RequestParam(value = "rating", defaultValue = "undefined") String rating) {
         Query query = datastore.createQuery(Anime.class);
         if(!"undefined".equals(rating)) {
             Double r = Double.parseDouble(rating);

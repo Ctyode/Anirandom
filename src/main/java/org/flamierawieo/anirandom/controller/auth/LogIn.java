@@ -1,5 +1,6 @@
-package org.flamierawieo.anirandom.controller;
+package org.flamierawieo.anirandom.controller.auth;
 
+import org.flamierawieo.anirandom.controller.Base;
 import org.flamierawieo.anirandom.orm.User;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,13 +13,13 @@ import java.security.spec.InvalidKeySpecException;
 import static org.flamierawieo.anirandom.Security.*;
 
 @RestController
-public class LogInController extends BaseController {
+public class LogIn extends Base {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public void handle(@RequestParam("username") String username,
-                       @RequestParam("password") String password,
-                       @RequestParam("back") String back,
-                       HttpServletResponse response) throws InvalidKeySpecException, NoSuchAlgorithmException, IOException {
+    public void post(@RequestParam("username") String username,
+                     @RequestParam("password") String password,
+                     @RequestParam("back") String back,
+                     HttpServletResponse response) throws InvalidKeySpecException, NoSuchAlgorithmException, IOException {
         User user = datastore.createQuery(User.class).filter("username", username).get();
         if(user != null) {
             if(user.password.equals(pbkdf2WithHmacSHA1(password))) {

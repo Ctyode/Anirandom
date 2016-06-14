@@ -19,7 +19,7 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BaseController {
+public class Base {
 
     public static final Morphia morphia;
     public static final Datastore datastore;

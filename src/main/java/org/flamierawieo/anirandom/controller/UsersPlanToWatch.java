@@ -8,15 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @RestController
-public class PlanToWatchController extends BaseController  {
+public class UsersPlanToWatch extends Base {
 
     private static String template;
 
@@ -25,7 +21,7 @@ public class PlanToWatchController extends BaseController  {
         template = "plan_to_watch.html";
 //            template = new String(Files.readAllBytes(Paths.get("src/main/resources/templates/plan_to_watch.html")), "UTF-8");
 //        } catch (IOException e) {
-//            Logger.getLogger(IndexController.class.getName()).log(Level.SEVERE, "", e);
+//            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, "", e);
 //            template = "Can someone unfuck the situation, please?";
 //        }
     }
@@ -41,7 +37,7 @@ public class PlanToWatchController extends BaseController  {
     }
 
     @RequestMapping("/plan_to_watch")
-    public String handle(HttpServletRequest request) throws IOException, PebbleException {
+    public String get(HttpServletRequest request) throws IOException, PebbleException {
         return render(template, getContext(request));
     }
 

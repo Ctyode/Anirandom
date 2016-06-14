@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="anirandom-title">
-      <a href="/">Anirandom</a>
+      <a href="/" class="anirandom-title">Anirandom</a>
     </div>
     {% if authorized %}
       <div class="auth">
@@ -66,9 +66,9 @@
         {% endblock %}
     </main>
     {% block js %}
-      <script src="/Bacon.min.js"></script>
-      <script src="/jquery.min.js"></script>
-      <script src="/js/login.js"></script>
+    <script src="/jquery.min.js"></script>
+    <script src="/Bacon.min.js"></script>
+    <script src="/js/base.js"></script>
     {% endblock %}
   </body>
 </html>

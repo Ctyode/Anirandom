@@ -1,19 +1,18 @@
 main .plan_to_watch {
-    top: 165px;
     font-family: "Lato-Regular";
-    font-size: 30px;
+    font-size: 4.3vh;
     color: #5B5B5B;
-    line-height: 36px;
-    margin-bottom: 12px;
+    line-height: 5.2vh;
+    margin-bottom: 1.8vh;
 }
 
 main section {
-    width: 833px;
-    height: 113px;
+    width: 120vh;
+    height: 16vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 4px;
-    margin-bottom: 18px;
+    border-radius: 0.4vh;
+    margin-bottom: 2.5vh;
     transition: 0.3s ease;
 }
 
@@ -26,28 +25,27 @@ main section.hidden {
 
 main section .cover {
     background-size: contain;
+    background-repeat: repeat-y;
     background-position: center;
     float: left;
-    width: 80px;
-    height: 113px;
-    background-color: #64D08F;
+    width: 11.5vh;
+    height: 16.2vh;
+    transition: 0.5s ease;
+    opacity: 1.0;
 }
 
 main section .info {
     float: left;
-    width: 707px;
+    width: 101vh;
 }
-
 
 main section .info .drop-down-more .more {
     position: absolute;
-    left: 780px;
+    left: 115vh;
     background: url("../images/more.svg");
-    margin-left: 10px;
-    margin-top: 8px;
-    width: 37px;
+    width: 4vh;
     background-size: cover;
-    height: 37px;
+    height: 4vh;
     background-repeat: no-repeat;
 }
 
@@ -57,21 +55,21 @@ main section .info .drop-down-more .bubble {
 }
 
 main section .info .drop-down-more.show .bubble {
-    right: 50px;
+    right: 4.5vh;
     position: absolute;
-    margin-top: 40px;
-    height: 71px;
-    width: 158px;
+    margin-top: 5vh;
+    height: 9vh;
+    width: 25vh;
     background: white;
-    border-radius: 4px;
+    border-radius: 0.4vh;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
-    margin-left: -74px;
 }
 
 main section .info .drop-down-more.show .bubble .options {
     font-family: "Lato-Regular";
-    margin-left: 12px;
-    font-size: 17px;
+    margin-left: 1.4vh;
+    font-size: 2.4vh;
+    margin-bottom: 0.2vh;
     color: #6D6D6D;
     cursor: pointer;
 }
@@ -81,30 +79,32 @@ main section .info .drop-down-more.show .bubble .options:hover {
 }
 
 main section .info .drop-down-more.show .bubble .options.move {
-    margin-top: 11px;
+    margin-top: 1.4vh;
 }
 
 main section .info .drop-down-menu.show .bubble .options.remove {
-    margin-top: 7px;
+    margin-top: 1vh;
 }
 
 main section .info .anime-title {
-    padding-left: 21px;
-    padding-top: 23px;
+    padding-left: 2.4vh;
+    margin-top: 3vh;
+    width: 90vh;
     font-family: "Lato-Regular";
-    font-size: 24px;
+    font-size: 3.5vh;
     color: #5B5B5B;
-    line-height: 0.75em;
-    margin-bottom: 16px;
+    line-height: 0.8em;
 }
 
 main section .info .stars {
-    margin-top: -3px;
-    margin-left: 15px;
+    margin-top: 1.5vh;
+    margin-left: 1.6vh;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 436px;
-    height: 44px;
+    width: 68.3vh;
+    height: 7vh;
+    left: 13.5vh;
+    transition: 0.2s ease;
 }
 
 main section .info .stars .stars-fill {
@@ -114,149 +114,52 @@ main section .info .stars .stars-fill {
 }
 
 main section .info .rating {
-    margin-top: -33px;
-    margin-left: 463px;
+    margin-top: -5.2vh;
+    margin-left: 71vh;
     font-family: "Lato-Regular";
-    font-size: 27px;
+    font-size: 3.9vh;
     color: #5B5B5B;
-    line-height: 27px;
+    line-height: 3.9vh;
 }
 
-main .no-image {
-    position: absolute;
-    margin: auto;
-    margin-top: 180px;
-    background-color: #64D08F;
-    width: 300px;
-    height: 150px;
-}
-
-main .no-text {
-    width: 700px;
-    font-family: "Lato-Light";
-    top: 124px;
-    left: 101px;
-    position: relative;
-    color: #757575;
-    font-size: 30px;
-}
-
-.search {
-    overflow: hidden;
-    position: absolute;
-    width: 842px;
-    height: 52px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 3px;
-}
-
-.search.open {
-    height: 360px;
-}
-
-.search-icon {
-    background-image: url("../images/search.svg");
-    margin-left: 10px;
-    top: 8px;
-    width: 37px;
-    background-size: cover;
-    height: 37px;
-    background-repeat: no-repeat;
-    position: absolute;
-}
-
-.search ul li .image {
-    left: 0px;
-    width: 57px;
-    height: 74px;
-    background-color: #6D6D6D;
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.search ul li .title {
-    padding-top: 8px;
-    top: 65px;
+.go_to_search {
+    margin: 4vh auto 0 auto;
+    line-height: 6.5vh;
+    text-align: center;
+    border-radius: 0.3vh;
+    width: 18vh;
+    height: 6.5vh;
+    background: #64D08F;
+    color: white;
     font-family: "Lato-Regular";
-    margin-left: 56px;
-    font-size: 22px;
-    color: black;
-    margin-bottom: 3px;
-}
-
-.search ul li .rating {
-    margin-top: 8px;
-    margin-left: 399px;
-    font-family: "Lato-Regular";
-    font-size: 21px;
-    color: black;
-}
-
-.search ul li .year {
-    margin-top: 1px;
-    float: right;
-    font-family: "Lato-Regular";
-    color: black;
-}
-
-.search ul::-webkit-scrollbar {
-    width: 6px;
-}
-
-.search ul::-webkit-scrollbar-thumb {
-    background-color: #BABABA;
-    border-top: 3px solid white;
-    border-bottom: 4px solid white;
-}
-
-.search ul li {
-    position: relative;
-    height: 57px;
-    padding-left: 20px;
     display: block;
-    margin-bottom: 17px;
+    font-size: 2.5vh;
+    text-decoration: none;
 }
 
-.search .tip {
-    position: relative;
-    padding-left: 20px;
-    box-sizing: border-box;
-    border-bottom: 1px solid #D5D4D4;
+.no-image {
+    margin: -2vh auto;
+    height: 28vh;
+    width: 29vh;
+    background-size: cover;
+    background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
 }
 
-.search .stars {
-    position: absolute;
-    margin-left: 51px;
-    background-repeat: repeat-x;
-    background-image: url("../images/star.svg");
-    width: 340px;
-    height: 34px;
-}
-
-.search .stars-fill {
-    background-repeat: repeat-x;
-    background-image: url("../images/star-filled.svg");
-    height: 100%;
-}
-
-.search ul {
-    margin-top: 0;
-    margin-right: 5px;
-    height: 304px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding: 0;
-}
-
-.search input[type="text"] {
+.no-text {
+    margin: 4.5vh auto 0 auto;
+    text-align: center;
+    width: 114vh;
     font-family: "Lato-Light";
-    border: none;
-    width: 789px;
-    margin-left: 52px;
-    height: 50px;
-    font-size: 20px;
-    padding-left: 8px;
-    outline: none;
+    color: #777777;
+    font-size: 3.4vh;
+}
+
+.plus {
+    background-image: url("../images/plus.svg");
+    width: 4vh;
+    height: 4vh;
+    top: 1.8vh;
+    right: 1vh;
+    position: absolute;
+    background-size: cover;
 }

@@ -16,11 +16,11 @@ import java.util.List;
 import static org.flamierawieo.anirandom.Util.jsonify;
 
 @RestController
-public class AddToPlanToWatchListController extends BaseController {
+public class AddToPlanToWatchList extends Base {
 
     @RequestMapping("/anime/add_to_plan_to_watch_list")
-    public String addAnimeToUsersPlanToWatchList(HttpServletRequest request,
-                                                 @RequestParam(value = "anime") String animeId) {
+    public String get(HttpServletRequest request,
+                      @RequestParam(value = "anime") String animeId) {
         User user = getAuthorizedUser(request);
         if(user == null) {
             return jsonify(new LinkedHashMap() {{
