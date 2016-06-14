@@ -42,7 +42,7 @@ public class EditCompletedListItem extends Base {
         List<Review> reviews = user.completedList.stream().filter(r -> !r.anime.equals(anime)).collect(Collectors.toList());
         Review updatedReview = new Review();
         updatedReview.anime = anime;
-        updatedReview.review = review;
+        updatedReview.review = review.replaceAll("\\s+", " ").trim();
         int r = (int) Float.parseFloat(rating);
         if(r > 10) {
             r = 10;

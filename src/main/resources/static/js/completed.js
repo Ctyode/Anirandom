@@ -48,8 +48,10 @@ $(function() {
                 review: review
             }, function(data) {
                 console.log(data);
+                document.location.reload();
             });
             return false;
+            setTimeout();
         });
     });
 });
