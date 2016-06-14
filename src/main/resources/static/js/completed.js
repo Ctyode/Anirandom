@@ -25,6 +25,14 @@ $(function() {
         });
         var $title_span = $section.find(".anime-title span");
         $title_span.attr("data-anime-title", $title_span.html());
+        var $stars = $hidden_edit.find(".stars");
+        console.log($stars);
+        $stars.find("input").change(function() {
+            console.log("asdasd")
+            if(this.checked) {
+                $stars.attr("data-checked", this.value);
+            }
+        });
         $hidden_edit.find("input[type=submit]").click(function() {
             var anime = $hidden_edit.find("input[name=anime]").val();
             var rating = $hidden_edit.find("input[name=rating]").val();
