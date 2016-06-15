@@ -42,6 +42,9 @@ public class EditCompletedListItem extends Base {
         Review updatedReview = new Review();
         updatedReview.anime = anime;
         updatedReview.review = review.replaceAll("\\s+", " ").trim();
+        if(updatedReview.review.length() == 0) {
+            updatedReview.review = null;
+        }
         int r = (int) Float.parseFloat(rating);
         if(r > 10) {
             r = 10;
