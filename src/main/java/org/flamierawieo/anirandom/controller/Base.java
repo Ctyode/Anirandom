@@ -39,13 +39,14 @@ public class Base {
 
     }
 
-    public String render(String templateName, Map<String, Object> config) throws PebbleException, IOException {
+    public String render(String templateName, Map<String, Object> context) throws PebbleException, IOException {
         PebbleTemplate template = templateCache.get(templateName);
         if(template == null) {
-            template = templateCache.put(templateName, engine.getTemplate(templateName));
+            template = engine.getTemplate(templateName);
+            templateCache.put(templateName, template);
         }
         Writer writer = new StringWriter();
-        template.evaluate(writer, config);
+        template.evaluate(writer, context);
         return writer.toString();
     }
 
