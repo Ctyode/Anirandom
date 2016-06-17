@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block css %}
+{{ parent() }}
+    <link rel="stylesheet" href="/css/search.css">
+{% endblock %}
+
+{% block main %}
+<h1>{{ http_status_code }}</h1>
+<p>{{ http_status_message }}</p>
+{% endblock %}
