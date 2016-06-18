@@ -4,6 +4,7 @@ import org.flamierawieo.anirandom.orm.mapping.Anime;
 import org.flamierawieo.anirandom.orm.mapping.Review;
 import org.flamierawieo.anirandom.orm.mapping.User;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -44,13 +45,20 @@ public class UserDao extends BaseDao {
 
     public DaoResponse addToPlanToWatch(User user, Anime anime) {
         try {
-            if(user.planToWatchList.contains(anime)) {
+            if(user.planToWatchList != null &&
+                    user.planToWatchList.contains(anime)) {
                 return response(false, "info is already in users plan to watch list");
             }
-            if(user.completedList.contains(new Review() {{ setAnime(anime); }})) {
+            Review testReview = new Review();
+            testReview.anime = anime;
+            if(user.completedList != null &&
+                    user.completedList.contains(testReview)) {
                 return response(false, "info is already in users completed list");
             }
             List<Anime> newPlanToWatchList = user.planToWatchList;
+            if(newPlanToWatchList == null) {
+                newPlanToWatchList = new ArrayList<>();
+            }
             newPlanToWatchList.add(anime);
             datastore.update(user,
                     datastore.createUpdateOperations(User.class)
@@ -79,14 +87,20 @@ public class UserDao extends BaseDao {
 
     public DaoResponse addToCompleted(User user, Anime anime) {
         try {
-            Review review = new Review() {{ setAnime(anime); }};
-            if(user.planToWatchList.contains(anime)) {
+            Review review = new Review();
+            review.anime = anime;
+            if(user.planToWatchList != null &&
+                    user.planToWatchList.contains(anime)) {
                 return fail("Anime is already in users plan to watch list");
             }
-            if(user.completedList.contains(review)) {
+            if(user.completedList != null &&
+                    user.completedList.contains(review)) {
                 return fail("Anime is already in users completed list");
             }
             List<Review> newCompletedList = user.completedList;
+            if(newCompletedList == null) {
+                newCompletedList = new ArrayList<>();
+            }
             newCompletedList.add(review);
             datastore.update(user, datastore.createUpdateOperations(User.class)
                     .set("completedList", newCompletedList));
@@ -122,10 +136,9 @@ public class UserDao extends BaseDao {
 
     public DaoResponse removeFromCompleted(User user, Anime anime) {
         try {
-            Review review = new Review() {{ setAnime(anime); }};
             List<Review> newCompletedList = user.completedList
                     .stream()
-                    .filter(r -> !r.equals(review))
+                    .filter(r -> !r.anime.equals(anime))
                     .collect(Collectors.toList());
             datastore.update(user, datastore.createUpdateOperations(User.class)
                     .set("completedList", newCompletedList));

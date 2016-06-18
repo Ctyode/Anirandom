@@ -28,7 +28,6 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-//    compile 'com.hubspot.jinjava:jinjava:2.1.7'
     compile group: 'com.mitchellbosecke', name: 'pebble', version: '2.2.1'
     compile 'com.googlecode.json-simple:json-simple:1.1'
     compile 'org.springframework.boot:spring-boot-starter-web'

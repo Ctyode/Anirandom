@@ -19,20 +19,20 @@ public class Index extends Base {
     }
 
     @RequestMapping("/json/anirandom.json")
-    public String getRandomAnime(@RequestParam(value = "genre", defaultValue = "_") String genre,
-                                 @RequestParam(value = "year", defaultValue = "_") String year,
-                                 @RequestParam(value = "rating", defaultValue = "_") String rating) {
+    public String getRandomAnime(@RequestParam(value = "genre", defaultValue = "undefined") String genre,
+                                 @RequestParam(value = "year", defaultValue = "undefined") String year,
+                                 @RequestParam(value = "rating", defaultValue = "undefined") String rating) {
         AnimeDao animeDao = new AnimeDao();
         String sGenre = null;
         Integer iYear = null;
         Double dRating = null;
-        if(!"_".equals(rating)) {
+        if(!"undefined".equals(rating)) {
             dRating = Double.parseDouble(rating);
         }
-        if(!"_".equals(year)) {
+        if(!"undefined".equals(year)) {
             iYear = Integer.parseInt(year);
         }
-        if(!"_".equals(genre)) {
+        if(!"undefined".equals(genre)) {
             sGenre = genre;
         }
         Anime anime = animeDao.getRandomAnime(sGenre, iYear, dRating);
