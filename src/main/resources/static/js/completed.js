@@ -15,7 +15,7 @@ $(function() {
         });
         $drop_down.find(".remove").click(function() {
             $.getJSON("/anime/remove_from_completed", {anime: $(this).attr("data-anime-id")}, function (data) {
-                if(data["status"] === "success") {
+                if(data["success"]) {
                     $section.addClass("hidden");
                     setTimeout(function() {
                         $section.remove();

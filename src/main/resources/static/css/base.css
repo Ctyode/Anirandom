@@ -240,3 +240,15 @@ main {
 .auth .auth-bubble .logout-text:hover {
   color: #292929;
 }
+
+.logo {
+    margin-top: -1vmin;
+    border-top: 1px solid #efefef;
+    background-position: center;
+    background-image: url("../images/logo.svg");
+    height: 9vmin;
+    width: 119vh;
+    background-repeat: no-repeat;
+    background-size: auto 65%;
+    opacity: 0.5;
+}

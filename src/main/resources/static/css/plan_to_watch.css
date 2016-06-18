@@ -41,7 +41,7 @@ main section .info {
 }
 
 main section .info .drop-down-more .more {
-    top: 1vh;
+    top: 1vmin;
     position: absolute;
     left: 115vmin;
     background: url("../images/more.svg");
@@ -171,4 +171,5 @@ main section .info .rating {
     right: 1vmin;
     position: absolute;
     background-size: cover;
+    opacity: 0.7;
 }
