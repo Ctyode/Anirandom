@@ -22,6 +22,10 @@ public class Review {
         return map;
     }
 
+    public void setAnime(Anime anime) {
+        this.anime = anime;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

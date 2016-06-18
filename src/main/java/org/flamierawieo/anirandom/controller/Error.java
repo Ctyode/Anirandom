@@ -30,7 +30,7 @@ public class Error extends Base implements ErrorController {
         return context;
     }
 
-    @RequestMapping(value = PATH)
+    @RequestMapping(PATH)
     public String handle(HttpServletRequest request) throws IOException, PebbleException {
         return render("error.html", getContext(request));
     }

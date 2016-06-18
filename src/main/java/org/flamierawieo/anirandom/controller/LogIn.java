@@ -1,6 +1,7 @@
-package org.flamierawieo.anirandom.controller.auth;
+package org.flamierawieo.anirandom.controller;
 
-import org.flamierawieo.anirandom.controller.Base;
+import org.flamierawieo.anirandom.orm.dao.BaseDao;
+import org.flamierawieo.anirandom.orm.dao.UserDao;
 import org.flamierawieo.anirandom.orm.mapping.User;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,12 +21,15 @@ public class LogIn extends Base {
                      @RequestParam("password") String password,
                      @RequestParam("back") String back,
                      HttpServletResponse response) throws InvalidKeySpecException, NoSuchAlgorithmException, IOException {
-        User user = datastore.createQuery(User.class).filter("username", username).get();
+        UserDao userDao = new UserDao();
+        User user = userDao.getUserByUsername(username);
         if(user != null) {
             if(user.password.equals(pbkdf2WithHmacSHA1(password))) {
                 String accessToken = randomAccessToken();
-                datastore.update(datastore.createQuery(User.class).filter("username", username), datastore.createUpdateOperations(User.class).add("accessTokens", accessToken));
-                response.addCookie(new Cookie("access_token", accessToken));
+                BaseDao.DaoResponse r = userDao.addAccessToken(user, accessToken);
+                if(r.isSuccess()) {
+                    response.addCookie(new Cookie("access_token", accessToken));
+                }
                 response.sendRedirect("/");
             } else {
                 response.sendRedirect(back);

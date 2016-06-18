@@ -2,6 +2,9 @@ package org.flamierawieo.anirandom.controller;
 
 import com.mitchellbosecke.pebble.error.PebbleException;
 import org.bson.types.ObjectId;
+import org.flamierawieo.anirandom.orm.dao.AnimeDao;
+import org.flamierawieo.anirandom.orm.dao.BaseDao;
+import org.flamierawieo.anirandom.orm.dao.UserDao;
 import org.flamierawieo.anirandom.orm.mapping.Anime;
 import org.flamierawieo.anirandom.orm.mapping.Review;
 import org.flamierawieo.anirandom.orm.mapping.User;
@@ -13,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -25,7 +27,7 @@ public class Completed extends Base {
     public Map<String, Object> getContext(HttpServletRequest request, String username) {
         Map<String, Object> context = super.getContext(request);
         User authorizedUser = getAuthorizedUser(request);
-        User user = datastore.createQuery(User.class).filter("username", username).get();
+        User user = new UserDao().getUserByUsername(username);
         if (user != null && user.completedList != null) {
             context.put("other", !user.equals(authorizedUser));
             context.put("completed_list", user.completedList.stream().map(Review::toMap).collect(Collectors.toList()));
@@ -41,32 +43,37 @@ public class Completed extends Base {
         return render("completed.html", getContext(request, otherUsername));
     }
 
-
-    @RequestMapping("/anime/remove_from_completed")
-    public String removeFromCompletedList(HttpServletRequest request,
-                      @RequestParam(value = "anime") String animeId) {
+    @RequestMapping("/anime/add_to_completed_list")
+    public String addToCompletedList(HttpServletRequest request,
+                                     @RequestParam(value = "anime") String animeId) {
+        AnimeDao animeDao = new AnimeDao();
+        UserDao userDao = new UserDao();
         User user = getAuthorizedUser(request);
-        if(user != null) {
-            ObjectId animeObjectId = new ObjectId(animeId);
-            datastore.update(user, datastore.createUpdateOperations(User.class).set("completedList", user.completedList.stream()
-                    .filter(r -> !r.anime.id.equals(animeObjectId)).collect(Collectors.toList())));
-            return jsonify(new LinkedHashMap() {{
-                put("status", "success");
-                put("info", "nice!");
-            }});
-        } else {
-            return jsonify(new LinkedHashMap() {{
-                put("status", "fail");
-                put("error", "not authorized");
-            }});
-        }
+        Anime anime = animeDao.getAnimeById(new ObjectId(animeId));
+        BaseDao.DaoResponse response = userDao.addToCompleted(user, anime);
+        return jsonify(new LinkedHashMap() {{
+            put("success", response.isSuccess());
+            put("info", response.getInfo());
+        }});
     }
 
-    @RequestMapping(value = "/anime/edit_completed_list")
-    public String editCompletedList(HttpServletRequest request,
-                      @RequestParam(value = "anime") String animeId,
-                      @RequestParam(value = "review") String review,
-                      @RequestParam(value = "rating") String rating) {
+    @RequestMapping("/anime/remove_from_completed")
+    public String removeFromCompleted(HttpServletRequest request,
+                                      @RequestParam(value = "anime") String animeId) {
+        User user = getAuthorizedUser(request);
+        Anime anime = new AnimeDao().getAnimeById(new ObjectId(animeId));
+        BaseDao.DaoResponse response = new UserDao().removeFromCompleted(user, anime);
+        return jsonify(new LinkedHashMap() {{
+            put("success", response.isSuccess());
+            put("info", response.getInfo());
+        }});
+    }
+
+    @RequestMapping("/anime/edit_completed_list")
+    public String editCompleted(HttpServletRequest request,
+                                @RequestParam(value = "anime") String animeId,
+                                @RequestParam(value = "review") String reviewText,
+                                @RequestParam(value = "rating") String rating) {
         User user = getAuthorizedUser(request);
         if(user == null) {
             return jsonify(new LinkedHashMap() {{
@@ -74,20 +81,12 @@ public class Completed extends Base {
                 put("error", "not authorized");
             }});
         }
-        ObjectId animeObjectId = new ObjectId(animeId);
-        Anime anime = datastore.get(Anime.class, animeObjectId);
-        if(anime == null) {
-            return jsonify(new LinkedHashMap() {{
-                put("status", "questionable");
-                put("info", "nonexistent anime, removing from list");
-            }});
-        }
-        List<Review> reviews = user.completedList.stream().filter(r -> !r.anime.equals(anime)).collect(Collectors.toList());
-        Review updatedReview = new Review();
-        updatedReview.anime = anime;
-        updatedReview.review = review.replaceAll("\\s+", " ").trim();
-        if(updatedReview.review.length() == 0) {
-            updatedReview.review = null;
+        Anime anime = new AnimeDao().getAnimeById(new ObjectId(animeId));
+        Review review = new Review();
+        review.anime = anime;
+        reviewText = reviewText.replaceAll("\\s+", " ").trim();
+        if(reviewText.length() > 0) {
+            review.review = reviewText;
         }
         int r = (int) Float.parseFloat(rating);
         if(r > 10) {
@@ -95,12 +94,11 @@ public class Completed extends Base {
         } else if(r < 0) {
             r = 0;
         }
-        updatedReview.rating = r;
-        reviews.add(updatedReview);
-        datastore.update(user, datastore.createUpdateOperations(User.class).set("completedList", reviews));
+        review.rating = r;
+        BaseDao.DaoResponse response = new UserDao().editCompleted(user, review);
         return jsonify(new LinkedHashMap() {{
-            put("status", "success");
-            put("info", "nice!");
+            put("success", response.isSuccess());
+            put("info", response.getInfo());
         }});
     }
 

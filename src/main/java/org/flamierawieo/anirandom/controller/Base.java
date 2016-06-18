@@ -4,10 +4,8 @@ import com.mitchellbosecke.pebble.PebbleEngine;
 import com.mitchellbosecke.pebble.error.PebbleException;
 import com.mitchellbosecke.pebble.loader.FileLoader;
 import com.mitchellbosecke.pebble.template.PebbleTemplate;
-import com.mongodb.MongoClient;
+import org.flamierawieo.anirandom.orm.dao.UserDao;
 import org.flamierawieo.anirandom.orm.mapping.User;
-import org.mongodb.morphia.Datastore;
-import org.mongodb.morphia.Morphia;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -19,24 +17,15 @@ import java.util.Map;
 
 public class Base {
 
-    public static final Morphia morphia;
-    public static final Datastore datastore;
-
     private static FileLoader loader;
     private static PebbleEngine engine;
     private static Map<String, PebbleTemplate> templateCache;
 
     static {
-        morphia = new Morphia();
-        morphia.mapPackage("org.flamierawieo.anirandom.orm");
-        datastore = morphia.createDatastore(new MongoClient(), "anirandom");
-        datastore.ensureIndexes();
-
         loader = new FileLoader();
         loader.setPrefix("src/main/resources/templates/");
         engine = new PebbleEngine.Builder().loader(loader).build();
         templateCache = new HashMap<>();
-
     }
 
     public String render(String templateName, Map<String, Object> context) throws PebbleException, IOException {
@@ -53,7 +42,7 @@ public class Base {
     public User getAuthorizedUser(HttpServletRequest request) {
         Map<String, String> cookies = getCookies(request);
         if(cookies.containsKey("access_token")) {
-            return datastore.createQuery(User.class).filter("accessTokens", cookies.get("access_token")).get();
+            return new UserDao().getUserByAccessToken(cookies.get("access_token"));
         } else {
             return null;
         }

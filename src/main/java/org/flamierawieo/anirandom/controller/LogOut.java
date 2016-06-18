@@ -1,4 +1,4 @@
-package org.flamierawieo.anirandom.controller.auth;
+package org.flamierawieo.anirandom.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
