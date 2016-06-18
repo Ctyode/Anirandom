@@ -1,18 +1,19 @@
 main .plan_to_watch {
     font-family: "Lato-Regular";
-    font-size: 4.3vh;
+    font-size: 4.3vmin;
     color: #5B5B5B;
-    line-height: 5.2vh;
-    margin-bottom: 1.8vh;
+    line-height: 5.2vmin;
+    margin-bottom: 1.8vmin;
 }
 
 main section {
-    width: 120vh;
-    height: 16vh;
+    position: relative;
+    width: 120vmin;
+    height: 16vmin;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    border-radius: 0.4vh;
-    margin-bottom: 2.5vh;
+    border-radius: 0.4vmin;
+    margin-bottom: 2.5vmin;
     transition: 0.3s ease;
 }
 
@@ -28,25 +29,33 @@ main section .cover {
     background-repeat: repeat-y;
     background-position: center;
     float: left;
-    width: 11.5vh;
-    height: 16.2vh;
+    width: 11.5vmin;
+    height: 16.2vmin;
     transition: 0.5s ease;
     opacity: 1.0;
 }
 
 main section .info {
     float: left;
-    width: 101vh;
+    width: 101vmin;
 }
 
 main section .info .drop-down-more .more {
+    top: 1vmin;
     position: absolute;
-    left: 115vh;
+    left: 115vmin;
     background: url("../images/more.svg");
-    width: 4vh;
+    width: 4vmin;
     background-size: cover;
-    height: 4vh;
+    height: 4vmin;
     background-repeat: no-repeat;
+    transition: 0.2s ease;
+    cursor: pointer;
+    opacity: 0.0;
+}
+
+main section:hover .info .drop-down-more .more {
+    opacity: 1.0;
 }
 
 main section .info .drop-down-more .bubble {
@@ -55,21 +64,21 @@ main section .info .drop-down-more .bubble {
 }
 
 main section .info .drop-down-more.show .bubble {
-    right: 4.5vh;
+    right: 5.5vmin;
     position: absolute;
-    margin-top: 5vh;
-    height: 9vh;
-    width: 25vh;
+    margin-top: 2vmin;
+    height: 9vmin;
+    width: 25vmin;
     background: white;
-    border-radius: 0.4vh;
+    border-radius: 0.4vmin;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
 }
 
 main section .info .drop-down-more.show .bubble .options {
     font-family: "Lato-Regular";
-    margin-left: 1.4vh;
-    font-size: 2.4vh;
-    margin-bottom: 0.2vh;
+    margin-left: 1.4vmin;
+    font-size: 2.4vmin;
+    margin-bottom: 0.2vmin;
     color: #6D6D6D;
     cursor: pointer;
 }
@@ -79,31 +88,31 @@ main section .info .drop-down-more.show .bubble .options:hover {
 }
 
 main section .info .drop-down-more.show .bubble .options.move {
-    margin-top: 1.4vh;
+    margin-top: 1.4vmin;
 }
 
 main section .info .drop-down-menu.show .bubble .options.remove {
-    margin-top: 1vh;
+    margin-top: 1vmin;
 }
 
 main section .info .anime-title {
-    padding-left: 2.4vh;
-    margin-top: 3vh;
-    width: 90vh;
+    padding-left: 2.4vmin;
+    margin-top: 3vmin;
+    width: 90vmin;
     font-family: "Lato-Regular";
-    font-size: 3.5vh;
+    font-size: 3.5vmin;
     color: #5B5B5B;
     line-height: 0.8em;
 }
 
 main section .info .stars {
-    margin-top: 1.5vh;
-    margin-left: 1.6vh;
+    margin-top: 1.5vmin;
+    margin-left: 1.6vmin;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 68.3vh;
-    height: 7vh;
-    left: 13.5vh;
+    width: 70.3vmin;
+    height: 7vmin;
+    left: 13.5vmin;
     transition: 0.2s ease;
 }
 
@@ -114,52 +123,53 @@ main section .info .stars .stars-fill {
 }
 
 main section .info .rating {
-    margin-top: -5.2vh;
-    margin-left: 71vh;
+    margin-top: -5.2vmin;
+    margin-left: 73vmin;
     font-family: "Lato-Regular";
-    font-size: 3.9vh;
+    font-size: 3.9vmin;
     color: #5B5B5B;
-    line-height: 3.9vh;
+    line-height: 3.9vmin;
 }
 
 .go_to_search {
-    margin: 4vh auto 0 auto;
-    line-height: 6.5vh;
+    margin: 4vmin auto 0 auto;
+    line-height: 6.5vmin;
     text-align: center;
-    border-radius: 0.3vh;
-    width: 18vh;
-    height: 6.5vh;
+    border-radius: 0.3vmin;
+    width: 18vmin;
+    height: 6.5vmin;
     background: #64D08F;
     color: white;
     font-family: "Lato-Regular";
     display: block;
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
     text-decoration: none;
 }
 
 .no-image {
-    margin: -2vh auto;
-    height: 28vh;
-    width: 29vh;
+    margin: -2vmin auto;
+    height: 28vmin;
+    width: 29vmin;
     background-size: cover;
     background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
 }
 
 .no-text {
-    margin: 4.5vh auto 0 auto;
+    margin: 4.5vmin auto 0 auto;
     text-align: center;
-    width: 114vh;
+    width: 114vmin;
     font-family: "Lato-Light";
     color: #777777;
-    font-size: 3.4vh;
+    font-size: 3.4vmin;
 }
 
 .plus {
     background-image: url("../images/plus.svg");
-    width: 4vh;
-    height: 4vh;
-    top: 1.8vh;
-    right: 1vh;
+    width: 4vmin;
+    height: 4vmin;
+    top: 1.8vmin;
+    right: 1vmin;
     position: absolute;
     background-size: cover;
+    opacity: 0.7;
 }

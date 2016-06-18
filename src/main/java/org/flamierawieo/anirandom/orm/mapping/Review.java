@@ -1,4 +1,4 @@
-package org.flamierawieo.anirandom.orm;
+package org.flamierawieo.anirandom.orm.mapping;
 
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Reference;

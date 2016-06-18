@@ -1,6 +1,7 @@
 $(function () {
-    $(document.body).click(function() {
+    $(document.body).click(function(e) {
         $(".drop-down-menu").removeClass("open");
+        $(".love").removeClass("show");
     });
     $(".drop-down-menu").each(function() {
         var $title = $(this).find(".title");
@@ -16,8 +17,9 @@ $(function () {
             $title.text($(this).text());
         });
     });
-    $(".love-button").click(function () {
+    $(".love-button").click(function (e) {
         $(".love").toggleClass("show");
+        e.stopPropagation();
     });
     $(".add-to-plan-to-watch").click(function () {
         $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".info").attr("data-anime-id")}, function (data) {

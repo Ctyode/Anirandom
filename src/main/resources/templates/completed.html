@@ -6,14 +6,13 @@
 {% endblock %}
 
 {% block main %}
-  {% if authorized %}
+  {% if authorized or other %}
     {% if completed_list is not empty %}
       <div class="completed">
         Completed
         <ul>
           <li class="menuElement" data-tab="reviewed">Reviewed</li>
           <li class="active menuElement" data-tab="unreviewed">Unreviewed</li>
-          <!--<li class="slider"></li>-->
         </ul>
       </div>
       <a href="/search">
@@ -26,13 +25,15 @@
               {% if review.review is not empty %}
                 <section>
                   <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
+                  {% if not other %}
                   <div class="drop-down-more">
                     <div class="more"></div>
                     <div class="bubble">
                       <div class="options edit">Edit review</div>
                       <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
+                    </div>
                   </div>
-                  </div>
+                  {% endif %}
                   <div class="anime-title">
                     <span>{{ review.anime.title }}</span>
                   </div>
@@ -41,15 +42,28 @@
                     <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
                   </div>
                   <div class="rating">{{ review.rating }}</div>
-                  <div class="hidden-edit">
+                  <form class="hidden-edit">
+                    <div class="stars" data-checked="{{ review.rating }}">
+                      <div class="stars-fill"></div>
+                      <input type="radio" name="rating" value="1">
+                      <input type="radio" name="rating" value="2">
+                      <input type="radio" name="rating" value="3">
+                      <input type="radio" name="rating" value="4">
+                      <input type="radio" name="rating" value="5">
+                      <input type="radio" name="rating" value="6">
+                      <input type="radio" name="rating" value="7">
+                      <input type="radio" name="rating" value="8">
+                      <input type="radio" name="rating" value="9">
+                      <input type="radio" name="rating" value="10">
+                    </div>
                     <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                    <textarea name="review" placeholder="napishi svoe voshititelnoe mnenie"></textarea>
+                    <textarea name="review" placeholder="napishi svoe voshititelnoe mnenie">{{ review.review }}</textarea>
                     <input type="submit" value="Davai">
-                  </div>
+                  </form>
                 </section>
               {% endif %}
             {% endfor %}
+            <div class="logo"></div>
           {% else %}
           <div class="no-image"></div>
           <div class="no-text">You don't have any reviews! You can change that by adding a comment in the Unreviewed section. Your friends should know your opinion!</div>
@@ -63,6 +77,7 @@
                 <section class="no-review">
                   <div class="cover-no-review" style="background-image:url({{ review.anime.image }})"></div>
                   <div class="cover-no-review-large" style="background-image:url({{ review.anime.image }})"></div>
+                  {% if not other %}
                   <div class="drop-down-more">
                     <div class="more"></div>
                     <div class="bubble">
@@ -70,22 +85,33 @@
                       <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
                     </div>
                   </div>
+                  {% endif %}
                   <div class="anime-title">
                     <span>{{ review.anime.title }}</span>
                   </div>
-                  <div class="stars stars-no-review">
-                    <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
-                  </div>
                   <div class="rating">{{ review.rating }}</div>
-                  <div class="hidden-edit">
-                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                    <input type="hidden" name="rating" value="{{ review.anime.rating }}">
-                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                  <form class="hidden-edit">
+                    <div class="stars" data-checked="{{ review.rating }}">
+                      <div class="stars-fill"></div>
+                      <input type="radio" name="rating" value="1">
+                      <input type="radio" name="rating" value="2">
+                      <input type="radio" name="rating" value="3">
+                      <input type="radio" name="rating" value="4">
+                      <input type="radio" name="rating" value="5">
+                      <input type="radio" name="rating" value="6">
+                      <input type="radio" name="rating" value="7">
+                      <input type="radio" name="rating" value="8">
+                      <input type="radio" name="rating" value="9">
+                      <input type="radio" name="rating" value="10">
+                    </div>
                     <input type="submit" value="Blyad">
-                  </div>
+                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
+                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                  </form>
                 </section>
               {% endif %}
             {% endfor %}
+              <div class="logo"></div>
           {% else %}
             <div class="no-image"></div>
             <div class="no-text">Your unreviewed list is empty! Either you were a good boy and left a comment about every single title, or you just haven't added anything yet. If you want to add something here, use the search function.</div>

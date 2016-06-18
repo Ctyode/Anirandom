@@ -15,8 +15,9 @@
     "url": "https://github.com/Ctyode/Anirandom/issues"
   },
   "homepage": "https://github.com/Ctyode/Anirandom#readme",
-  "devDependencies": {
+  "dependencies": {
     "baconjs": "^0.7.84",
-    "jquery": "^2.2.4"
+    "jquery": "^2.2.4",
+    "sweetalert": "^1.1.3"
   }
 }

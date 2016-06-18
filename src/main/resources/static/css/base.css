@@ -27,11 +27,11 @@ body {
 
 .anirandom-title {
   font-family: "Lato-Black";
-  margin-bottom: 13vh;
-  line-height: 7.5vh;
-  margin-top: 2.5vh;
-  margin-left: 2.3vh;
-  font-size: 7.6vh;
+  margin-bottom: 13vmin;
+  line-height: 7.5vmin;
+  margin-top: 2.5vmin;
+  margin-left: 2.3vmin;
+  font-size: 7.6vmin;
 }
 
 .anirandom-title a {
@@ -41,8 +41,8 @@ body {
 
 main {
   position: relative;
-  height: 71.6vh;
-  width: 120.5vh;
+  height: 71.6vmin;
+  width: 120.5vmin;
   margin: auto;
   margin-top: 0;
 }
@@ -53,16 +53,16 @@ main {
 
 .auth {
   position: absolute;
-  top: 2.2vh;
-  right: 2.8vh;
+  top: 2.2vmin;
+  right: 2.8vmin;
   text-align: right;
 }
 
 .auth .auth-text {
   font-family: "Lato-Regular";
   color: #6D6D6D;
-  font-size: 3vh;
-  line-height: 3vh;
+  font-size: 3vmin;
+  line-height: 3vmin;
   z-index: 101;
   position: absolute;
   float: right;
@@ -79,7 +79,7 @@ main {
 }
 
 .auth .auth-text a:not(:first-child) {
-  margin-left: 2vh;
+  margin-left: 2vmin;
 }
 
 .auth .auth-text a:hover {
@@ -88,22 +88,22 @@ main {
 
 .auth .auth-bubble {
   position: relative;
-  top: 6vh;
+  top: 6vmin;
   left: 0;
   height: 0;
   z-index: 100;
   opacity: 0.0;
   transition: 0.3s ease;
-  border-radius: 0.2vh;
-  box-shadow: 0vh 0.1vh 1vh 0vh rgba(0,0,0,0.10), 0vh 1vh 2vh 0vh rgba(52,52,52,0.06), 0vh 1vh 2vh 0vh rgba(52,52,52,0.03);
+  border-radius: 0.2vmin;
+  box-shadow: 0vmin 0.1vmin 1vmin 0vmin rgba(0,0,0,0.10), 0vmin 1vmin 2vmin 0vmin rgba(52,52,52,0.06), 0vmin 1vmin 2vmin 0vmin rgba(52,52,52,0.03);
 }
 
 .auth .auth-bubble.initial-width-297px {
-  width: 42.8vh;
+  width: 42.8vmin;
 }
 
 .auth .auth-bubble.initial-width-180px {
-  width: 19vh;
+  width: 19vmin;
 }
 
 .auth[section] .auth-bubble {
@@ -113,15 +113,15 @@ main {
 
 .auth[section=login] .auth-bubble {
   height: 250px;
-  height: 36vh;
+  height: 36vmin;
 }
 
 .auth[section=signup] .auth-bubble {
-  height: 51.7vh;
+  height: 51.7vmin;
 }
 
 .auth[section=logout] .auth-bubble {
-  height: 7vh;
+  height: 7vmin;
 }
 
 .auth .auth-bubble .section {
@@ -143,10 +143,10 @@ main {
 }
 
 .auth .auth-bubble .section .title {
-  margin-top: 2.8vh;
+  margin-top: 2.8vmin;
   font-family: "Lato-Medium";
-  font-size: 3.5vh;
-  line-height: 3.5vh;
+  font-size: 3.5vmin;
+  line-height: 3.5vmin;
   color: #6D6D6D;
   text-align: center;
 }
@@ -155,33 +155,33 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2.6vh;
+  margin-top: 2.6vmin;
 }
 
 .auth .auth-bubble .section form input[type="text"],
 .auth .auth-bubble .section form input[type="email"],
 .auth .auth-bubble .section form input[type="password"] {
-  width: 33.2vh;
-  height: 5.4vh;
-  border-radius: 0.2vh;
-  margin-bottom: 1.9vh;
-  padding-left: 1.3vh;
+  width: 33.2vmin;
+  height: 5.4vmin;
+  border-radius: 0.2vmin;
+  margin-bottom: 1.9vmin;
+  padding-left: 1.3vmin;
   background-color: #fffdfe;
   font-family: "Lato-Light";
   font-size: 18px;
-  font-size: 2.6vh;
+  font-size: 2.6vmin;
   font-weight: 100;
   color: #cecece;
   border: 1px solid #E7E7E7;
 }
 
 .auth .auth-bubble .section form input[type="submit"] {
-  width: 35vh;
-  height: 5vh;
+  width: 35vmin;
+  height: 5vmin;
   border: none;
-  border-radius: 0.2vh;
+  border-radius: 0.2vmin;
   background-color: #809BBD;
-  font-size: 2.5vh;
+  font-size: 2.5vmin;
   font-family: "Lato-Light";
   color: white;
   cursor: pointer;
@@ -189,12 +189,12 @@ main {
 
 .auth .auth-bubble .section .goto-button {
   position: absolute;
-  right: 4vh;
-  bottom: 3vh;
+  right: 4vmin;
+  bottom: 3vmin;
   font-family: "Lato-Medium";
   color: #6D6D6D;
-  font-size: 2vh;
-  line-height: 1vh;
+  font-size: 2vmin;
+  line-height: 1vmin;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -206,21 +206,21 @@ main {
 .auth .auth-bubble .triangle {
   position: absolute;
   overflow: hidden;
-  top: -10.8vh;
-  right: 0.8vh;
-  width: 11vh;
-  height: 10.8vh;
+  top: -10.8vmin;
+  right: 0.8vmin;
+  width: 11vmin;
+  height: 10.8vmin;
 }
 
 .auth .auth-bubble .triangle::after {
   content: "";
   position: absolute;
-  width: 7vh;
-  height: 7vh;
+  width: 7vmin;
+  height: 7vmin;
   background: white;
   transform: rotate(45deg);
-  top: 10.8vh;
-  left: 4vh;
+  top: 10.8vmin;
+  left: 4vmin;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.10);
 }
 
@@ -228,15 +228,27 @@ main {
   text-align: left;
   position: absolute;
   font-family: "Lato-Regular";
-  font-size: 2.6vh;
+  font-size: 2.6vmin;
   color: #6D6D6D;
-  line-height: 3.1vh;
+  line-height: 3.1vmin;
   text-decoration: none;
   width: 100px;
-  left: 2vh;
-  top: 1.9vh;
+  left: 2vmin;
+  top: 1.9vmin;
 }
 
 .auth .auth-bubble .logout-text:hover {
   color: #292929;
+}
+
+.logo {
+    margin-top: -1vmin;
+    border-top: 1px solid #efefef;
+    background-position: center;
+    background-image: url("../images/logo.svg");
+    height: 9vmin;
+    width: 119vh;
+    background-repeat: no-repeat;
+    background-size: auto 65%;
+    opacity: 0.5;
 }
