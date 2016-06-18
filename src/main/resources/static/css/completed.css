@@ -76,7 +76,7 @@ main section .drop-down-more .bubble {
 main section .drop-down-more.show .bubble {
     right: 4.5vmin;
     position: absolute;
-    margin-top: 5.2vmin;
+    top: 2vmin;
     height: 9.5vmin;
     width: 23vmin;
     background: white;
@@ -162,7 +162,7 @@ main section .stars {
     left: 22vmin;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 59vmin;
+    width: 60vmin;
     height: 6vmin;
     white-space: nowrap;
 }
@@ -208,7 +208,7 @@ main section .stars[data-checked="10"] .stars-fill { width: 100%; }
 main section .rating {
     position: absolute;
     top: 21.3vmin;
-    left: 82vmin;
+    left: 83.2vmin;
     font-family: "Lato-Regular";
     font-size: 4vmin;
     color: #5B5B5B;
@@ -377,6 +377,7 @@ main section.no-review.edit .rating {
     top: 6px;
     right: 1vmin;
     position: absolute;
+    opacity: 0.7;
     background-size: cover;
 }
 

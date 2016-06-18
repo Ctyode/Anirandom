@@ -2,7 +2,7 @@ package org.flamierawieo.anirandom.controller.auth;
 
 import org.flamierawieo.anirandom.Validation;
 import org.flamierawieo.anirandom.controller.Base;
-import org.flamierawieo.anirandom.orm.User;
+import org.flamierawieo.anirandom.orm.mapping.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

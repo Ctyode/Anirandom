@@ -16,8 +16,8 @@
     {% if authorized %}
       <div class="auth">
         <div class="auth-text">
-          <a href="/completed">Completed</a>
-          <a href="/plan_to_watch">Plan to watch</a>
+          <a href="/profile/{{ username }}/completed">Completed</a>
+          <a href="/profile/{{ username }}/plan_to_watch">Plan to watch</a>
           <a class="auth-button" data-target="logout">{{ username }}</a>
         </div>
         <div class="auth-bubble initial-width-180px">

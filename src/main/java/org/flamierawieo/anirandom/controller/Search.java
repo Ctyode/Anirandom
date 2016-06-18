@@ -1,7 +1,7 @@
 package org.flamierawieo.anirandom.controller;
 
 import com.mitchellbosecke.pebble.error.PebbleException;
-import org.flamierawieo.anirandom.orm.Anime;
+import org.flamierawieo.anirandom.orm.mapping.Anime;
 import org.mongodb.morphia.query.Query;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

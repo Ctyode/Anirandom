@@ -1,7 +1,7 @@
 package org.flamierawieo.anirandom.controller.auth;
 
 import org.flamierawieo.anirandom.controller.Base;
-import org.flamierawieo.anirandom.orm.User;
+import org.flamierawieo.anirandom.orm.mapping.User;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;

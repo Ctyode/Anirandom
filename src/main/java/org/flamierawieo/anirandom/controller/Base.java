@@ -5,7 +5,7 @@ import com.mitchellbosecke.pebble.error.PebbleException;
 import com.mitchellbosecke.pebble.loader.FileLoader;
 import com.mitchellbosecke.pebble.template.PebbleTemplate;
 import com.mongodb.MongoClient;
-import org.flamierawieo.anirandom.orm.User;
+import org.flamierawieo.anirandom.orm.mapping.User;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 

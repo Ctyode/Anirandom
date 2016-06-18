@@ -1,4 +1,4 @@
-package org.flamierawieo.anirandom.orm;
+package org.flamierawieo.anirandom.orm.mapping;
 
 import org.bson.types.ObjectId;
 import org.json.simple.JSONObject;

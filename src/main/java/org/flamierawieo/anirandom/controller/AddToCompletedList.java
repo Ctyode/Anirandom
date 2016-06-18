@@ -1,9 +1,9 @@
 package org.flamierawieo.anirandom.controller;
 
 import org.bson.types.ObjectId;
-import org.flamierawieo.anirandom.orm.Anime;
-import org.flamierawieo.anirandom.orm.Review;
-import org.flamierawieo.anirandom.orm.User;
+import org.flamierawieo.anirandom.orm.mapping.Anime;
+import org.flamierawieo.anirandom.orm.mapping.Review;
+import org.flamierawieo.anirandom.orm.mapping.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
