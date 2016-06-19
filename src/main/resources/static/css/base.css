@@ -22,7 +22,6 @@
 
 body {
   margin: 0;
-  max-width: 1366px;
 }
 
 .anirandom-title {
@@ -42,7 +41,7 @@ body {
 main {
   position: relative;
   height: 71.6vmin;
-  width: 120.5vmin;
+  width: 59.5vw;
   margin: auto;
   margin-top: 0;
 }
@@ -112,7 +111,6 @@ main {
 }
 
 .auth[section=login] .auth-bubble {
-  height: 250px;
   height: 36vmin;
 }
 
@@ -168,11 +166,10 @@ main {
   padding-left: 1.3vmin;
   background-color: #fffdfe;
   font-family: "Lato-Light";
-  font-size: 18px;
   font-size: 2.6vmin;
   font-weight: 100;
   color: #cecece;
-  border: 1px solid #E7E7E7;
+  border: 0.1vmin solid #E7E7E7;
 }
 
 .auth .auth-bubble .section form input[type="submit"] {
@@ -221,7 +218,7 @@ main {
   transform: rotate(45deg);
   top: 10.8vmin;
   left: 4vmin;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 0 0.4vmin 0.2vmin rgba(0, 0, 0, 0.10);
 }
 
 .auth .auth-bubble .logout-text {
@@ -232,7 +229,7 @@ main {
   color: #6D6D6D;
   line-height: 3.1vmin;
   text-decoration: none;
-  width: 100px;
+  width: 16vmin;
   left: 2vmin;
   top: 1.9vmin;
 }
@@ -242,13 +239,12 @@ main {
 }
 
 .logo {
-    margin-top: -1vmin;
-    border-top: 1px solid #efefef;
+    margin-top: -0.5vw;
+    border-top: 0.1vw solid #efefef;
     background-position: center;
     background-image: url("../images/logo.svg");
-    height: 9vmin;
-    width: 119vh;
+    height: 4.5vw;
     background-repeat: no-repeat;
-    background-size: auto 65%;
+    background-size: auto 72%;
     opacity: 0.5;
 }

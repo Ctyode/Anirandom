@@ -4,7 +4,7 @@
     position: absolute;
     width: 121vmin;
     background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+    box-shadow: 0 0 0.3vmin 0 rgba(0,0,0,0.12), 0 0.3vmin 0.3vmin 0 rgba(0,0,0,0.24);
     border-radius: 0.2vmin;
 }
 
@@ -55,13 +55,13 @@
 .search ul li .year {width: 8vmin;float: left;margin-left: 1vmin;}
 
 .search ul::-webkit-scrollbar {
-    width: 6px;
+    width: 0.8vmin;
 }
 
 .search ul::-webkit-scrollbar-thumb {
     background-color: #BABABA;
-    border-top: 3px solid white;
-    border-bottom: 4px solid white;
+    border-top: 0.3vmin solid white;
+    border-bottom: 0.4vmin solid white;
 }
 
 .search ul li {
@@ -92,8 +92,8 @@
 
 .search ul {
     position: relative;
-    border-top: 1px solid #DEDEDE;
-    top: 1px;
+    border-top: 0.1vmin solid #DEDEDE;
+    top: 0.1vmin;
     overflow: auto;
     max-height: 48vmin;
     height: auto;
@@ -162,11 +162,11 @@ ul li .drop-down-search.show .bubble-search {
     width: 25vmin;
     background: white;
     border-radius: 0.4vmin;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
+    box-shadow: 0 0.1vmin 0.7vmin 0 rgba(0,0,0,0.10), 0 0.3vmin 1.1vmin 0 rgba(52,52,52,0.12);
 }
 
 ul li .drop-down-search.show .bubble-search {
-    margin-right: -3vh;
+    margin-right: -3vmin;
     margin-top: 1.2vmin;
     height: 9.2vmin;
     width: 19.5vmin;

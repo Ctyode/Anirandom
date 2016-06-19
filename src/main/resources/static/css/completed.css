@@ -1,33 +1,33 @@
 main .completed {
     overflow: hidden;
     font-family: "Lato-Regular";
-    font-size: 4.3vmin;
+    font-size: 4.3vh;
     color: #5B5B5B;
-    margin-bottom: 1.8vmin;
+    margin-bottom: 1.8vh;
 }
 
 main .completed ul {
-    margin-right: 7vmin;
-    margin-top: -5vmin;
+    margin-right: 7vh;
+    margin-top: -5vh;
 }
 
 main .completed ul li.menuElement {
-    margin-left: 2.4vmin;
+    margin-left: 2.4vh;
     display: block;
     float: right;
     font-family: "Lato-Medium";
-    font-size: 4.3vmin;
+    font-size: 4.3vh;
     cursor: pointer;
 }
 
 main section {
     position: relative;
     overflow: hidden;
-    width: 119vmin;
-    height: 28vmin;
+    width: 119vh;
+    height: 28vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    margin-bottom: 2.4vmin;
+    margin-bottom: 2.4vh;
     transition: 0.3s ease;
 }
 
@@ -43,19 +43,19 @@ main section .cover {
     background-size: contain;
     background-position: left;
     float: left;
-    width: 20.1vmin;
-    height: 28vmin;
+    width: 20.1vh;
+    height: 28vh;
 }
 
 main section .drop-down-more .more {
     position: absolute;
-    left: 114.5vmin;
+    left: 114.5vh;
     top: 0;
     background: url("../images/more.svg");
-    margin-top: 1vmin;
-    width: 4vmin;
+    margin-top: 1vh;
+    width: 4vh;
     background-size: cover;
-    height: 4vmin;
+    height: 4vh;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -74,20 +74,20 @@ main section .drop-down-more .bubble {
 }
 
 main section .drop-down-more.show .bubble {
-    right: 4.5vmin;
+    right: 4.5vh;
     position: absolute;
-    top: 2vmin;
-    height: 9.5vmin;
-    width: 23vmin;
+    top: 2vh;
+    height: 9.5vh;
+    width: 23vh;
     background: white;
-    border-radius: 0.4vmin;
+    border-radius: 0.4vh;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
 }
 
 main section .drop-down-more.show .bubble .options {
     font-family: "Lato-Regular";
-    margin-left: 1.8vmin;
-    font-size: 2.4vmin;
+    margin-left: 1.8vh;
+    font-size: 2.4vh;
     color: #6D6D6D;
     cursor: pointer;
 }
@@ -97,20 +97,20 @@ main section .drop-down-more.show .bubble .options:hover {
 }
 
 main section .drop-down-more.show .bubble .options.edit {
-    margin-top: 1.3vmin;
+    margin-top: 1.3vh;
 }
 
 main section .drop-down-more.show .bubble .options.remove {
-    margin-top: 1vmin;
+    margin-top: 1vh;
 }
 
 main section .anime-title {
     position: absolute;
-    top: 3vmin;
-    left: 22.3vmin;
-    width: 90vmin;
+    top: 3vh;
+    left: 22.3vh;
+    width: 90vh;
     font-family: "Lato-Regular";
-    font-size: 3.5vmin;
+    font-size: 3.5vh;
     color: #5B5B5B;
     line-height: 0.8em;
 }
@@ -147,34 +147,34 @@ main section .anime-title span:hover::after {
 
 main section .synopsis {
     position: absolute;
-    top: 6.8vmin;
-    left: 22.4vmin;
+    top: 6.8vh;
+    left: 22.4vh;
     font-family: Lato-Light;
-    font-size: 2.58vmin;
-    width: 91vmin;
+    font-size: 2.58vh;
+    width: 91vh;
     color: #626262;
-    line-height: 3.2vmin;
+    line-height: 3.2vh;
 }
 
 main section .stars {
     position: absolute;
-    top: 20vmin;
-    left: 22vmin;
+    top: 20vh;
+    left: 22vh;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 60vmin;
-    height: 6vmin;
+    width: 60vh;
+    height: 6vh;
     white-space: nowrap;
 }
 
 main section .stars input {
     opacity: 0.0;
     position: relative;
-    top: -5.4vmin;
-    left: 0.5vmin;
-    width: 5vmin;
-    height: 5vmin;
-    margin: 0 0.4vmin 0 0;
+    top: -5.4vh;
+    left: 0.5vh;
+    width: 5vh;
+    height: 5vh;
+    margin: 0 0.4vh 0 0;
 }
 
 main section .stars .stars-fill {
@@ -207,12 +207,12 @@ main section .stars[data-checked="10"] .stars-fill { width: 100%; }
 
 main section .rating {
     position: absolute;
-    top: 21.3vmin;
-    left: 83.2vmin;
+    top: 21.3vh;
+    left: 83.2vh;
     font-family: "Lato-Regular";
-    font-size: 4vmin;
+    font-size: 4vh;
     color: #5B5B5B;
-    line-height: 4vmin;
+    line-height: 4vh;
 }
 
 main section .hidden-edit {
@@ -221,33 +221,33 @@ main section .hidden-edit {
 
 main section .hidden-edit textarea {
     z-index: 0;
-    border-radius: 0.2vmin;
+    border-radius: 0.2vh;
     position: absolute;
-    top: 7.5vmin;
-    left: 23.5vmin;
-    width: 87.5vmin;
-    height: 11vmin;
+    top: 7.5vh;
+    left: 23.5vh;
+    width: 87.5vh;
+    height: 11vh;
     background-color: #fffdfe;
     font-family: "Lato-Light";
-    font-size: 2.6vmin;
+    font-size: 2.6vh;
     font-weight: 100;
     color: #cecece;
     border: 1px solid #E7E7E7;
-    padding-left: 1.4vmin;
-    padding-top: 0.5vmin;
+    padding-left: 1.4vh;
+    padding-top: 0.5vh;
     resize: none;
 }
 
 main section .hidden-edit input[type="submit"] {
-    top: 21.5vmin;
-    left: 98.5vmin;
+    top: 21.5vh;
+    left: 98.5vh;
     position: absolute;
-    width: 14vmin;
-    height: 5vmin;
+    width: 14vh;
+    height: 5vh;
     border: none;
-    border-radius: 0.2vmin;
+    border-radius: 0.2vh;
     background-color: #809BBD;
-    font-size: 2.5vmin;
+    font-size: 2.5vh;
     font-family: "Lato-Light";
     color: white;
     cursor: pointer;
@@ -258,31 +258,31 @@ main section.edit .hidden-edit {
 }
 
 main section.no-review {
-    width: 119.5vmin;
-    height: 16.2vmin;
+    width: 119.5vh;
+    height: 16.2vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    margin-bottom: 2.6vmin;
+    margin-bottom: 2.6vh;
     transition: 0.5s ease;
 }
 
 main section.no-review.edit {
-    height: 28.4vmin;
+    height: 28.4vh;
 }
 
 main section.no-review .anime-title {
     top: 14px;
-    top: 2.9vmin;
+    top: 2.9vh;
     left: 92px;
-    left: 14vmin;
+    left: 14vh;
     transition: 0.4s ease;
 }
 
 main section.no-review.edit .anime-title {
     top: 14px;
-    top: 2.5vmin;
+    top: 2.5vh;
     left: 154px;
-    left: 23.5vmin;
+    left: 23.5vh;
 }
 
 main section.no-review .cover-no-review {
@@ -291,8 +291,8 @@ main section.no-review .cover-no-review {
     background-position: center;
     float: left;
     width: 80px;
-    width: 11.5vmin;
-    height: 16.2vmin;
+    width: 11.5vh;
+    height: 16.2vh;
     transition: 0.5s ease;
     opacity: 1.0;
 }
@@ -305,8 +305,8 @@ main section.no-review.edit .cover-no-review-large {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
-    width: 21vmin;
-    height: 28.5vmin;
+    width: 21vh;
+    height: 28.5vh;
     transition: 0.5s ease;
 }
 
@@ -320,62 +320,62 @@ main section.no-review.edit .rating {
 }
 
 main section.no-review .stars {
-    top: 20vmin;
-    left: 21.5vmin;
+    top: 20vh;
+    left: 21.5vh;
     transition: 0.2s ease;
 }
 
 main section.no-review .rating {
-    top: 10vmin;
-    left: 84.5vmin;
-    font-size: 4.5vmin;
+    top: 10vh;
+    left: 84.5vh;
+    font-size: 4.5vh;
 }
 
 main section.no-review.edit .rating {
     top: 154px;
-    top: 22vmin;
+    top: 22vh;
     left: 570px;
-    left: 89vmin;
+    left: 89vh;
 }
 
 .go_to_search {
-    margin: 4vmin auto 0 auto;
-    line-height: 6.5vmin;
+    margin: 4vh auto 0 auto;
+    line-height: 6.5vh;
     text-align: center;
-    border-radius: 0.3vmin;
-    width: 18vmin;
-    height: 6.5vmin;
+    border-radius: 0.3vh;
+    width: 18vh;
+    height: 6.5vh;
     background: #64D08F;
     color: white;
     font-family: "Lato-Regular";
     display: block;
-    font-size: 2.5vmin;
+    font-size: 2.5vh;
     text-decoration: none;
 }
 
 .no-image {
-    margin: -2vmin auto;
-    height: 28vmin;
-    width: 29vmin;
+    margin: -2vh auto;
+    height: 28vh;
+    width: 29vh;
     background-size: cover;
     background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
 }
 
 .no-text {
-    margin: 4.5vmin auto 0 auto;
+    margin: 4.5vh auto 0 auto;
     text-align: center;
-    width: 106vmin;
+    width: 106vh;
     font-family: "Lato-Light";
     color: #777777;
-    font-size: 3.4vmin;
+    font-size: 3.4vh;
 }
 
 .plus {
     background-image: url("../images/plus.svg");
-    width: 4vmin;
-    height: 4vmin;
+    width: 4vh;
+    height: 4vh;
     top: 6px;
-    right: 1vmin;
+    right: 1vh;
     position: absolute;
     opacity: 0.7;
     background-size: cover;
