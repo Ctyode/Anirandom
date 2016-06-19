@@ -41,6 +41,8 @@ task staticResources(type: Copy) {
     from 'src/main/resources'
     from 'node_modules/baconjs/dist/Bacon.min.js'
     from 'node_modules/jquery/dist/jquery.min.js'
+    from 'node_modules/sweetalert/dist/sweetalert.min.js'
+    from 'node_modules/sweetalert/dist/sweetalert.css'
     into 'build/resources/main/static/'
 }
 

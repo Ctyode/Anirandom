@@ -17,6 +17,7 @@
     height: 4.5vmin;
     background-repeat: no-repeat;
     position: absolute;
+    opacity: 0.3;
 }
 
 .search ul {
@@ -44,7 +45,7 @@
 
 .search ul li .rating {
     top: 5.8vmin;
-    left: 59.5vmin;
+    left: 60.5vmin;
     font-family: "Lato-Regular";
     font-size: 3vmin;
     color: #2D2D2D;
@@ -79,7 +80,7 @@
     top: 5vmin;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 48.5vmin;
+    width: 50.5vmin;
     height: 5vmin;
 }
 
@@ -113,10 +114,10 @@
     background: none;
 }
 
-::-webkit-input-placeholder { color: black; }
-::-moz-placeholder          { color: black; }
-:-moz-placeholder           { color: black; }
-:-ms-input-placeholder      { color: black; }
+::-webkit-input-placeholder { color: gray; }
+::-moz-placeholder          { color: gray; }
+:-moz-placeholder           { color: gray; }
+:-ms-input-placeholder      { color: gray; }
 
 .title-container {
     color: #2D2D2D;
@@ -145,7 +146,7 @@ ul li .drop-down-search .more {
 }
 
 ul li:hover .drop-down-search .more {
-    opacity: 1.0;
+    opacity: 0.7;
 }
 
 ul li .drop-down-search .bubble-search {
@@ -165,13 +166,13 @@ ul li .drop-down-search.show .bubble-search {
 }
 
 ul li .drop-down-search.show .bubble-search {
+    margin-right: -3vh;
     margin-top: 1.2vmin;
     height: 9.2vmin;
-    width: 18.5vmin;
+    width: 19.5vmin;
     background: white;
     border-radius: 0.2vmin;
     box-shadow: 0vmin 0.2vmin 0.8vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
-    margin-left: -10.4vmin;
 }
 
 ul li .drop-down-search.show .bubble-search .search-add-to {

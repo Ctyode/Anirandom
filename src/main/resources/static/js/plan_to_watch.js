@@ -11,7 +11,8 @@ $(function() {
         });
         $drop_down.find(".remove").click(function() {
             $.getJSON("/anime/remove_from_plan_to_watch", {anime: $(this).attr("data-anime-id")}, function (data) {
-                if(data["status"] === "success") {
+                console.log(data);
+                if(data["success"]) {
                     $section.addClass("hidden");
                     setTimeout(function() {
                         $section.remove();
@@ -21,8 +22,8 @@ $(function() {
         });
         $drop_down.find(".move").click(function() {
             $.getJSON("/anime/move_to_completed", {anime: $(this).attr("data-anime-id")}, function (data) {
-                if(data["status"] === "success") {
-                    console.log("blablabla")
+                console.log(data);
+                if(data["success"]) {
                     $section.addClass("hidden");
                     setTimeout(function() {
                         $section.remove();
