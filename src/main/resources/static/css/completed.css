@@ -320,8 +320,8 @@ main section.no-review.edit .rating {
 }
 
 main section.no-review .stars {
-    top: 20vmin;
-    left: 21.5vmin;
+    top: 9vmin;
+    left: 14.5vmin;
     transition: 0.2s ease;
 }
 
@@ -329,6 +329,12 @@ main section.no-review .rating {
     top: 10vmin;
     left: 84.5vmin;
     font-size: 4.5vmin;
+}
+
+main section.no-review.edit .stars {
+    top: 21vmin;
+    left: 22.5vmin;
+    transition: 0.2s ease;
 }
 
 main section.no-review.edit .rating {
