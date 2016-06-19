@@ -25,8 +25,7 @@ $(function() {
         });
         var $title_span = $section.find(".anime-title span");
         $title_span.attr("data-anime-title", $title_span.html());
-        var $stars = $hidden_edit.find(".stars");
-        console.log($stars);
+        var $stars = $section.find(".stars");
         $stars.find("input").change(function() {
             console.log("asdasd")
             if(this.checked) {
