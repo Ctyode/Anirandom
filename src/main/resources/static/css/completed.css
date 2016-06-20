@@ -376,17 +376,6 @@ main section.no-review.edit .rating {
     font-size: 3.4vmin;
 }
 
-.plus {
-    background-image: url("../images/plus.svg");
-    width: 4vmin;
-    height: 4vmin;
-    top: 6px;
-    right: 1vmin;
-    position: absolute;
-    opacity: 0.7;
-    background-size: cover;
-}
-
 #unreviewed {
     visibility: hidden;
 }

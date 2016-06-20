@@ -1,316 +1,526 @@
-main .gray_text {
-    position: absolute;
-    text-align: center;
-    left: 0;
-    top: 14vw;
-    font-family: "Lato-Light";
-    font-size: 2.5vw;
-    color: #6e6e6e;
-    width: 60vw;
-    transition: 0.3s ease;
-    opacity: 0.0;
-}
+@media (orientation: landscape) {
 
-main .gray_text.show {
-    opacity: 1.0;
-}
-
-main .randomize-button {
-    font-family: "Lato-Medium";
-    box-sizing: border-box;
-    line-height: 4.2vw;
-    text-align: center;
-    top: 30vw;
-    left: 22.3vw;
-    margin: auto;
-    position: absolute;
-    height: 4.2vw;
-    width: 14vw;
-    background: #64D08F;
-    border-radius: 0.5vmin;
-    font-size: 1.6vw;
-    color: #FFFFFF;
-    letter-spacing: 0.03vmin;
-    cursor: pointer;
-}
-
-main .drop-down-menu {
-    font-family: "Lato-Medium";
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 3.85vw;
-    font-size: 1.22vw;
-    color: #6e6e6e;
-    width: 18.8vw;
-    height: 3.8vw;
-    background: #FCFCFC;
-    box-shadow: 0 0 0.3vmin 0 rgba(0, 0, 0, 0.12), 0 0.3vmin 0.4vmin 0 rgba(0, 0, 0, 0.24);
-    border-radius: 0.1vw;
-    transition: 0.3s ease;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-main .drop-down-menu ul {
-    width: 18.5vw;
-    height: 42vmin;
-    height: 20.5vw;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    margin: 0;
-    padding: 0;
-}
-
-@-moz-document url-prefix() {
-    main .drop-down-menu ul {
-        width: 30vmin;
+    main .gray_text {
+        position: absolute;
+        text-align: center;
+        left: 0;
+        top: 14vw;
+        font-family: "Lato-Light";
+        font-size: 2.5vw;
+        color: #6e6e6e;
+        width: 60vw;
+        transition: 0.3s ease;
+        opacity: 0.0;
     }
+
+    main .gray_text.show { opacity: 1.0; }
+
+    main .randomize-button {
+        font-family: "Lato-Medium";
+        box-sizing: border-box;
+        line-height: 4.2vw;
+        text-align: center;
+        top: 30vw;
+        left: 22.3vw;
+        margin: auto;
+        position: absolute;
+        height: 4.2vw;
+        width: 14vw;
+        background: #64D08F;
+        border-radius: 0.5vmin;
+        font-size: 1.6vw;
+        color: #FFFFFF;
+        letter-spacing: 0.03vmin;
+        cursor: pointer;
+    }
+
+    main .drop-down-menu {
+        font-family: "Lato-Medium";
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 3.85vw;
+        font-size: 1.22vw;
+        color: #6e6e6e;
+        width: 18.8vw;
+        height: 3.8vw;
+        background: #FCFCFC;
+        box-shadow: 0 0 0.3vmin 0 rgba(0, 0, 0, 0.12), 0 0.3vmin 0.4vmin 0 rgba(0, 0, 0, 0.24);
+        border-radius: 0.1vw;
+        transition: 0.3s ease;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    main .drop-down-menu ul {
+        width: 18.5vw;
+        height: 42vmin;
+        height: 20.5vw;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin: 0;
+        padding: 0;
+    }
+
+    @-moz-document url-prefix() { main .drop-down-menu ul { width: 30vmin; } }
+
+    main .drop-down-menu ul::-webkit-scrollbar { width: 0.9vmin; }
+
+    main .drop-down-menu ul::-webkit-scrollbar-thumb {
+        background-color: #BABABA;
+        border-top: 0.3vmin solid white;
+        border-bottom: 0.6vmin solid white;
+    }
+
+    main .drop-down-menu ul li {
+        height: 4vw;
+        padding-left: 1.5vw;
+        display: block;
+    }
+
+    main .drop-down-menu .title {
+        position: relative;
+        padding-left: 1.4vw;
+        box-sizing: border-box;
+        border-bottom: 0.1vmin solid #D5D4D4;
+    }
+
+    main .drop-down-menu .title::after {
+        content: ' ';
+        position: absolute;
+        right: 1.5vw;
+        top: 1.8vw;
+        border-width: 0.5vw;
+        border-color: #5B5B5B rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
+        border-style: solid;
+    }
+
+    main .drop-down-menu.open { height: 24.4vw; }
+
+    main /*.drop-down-menu*/ #genre { position: absolute; }
+    main /*.drop-down-menu*/ #year { position: absolute; left: 20vw; }
+    main /*.drop-down-menu*/ #rating { position: absolute; left: 40vw; }
+
+    main .info { transition: 0.5s ease; opacity: 0.0; }
+    main .info.show { opacity: 1.0; }
+
+    main .info .image {
+        background-size: contain;
+        background-position: center;
+        width: 13vw;
+        height: 19vw;
+        position: absolute;
+        left: 1.3vw;
+        top: 7.3vw;
+        background-repeat: no-repeat;
+    }
+
+    main .info .title {
+        color: #383838;
+        font-family: "Lato-Regular";
+        position: absolute;
+        top: 7vw;
+        left: 18vw;
+        right: 2vw;
+    }
+
+    main .info .title .wrap {
+        position: relative;
+        left: 0;
+    }
+
+    main .info .title span {
+        white-space: nowrap;
+        font-weight: 400;
+        color: #5B5B5B;
+    }
+
+    main .info .synopsis {
+        overflow-y: scroll;
+        font-family: "Lato-Light";
+        position: absolute;
+        left: 18vw;
+        top: 10.9vw;
+        width: 39vw;
+        height: 12vw;
+        color: #626262;
+        font-size: 1.26vw;
+        font-weight: 300;
+        padding-right: 0.6vw;
+    }
+
+    main .info .synopsis::-webkit-scrollbar { width: 0.8vmin; }
+
+    main .info .synopsis::-webkit-scrollbar-thumb {
+        background-color: #BABABA;
+        border-top: 0.4vmin solid white;
+        border-bottom: 0.4vmin solid white;
+    }
+
+    main .info .rating {
+        color: #5B5B5B;
+        padding-left: 3.5vw;
+        background-repeat: no-repeat;
+        font-family: "Lato-Medium";
+        font-size: 1.9vw;
+        position: absolute;
+        left: 18vw;
+        top: 24.5vw;
+    }
+
+    main .info .rating::before {
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: -0.25vw;
+        position: absolute;
+        left: 0.2vw;
+        content: " ";
+        transition: 0.2s ease;
+        background-image: url("../images/index-star.svg");
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    main .info .love {
+        position: absolute;
+        left: 51.2vw;
+        top: 24.5vw;
+        cursor: pointer;
+    }
+
+    main .info .love .love-button {
+        position: relative;
+        color: #5B5B5B;
+        font-size: 1.9vw;
+        font-family: "Lato-Medium";
+        transition: 0.2s ease;
+    }
+
+    main .info .love .love-button:hover { color: #232323; }
+
+
+    main .info .love .love-button::before {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../images/heart.svg");
+        width: 2.5vw;
+        height: 2.25vw;
+        position: absolute;
+        left: -3.2vw;
+        content: " ";
+        transition: 0.2s ease;
+    }
+
+    main .info .love .love-button:hover::before {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../images/heart-fill.svg");
+        width: 2.5vw;
+        height: 2.25vw;
+        position: absolute;
+        left: -3.2vw;
+        content: " ";
+    }
+
+    main .info .love .bubble { height: 0; overflow: hidden; }
+
+    main .info .love.show .bubble {
+        margin-top: 0.3vw;
+        height: 5vw;
+        width: 11vw;
+        background: white;
+        border-radius: 0.1vw;
+        box-shadow: 0vmin 0.2vmin 1vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
+        margin-left: -4.5vw;
+    }
+
+    main .info .love.show .bubble .add-to {
+        font-family: "Lato-Regular";
+        margin-left: 0.8vw;
+        font-size: 1.23vw;
+        color: #6D6D6D;
+        cursor: pointer;
+    }
+
+    main .info .love.show .bubble .add-to:hover {
+        color: #020202;
+    }
+
+    main .info .love.show .bubble .add-to.add-to-plan-to-watch {
+        margin-top: 0.7vw;
+    }
+
+    main .info .love.show .bubble .add-to.add-to-completed {
+        margin-top: 0.45vw;
+    }
+
+    main .info .title span {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 2.8vw;
+    }
+
+    main .info .title span::after {
+        z-index: 105;
+        font-size: 2.2vmin;
+        background: #FDFDF6;
+        border-radius: 0.5vmin;
+        padding: 0.6vmin 1vmin;
+        box-shadow: 0 0.1vmin 0.5vmin rgba(0, 0, 0, 0.2);
+        color: #1B1B1B;
+        left: 45vmin;
+        margin-top: 7vmin;
+        opacity: 0;
+        content: attr(anime-title);
+        position: absolute;
+        visibility: hidden;
+        transition: 0.5s ease 1.5s;
+    }
+
+    main .info .title span:hover::after { opacity: 1; visibility: visible; }
+
 }
 
-main .drop-down-menu ul::-webkit-scrollbar {
-    width: 0.9vmin;
-}
+@media (orientation: portrait) {
 
-main .drop-down-menu ul::-webkit-scrollbar-thumb {
-    background-color: #BABABA;
-    border-top: 0.3vmin solid white;
-    border-bottom: 0.6vmin solid white;
-}
+        main .gray_text { position: absolute; opacity: 0.0; }
+        main .gray_text.show { opacity: 0.0; }
 
-main .drop-down-menu ul li {
-    height: 4vw;
-    padding-left: 1.5vw;
-    display: block;
-}
+         main .randomize-button {
+             z-index: 1;
+             font-family: "Lato-Medium";
+             line-height: 12.2vw;
+             text-align: center;
+             top: 44vw;
+             left: 12vw;
+             position: absolute;
+             width: 41vw;
+             background: #64D08F;
+             border-radius: 0.5vmin;
+             font-size: 4.6vw;
+             letter-spacing: 0.03em;
+             color: #FFFFFF;
+             margin-bottom: 2vw;
+             cursor: pointer;
+             transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+         }
 
-main .drop-down-menu .title {
-    position: relative;
-    padding-left: 1.4vw;
-    box-sizing: border-box;
-    border-bottom: 0.1vmin solid #D5D4D4;
-}
+         main .randomize-button.randomized { top: 153vw; }
 
-main .drop-down-menu .title::after {
-    content: ' ';
-    position: absolute;
-    right: 1.5vw;
-    top: 1.8vw;
-    border-width: 0.5vw;
-    border-color: #5B5B5B rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
-    border-style: solid;
-}
+         main .drop-down-menu {
+             margin-top: -5vh;
+             left: -4vw;
+             position: absolute;
+             font-family: "Lato-Medium";
+             line-height: 13.85vw;
+             font-size: 4.22vw;
+             width: 71vw;
+             color: #6e6e6e;
+             height: 13.7vw;
+             background: #FCFCFC;
+             box-shadow: 0 0 0.3vmin 0 rgba(0, 0, 0, 0.12), 0 0.3vmin 0.4vmin 0 rgba(0, 0, 0, 0.24);
+             border-radius: 0.3vw;
+             transition: 0.3s ease;
+             overflow: hidden;
+             cursor: pointer;
+         }
 
-main .drop-down-menu.open {
-    height: 24.4vw;
-}
+         main .drop-down-menu ul {
+             height: 58.5vw;
+             overflow-x: hidden;
+             overflow-y: scroll;
+             margin: 0;
+             padding: 0;
+         }
 
-main /*.drop-down-menu*/ #genre {
-    position: absolute;
-}
+         @-moz-document url-prefix() { main .drop-down-menu ul { width: 30vmin; } }
 
-main /*.drop-down-menu*/ #year {
-    position: absolute;
-    left: 20vw;
-}
+         main .drop-down-menu ul::-webkit-scrollbar { width: 0.9vmin; }
 
-main /*.drop-down-menu*/ #rating {
-    position: absolute;
-    left: 40vw;
-}
+         main .drop-down-menu ul::-webkit-scrollbar-thumb {
+             background-color: #BABABA;
+             border-top: 0.3vmin solid white;
+             border-bottom: 0.6vmin solid white;
+         }
 
-main .info {
-    transition: 0.5s ease;
-    opacity: 0.0;
-}
+         main .drop-down-menu ul li {
+             height: 13.85vw;
+             padding-left: 3.5vw;
+             display: block;
+         }
 
-main .info.show {
-    opacity: 1.0;
-}
+         main .drop-down-menu .title {
+             position: relative;
+             padding-left: 3.4vw;
+             box-sizing: border-box;
+             border-bottom: 0.1vmin solid #D5D4D4;
+         }
 
-main .info .image {
-    background-size: contain;
-    background-position: center;
-    width: 13vw;
-    height: 19vw;
-    position: absolute;
-    left: 1.3vw;
-    top: 7.3vw;
-    background-repeat: no-repeat;
-}
+         main .drop-down-menu .title::after {
+             content: ' ';
+             position: absolute;
+             right: 4.5vw;
+             top: 6vw;
+             border-width: 1.5vw;
+             border-color: #6f6f6f rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
+             border-style: solid;
+         }
 
-main .info .title {
-    color: #383838;
-    font-family: "Lato-Regular";
-    position: absolute;
-    top: 7vw;
-    left: 18vw;
-    right: 2vw;
-}
+         main .drop-down-menu.open { height: 72.4vw; }
 
-main .info .title .wrap {
-    position: relative;
-    left: 0;
-}
+         main /*.drop-down-menu*/ #genre { z-index: 101; }
+         main /*.drop-down-menu*/ #year { top: 16vw; z-index: 100; }
+         main /*.drop-down-menu*/ #rating { top: 32vw; z-index: 99; }
 
-main .info .title span {
-    white-space: nowrap;
-    font-weight: 400;
-    color: #5B5B5B;
-}
+         main .info { transition: 0.5s ease; opacity: 0.0; }
 
-main .info .synopsis {
-    overflow-y: scroll;
-    font-family: "Lato-Light";
-    position: absolute;
-    left: 18vw;
-    top: 10.9vw;
-    width: 39vw;
-    height: 12vw;
-    color: #626262;
-    font-size: 1.26vw;
-    font-weight: 300;
-    padding-right: 0.6vw;
-}
+         main .info.show { opacity: 1.0; }
 
-main .info .synopsis::-webkit-scrollbar {
-    width: 0.8vmin;
-}
+         main .info .image {
+             background-size: contain;
+             background-position: center;
+             width: 49vw;
+             height: 62vw;
+             position: absolute;
+             left: 7.3vw;
+             top: 43.3vw;
+             background-repeat: no-repeat;
+         }
 
-main .info .synopsis::-webkit-scrollbar-thumb {
-    background-color: #BABABA;
-    border-top: 0.4vmin solid white;
-    border-bottom: 0.4vmin solid white;
-}
+         main .info .title {
+             color: #383838;
+             font-family: "Lato-Regular";
+             position: absolute;
+             top: 108vw;
+             left: -14vw;
+             right: 2vw;
+             width: 88vw;
+         }
 
-main .info .rating {
-    color: #5B5B5B;
-    padding-left: 3.5vw;
-    background-repeat: no-repeat;
-    font-family: "Lato-Medium";
-    font-size: 1.9vw;
-    position: absolute;
-    left: 18vw;
-    top: 24.5vw;
-}
+         main .info .title span {
+             white-space: nowrap;
+             font-weight: 400;
+             color: #5B5B5B;
+         }
 
-main .info .rating::before {
-	background-size: cover;
-	background-repeat: no-repeat;
-	top: -0.25vw;
-	position: absolute;
-	left: 0.2vw;
-	content: " ";
-	transition: 0.2s ease;
-	background-image: url("../images/index-star.svg");
-	width: 2.5vw;
-	height: 2.5vw;
-}
+         main .info .synopsis {
+             overflow-y: scroll;
+             font-family: "Lato-Light";
+             position: absolute;
+             left: -14vw;
+             top: 116vw;
+             width: 90vw;
+             height: 24vw;
+             color: #626262;
+             font-size: 3.26vw;
+             font-weight: 300;
+             padding-right: 0.6vw;
+         }
 
-main .info .love {
-    position: absolute;
-    left: 51.2vw;
-    top: 24.5vw;
-    cursor: pointer;
-}
+         main .info .synopsis::-webkit-scrollbar { width: 0.8vmin; }
 
-main .info .love .love-button {
-    position: relative;
-    color: #5B5B5B;
-    font-size: 1.9vw;
-    font-family: "Lato-Medium";
-    transition: 0.2s ease;
-}
+         main .info .synopsis::-webkit-scrollbar-thumb {
+             background-color: #BABABA;
+             border-top: 0.4vmin solid white;
+             border-bottom: 0.4vmin solid white;
+         }
 
-main .info .love .love-button:hover {
-    color: #232323;
-}
+         main .info .rating {
+             color: #5B5B5B;
+             padding-left: 3.5vw;
+             background-repeat: no-repeat;
+             font-family: "Lato-Medium";
+             font-size: 4.9vw;
+             position: absolute;
+             left: -8vw;
+             top: 143.5vw;
+         }
 
+         main .info .rating::before {
+             background-size: cover;
+             background-repeat: no-repeat;
+             top: -1.25vw;
+             position: absolute;
+             left: -5.8vw;
+             content: " ";
+             transition: 0.2s ease;
+             background-image: url("../images/index-star.svg");
+             width: 7.5vw;
+             height: 7.5vw;
+         }
 
-main .info .love .love-button::before {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../images/heart.svg");
-    width: 2.5vw;
-    height: 2.25vw;
-    position: absolute;
-    left: -3.2vw;
-    content: " ";
-    transition: 0.2s ease;
-}
+         main .info .love {
+             position: absolute;
+             left: 60.2vw;
+             top: 143.5vw;
+             cursor: pointer;
+         }
 
-main .info .love .love-button:hover::before {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../images/heart-fill.svg");
-    width: 2.5vw;
-    height: 2.25vw;
-    position: absolute;
-    left: -3.2vw;
-    content: " ";
-}
+         main .info .love .love-button {
+             white-space: nowrap;
+             position: relative;
+             color: #5B5B5B;
+             font-size: 4.9vw;
+             font-family: "Lato-Medium";
+             transition: 0.2s ease;
+         }
 
-main .info .love .bubble {
-    height: 0;
-    overflow: hidden;
-}
+         main .info .love .love-button:hover { color: #232323; }
 
-main .info .love.show .bubble {
-    margin-top: 0.3vw;
-    height: 5vw;
-    width: 11vw;
-    background: white;
-    border-radius: 0.1vw;
-    box-shadow: 0vmin 0.2vmin 1vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
-    margin-left: -4.5vw;
-}
+         main .info .love .love-button::before {
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-image: url("../images/heart.svg");
+             width: 7.8vw;
+             height: 7.25vw;
+             position: absolute;
+             left: -10.2vw;
+             content: " ";
+             transition: 0.2s ease;
+         }
 
-main .info .love.show .bubble .add-to {
-    font-family: "Lato-Regular";
-    margin-left: 0.8vw;
-    font-size: 1.23vw;
-    color: #6D6D6D;
-    cursor: pointer;
-}
+         main .info .love .love-button:hover::before {
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-image: url("../images/heart-fill.svg");
+             width: 7.8vw;
+             height: 7.25vw;
+             position: absolute;
+             left: -10.2vw;
+             content: " ";
+         }
 
-main .info .love.show .bubble .add-to:hover {
-    color: #020202;
-}
+         main .info .love .bubble { height: 0; overflow: hidden; }
 
-main .info .love.show .bubble .add-to.add-to-plan-to-watch {
-    margin-top: 0.7vw;
-}
+         main .info .love.show .bubble {
+             margin-top: -21.7vw;
+             height: 13vw;
+             width: 33vw;
+             background: white;
+             border-radius: 0.1vw;
+             box-shadow: 0vmin 0.2vmin 1vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
+             margin-left: -17.5vw;
+         }
 
-main .info .love.show .bubble .add-to.add-to-completed {
-    margin-top: 0.45vw;
-}
+         main .info .love.show .bubble .add-to {
+             font-family: "Lato-Regular";
+             margin-left: 1.8vw;
+             font-size: 3.8vw;
+             color: #6D6D6D;
+             cursor: pointer;
+         }
 
-main .info .title span {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 2.8vw;
-}
+         main .info .love.show .bubble .add-to:hover { color: #020202; }
+         main .info .love.show .bubble .add-to.add-to-plan-to-watch { margin-top: 1.4vw; }
+         main .info .love.show .bubble .add-to.add-to-completed { margin-top: 0.45vw; }
 
-main .info .title span::after {
-    z-index: 105;
-    font-size: 2.2vmin;
-    background: #FDFDF6;
-    border-radius: 0.5vmin;
-    padding: 0.6vmin 1vmin;
-    box-shadow: 0 0.1vmin 0.5vmin rgba(0, 0, 0, 0.2);
-    color: #1B1B1B;
-    left: 45vmin;
-    margin-top: 7vmin;
-    opacity: 0;
-    content: attr(anime-title);
-    position: absolute;
-    visibility: hidden;
-    transition: 0.5s ease 1.5s;
-}
-
-main .info .title span:hover::after {
-	opacity: 1;
-	visibility: visible;
-}
+         main .info .title span {
+             display: block;
+             overflow: hidden;
+             white-space: nowrap;
+             text-overflow: ellipsis;
+             font-size: 5.8vw;
+         }
+ }
