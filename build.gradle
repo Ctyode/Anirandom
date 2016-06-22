@@ -28,6 +28,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    compile group: 'org.springframework.security', name: 'spring-security-crypto', version: '4.1.0.RELEASE'
     compile group: 'com.mitchellbosecke', name: 'pebble', version: '2.2.1'
     compile 'com.googlecode.json-simple:json-simple:1.1'
     compile 'org.springframework.boot:spring-boot-starter-web'

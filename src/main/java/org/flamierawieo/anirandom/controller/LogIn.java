@@ -24,9 +24,7 @@ public class LogIn extends Base {
         UserDao userDao = new UserDao();
         User user = userDao.getUserByUsername(username);
         if(user != null) {
-            System.out.println(user.password);
-            System.out.println(pbkdf2WithHmacSHA1(password));
-            if(user.password.equals(pbkdf2WithHmacSHA1(password))) {
+            if(bcheck(password, user.password)) {
                 String accessToken = randomAccessToken();
                 BaseDao.DaoResponse r = userDao.addAccessToken(user, accessToken);
                 if(r.isSuccess()) {

@@ -2,6 +2,7 @@ package org.flamierawieo.anirandom.controller;
 
 import org.flamierawieo.anirandom.orm.dao.UserDao;
 import org.flamierawieo.anirandom.orm.mapping.User;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -45,7 +46,7 @@ public class SignUp extends Base {
             User user = new User();
             user.username = username;
             user.email = email;
-            user.password = pbkdf2WithHmacSHA1(password);
+            user.password = bhash(password);
             user.accessTokens = accessTokens;
             new UserDao().createUser(user);
             response.addCookie(new Cookie("access_token", accessToken));
