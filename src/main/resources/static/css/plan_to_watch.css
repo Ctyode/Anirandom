@@ -1,3 +1,5 @@
+@media(orientation: landscape) {
+
 main .plan_to_watch {
     font-family: "Lato-Regular";
     font-size: 2.1vw;
@@ -145,4 +147,195 @@ main section .info .rating {
     font-family: "Lato-Light";
     color: #777777;
     font-size: 3.4vh;
+}
+
+}
+
+@media (orientation: portrait) {
+
+    main {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      margin-top: 0;
+    }
+
+    main .plan_to_watch {
+        font-family: "Lato-Regular";
+        font-size: 4.1vw;
+        margin-left: 1.5vw;
+        color: #5B5B5B;
+        margin-bottom: 0.8vw;
+    }
+
+    main section {
+        position: relative;
+        height: 16vw;
+        background: #FFFFFF;
+        box-shadow: 0 0 0.3vh 0 rgba(0,0,0,0.12), 0 0.3vh 0.4vh 0 rgba(0,0,0,0.24);
+        border-radius: 0.1vw;
+        margin-bottom: 1.2vw;
+        transition: 0.3s ease;
+    }
+
+    main section.hidden {
+        opacity: 0.0;
+        overflow: hidden;
+        height: 0;
+        margin-bottom: 0;
+    }
+
+    main section .cover {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        float: left;
+        width: 13vw;
+        height: 16vw;
+        margin-left: -1vw;
+        transition: 0.5s ease;
+        opacity: 1.0;
+    }
+
+    main section .info {
+        float: left;
+        width: 50vw;
+    }
+
+    main section .drop-down-more .more {
+        position: absolute;
+        right: 0.3vw;
+        top: 0;
+        background: url("../images/more.svg");
+        margin-top: 1vw;
+        width: 4vw;
+        height: 4vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    main section:hover .drop-down-more .more {
+        opacity: 1.0;
+    }
+
+    main section .drop-down-more .bubble {
+        height: 0;
+        overflow: hidden;
+        z-index: 100;
+    }
+
+    main section .drop-down-more.show .bubble {
+        right: 4.2vw;
+        position: absolute;
+        top: 1vw;
+        height: 9.5vw;
+        width: 27.5vw;
+        background: white;
+        border-radius: 0.4vmin;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
+    }
+
+    main section .drop-down-more.show .bubble .options {
+        font-family: "Lato-Regular";
+        margin-left: 1.5vw;
+        font-size: 2.6vw;
+        color: #6D6D6D;
+        cursor: pointer;
+    }
+
+    main section .drop-down-more.show .bubble .options:hover {
+        color: #020202;
+    }
+
+    main section .drop-down-more.show .bubble .options.move {
+        margin-top: 1.2vw;
+    }
+
+    main section .drop-down-more.show .bubble .options.remove {
+        margin-top: 0.6vw;
+    }
+
+    main section .info .anime-title {
+        padding-left: 1.9vh;
+        margin-top: 1.9vw;
+        font-family: "Lato-Regular";
+        font-size: 4vw;
+        width: 78vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #5B5B5B;
+        height: 4.8vw;
+    }
+
+    main section .info .stars {
+        margin-top: 1vw;
+        margin-left: 1vw;
+        background-repeat: repeat-x;
+        background-image: url("../images/star.svg");
+        width: 64.7vw;
+        height: 6.5vw;
+        transition: 0.2s ease;
+    }
+
+    main section .info .stars .stars-fill {
+        background-repeat: repeat-x;
+        background-image: url("../images/star-filled.svg");
+        height: 100%;
+    }
+
+    main section .info .rating {
+        position: absolute;
+        margin-top: -5.6vw;
+        margin-left: 67vw;
+        font-family: "Lato-Regular";
+        font-size: 4.2vw;
+        color: #5B5B5B;
+    }
+
+    .go_to_search {
+        margin: 4vh auto 0 auto;
+        line-height: 6.5vh;
+        text-align: center;
+        border-radius: 0.3vh;
+        width: 18vh;
+        height: 6.5vh;
+        background: #64D08F;
+        color: white;
+        font-family: "Lato-Regular";
+        display: block;
+        font-size: 2.5vh;
+        text-decoration: none;
+    }
+
+    .no-image {
+        margin: -2vh auto;
+        height: 28vh;
+        width: 29vh;
+        background-size: cover;
+        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+    }
+
+    .no-text {
+        margin: 4.5vh auto 0 auto;
+        text-align: center;
+        width: 114vh;
+        font-family: "Lato-Light";
+        color: #777777;
+        font-size: 3.4vh;
+    }
+
+    .plus {
+        background-image: url("../images/plus.svg");
+        width: 4vw;
+        height: 4vw;
+        top: 0.5vw;
+        right: 1vw;
+        position: absolute;
+        background-size: cover;
+        opacity: 0.7;
+    }
+
 }

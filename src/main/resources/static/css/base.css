@@ -243,8 +243,8 @@ main {
     background-image: url("../images/plus.svg");
     width: 2vw;
     height: 2vw;
-    top: 0.8vw;
-    right: 0;
+    top: 0.3vw;
+    right: 0.8vw;
     position: absolute;
     background-size: cover;
     opacity: 0.7;

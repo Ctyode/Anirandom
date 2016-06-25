@@ -2,19 +2,19 @@
     z-index: 100500;
     overflow: hidden;
     position: absolute;
-    width: 121vmin;
+    width: 59.25vw;
     background: #FFFFFF;
     box-shadow: 0 0 0.3vmin 0 rgba(0,0,0,0.12), 0 0.3vmin 0.3vmin 0 rgba(0,0,0,0.24);
-    border-radius: 0.2vmin;
+    border-radius: 0.1vw;
 }
 
 .search-icon {
     background-image: url("../images/search.svg");
-    margin-left: 1.9vmin;
-    top: 1.5vmin;
-    width: 4.5vmin;
+    margin-left: 0.9vw;
+    top: 0.75vw;
+    width: 2.2vw;
     background-size: cover;
-    height: 4.5vmin;
+    height: 2.2vw;
     background-repeat: no-repeat;
     position: absolute;
     opacity: 0.3;
@@ -25,9 +25,9 @@
 }
 
 .search ul li .image {
-    width: 8vmin;
+    width: 3.9vw;
     float: left;
-    height: 11vmin;
+    height: 5.5vw;
     background-color: #6D6D6D;
     position: absolute;
     background-size: cover;
@@ -36,23 +36,23 @@
 
 .search ul li .title {
     overflow: hidden;
-    max-width: 95vmin;
+    max-width: 47vw;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-left: 10vmin;
+    margin-left: 5vw;
     float: left;
 }
 
 .search ul li .rating {
-    top: 5.8vmin;
-    left: 60.5vmin;
+    top: 2.85vw;
+    left: 29.3vw;
     font-family: "Lato-Regular";
-    font-size: 3vmin;
+    font-size: 1.5vw;
     color: #2D2D2D;
     position: absolute;
 }
 
-.search ul li .year {width: 8vmin;float: left;margin-left: 1vmin;}
+.search ul li .year {width: 4vw;float: left;margin-left: 0.5vw;}
 
 .search ul::-webkit-scrollbar {
     width: 0.8vmin;
@@ -66,8 +66,8 @@
 
 .search ul li {
     position: relative;
-    height: 11vmin;
-    width: 117vmin;
+    height: 5.39vw;
+    width: 55vw;
     display: block;
 }
 
@@ -76,12 +76,12 @@
 
 .search .stars {
     position: absolute;
-    left: 9.5vmin;
-    top: 5vmin;
+    left: 4.8vw;
+    top: 2.4vw;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 50.5vmin;
-    height: 5vmin;
+    width: 24vw;
+    height: 2.4vw;
 }
 
 .search .stars-fill {
@@ -92,10 +92,10 @@
 
 .search ul {
     position: relative;
-    border-top: 0.1vmin solid #DEDEDE;
-    top: 0.1vmin;
+    border-top: 0.1vw solid #DEDEDE;
+    top: 0.1vw;
     overflow: auto;
-    max-height: 48vmin;
+    max-height: 24vw;
     height: auto;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -106,11 +106,11 @@
 .search input[type="text"] {
     font-family: "Lato-Light";
     border: none;
-    width: 112vmin;
-    margin-left: 7.8vmin;
-    height: 7vmin;
-    font-size: 2.8vmin;
-    padding-left: 1.2vmin;
+    width: 55vw;
+    margin-left: 3.8vw;
+    height: 3.4vw;
+    font-size: 1.34vw;
+    padding-left: 0.6vw;
     background: none;
 }
 
@@ -122,22 +122,23 @@
 .title-container {
     color: #2D2D2D;
     display: inline-block;
-    width: 119vmin;
+    width: 58vw;
     font-family: "Lato-Regular";
-    font-size: 3vmin;
+    font-size: 1.45vw;
     cursor: pointer;
     position: absolute;
-    top: 1vmin;
+    top: 0.45vw;
 }
 
 ul li .drop-down-search .more {
-    left: 115.5vmin;
+    /* left: 115.5vmin; */
+    right: -3.5vw;
     top: 0;
     background: url("../images/more.svg");
-    margin-top: 1vmin;
-    width: 4vmin;
+    margin-top: 0.5vw;
+    width: 2vw;
     background-size: cover;
-    height: 4vmin;
+    height: 2vw;
     background-repeat: no-repeat;
     position: absolute;
     opacity: 0.0;
@@ -166,19 +167,19 @@ ul li .drop-down-search.show .bubble-search {
 }
 
 ul li .drop-down-search.show .bubble-search {
-    margin-right: -3vmin;
-    margin-top: 1.2vmin;
-    height: 9.2vmin;
-    width: 19.5vmin;
+    margin-right: -3.7vw;
+    margin-top: 0.6vw;
+    height: 4.4vw;
+    width: 10vw;
     background: white;
-    border-radius: 0.2vmin;
+    border-radius: 0.05vw;
     box-shadow: 0vmin 0.2vmin 0.8vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
 }
 
 ul li .drop-down-search.show .bubble-search .search-add-to {
     font-family: "Lato-Regular";
-    margin-left: 1.4vmin;
-    font-size: 2.4vmin;
+    margin-left: 0.7vw;
+    font-size: 1.2vw;
     color: #6D6D6D;
     cursor: pointer;
 }
@@ -188,30 +189,30 @@ ul li .drop-down-search.show .bubble-search .search-add-to:hover {
 }
 
 ul li .drop-down-search.show .bubble-search .search-add-to.add-to-plan-to-watch {
-    margin-top: 1.2vmin;
+    margin-top: 0.5vw;
 }
 
 ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed {
-    margin-top: 0.8vmin;
+    margin-top: 0.4vw;
 }
 
 .no-image {
     position: absolute;
-    top: 13vmin;
-    left: 45vmin;
-    height: 28vmin;
-    width: 29vmin;
+    top: 6.5vw;
+    left: 22vw;
+    height: 14vw;
+    width: 14.5vw;
     background-size: cover;
     background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
 }
 
 .no-text {
     text-align: center;
-    width: 114vmin;
+    width: 56vw;
     font-family: "Lato-Light";
     color: #777777;
-    font-size: 3.4vmin;
+    font-size: 1.67vw;
     position: absolute;
-    top: 43vmin;
-    left: 3vmin;
+    left: 1.6vw;
+    top: 21vw;
 }
