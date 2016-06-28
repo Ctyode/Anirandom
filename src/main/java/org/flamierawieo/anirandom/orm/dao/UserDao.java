@@ -114,6 +114,9 @@ public class UserDao extends BaseDao {
     public DaoResponse moveToCompleted(User user, Anime anime) {
         try {
             Review review = new Review();
+            if(user.completedList == null) {
+                user.completedList = new ArrayList<>();
+            }
             List<Review> reviews = user.completedList
                     .stream()
                     .filter(r -> !r.anime.equals(anime))
