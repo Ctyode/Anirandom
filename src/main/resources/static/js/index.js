@@ -74,3 +74,9 @@ $(function () {
         }
     });
 });
+
+$(function() {
+    $(".randomize-button").click(function() {
+        $(".randomize-button").addClass("randomized");
+    });
+});

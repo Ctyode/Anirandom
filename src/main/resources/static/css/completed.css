@@ -1,386 +1,783 @@
-main .completed {
-    overflow: hidden;
-    font-family: "Lato-Regular";
-    font-size: 4.3vmin;
-    color: #5B5B5B;
-    margin-bottom: 1.8vmin;
+@media screen and (min-aspect-ratio: 13/9) {
+
+    main .completed {
+        overflow: hidden;
+        font-family: "Lato-Regular";
+        font-size: 2.1vw;
+        color: #5B5B5B;
+        margin-bottom: 0.6vw;
+        height: 2.6vw;
+    }
+
+    main .completed ul {
+        margin-right: 3.5vw;
+        margin-top: -2.5vw;
+    }
+
+    main .completed ul li.menuElement {
+        margin-left: 1.1vw;
+        display: block;
+        float: right;
+        font-family: "Lato-Medium";
+        font-size: 2.1vw;
+        height: 2.6vw;
+        cursor: pointer;
+    }
+
+    main section {
+        position: relative;
+        overflow: hidden;
+        width: 58.5vw;
+        height: 13.7vw;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+        margin-bottom: 2.4vmin;
+        transition: 0.3s ease;
+    }
+
+    main section.hidden {
+        opacity: 0.0;
+        overflow: hidden;
+        height: 0;
+        margin-bottom: 0;
+    }
+
+    main section .cover {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        float: left;
+        width: 10vw;
+        height: 14vw;
+    }
+
+    main section .drop-down-more .more {
+        position: absolute;
+        right: 0.3vw;
+        top: 0;
+        background: url("../images/more.svg");
+        margin-top: 0.5vw;
+        width: 2vw;
+        height: 2vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.2s ease;
+        opacity: 0.0;
+    }
+
+    main section:hover .drop-down-more .more {
+        opacity: 1.0;
+    }
+
+    main section .drop-down-more .bubble {
+        height: 0;
+        overflow: hidden;
+        z-index: 100;
+    }
+
+    main section .drop-down-more.show .bubble {
+        right: 2.2vw;
+        position: absolute;
+        top: 1vw;
+        height: 4.5vw;
+        width: 11.5vw;
+        background: white;
+        border-radius: 0.4vmin;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
+    }
+
+    main section .drop-down-more.show .bubble .options {
+        font-family: "Lato-Regular";
+        margin-left: 0.8vw;
+        font-size: 1.2vw;
+        color: #6D6D6D;
+        cursor: pointer;
+    }
+
+    main section .drop-down-more.show .bubble .options:hover {
+        color: #020202;
+    }
+
+    main section .drop-down-more.show .bubble .options.edit {
+        margin-top: 0.6vw;
+    }
+
+    main section .drop-down-more.show .bubble .options.remove {
+        margin-top: 0.7vmin;
+    }
+
+    main section .anime-title {
+        position: absolute;
+        top: 1vw;
+        left: 11.5vw;
+        width: 45vw;
+        font-family: "Lato-Regular";
+        font-size: 1.8vw;
+        color: #5B5B5B;
+    }
+
+    main section .anime-title span {
+        height: 2vw;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    main section .anime-title span::after {
+        z-index: 105;
+        font-size: 15px;
+        background: #FDFDF6;
+        border-radius: 3px;
+        padding: 4px 6px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        color: #1B1B1B;
+        left: 500px;
+        margin-top: 25px;
+        opacity: 0;
+        content: attr(data-anime-title);
+        position: absolute;
+        visibility: hidden;
+        transition: 0.5s ease 1.5s;
+    }
+
+    main section .anime-title span:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    main section .synopsis {
+        position: absolute;
+        top: 3.35vw;
+        left: 11.5vw;
+        font-family: Lato-Light;
+        font-size: 1.25vw;
+        width: 45vw;
+        color: #626262;
+        line-height: 1.6vw;
+    }
+
+    main section .stars {
+        position: absolute;
+        top: 10vw;
+        left: 11vw;
+        background-repeat: repeat-x;
+        background-image: url("../images/star.svg");
+        width: 29vw;
+        height: 2.9vw;
+        overflow: hidden;
+    }
+
+    main section .stars .wrap {
+        width: 10000vmax;
+    }
+
+    main section .stars label {
+        opacity: 0;
+        display: block;
+        float: left;
+        position: relative;
+        top: -2.5vw;
+        width: 2.7vw;
+        height: 2.3vw;
+        margin-right: 0.22vw;
+    }
+
+    main section .stars .stars-fill {
+        background-repeat: repeat-x;
+        background-image: url("../images/star-filled.svg");
+        height: 100%;
+    }
+
+    main section .stars[data-checked="0"] .stars-fill { width: 0%; }
+
+    main section .stars[data-checked="1"] .stars-fill { width: 10%; }
+
+    main section .stars[data-checked="2"] .stars-fill { width: 20%; }
+
+    main section .stars[data-checked="3"] .stars-fill { width: 30%; }
+
+    main section .stars[data-checked="4"] .stars-fill { width: 40%; }
+
+    main section .stars[data-checked="5"] .stars-fill { width: 50%; }
+
+    main section .stars[data-checked="6"] .stars-fill { width: 60%; }
+
+    main section .stars[data-checked="7"] .stars-fill { width: 70%; }
+
+    main section .stars[data-checked="8"] .stars-fill { width: 80%; }
+
+    main section .stars[data-checked="9"] .stars-fill { width: 90%; }
+
+    main section .stars[data-checked="10"] .stars-fill { width: 100%; }
+
+    main section .rating {
+        position: absolute;
+        top: 10.5vw;
+        left: 40.7vw;
+        font-family: "Lato-Regular";
+        font-size: 2vw;
+        color: #5B5B5B;
+        line-height: 2vw;
+    }
+
+    main section .hidden-edit {
+        visibility: hidden;
+    }
+
+    main section .hidden-edit textarea {
+        z-index: 0;
+        border-radius: 0.15vw;
+        position: absolute;
+        top: 3.7vw;
+        left: 11.5vw;
+        width: 42.9vw;
+        height: 5.5vw;
+        background-color: #fffdfe;
+        font-family: "Lato-Light";
+        font-size: 1.25vw;
+        font-weight: 100;
+        color: #cecece;
+        border: 1px solid #E7E7E7;
+        padding-left: 0.7vw;
+        padding-top: 0.35vw;
+        resize: none;
+    }
+
+    main section .hidden-edit input[type="submit"] {
+        top: 10.6vw;
+        left: 48.5vw;
+        position: absolute;
+        width: 6.8vw;
+        height: 2.4vw;
+        border: none;
+        border-radius: 0.2vmin;
+        background-color: #809BBD;
+        font-size: 1.2vw;
+        font-family: "Lato-Light";
+        color: white;
+        cursor: pointer;
+    }
+
+    main section.edit .hidden-edit {
+        visibility: visible;
+    }
+
+    main section.no-review {
+        width: 58.5vw;
+        height: 7.95vw;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+        margin-bottom: 1.2vw;
+        transition: 0.5s ease;
+    }
+
+    main section.no-review.edit {
+        height: 14vw;
+    }
+
+    main section.no-review .anime-title {
+        top: 1.1vw;
+        left: 6.8vw;
+        transition: 0.4s ease;
+    }
+
+    main section.no-review.edit .anime-title {
+        top: 1.1vw;
+        left: 11.5vw;
+    }
+
+    main section.no-review .cover-no-review {
+        background-size: contain;
+        background-repeat: repeat-y;
+        background-position: center;
+        float: left;
+        width: 5.5vw;
+        height: 8vw;
+        transition: 0.5s ease;
+        opacity: 1.0;
+    }
+
+    main section.no-review.edit .cover-no-review {
+        opacity: 0.0;
+    }
+
+    main section.no-review.edit .cover-no-review-large {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        width: 10vw;
+        height: 14vw;
+        transition: 0.5s ease;
+    }
+
+    main section.no-review .rating {
+        transition: 0.5s ease;
+        opacity: 1.0;
+    }
+
+    main section.no-review.edit .rating {
+        opacity: 0.0;
+    }
+
+    main section.no-review .stars {
+        top: 4vw;
+        left: 6.5vw;
+        transition: 0.2s ease;
+    }
+
+    main section.no-review .rating {
+        top: 4.5vw;
+        left: 36.2vw;
+        line-height: 2vw;
+        font-size: 2vw;
+    }
+
+    main section.no-review.edit .stars {
+        top: 10.3vw;
+        left: 11.3vw;
+        transition: 0.2s ease;
+    }
+
+    main section.no-review.edit .rating {
+        top: 154px;
+        top: 22vmin;
+        left: 570px;
+        left: 89vmin;
+    }
+
+    .go_to_search {
+        margin: 4vmin auto 0 auto;
+        line-height: 6.5vmin;
+        text-align: center;
+        border-radius: 0.3vmin;
+        width: 18vmin;
+        height: 6.5vmin;
+        background: #64D08F;
+        color: white;
+        font-family: "Lato-Regular";
+        display: block;
+        font-size: 2.5vmin;
+        text-decoration: none;
+    }
+
+    .no-image {
+        margin: -2vmin auto;
+        height: 28vmin;
+        width: 29vmin;
+        background-size: cover;
+        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+    }
+
+    .no-text {
+        margin: 4.5vmin auto 0 auto;
+        text-align: center;
+        width: 106vmin;
+        font-family: "Lato-Light";
+        color: #777777;
+        font-size: 3.4vmin;
+    }
+
+    #unreviewed {
+        visibility: hidden;
+    }
+
 }
 
-main .completed ul {
-    margin-right: 7vmin;
-    margin-top: -5vmin;
-}
+@media screen and (max-aspect-ratio: 13/9) {
 
-main .completed ul li.menuElement {
-    margin-left: 2.4vmin;
-    display: block;
-    float: right;
-    font-family: "Lato-Medium";
-    font-size: 4.3vmin;
-    cursor: pointer;
-}
+    main {
+        width: 100%;
+    }
 
-main section {
-    position: relative;
-    overflow: hidden;
-    width: 119vmin;
-    height: 28vmin;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    margin-bottom: 2.4vmin;
-    transition: 0.3s ease;
-}
+    main .completed {
+        overflow: hidden;
+        font-family: "Lato-Regular";
+        font-size: 4.1vw;
+        color: #5B5B5B;
+        margin-bottom: 1vw;
+        height: 4.8vw;
+        margin-left: 1.5vw;
+    }
 
-main section.hidden {
-    opacity: 0.0;
-    overflow: hidden;
-    height: 0;
-    margin-bottom: 0;
-}
+    main .completed ul {
+        margin-right: 5.5vw;
+        margin-top: -4.9vw;
+    }
 
-main section .cover {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
-    float: left;
-    width: 20.1vmin;
-    height: 28vmin;
-}
+    main .completed ul li.menuElement {
+        margin-left: 0.6vw;
+        margin-right: 1.2vw;
+        display: block;
+        float: right;
+        font-family: "Lato-Medium";
+        font-size: 4.1vw;
+        height: 4.8vw;
+        cursor: pointer;
+    }
 
-main section .drop-down-more .more {
-    position: absolute;
-    left: 114.5vmin;
-    top: 0;
-    background: url("../images/more.svg");
-    margin-top: 1vmin;
-    width: 4vmin;
-    background-size: cover;
-    height: 4vmin;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: 0.2s ease;
-    opacity: 0.0;
-}
+    main section {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 27vw;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+        margin-bottom: 1.7vw;
+        transition: 0.3s ease;
+    }
 
-main section:hover .drop-down-more .more {
-    opacity: 1.0;
-}
+    main section.hidden {
+        opacity: 0.0;
+        overflow: hidden;
+        height: 0;
+        margin-bottom: 0;
+    }
 
-main section .drop-down-more .bubble {
-    height: 0;
-    overflow: hidden;
-    z-index: 100;
-}
+    main section .cover {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        float: left;
+        width: 16vw;
+        height: 27vw;
+    }
 
-main section .drop-down-more.show .bubble {
-    right: 4.5vmin;
-    position: absolute;
-    top: 2vmin;
-    height: 9.5vmin;
-    width: 23vmin;
-    background: white;
-    border-radius: 0.4vmin;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
-}
+    main section .drop-down-more .more {
+        position: absolute;
+        right: 0.3vw;
+        top: 0;
+        background: url("../images/more.svg");
+        margin-top: 1vw;
+        width: 4vw;
+        height: 4vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
 
-main section .drop-down-more.show .bubble .options {
-    font-family: "Lato-Regular";
-    margin-left: 1.8vmin;
-    font-size: 2.4vmin;
-    color: #6D6D6D;
-    cursor: pointer;
-}
+    main section:hover .drop-down-more .more {
+        opacity: 1.0;
+    }
 
-main section .drop-down-more.show .bubble .options:hover {
-    color: #020202;
-}
+    main section .drop-down-more .bubble {
+        height: 0;
+        overflow: hidden;
+        z-index: 100;
+    }
 
-main section .drop-down-more.show .bubble .options.edit {
-    margin-top: 1.3vmin;
-}
+    main section .drop-down-more.show .bubble {
+        right: 4.2vw;
+        position: absolute;
+        top: 1vw;
+        height: 9.5vw;
+        width: 24.5vw;
+        background: white;
+        border-radius: 0.4vmin;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
+    }
 
-main section .drop-down-more.show .bubble .options.remove {
-    margin-top: 1vmin;
-}
+    main section .drop-down-more.show .bubble .options {
+        font-family: "Lato-Regular";
+        margin-left: 1.5vw;
+        font-size: 2.6vw;
+        color: #6D6D6D;
+        cursor: pointer;
+    }
 
-main section .anime-title {
-    position: absolute;
-    top: 3vmin;
-    left: 22.3vmin;
-    width: 90vmin;
-    font-family: "Lato-Regular";
-    font-size: 3.5vmin;
-    color: #5B5B5B;
-    line-height: 0.8em;
-}
+    main section .drop-down-more.show .bubble .options:hover {
+        color: #020202;
+    }
 
-main section .anime-title span {
-    height: 24px;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+    main section .drop-down-more.show .bubble .options.edit {
+        margin-top: 1.2vw;
+    }
 
-main section .anime-title span::after {
-    z-index: 105;
-    font-size: 15px;
-    background: #FDFDF6;
-    border-radius: 3px;
-    padding: 4px 6px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    color: #1B1B1B;
-    left: 500px;
-    margin-top: 25px;
-    opacity: 0;
-    content: attr(data-anime-title);
-    position: absolute;
-    visibility: hidden;
-    transition: 0.5s ease 1.5s;
-}
+    main section .drop-down-more.show .bubble .options.remove {
+        margin-top: 0.6vw;
+    }
 
-main section .anime-title span:hover::after {
-	opacity: 1;
-	visibility: visible;
-}
+    main section .anime-title {
+        position: absolute;
+        top: 1.3vw;
+        left: 19vw;
+        width: 76vw;
+        font-family: "Lato-Regular";
+        font-size: 3.5vw;
+        color: #5B5B5B;
+    }
 
-main section .synopsis {
-    position: absolute;
-    top: 6.8vmin;
-    left: 22.4vmin;
-    font-family: Lato-Light;
-    font-size: 2.58vmin;
-    width: 91vmin;
-    color: #626262;
-    line-height: 3.2vmin;
-}
+    main section .anime-title span {
+        height: 5vw;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 
-main section .stars {
-    position: absolute;
-    top: 20vmin;
-    left: 22vmin;
-    background-repeat: repeat-x;
-    background-image: url("../images/star.svg");
-    width: 60vmin;
-    height: 6vmin;
-    white-space: nowrap;
-}
+    main section .anime-title span::after {
+        z-index: 105;
+        font-size: 15px;
+        background: #FDFDF6;
+        border-radius: 3px;
+        padding: 4px 6px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        color: #1B1B1B;
+        left: 500px;
+        margin-top: 25px;
+        opacity: 0;
+        content: attr(data-anime-title);
+        position: absolute;
+        visibility: hidden;
+        transition: 0.5s ease 1.5s;
+    }
 
-main section .stars input {
-    opacity: 0.0;
-    position: relative;
-    top: -5.4vmin;
-    left: 0.5vmin;
-    width: 5vmin;
-    height: 5vmin;
-    margin: 0 0.4vmin 0 0;
-}
+    main section .anime-title span:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
 
-main section .stars .stars-fill {
-    background-repeat: repeat-x;
-    background-image: url("../images/star-filled.svg");
-    height: 100%;
-}
+    main section .synopsis {
+        position: absolute;
+        top: 6vw;
+        left: 19vw;
+        font-family: Lato-Light;
+        font-size: 2.5vw;
+        width: 78vw;
+        color: #626262;
+        line-height: 3vw;
+        transition: 0.3s ease;
+    }
 
-main section .stars[data-checked="0"] .stars-fill { width: 0%; }
+    main section .stars {
+        position: absolute;
+        top: 20.5vw;
+        left: 18.2vw;
+        background-repeat: repeat-x;
+        background-image: url("../images/star.svg");
+        width: 55vw;
+        height: 5.5vw;
+        white-space: nowrap;
+    }
 
-main section .stars[data-checked="1"] .stars-fill { width: 10%; }
+    main section .stars input {
+        opacity: 0;
+        position: relative;
+        top: -2.5vw;
+        width: 2.2vw;
+        height: 2.3vw;
+    }
 
-main section .stars[data-checked="2"] .stars-fill { width: 20%; }
+    main section .stars .stars-fill {
+        background-repeat: repeat-x;
+        background-image: url("../images/star-filled.svg");
+        height: 100%;
+    }
 
-main section .stars[data-checked="3"] .stars-fill { width: 30%; }
+    main section .stars[data-checked="0"] .stars-fill { width: 0%; }
 
-main section .stars[data-checked="4"] .stars-fill { width: 40%; }
+    main section .stars[data-checked="1"] .stars-fill { width: 10%; }
 
-main section .stars[data-checked="5"] .stars-fill { width: 50%; }
+    main section .stars[data-checked="2"] .stars-fill { width: 20%; }
 
-main section .stars[data-checked="6"] .stars-fill { width: 60%; }
+    main section .stars[data-checked="3"] .stars-fill { width: 30%; }
 
-main section .stars[data-checked="7"] .stars-fill { width: 70%; }
+    main section .stars[data-checked="4"] .stars-fill { width: 40%; }
 
-main section .stars[data-checked="8"] .stars-fill { width: 80%; }
+    main section .stars[data-checked="5"] .stars-fill { width: 50%; }
 
-main section .stars[data-checked="9"] .stars-fill { width: 90%; }
+    main section .stars[data-checked="6"] .stars-fill { width: 60%; }
 
-main section .stars[data-checked="10"] .stars-fill { width: 100%; }
+    main section .stars[data-checked="7"] .stars-fill { width: 70%; }
 
-main section .rating {
-    position: absolute;
-    top: 21.3vmin;
-    left: 83.2vmin;
-    font-family: "Lato-Regular";
-    font-size: 4vmin;
-    color: #5B5B5B;
-    line-height: 4vmin;
-}
+    main section .stars[data-checked="8"] .stars-fill { width: 80%; }
 
-main section .hidden-edit {
-    visibility: hidden;
-}
+    main section .stars[data-checked="9"] .stars-fill { width: 90%; }
 
-main section .hidden-edit textarea {
-    z-index: 0;
-    border-radius: 0.2vmin;
-    position: absolute;
-    top: 7.5vmin;
-    left: 23.5vmin;
-    width: 87.5vmin;
-    height: 11vmin;
-    background-color: #fffdfe;
-    font-family: "Lato-Light";
-    font-size: 2.6vmin;
-    font-weight: 100;
-    color: #cecece;
-    border: 1px solid #E7E7E7;
-    padding-left: 1.4vmin;
-    padding-top: 0.5vmin;
-    resize: none;
-}
+    main section .stars[data-checked="10"] .stars-fill { width: 100%; }
 
-main section .hidden-edit input[type="submit"] {
-    top: 21.5vmin;
-    left: 98.5vmin;
-    position: absolute;
-    width: 14vmin;
-    height: 5vmin;
-    border: none;
-    border-radius: 0.2vmin;
-    background-color: #809BBD;
-    font-size: 2.5vmin;
-    font-family: "Lato-Light";
-    color: white;
-    cursor: pointer;
-}
+    main section .rating {
+        position: absolute;
+        top: 21.25vw;
+        left: 75vw;
+        font-family: "Lato-Regular";
+        font-size: 3.5vw;
+        color: #5B5B5B;
+    }
 
-main section.edit .hidden-edit {
-    visibility: visible;
-}
+    main section .hidden-edit {
+        visibility: hidden;
+    }
 
-main section.no-review {
-    width: 119.5vmin;
-    height: 16.2vmin;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    margin-bottom: 2.6vmin;
-    transition: 0.5s ease;
-}
+    main section .hidden-edit textarea {
+        z-index: 0;
+        border-radius: 0.15vw;
+        position: absolute;
+        top: 6.3vw;
+        left: 19vw;
+        width: 75.9vw;
+        height: 12.2vw;
+        background-color: #fffdfe;
+        font-family: "Lato-Light";
+        font-size: 2.4vw;
+        font-weight: 100;
+        color: #cecece;
+        border: 1px solid #E7E7E7;
+        padding-left: 0.7vw;
+        padding-top: 0.35vw;
+        resize: none;
+        transition: 0.3s ease;
+    }
 
-main section.no-review.edit {
-    height: 28.4vmin;
-}
+    main section .hidden-edit input[type="submit"] {
+        top: 21vw;
+        left: 84.5vw;
+        position: absolute;
+        width: 11.5vw;
+        height: 4.4vw;
+        border: none;
+        border-radius: 0.2vw;
+        background-color: #809BBD;
+        font-size: 2.5vw;
+        font-family: "Lato-Light";
+        color: white;
+        cursor: pointer;
+    }
 
-main section.no-review .anime-title {
-    top: 14px;
-    top: 2.9vmin;
-    left: 92px;
-    left: 14vmin;
-    transition: 0.4s ease;
-}
+    main section.edit .hidden-edit {
+        visibility: visible;
+    }
 
-main section.no-review.edit .anime-title {
-    top: 14px;
-    top: 2.5vmin;
-    left: 154px;
-    left: 23.5vmin;
-}
+    main section.no-review {
+        width: 100%;
+        height: 16vw;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+        margin-bottom: 1.2vw;
+        transition: 0.5s ease;
+    }
 
-main section.no-review .cover-no-review {
-    background-size: contain;
-    background-repeat: repeat-y;
-    background-position: center;
-    float: left;
-    width: 80px;
-    width: 11.5vmin;
-    height: 16.2vmin;
-    transition: 0.5s ease;
-    opacity: 1.0;
-}
+    main section.no-review.edit {
+        height: 27vw;
+    }
 
-main section.no-review.edit .cover-no-review {
-    opacity: 0.0;
-}
+    main section.no-review .anime-title {
+        top: 1.8vw;
+        left: 12.8vw;
+        transition: 0.4s ease;
+    }
 
-main section.no-review.edit .cover-no-review-large {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
-    width: 21vmin;
-    height: 28.5vmin;
-    transition: 0.5s ease;
-}
+    main section.no-review.edit .anime-title {
+        top: 1.3vw;
+        left: 19vw;
+    }
 
-main section.no-review .rating {
-    transition: 0.5s ease;
-    opacity: 1.0;
-}
+    main section.no-review .cover-no-review {
+        background-size: contain;
+        background-repeat: repeat-y;
+        background-position: left;
+        float: left;
+        width: 10.7vw;
+        height: 16vw;
+        transition: 0.5s ease;
+        opacity: 1.0;
+    }
 
-main section.no-review.edit .rating {
-    opacity: 0.0;
-}
+    main section.no-review.edit .cover-no-review {
+        opacity: 0.0;
+    }
 
-main section.no-review .stars {
-    top: 20vmin;
-    left: 21.5vmin;
-    transition: 0.2s ease;
-}
+    main section.no-review.edit .cover-no-review-large {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        width: 16vw;
+        height: 27vw;
+        transition: 0.5s ease;
+    }
 
-main section.no-review .rating {
-    top: 10vmin;
-    left: 84.5vmin;
-    font-size: 4.5vmin;
-}
+    main section.no-review .rating {
+        transition: 0.5s ease;
+        opacity: 1.0;
+    }
 
-main section.no-review.edit .rating {
-    top: 154px;
-    top: 22vmin;
-    left: 570px;
-    left: 89vmin;
-}
+    main section.no-review.edit .rating {opacity: 0.0;}
 
-.go_to_search {
-    margin: 4vmin auto 0 auto;
-    line-height: 6.5vmin;
-    text-align: center;
-    border-radius: 0.3vmin;
-    width: 18vmin;
-    height: 6.5vmin;
-    background: #64D08F;
-    color: white;
-    font-family: "Lato-Regular";
-    display: block;
-    font-size: 2.5vmin;
-    text-decoration: none;
-}
+    main section.no-review .stars {
+        top: 7.5vw;
+        left: 12vw;
+        transition: 0.2s ease;
+        width: 65vw;
+        height: 6.5vw;
+    }
 
-.no-image {
-    margin: -2vmin auto;
-    height: 28vmin;
-    width: 29vmin;
-    background-size: cover;
-    background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
-}
+    main section.no-review .rating {
+        top: 8.1vw;
+        left: 78vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
+    }
 
-.no-text {
-    margin: 4.5vmin auto 0 auto;
-    text-align: center;
-    width: 106vmin;
-    font-family: "Lato-Light";
-    color: #777777;
-    font-size: 3.4vmin;
-}
+    main section.no-review.edit .stars {
+        top: 20.4vw;
+        left: 18.3vw;
+        width: 55vw;
+        height: 5.5vw;
+        transition: 0.2s ease;
+    }
 
-.plus {
-    background-image: url("../images/plus.svg");
-    width: 4vmin;
-    height: 4vmin;
-    top: 6px;
-    right: 1vmin;
-    position: absolute;
-    opacity: 0.7;
-    background-size: cover;
-}
+    main section.no-review.edit .rating {
+        top: 18.5vw;
+        left: 67.5vw;
+    }
 
-#unreviewed {
-    visibility: hidden;
+    .go_to_search {
+        margin: 4vmin auto 0 auto;
+        line-height: 6.5vmin;
+        text-align: center;
+        border-radius: 0.3vmin;
+        width: 18vmin;
+        height: 6.5vmin;
+        background: #64D08F;
+        color: white;
+        font-family: "Lato-Regular";
+        display: block;
+        font-size: 2.5vmin;
+        text-decoration: none;
+    }
+
+    .no-image {
+        margin: -2vmin auto;
+        height: 28vmin;
+        width: 29vmin;
+        background-size: cover;
+        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+    }
+
+    .no-text {
+        margin: 4.5vmin auto 0 auto;
+        text-align: center;
+        width: 106vmin;
+        font-family: "Lato-Light";
+        color: #777777;
+        font-size: 3.4vmin;
+    }
+
+    #unreviewed {
+        visibility: hidden;
+    }
+
+    .plus {
+        background-image: url("../images/plus.svg");
+        width: 4vw;
+        height: 4vw;
+        top: 0.5vw;
+        right: 1vw;
+        position: absolute;
+        background-size: cover;
+        opacity: 0.7;
+    }
+
 }
