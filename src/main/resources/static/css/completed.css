@@ -540,6 +540,7 @@ main section .synopsis {
     width: 78vw;
     color: #626262;
     line-height: 3vw;
+    transition: 0.3s ease;
 }
 
 main section .stars {
@@ -619,16 +620,17 @@ main section .hidden-edit textarea {
     padding-left: 0.7vw;
     padding-top: 0.35vw;
     resize: none;
+    transition: 0.3s ease;
 }
 
 main section .hidden-edit input[type="submit"] {
     top: 21vw;
-    right: 4vw;
+    left: 84.5vw;
     position: absolute;
     width: 11.5vw;
     height: 4.4vw;
     border: none;
-    border-radius: 0.2vmin;
+    border-radius: 0.2vw;
     background-color: #809BBD;
     font-size: 2.5vw;
     font-family: "Lato-Light";
@@ -707,11 +709,14 @@ main section.no-review .rating {
     top: 8.1vw;
     left: 78vw;
     font-size: 4.5vw;
+    line-height: 5.5vw;
 }
 
 main section.no-review.edit .stars {
     top: 20.4vw;
     left: 18.3vw;
+    width: 55vw;
+    height: 5.5vw;
     transition: 0.2s ease;
 }
 

@@ -11,6 +11,7 @@ $(function() {
         });
         var $hidden_edit = $section.find(".hidden-edit");
         $drop_down.find(".edit").click(function() {
+            $section.find(".synopsis").css("visibility", "hidden");
             $section.addClass("edit");
         });
         $drop_down.find(".remove").click(function() {
