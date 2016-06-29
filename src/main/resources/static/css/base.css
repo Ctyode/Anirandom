@@ -56,7 +56,7 @@ main {
   color: #6D6D6D;
   font-size: 3vmin;
   line-height: 3vmin;
-  z-index: 101;
+  z-index: 165;
   position: absolute;
   float: right;
   right: 0;
@@ -67,7 +67,7 @@ main {
   text-decoration: none;
   font-family: "Lato-Regular";
   color: #6D6D6D;
-  z-index: 101;
+  z-index: 162;
   cursor: pointer;
 }
 
@@ -84,7 +84,7 @@ main {
   top: 6vmin;
   left: 0;
   height: 0;
-  z-index: 100;
+  z-index: 160;
   opacity: 0.0;
   transition: 0.3s ease;
   border-radius: 0.2vmin;
@@ -96,6 +96,7 @@ main {
 }
 
 .auth .auth-bubble.initial-width-180px {
+  z-index: 150;
   width: 19vmin;
 }
 

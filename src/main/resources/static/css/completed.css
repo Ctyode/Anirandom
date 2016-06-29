@@ -1,4 +1,5 @@
-@media(orientation: landscape) {
+@media screen and (min-aspect-ratio: 13/9) {
+
     main .completed {
         overflow: hidden;
         font-family: "Lato-Regular";
@@ -377,399 +378,399 @@
 
 }
 
-@media all and (max-width: 1080px)  {
+@media screen and (max-aspect-ratio: 13/9) {
 
-main {
-    width: 100%;
-}
+    main {
+        width: 100%;
+    }
 
-main .completed {
-    overflow: hidden;
-    font-family: "Lato-Regular";
-    font-size: 4.1vw;
-    color: #5B5B5B;
-    margin-bottom: 1vw;
-    height: 4.8vw;
-    margin-left: 1.5vw;
-}
+    main .completed {
+        overflow: hidden;
+        font-family: "Lato-Regular";
+        font-size: 4.1vw;
+        color: #5B5B5B;
+        margin-bottom: 1vw;
+        height: 4.8vw;
+        margin-left: 1.5vw;
+    }
 
-main .completed ul {
-    margin-right: 5.5vw;
-    margin-top: -4.9vw;
-}
+    main .completed ul {
+        margin-right: 5.5vw;
+        margin-top: -4.9vw;
+    }
 
-main .completed ul li.menuElement {
-    margin-left: 0.6vw;
-    margin-right: 1.2vw;
-    display: block;
-    float: right;
-    font-family: "Lato-Medium";
-    font-size: 4.1vw;
-    height: 4.8vw;
-    cursor: pointer;
-}
+    main .completed ul li.menuElement {
+        margin-left: 0.6vw;
+        margin-right: 1.2vw;
+        display: block;
+        float: right;
+        font-family: "Lato-Medium";
+        font-size: 4.1vw;
+        height: 4.8vw;
+        cursor: pointer;
+    }
 
-main section {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 27vw;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    margin-bottom: 1.7vw;
-    transition: 0.3s ease;
-}
+    main section {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 27vw;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+        margin-bottom: 1.7vw;
+        transition: 0.3s ease;
+    }
 
-main section.hidden {
-    opacity: 0.0;
-    overflow: hidden;
-    height: 0;
-    margin-bottom: 0;
-}
+    main section.hidden {
+        opacity: 0.0;
+        overflow: hidden;
+        height: 0;
+        margin-bottom: 0;
+    }
 
-main section .cover {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    float: left;
-    width: 16vw;
-    height: 27vw;
-}
+    main section .cover {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        float: left;
+        width: 16vw;
+        height: 27vw;
+    }
 
-main section .drop-down-more .more {
-    position: absolute;
-    right: 0.3vw;
-    top: 0;
-    background: url("../images/more.svg");
-    margin-top: 1vw;
-    width: 4vw;
-    height: 4vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
+    main section .drop-down-more .more {
+        position: absolute;
+        right: 0.3vw;
+        top: 0;
+        background: url("../images/more.svg");
+        margin-top: 1vw;
+        width: 4vw;
+        height: 4vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
 
-main section:hover .drop-down-more .more {
-    opacity: 1.0;
-}
+    main section:hover .drop-down-more .more {
+        opacity: 1.0;
+    }
 
-main section .drop-down-more .bubble {
-    height: 0;
-    overflow: hidden;
-    z-index: 100;
-}
+    main section .drop-down-more .bubble {
+        height: 0;
+        overflow: hidden;
+        z-index: 100;
+    }
 
-main section .drop-down-more.show .bubble {
-    right: 4.2vw;
-    position: absolute;
-    top: 1vw;
-    height: 9.5vw;
-    width: 24.5vw;
-    background: white;
-    border-radius: 0.4vmin;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
-}
+    main section .drop-down-more.show .bubble {
+        right: 4.2vw;
+        position: absolute;
+        top: 1vw;
+        height: 9.5vw;
+        width: 24.5vw;
+        background: white;
+        border-radius: 0.4vmin;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.10), 0px 3px 8px 0px rgba(52,52,52,0.12);
+    }
 
-main section .drop-down-more.show .bubble .options {
-    font-family: "Lato-Regular";
-    margin-left: 1.5vw;
-    font-size: 2.6vw;
-    color: #6D6D6D;
-    cursor: pointer;
-}
+    main section .drop-down-more.show .bubble .options {
+        font-family: "Lato-Regular";
+        margin-left: 1.5vw;
+        font-size: 2.6vw;
+        color: #6D6D6D;
+        cursor: pointer;
+    }
 
-main section .drop-down-more.show .bubble .options:hover {
-    color: #020202;
-}
+    main section .drop-down-more.show .bubble .options:hover {
+        color: #020202;
+    }
 
-main section .drop-down-more.show .bubble .options.edit {
-    margin-top: 1.2vw;
-}
+    main section .drop-down-more.show .bubble .options.edit {
+        margin-top: 1.2vw;
+    }
 
-main section .drop-down-more.show .bubble .options.remove {
-    margin-top: 0.6vw;
-}
+    main section .drop-down-more.show .bubble .options.remove {
+        margin-top: 0.6vw;
+    }
 
-main section .anime-title {
-    position: absolute;
-    top: 1.3vw;
-    left: 19vw;
-    width: 76vw;
-    font-family: "Lato-Regular";
-    font-size: 3.5vw;
-    color: #5B5B5B;
-}
+    main section .anime-title {
+        position: absolute;
+        top: 1.3vw;
+        left: 19vw;
+        width: 76vw;
+        font-family: "Lato-Regular";
+        font-size: 3.5vw;
+        color: #5B5B5B;
+    }
 
-main section .anime-title span {
-    height: 5vw;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+    main section .anime-title span {
+        height: 5vw;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 
-main section .anime-title span::after {
-    z-index: 105;
-    font-size: 15px;
-    background: #FDFDF6;
-    border-radius: 3px;
-    padding: 4px 6px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-    color: #1B1B1B;
-    left: 500px;
-    margin-top: 25px;
-    opacity: 0;
-    content: attr(data-anime-title);
-    position: absolute;
-    visibility: hidden;
-    transition: 0.5s ease 1.5s;
-}
+    main section .anime-title span::after {
+        z-index: 105;
+        font-size: 15px;
+        background: #FDFDF6;
+        border-radius: 3px;
+        padding: 4px 6px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+        color: #1B1B1B;
+        left: 500px;
+        margin-top: 25px;
+        opacity: 0;
+        content: attr(data-anime-title);
+        position: absolute;
+        visibility: hidden;
+        transition: 0.5s ease 1.5s;
+    }
 
-main section .anime-title span:hover::after {
-	opacity: 1;
-	visibility: visible;
-}
+    main section .anime-title span:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
 
-main section .synopsis {
-    position: absolute;
-    top: 6vw;
-    left: 19vw;
-    font-family: Lato-Light;
-    font-size: 2.5vw;
-    width: 78vw;
-    color: #626262;
-    line-height: 3vw;
-    transition: 0.3s ease;
-}
+    main section .synopsis {
+        position: absolute;
+        top: 6vw;
+        left: 19vw;
+        font-family: Lato-Light;
+        font-size: 2.5vw;
+        width: 78vw;
+        color: #626262;
+        line-height: 3vw;
+        transition: 0.3s ease;
+    }
 
-main section .stars {
-    position: absolute;
-    top: 20.5vw;
-    left: 18.2vw;
-    background-repeat: repeat-x;
-    background-image: url("../images/star.svg");
-    width: 55vw;
-    height: 5.5vw;
-    white-space: nowrap;
-}
+    main section .stars {
+        position: absolute;
+        top: 20.5vw;
+        left: 18.2vw;
+        background-repeat: repeat-x;
+        background-image: url("../images/star.svg");
+        width: 55vw;
+        height: 5.5vw;
+        white-space: nowrap;
+    }
 
-main section .stars input {
-    opacity: 0;
-    position: relative;
-    top: -2.5vw;
-    width: 2.2vw;
-    height: 2.3vw;
-}
+    main section .stars input {
+        opacity: 0;
+        position: relative;
+        top: -2.5vw;
+        width: 2.2vw;
+        height: 2.3vw;
+    }
 
-main section .stars .stars-fill {
-    background-repeat: repeat-x;
-    background-image: url("../images/star-filled.svg");
-    height: 100%;
-}
+    main section .stars .stars-fill {
+        background-repeat: repeat-x;
+        background-image: url("../images/star-filled.svg");
+        height: 100%;
+    }
 
-main section .stars[data-checked="0"] .stars-fill { width: 0%; }
+    main section .stars[data-checked="0"] .stars-fill { width: 0%; }
 
-main section .stars[data-checked="1"] .stars-fill { width: 10%; }
+    main section .stars[data-checked="1"] .stars-fill { width: 10%; }
 
-main section .stars[data-checked="2"] .stars-fill { width: 20%; }
+    main section .stars[data-checked="2"] .stars-fill { width: 20%; }
 
-main section .stars[data-checked="3"] .stars-fill { width: 30%; }
+    main section .stars[data-checked="3"] .stars-fill { width: 30%; }
 
-main section .stars[data-checked="4"] .stars-fill { width: 40%; }
+    main section .stars[data-checked="4"] .stars-fill { width: 40%; }
 
-main section .stars[data-checked="5"] .stars-fill { width: 50%; }
+    main section .stars[data-checked="5"] .stars-fill { width: 50%; }
 
-main section .stars[data-checked="6"] .stars-fill { width: 60%; }
+    main section .stars[data-checked="6"] .stars-fill { width: 60%; }
 
-main section .stars[data-checked="7"] .stars-fill { width: 70%; }
+    main section .stars[data-checked="7"] .stars-fill { width: 70%; }
 
-main section .stars[data-checked="8"] .stars-fill { width: 80%; }
+    main section .stars[data-checked="8"] .stars-fill { width: 80%; }
 
-main section .stars[data-checked="9"] .stars-fill { width: 90%; }
+    main section .stars[data-checked="9"] .stars-fill { width: 90%; }
 
-main section .stars[data-checked="10"] .stars-fill { width: 100%; }
+    main section .stars[data-checked="10"] .stars-fill { width: 100%; }
 
-main section .rating {
-    position: absolute;
-    top: 21.25vw;
-    left: 75vw;
-    font-family: "Lato-Regular";
-    font-size: 3.5vw;
-    color: #5B5B5B;
-}
+    main section .rating {
+        position: absolute;
+        top: 21.25vw;
+        left: 75vw;
+        font-family: "Lato-Regular";
+        font-size: 3.5vw;
+        color: #5B5B5B;
+    }
 
-main section .hidden-edit {
-    visibility: hidden;
-}
+    main section .hidden-edit {
+        visibility: hidden;
+    }
 
-main section .hidden-edit textarea {
-    z-index: 0;
-    border-radius: 0.15vw;
-    position: absolute;
-    top: 6.3vw;
-    left: 19vw;
-    width: 75.9vw;
-    height: 12.2vw;
-    background-color: #fffdfe;
-    font-family: "Lato-Light";
-    font-size: 2.4vw;
-    font-weight: 100;
-    color: #cecece;
-    border: 1px solid #E7E7E7;
-    padding-left: 0.7vw;
-    padding-top: 0.35vw;
-    resize: none;
-    transition: 0.3s ease;
-}
+    main section .hidden-edit textarea {
+        z-index: 0;
+        border-radius: 0.15vw;
+        position: absolute;
+        top: 6.3vw;
+        left: 19vw;
+        width: 75.9vw;
+        height: 12.2vw;
+        background-color: #fffdfe;
+        font-family: "Lato-Light";
+        font-size: 2.4vw;
+        font-weight: 100;
+        color: #cecece;
+        border: 1px solid #E7E7E7;
+        padding-left: 0.7vw;
+        padding-top: 0.35vw;
+        resize: none;
+        transition: 0.3s ease;
+    }
 
-main section .hidden-edit input[type="submit"] {
-    top: 21vw;
-    left: 84.5vw;
-    position: absolute;
-    width: 11.5vw;
-    height: 4.4vw;
-    border: none;
-    border-radius: 0.2vw;
-    background-color: #809BBD;
-    font-size: 2.5vw;
-    font-family: "Lato-Light";
-    color: white;
-    cursor: pointer;
-}
+    main section .hidden-edit input[type="submit"] {
+        top: 21vw;
+        left: 84.5vw;
+        position: absolute;
+        width: 11.5vw;
+        height: 4.4vw;
+        border: none;
+        border-radius: 0.2vw;
+        background-color: #809BBD;
+        font-size: 2.5vw;
+        font-family: "Lato-Light";
+        color: white;
+        cursor: pointer;
+    }
 
-main section.edit .hidden-edit {
-    visibility: visible;
-}
+    main section.edit .hidden-edit {
+        visibility: visible;
+    }
 
-main section.no-review {
-    width: 100%;
-    height: 16vw;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
-    margin-bottom: 1.2vw;
-    transition: 0.5s ease;
-}
+    main section.no-review {
+        width: 100%;
+        height: 16vw;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 3px 0px rgba(0,0,0,0.24);
+        margin-bottom: 1.2vw;
+        transition: 0.5s ease;
+    }
 
-main section.no-review.edit {
-    height: 27vw;
-}
+    main section.no-review.edit {
+        height: 27vw;
+    }
 
-main section.no-review .anime-title {
-    top: 1.8vw;
-    left: 12.8vw;
-    transition: 0.4s ease;
-}
+    main section.no-review .anime-title {
+        top: 1.8vw;
+        left: 12.8vw;
+        transition: 0.4s ease;
+    }
 
-main section.no-review.edit .anime-title {
-    top: 1.3vw;
-    left: 19vw;
-}
+    main section.no-review.edit .anime-title {
+        top: 1.3vw;
+        left: 19vw;
+    }
 
-main section.no-review .cover-no-review {
-    background-size: contain;
-    background-repeat: repeat-y;
-    background-position: left;
-    float: left;
-    width: 10.7vw;
-    height: 16vw;
-    transition: 0.5s ease;
-    opacity: 1.0;
-}
+    main section.no-review .cover-no-review {
+        background-size: contain;
+        background-repeat: repeat-y;
+        background-position: left;
+        float: left;
+        width: 10.7vw;
+        height: 16vw;
+        transition: 0.5s ease;
+        opacity: 1.0;
+    }
 
-main section.no-review.edit .cover-no-review {
-    opacity: 0.0;
-}
+    main section.no-review.edit .cover-no-review {
+        opacity: 0.0;
+    }
 
-main section.no-review.edit .cover-no-review-large {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
-    width: 16vw;
-    height: 27vw;
-    transition: 0.5s ease;
-}
+    main section.no-review.edit .cover-no-review-large {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        width: 16vw;
+        height: 27vw;
+        transition: 0.5s ease;
+    }
 
-main section.no-review .rating {
-    transition: 0.5s ease;
-    opacity: 1.0;
-}
+    main section.no-review .rating {
+        transition: 0.5s ease;
+        opacity: 1.0;
+    }
 
-main section.no-review.edit .rating {opacity: 0.0;}
+    main section.no-review.edit .rating {opacity: 0.0;}
 
-main section.no-review .stars {
-    top: 7.5vw;
-    left: 12vw;
-    transition: 0.2s ease;
-    width: 65vw;
-    height: 6.5vw;
-}
+    main section.no-review .stars {
+        top: 7.5vw;
+        left: 12vw;
+        transition: 0.2s ease;
+        width: 65vw;
+        height: 6.5vw;
+    }
 
-main section.no-review .rating {
-    top: 8.1vw;
-    left: 78vw;
-    font-size: 4.5vw;
-    line-height: 5.5vw;
-}
+    main section.no-review .rating {
+        top: 8.1vw;
+        left: 78vw;
+        font-size: 4.5vw;
+        line-height: 5.5vw;
+    }
 
-main section.no-review.edit .stars {
-    top: 20.4vw;
-    left: 18.3vw;
-    width: 55vw;
-    height: 5.5vw;
-    transition: 0.2s ease;
-}
+    main section.no-review.edit .stars {
+        top: 20.4vw;
+        left: 18.3vw;
+        width: 55vw;
+        height: 5.5vw;
+        transition: 0.2s ease;
+    }
 
-main section.no-review.edit .rating {
-    top: 18.5vw;
-    left: 67.5vw;
-}
+    main section.no-review.edit .rating {
+        top: 18.5vw;
+        left: 67.5vw;
+    }
 
-.go_to_search {
-    margin: 4vmin auto 0 auto;
-    line-height: 6.5vmin;
-    text-align: center;
-    border-radius: 0.3vmin;
-    width: 18vmin;
-    height: 6.5vmin;
-    background: #64D08F;
-    color: white;
-    font-family: "Lato-Regular";
-    display: block;
-    font-size: 2.5vmin;
-    text-decoration: none;
-}
+    .go_to_search {
+        margin: 4vmin auto 0 auto;
+        line-height: 6.5vmin;
+        text-align: center;
+        border-radius: 0.3vmin;
+        width: 18vmin;
+        height: 6.5vmin;
+        background: #64D08F;
+        color: white;
+        font-family: "Lato-Regular";
+        display: block;
+        font-size: 2.5vmin;
+        text-decoration: none;
+    }
 
-.no-image {
-    margin: -2vmin auto;
-    height: 28vmin;
-    width: 29vmin;
-    background-size: cover;
-    background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
-}
+    .no-image {
+        margin: -2vmin auto;
+        height: 28vmin;
+        width: 29vmin;
+        background-size: cover;
+        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+    }
 
-.no-text {
-    margin: 4.5vmin auto 0 auto;
-    text-align: center;
-    width: 106vmin;
-    font-family: "Lato-Light";
-    color: #777777;
-    font-size: 3.4vmin;
-}
+    .no-text {
+        margin: 4.5vmin auto 0 auto;
+        text-align: center;
+        width: 106vmin;
+        font-family: "Lato-Light";
+        color: #777777;
+        font-size: 3.4vmin;
+    }
 
-#unreviewed {
-    visibility: hidden;
-}
+    #unreviewed {
+        visibility: hidden;
+    }
 
-.plus {
-    background-image: url("../images/plus.svg");
-    width: 4vw;
-    height: 4vw;
-    top: 0.5vw;
-    right: 1vw;
-    position: absolute;
-    background-size: cover;
-    opacity: 0.7;
-}
+    .plus {
+        background-image: url("../images/plus.svg");
+        width: 4vw;
+        height: 4vw;
+        top: 0.5vw;
+        right: 1vw;
+        position: absolute;
+        background-size: cover;
+        opacity: 0.7;
+    }
 
 }
