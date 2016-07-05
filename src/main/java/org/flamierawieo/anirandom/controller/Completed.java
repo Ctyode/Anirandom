@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static org.flamierawieo.anirandom.Util.jsonify;
@@ -73,7 +74,7 @@ public class Completed extends Base {
     public String editCompleted(HttpServletRequest request,
                                 @RequestParam(value = "anime") String animeId,
                                 @RequestParam(value = "review") String reviewText,
-                                @RequestParam(value = "rating") String rating) {
+                                @RequestParam(value = "rating", defaultValue = "_") String rating) {
         User user = getAuthorizedUser(request);
         if(user == null) {
             return jsonify(new LinkedHashMap() {{
@@ -88,11 +89,19 @@ public class Completed extends Base {
         if(reviewText.length() > 0) {
             review.review = reviewText;
         }
-        int r = (int) Float.parseFloat(rating);
-        if(r > 10) {
-            r = 10;
-        } else if(r < 0) {
-            r = 0;
+        int r = 0;
+        if(!"_".equals(rating)) {
+            r = (int) Float.parseFloat(rating);
+            if(r > 10) {
+                r = 10;
+            } else if(r < 0) {
+                r = 0;
+            }
+        } else {
+            Optional<Review> o = getAuthorizedUser(request).completedList.stream().filter(r_ -> r_.anime.equals(anime)).findFirst();
+            if(o.isPresent()) {
+                r = o.get().rating;
+            }
         }
         review.rating = r;
         BaseDao.DaoResponse response = new UserDao().editCompleted(user, review);

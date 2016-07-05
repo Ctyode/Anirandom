@@ -92,25 +92,25 @@
                     <span>{{ review.anime.title }}</span>
                   </div>
                   <div class="rating">{{ review.rating }}</div>
-                  <div class="stars" data-checked="{{ review.rating }}">
-                    <div class="stars-fill"></div>
-                    <div class="wrap">
-                      <label><input type="radio" name="rating" value="1"></label>
-                      <label><input type="radio" name="rating" value="2"></label>
-                      <label><input type="radio" name="rating" value="3"></label>
-                      <label><input type="radio" name="rating" value="4"></label>
-                      <label><input type="radio" name="rating" value="5"></label>
-                      <label><input type="radio" name="rating" value="6"></label>
-                      <label><input type="radio" name="rating" value="7"></label>
-                      <label><input type="radio" name="rating" value="8"></label>
-                      <label><input type="radio" name="rating" value="9"></label>
-                      <label><input type="radio" name="rating" value="10"></label>
-                    </div>
-                  </div>
                   <form class="hidden-edit">
-                    <input type="submit" value="Blyad">
+                    <div class="stars" data-checked="{{ review.rating }}">
+                      <div class="stars-fill"></div>
+                      <div class="wrap">
+                        <label><input type="radio" name="rating" value="1"></label>
+                        <label><input type="radio" name="rating" value="2"></label>
+                        <label><input type="radio" name="rating" value="3"></label>
+                        <label><input type="radio" name="rating" value="4"></label>
+                        <label><input type="radio" name="rating" value="5"></label>
+                        <label><input type="radio" name="rating" value="6"></label>
+                        <label><input type="radio" name="rating" value="7"></label>
+                        <label><input type="radio" name="rating" value="8"></label>
+                        <label><input type="radio" name="rating" value="9"></label>
+                        <label><input type="radio" name="rating" value="10"></label>
+                      </div>
+                    </div>
                     <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
+                    <textarea name="review" placeholder="napishi svoe voshititelnoe mnenie">{{ review.review }}</textarea>
+                    <input type="submit" value="Davai">
                   </form>
                 </section>
               {% endif %}

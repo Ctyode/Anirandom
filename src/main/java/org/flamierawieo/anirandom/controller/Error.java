@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-@RestController
+//@RestController
 public class Error extends Base implements ErrorController {
 
     private static final String PATH = "/error";
@@ -19,6 +21,10 @@ public class Error extends Base implements ErrorController {
         Map<String, Object> context = super.getContext(request);
 
         Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
+        Object t = request.getAttribute("javax.servlet.error.exception");
+        if(t != null && t instanceof Throwable) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "", t);
+        }
         if (statusCode == null) {
             context.put("http_status_code", HttpStatus.INTERNAL_SERVER_ERROR.value());
             context.put("http_status_message", HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase());
@@ -30,12 +36,12 @@ public class Error extends Base implements ErrorController {
         return context;
     }
 
-    @RequestMapping(PATH)
+//    @RequestMapping(PATH)
     public String handle(HttpServletRequest request) throws IOException, PebbleException {
         return render("error.html", getContext(request));
     }
 
-    @Override
+//    @Override
     public String getErrorPath() {
         return PATH;
     }
