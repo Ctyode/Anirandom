@@ -291,27 +291,29 @@
      main .randomize-button {
          z-index: 1;
          font-family: "Lato-Medium";
-         line-height: 12.2vw;
          text-align: center;
          top: 44vw;
-         left: 12vw;
+         left: 11vw;
+         padding-top: 3vw;
+         padding-bottom: 1.5vw;
+         height: 7vw;
          position: absolute;
          width: 41vw;
          background: #64D08F;
-         border-radius: 0.5vmin;
+         border-radius: 0.5vw;
          font-size: 4.6vw;
          letter-spacing: 0.03em;
          color: #FFFFFF;
-         margin-bottom: 2vw;
+         margin-bottom: 4vw;
          cursor: pointer;
          transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
      }
 
-     main .randomize-button.randomized { top: 153vw; }
+     main .randomize-button.randomized {top: 156vw;}
 
      main .drop-down-menu {
          margin-top: -5vh;
-         left: -4vw;
+         left: -5vw;
          position: absolute;
          font-family: "Lato-Medium";
          line-height: 13.85vw;
@@ -384,7 +386,7 @@
          width: 49vw;
          height: 62vw;
          position: absolute;
-         left: 7.3vw;
+         left: 6.3vw;
          top: 43.3vw;
          background-repeat: no-repeat;
      }
@@ -394,9 +396,9 @@
          font-family: "Lato-Regular";
          position: absolute;
          top: 108vw;
-         left: -14vw;
+         left: -15vw;
          right: 2vw;
-         width: 88vw;
+         width: 89vw;
      }
 
      main .info .title span {
@@ -409,7 +411,7 @@
          overflow-y: scroll;
          font-family: "Lato-Light";
          position: absolute;
-         left: -14vw;
+         left: -15vw;
          top: 116vw;
          width: 90vw;
          height: 24vw;
@@ -434,7 +436,7 @@
          font-family: "Lato-Medium";
          font-size: 4.9vw;
          position: absolute;
-         left: -8vw;
+         left: -9vw;
          top: 143.5vw;
      }
 
@@ -453,7 +455,7 @@
 
      main .info .love {
          position: absolute;
-         left: 60.2vw;
+         left: 59.2vw;
          top: 143.5vw;
          cursor: pointer;
      }

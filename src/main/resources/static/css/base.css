@@ -250,3 +250,11 @@ main {
     background-size: cover;
     opacity: 0.7;
 }
+
+.no-image {
+    margin: -2vmin auto;
+    height: 7.5vw;
+    width: 7.5vw;
+    background-size: cover;
+    background-image: url("../images/logo.svg");
+}

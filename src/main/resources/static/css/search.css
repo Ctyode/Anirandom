@@ -197,12 +197,8 @@
 
     .no-image {
         position: absolute;
-        top: 6.5vw;
-        left: 22vw;
-        height: 14vw;
-        width: 14.5vw;
-        background-size: cover;
-        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+        top: 7vw;
+        left: 25.4vw;
     }
 
     .no-text {
@@ -213,7 +209,7 @@
         font-size: 1.67vw;
         position: absolute;
         left: 1.6vw;
-        top: 21vw;
+        top: 15vw;
     }
 
 }
@@ -420,23 +416,19 @@
 
     .no-image {
         position: absolute;
-        top: 6.5vw;
-        left: 22vw;
-        height: 14vw;
-        width: 14.5vw;
-        background-size: cover;
-        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+        top: 15.5vw;
+        left: 34vw;
     }
 
     .no-text {
         text-align: center;
-        width: 56vw;
+        width: 82vw;
         font-family: "Lato-Light";
         color: #777777;
-        font-size: 1.67vw;
+        font-size: 4.67vw;
         position: absolute;
-        left: 1.6vw;
-        top: 21vw;
+        left: 8.5vw;
+        top: 49vw;
     }
 
 }

@@ -289,8 +289,8 @@
     }
 
     main section.no-review .cover-no-review {
-        background-size: contain;
-        background-repeat: repeat-y;
+        background-size: cover;
+        background-repeat: no-repeat;
         background-position: center;
         float: left;
         width: 5.5vw;
@@ -348,35 +348,26 @@
     }
 
     .go_to_search {
-        margin: 4vmin auto 0 auto;
-        line-height: 6.5vmin;
+        margin: 2vw auto 0 auto;
+        line-height: 3.2vw;
         text-align: center;
-        border-radius: 0.3vmin;
-        width: 18vmin;
-        height: 6.5vmin;
+        border-radius: 0.2vw;
+        width: 9vw;
         background: #64D08F;
         color: white;
         font-family: "Lato-Regular";
         display: block;
-        font-size: 2.5vmin;
+        font-size: 1.25vw;
         text-decoration: none;
     }
 
-    .no-image {
-        margin: -2vmin auto;
-        height: 28vmin;
-        width: 29vmin;
-        background-size: cover;
-        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
-    }
-
     .no-text {
-        margin: 4.5vmin auto 0 auto;
+        margin: 2vw auto 0 auto;
         text-align: center;
-        width: 106vmin;
+        width: 56vw;
         font-family: "Lato-Light";
         color: #777777;
-        font-size: 3.4vmin;
+        font-size: 1.66vw;
     }
 
     #unreviewed {
@@ -734,35 +725,26 @@
     }
 
     .go_to_search {
-        margin: 4vmin auto 0 auto;
-        line-height: 6.5vmin;
+        margin: 4vw auto 0 auto;
+        line-height: 6.5vw;
         text-align: center;
-        border-radius: 0.3vmin;
-        width: 18vmin;
-        height: 6.5vmin;
+        border-radius: 0.3vw;
+        width: 18vw;
         background: #64D08F;
         color: white;
         font-family: "Lato-Regular";
         display: block;
-        font-size: 2.5vmin;
+        font-size: 2.5vw;
         text-decoration: none;
     }
 
-    .no-image {
-        margin: -2vmin auto;
-        height: 28vmin;
-        width: 29vmin;
-        background-size: cover;
-        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
-    }
-
     .no-text {
-        margin: 4.5vmin auto 0 auto;
+        margin: 4.5vw auto 0 auto;
         text-align: center;
-        width: 106vmin;
+        width: 86vw;
         font-family: "Lato-Light";
         color: #777777;
-        font-size: 3.4vmin;
+        font-size: 4.4vmin;
     }
 
     #unreviewed {

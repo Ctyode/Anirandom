@@ -8,6 +8,7 @@
     }
 
     main section {
+        width: 58.5vw;
         position: relative;
         height: 8vw;
         background: #FFFFFF;
@@ -43,7 +44,7 @@
     main section .info .drop-down-more .more {
         top: 0.6vw;
         position: absolute;
-        left: 57.1vw;
+        left: 56.1vw;
         background: url("../images/more.svg");
         width: 2vw;
         background-size: cover;
@@ -130,14 +131,6 @@
         display: block;
         font-size: 2.5vh;
         text-decoration: none;
-    }
-
-    .no-image {
-        margin: -2vh auto;
-        height: 28vh;
-        width: 29vh;
-        background-size: cover;
-        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
     }
 
     .no-text {
@@ -308,14 +301,6 @@
         display: block;
         font-size: 2.5vh;
         text-decoration: none;
-    }
-
-    .no-image {
-        margin: -2vh auto;
-        height: 28vh;
-        width: 29vh;
-        background-size: cover;
-        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
     }
 
     .no-text {
