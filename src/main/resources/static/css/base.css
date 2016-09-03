@@ -24,11 +24,10 @@ body { margin: 0; }
 
 .anirandom-title {
   font-family: "Lato-Black";
-  margin-bottom: 13vmin;
-  line-height: 7.5vmin;
-  margin-top: 2.5vmin;
-  margin-left: 2.3vmin;
-  font-size: 7.6vmin;
+  line-height: 3.2rem;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 3.2rem;
 }
 
 .anirandom-title a {
@@ -38,10 +37,9 @@ body { margin: 0; }
 
 main {
   position: relative;
-  height: 71.6vmin;
-  width: 59.5vw;
+  width: 60%;
   margin: auto;
-  margin-top: 0;
+  margin-top: 60px;
 }
 
 .auth {
