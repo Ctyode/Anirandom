@@ -73,7 +73,7 @@ public class Completed extends Base {
     public String editCompleted(HttpServletRequest request,
                                 @RequestParam(value = "anime") String animeId,
                                 @RequestParam(value = "review") String reviewText,
-                                @RequestParam(value = "rating") String rating) {
+                                @RequestParam(value = "rating", defaultValue = "0") String rating) {
         User user = getAuthorizedUser(request);
         if(user == null) {
             return jsonify(new LinkedHashMap() {{
