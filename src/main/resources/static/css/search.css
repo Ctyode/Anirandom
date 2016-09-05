@@ -4,7 +4,7 @@
         z-index: 100500;
         overflow: hidden;
         position: absolute;
-        width: 59.25vw;
+        width: 100%;
         background: #FFFFFF;
         box-shadow: 0 0 0.3vmin 0 rgba(0,0,0,0.12), 0 0.3vmin 0.3vmin 0 rgba(0,0,0,0.24);
         border-radius: 0.1vw;
@@ -13,10 +13,10 @@
     .search-icon {
         background-image: url("../images/search.svg");
         margin-left: 0.9vw;
-        top: 0.75vw;
-        width: 2.2vw;
+        top: 10px;
+        width: 1.9rem;
         background-size: cover;
-        height: 2.2vw;
+        height: 1.9rem;
         background-repeat: no-repeat;
         position: absolute;
         opacity: 0.3;
@@ -27,9 +27,9 @@
     }
 
     .search ul li .image {
-        width: 3.9vw;
+        width: 53px;
         float: left;
-        height: 5.5vw;
+        height: 100%;
         background-color: #6D6D6D;
         position: absolute;
         background-size: cover;
@@ -38,49 +38,50 @@
 
     .search ul li .title {
         overflow: hidden;
-        max-width: 47vw;
+        max-width: 82%;
         white-space: nowrap;
         text-overflow: ellipsis;
-        margin-left: 5vw;
+        margin-left: 68px;
         float: left;
     }
 
     .search ul li .rating {
-        top: 2.85vw;
-        left: 29.3vw;
+        top: 38px;
+        left: 397px;
         font-family: "Lato-Regular";
-        font-size: 1.5vw;
+        font-size: 1.3rem;
         color: #2D2D2D;
         position: absolute;
     }
 
-    .search ul li .year {width: 4vw;float: left;margin-left: 0.5vw;}
+    .search ul li .year {width: 59px;float: left;margin-left: 4px;}
 
     .search ul::-webkit-scrollbar {
-        width: 0.8vmin;
+        width: 7px;
     }
 
     .search ul::-webkit-scrollbar-thumb {
         background-color: #BABABA;
-        border-top: 0.3vmin solid white;
-        border-bottom: 0.4vmin solid white;
+        border-top: 4px solid white;
+        border-bottom: 4px solid white;
+        border-right: 3px solid white;
     }
 
     .search ul li {
         position: relative;
-        height: 5.39vw;
-        width: 55vw;
+        height: 4.6rem;
+        width: 47.2rem;
         display: block;
     }
 
     .search .stars {
         position: absolute;
-        left: 4.8vw;
-        top: 2.4vw;
+        left: 65px;
+        top: 2rem;
         background-repeat: repeat-x;
         background-image: url("../images/star.svg");
-        width: 24vw;
-        height: 2.4vw;
+        width: 327px;
+        height: 33px;
     }
 
     .search .stars-fill {
@@ -91,10 +92,10 @@
 
     .search ul {
         position: relative;
-        border-top: 0.1vw solid #DEDEDE;
-        top: 0.1vw;
+        border-top: 1px solid #DEDEDE;
+        top: 1px;
         overflow: auto;
-        max-height: 24vw;
+        max-height: 325px;
         height: auto;
         overflow-x: hidden;
         overflow-y: scroll;
@@ -105,11 +106,11 @@
     .search input[type="text"] {
         font-family: "Lato-Light";
         border: none;
-        width: 55vw;
-        margin-left: 3.8vw;
-        height: 3.4vw;
-        font-size: 1.34vw;
-        padding-left: 0.6vw;
+        width: 93%;
+        margin-left: 3rem;
+        height: 2.9rem;
+        font-size: 1.1rem;
+        padding-left: 8px;
         background: none;
     }
 
@@ -121,26 +122,25 @@
     .title-container {
         color: #2D2D2D;
         display: inline-block;
-        width: 58vw;
+        width: 100%;
         font-family: "Lato-Regular";
-        font-size: 1.45vw;
+        font-size: 1.25rem;
         cursor: pointer;
         position: absolute;
-        top: 0.45vw;
+        top: 10%;
     }
 
     ul li .drop-down-search .more {
-        /* left: 115.5vmin; */
-        right: -3.5vw;
+        right: -3rem;
         top: 0;
         background: url("../images/more.svg");
-        margin-top: 0.5vw;
-        width: 2vw;
+        margin-top: 8px;
+        width: 1.6rem;
         background-size: cover;
-        height: 2vw;
+        height: 1.6rem;
         background-repeat: no-repeat;
         position: absolute;
-        opacity: 0.0;
+        opacity: 0.4;
         transition: 0.2s ease;
         cursor: pointer;
     }
@@ -196,24 +196,25 @@
     }
 
     .no-image {
-        position: absolute;
-        top: 6.5vw;
-        left: 22vw;
-        height: 14vw;
-        width: 14.5vw;
+        position: relative;
+        top: 77px;
+        height: 10rem;
+        width: 10rem;
+        margin: auto;
         background-size: cover;
-        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
+        background-image: url("/images/logo.svg");
     }
 
     .no-text {
         text-align: center;
-        width: 56vw;
+        width: 96%;
         font-family: "Lato-Light";
         color: #777777;
-        font-size: 1.67vw;
-        position: absolute;
-        left: 1.6vw;
-        top: 21vw;
+        font-size: 1.45rem;
+        line-height: 1.8rem;
+        position: relative;
+        top: 98px;
+        margin: auto;
     }
 
 }

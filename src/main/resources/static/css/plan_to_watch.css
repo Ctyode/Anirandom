@@ -10,6 +10,7 @@
     main section {
         position: relative;
         height: 6.8rem;
+        width: 98%;
         background: #FFFFFF;
         box-shadow: 0 0 0.3vh 0 rgba(0,0,0,0.12), 0 0.3vh 0.4vh 0 rgba(0,0,0,0.24);
         border-radius: 0.1vw;
@@ -61,27 +62,27 @@
 
     main section .info .drop-down-more.show .bubble {
         z-index: 100;
-        right: 2.2vw;
+        right: 28px;
         position: absolute;
-        margin-top: 1vw;
-        height: 4.5vw;
-        width: 12vw;
+        margin-top: 12px;
+        height: 59px;
+        width: 176px;
         background: white;
         border-radius: 0.1vw;
-        box-shadow: 0 0.1vh 0.7vh 0 rgba(0,0,0,0.10), 0 0.3vh 1vh 0 rgba(52,52,52,0.12);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.10), 0 1px 4px 0 rgba(52,52,52,0.12);
     }
 
     main section .info .drop-down-more.show .bubble .options {
         font-family: "Lato-Regular";
-        margin-left: 0.7vw;
-        font-size: 1.2vw;
-        margin-bottom: 0.2vh;
+        margin-left: 9px;
+        font-size: 1rem;
+        margin-bottom: 3px;
         color: #6D6D6D;
         cursor: pointer;
     }
 
     main section .info .drop-down-more.show .bubble .options:hover { color: #020202; }
-    main section .info .drop-down-more.show .bubble .options.move { margin-top: 0.7vw; }
+    main section .info .drop-down-more.show .bubble .options.move {margin-top: 9px;}
     main section .info .drop-down-menu.show .bubble .options.remove { margin-top: 1vh; }
 
     main section .info .anime-title {
@@ -89,8 +90,11 @@
         margin-top: 20px;
         font-family: "Lato-Regular";
         font-size: 1.5rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         color: #5B5B5B;
-        line-height: 0.8em;
+        line-height: 1em;
     }
 
     main section .info .stars {
@@ -98,7 +102,7 @@
         margin-left: 11px;
         background-repeat: repeat-x;
         background-image: url("../images/star.svg");
-        width: 66%;
+        width: 28rem;
         height: 2.8rem;
         transition: 0.2s ease;
     }
@@ -111,7 +115,7 @@
 
     main section .info .rating {
         position: absolute;
-        right: 26%;
+        left: 541px;
         margin-top: -34px;
         font-family: "Lato-Regular";
         font-size: 1.6rem;

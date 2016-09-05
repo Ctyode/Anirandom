@@ -39,21 +39,21 @@ main {
   position: relative;
   width: 60%;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 75px;
 }
 
 .auth {
   position: absolute;
-  top: 2.2vmin;
-  right: 2.8vmin;
+  top: 15px;
+  right: 19px;
   text-align: right;
 }
 
 .auth .auth-text {
   font-family: "Lato-Regular";
   color: #6D6D6D;
-  font-size: 3vmin;
-  line-height: 3vmin;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
   z-index: 165;
   position: absolute;
   float: right;
@@ -79,7 +79,7 @@ main {
 
 .auth .auth-bubble {
   position: relative;
-  top: 6vmin;
+  top: 40px;
   left: 0;
   height: 0;
   z-index: 160;
@@ -90,7 +90,7 @@ main {
 }
 
 .auth .auth-bubble.initial-width-297px {
-  width: 42.8vmin;
+  width: 18rem;
 }
 
 .auth .auth-bubble.initial-width-180px {
@@ -104,7 +104,7 @@ main {
 }
 
 .auth[section=login] .auth-bubble {
-  height: 36vmin;
+  height: 15.2rem;
 }
 
 .auth[section=signup] .auth-bubble {
@@ -134,10 +134,10 @@ main {
 }
 
 .auth .auth-bubble .section .title {
-  margin-top: 2.8vmin;
+  margin-top: 1.2rem;
   font-family: "Lato-Medium";
-  font-size: 3.5vmin;
-  line-height: 3.5vmin;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   color: #6D6D6D;
   text-align: center;
 }
@@ -146,32 +146,31 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2.6vmin;
+  margin-top: 1.1rem;
 }
 
 .auth .auth-bubble .section form input[type="text"],
 .auth .auth-bubble .section form input[type="email"],
 .auth .auth-bubble .section form input[type="password"] {
-  width: 33.2vmin;
-  height: 5.4vmin;
+  width: 14rem;
+  height: 2.25rem;
   border-radius: 0.2vmin;
-  margin-bottom: 1.9vmin;
-  padding-left: 1.3vmin;
+  margin-bottom: 0.8rem;
+  padding-left: 3%;
   background-color: #fffdfe;
   font-family: "Lato-Light";
-  font-size: 2.6vmin;
+  font-size: 1.1rem;
   font-weight: 100;
   color: #cecece;
   border: 0.1vmin solid #E7E7E7;
 }
 
 .auth .auth-bubble .section form input[type="submit"] {
-  width: 35vmin;
-  height: 5vmin;
+  padding: 3% 10%;
   border: none;
   border-radius: 0.2vmin;
   background-color: #809BBD;
-  font-size: 2.5vmin;
+  font-size: 1.05rem;
   font-family: "Lato-Light";
   color: white;
   cursor: pointer;
@@ -179,12 +178,12 @@ main {
 
 .auth .auth-bubble .section .goto-button {
   position: absolute;
-  right: 4vmin;
+  right: 9%;
   bottom: 3vmin;
   font-family: "Lato-Medium";
   color: #6D6D6D;
-  font-size: 2vmin;
-  line-height: 1vmin;
+  font-size: 0.8rem;
+  line-height: 0.3rem;
   cursor: pointer;
   opacity: 0.8;
 }
