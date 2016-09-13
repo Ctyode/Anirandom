@@ -54,7 +54,7 @@ main {
   color: #6D6D6D;
   font-size: 1.2rem;
   line-height: 1.4rem;
-  z-index: 165;
+  z-index: 100501;
   position: absolute;
   float: right;
   right: 0;
@@ -105,10 +105,11 @@ main {
 
 .auth[section=login] .auth-bubble {
   height: 15.2rem;
+  z-index: 100501;
 }
 
 .auth[section=signup] .auth-bubble {
-  height: 51.7vmin;
+  height: 21.5rem;
 }
 
 .auth[section=logout] .auth-bubble {
@@ -166,9 +167,9 @@ main {
 }
 
 .auth .auth-bubble .section form input[type="submit"] {
-  padding: 3% 10%;
+  padding: 0.4rem 1.6rem;
   border: none;
-  border-radius: 0.2vmin;
+  border-radius: 2px;
   background-color: #809BBD;
   font-size: 1.05rem;
   font-family: "Lato-Light";
@@ -179,7 +180,7 @@ main {
 .auth .auth-bubble .section .goto-button {
   position: absolute;
   right: 9%;
-  bottom: 3vmin;
+  bottom: 0.9rem;
   font-family: "Lato-Medium";
   color: #6D6D6D;
   font-size: 0.8rem;

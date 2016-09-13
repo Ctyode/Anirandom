@@ -47,6 +47,7 @@
         transition: 0.3s ease;
         overflow: hidden;
         cursor: pointer;
+        z-index: 100500;
     }
 
     main .drop-down-menu ul {
@@ -59,8 +60,6 @@
         margin: 0;
         padding: 0;
     }
-
-    @-moz-document url-prefix() { main .drop-down-menu ul { width: 30vmin; } }
 
     main .drop-down-menu ul::-webkit-scrollbar { width: 0.9vmin; }
 
@@ -202,10 +201,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url("../images/heart.svg");
-        width: 34%;
-        height: 1.9rem;
+        width: 2.2rem;
+        height: 2rem;
         position: absolute;
-        left: -45%;
+        left: -2.8rem;
         content: " ";
         transition: 0.2s ease;
     }
@@ -214,10 +213,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url("../images/heart-fill.svg");
-        width: 2.5vw;
-        height: 2.25vw;
         position: absolute;
-        left: -3.2vw;
         content: " ";
     }
 

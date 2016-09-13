@@ -2,10 +2,11 @@
 
 {% block css %}
 {{ parent() }}
-    <link rel="stylesheet" href="/css/search.css">
+    <link rel="stylesheet" href="/css/error.css">
 {% endblock %}
 
 {% block main %}
 <h1>{{ http_status_code }}</h1>
 <p>{{ http_status_message }}</p>
+<img class="image" src="/images/logo.svg">
 {% endblock %}

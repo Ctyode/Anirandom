@@ -148,14 +148,13 @@
     main section .synopsis {
         word-wrap: break-word;
         position: absolute;
-        top: 45px;
-        left: 156px;
+        top: 2.8rem;
+        left: 9.8rem;
         font-family: Lato-Light;
         font-size: 1.05rem;
         width: 75%;
         height: 45%;
         color: #626262;
-        overflow-y: scroll;
         line-height: 1.2rem;
         overflow-x: hidden;
     }
