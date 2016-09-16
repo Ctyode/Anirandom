@@ -131,10 +131,10 @@
     }
 
     ul li .drop-down-search .more {
-        right: -3rem;
+        right: -2rem;
         top: 0;
         background: url("../images/more.svg");
-        margin-top: 8px;
+        margin-top: 0.2rem;
         width: 1.6rem;
         background-size: cover;
         height: 1.6rem;
@@ -166,19 +166,19 @@
     }
 
     ul li .drop-down-search.show .bubble-search {
-        margin-right: -3.7vw;
+        margin-right: -2rem;
         margin-top: 0.6vw;
-        height: 4.4vw;
-        width: 10vw;
+        height: 3.5rem;
+        width: 9rem;
         background: white;
-        border-radius: 0.05vw;
-        box-shadow: 0vmin 0.2vmin 0.8vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
+        border-radius: 2px;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.10), 0 1px 4px 0 rgba(52,52,52,0.12);
     }
 
     ul li .drop-down-search.show .bubble-search .search-add-to {
         font-family: "Lato-Regular";
-        margin-left: 0.7vw;
-        font-size: 1.2vw;
+        margin-left: 0.5rem;
+        font-size: 1rem;
         color: #6D6D6D;
         cursor: pointer;
     }
@@ -188,11 +188,11 @@
     }
 
     ul li .drop-down-search.show .bubble-search .search-add-to.add-to-plan-to-watch {
-        margin-top: 0.5vw;
+        margin-top: 0.48rem;
     }
 
     ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed {
-        margin-top: 0.4vw;
+        margin-top: 0.2rem;
     }
 
     .no-image {
@@ -207,7 +207,7 @@
 
     .no-text {
         text-align: center;
-        width: 96%;
+        width: 97%;
         font-family: "Lato-Light";
         color: #777777;
         font-size: 1.45rem;

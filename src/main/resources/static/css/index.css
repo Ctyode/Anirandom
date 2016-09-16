@@ -43,7 +43,7 @@
         height: 3.25rem;
         background: #FCFCFC;
         box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-        border-radius: 0.1vw;
+        border-radius: 2px;
         transition: 0.3s ease;
         overflow: hidden;
         cursor: pointer;
@@ -51,9 +51,7 @@
     }
 
     main .drop-down-menu ul {
-        width: 18.5vw;
         width: 99%;
-        height: 20.5vw;
         height: 84%;
         overflow-x: hidden;
         overflow-y: scroll;
@@ -85,14 +83,14 @@
     main .drop-down-menu .title::after {
         content: ' ';
         position: absolute;
-        right: 1.5vw;
-        top: 24px;
-        border-width: 0.5vw;
+        right: 1.1rem;
+        top: 1.45rem;
+        border-width: 0.4rem;
         border-color: #5B5B5B rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0) rgba(0, 0, 0, 0.0);
         border-style: solid;
     }
 
-    main .drop-down-menu.open {height: 24.4vw;height: 20.5rem;}
+    main .drop-down-menu.open {height: 20.5rem;}
 
     main /*.drop-down-menu*/ #genre { position: absolute; }
     main /*.drop-down-menu*/ #year {position: absolute;left: 33.4%;}
@@ -220,19 +218,19 @@
     main .info .love .bubble { height: 0; overflow: hidden; }
 
     main .info .love.show .bubble {
-        margin-top: 0.3vw;
-        height: 5vw;
-        width: 11vw;
+        margin-top: 9px;
+        height: 3.6rem;
+        width: 10rem;
         background: white;
-        border-radius: 0.1vw;
-        box-shadow: 0vmin 0.2vmin 1vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
-        margin-left: -4.5vw;
+        border-radius: 2px;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 3px 7px 0 rgba(0, 0, 0, 0.16);
+        margin-left: -4.8rem;
     }
 
     main .info .love.show .bubble .add-to {
         font-family: "Lato-Regular";
-        margin-left: 0.8vw;
-        font-size: 1.23vw;
+        margin-left: 9px;
+        font-size: 1rem;
         color: #6D6D6D;
         cursor: pointer;
     }
@@ -242,11 +240,11 @@
     }
 
     main .info .love.show .bubble .add-to.add-to-plan-to-watch {
-        margin-top: 0.7vw;
+        margin-top: 8px;
     }
 
     main .info .love.show .bubble .add-to.add-to-completed {
-        margin-top: 0.45vw;
+        margin-top: 3px;
     }
 
     main .info .title span {
@@ -277,7 +275,6 @@
     main .info .title span:hover::after { opacity: 1; visibility: visible; }
 
 }
-
 @media screen and (max-aspect-ratio: 13/9) {
 
     main .gray_text { position: absolute; opacity: 0.0; }

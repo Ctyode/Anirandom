@@ -3,24 +3,24 @@
     main .completed {
         overflow: hidden;
         font-family: "Lato-Regular";
-        font-size: 2.1vw;
+        font-size: 1.75rem;
         color: #5B5B5B;
-        margin-bottom: 0.6vw;
-        height: 2.6vw;
+        margin-bottom: 0.3rem;
+        height: 2.2rem;
     }
 
     main .completed ul {
-        margin-right: 3.5vw;
-        margin-top: -2.5vw;
+        margin-right: 3rem;
+        margin-top: -2.1rem;
     }
 
     main .completed ul li.menuElement {
-        margin-left: 1.1vw;
+        margin-left: 0.9rem;
         display: block;
         float: right;
         font-family: "Lato-Medium";
-        font-size: 2.1vw;
-        height: 2.6vw;
+        font-size: 1.75rem;
+        height: 2.2rem;
         cursor: pointer;
     }
 
@@ -229,17 +229,17 @@
 
     main section .hidden-edit textarea {
         z-index: 0;
-        border-radius: 0.15vw;
+        border-radius: 3px;
         position: absolute;
-        top: 49px;
-        left: 150px;
-        width: 76%;
+        top: 3rem;
+        left: 9.85rem;
+        width: 75%;
         height: 39%;
         background-color: #fffdfe;
         font-family: "Lato-Light";
         font-size: 1.05rem;
         font-weight: 100;
-        color: #cecece;
+        color: #464646;
         border: 1px solid #E7E7E7;
         padding: 6px 0 0 8px;
         resize: none;
@@ -285,8 +285,8 @@
 
     main section.no-review.edit .anime-title {
         position: absolute;
-        top: 15px;
-        left: 152px;
+        top: 0.9rem;
+        left: 9.85rem;
     }
 
     main section.no-review .cover-no-review {
@@ -308,7 +308,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: left;
-        width: 120px;
+        width: 128px;
         height: 100%;
         transition: 0.5s ease;
     }
@@ -339,8 +339,8 @@
 
     main section.no-review.edit .stars {
         position: absolute;
-        top: 138px;
-        left: 147px;
+        top: 8.5rem;
+        left: 9.6rem;
         transition: 0.2s ease;
     }
 
