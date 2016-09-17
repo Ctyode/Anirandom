@@ -61,7 +61,7 @@ main section .drop-down-more .more {
     background-repeat: no-repeat;
     cursor: pointer;
     transition: 0.2s ease;
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 main section:hover .drop-down-more .more {
@@ -112,7 +112,7 @@ main section .anime-title {
 }
 
 main section .anime-title span {
-    height: 1.5rem;
+    height: 1.7rem;
     display: block;
     overflow: hidden;
     white-space: nowrap;
@@ -179,10 +179,10 @@ main section .stars label {
     display: block;
     float: left;
     position: relative;
-    top: -2.5vw;
-    width: 2.7vw;
-    height: 2.3vw;
-    margin-right: 0.22vw;
+    top: -2.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 0.35rem;
 }
 
 main section .stars .stars-fill {
@@ -353,7 +353,7 @@ main section.no-review.edit .rating {
 .no-text {
     margin: 30px auto 25px auto;
     text-align: center;
-    width: 80%;
+    width: 82%;
     font-family: "Lato-Light";
     color: #777777;
     font-size: 1.3rem;

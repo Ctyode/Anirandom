@@ -23,7 +23,7 @@ main .randomize-button {
     margin: auto;
     position: relative;
     background: #64D08F;
-    border-radius: 0.5vmin;
+    border-radius: 4px;
     color: #FFFFFF;
     cursor: pointer;
     top: 400px;
@@ -45,7 +45,7 @@ main .drop-down-menu {
     transition: 0.3s ease;
     overflow: hidden;
     cursor: pointer;
-    z-index: 100500;
+    z-index: 100;
 }
 
 main .drop-down-menu ul {
@@ -57,12 +57,12 @@ main .drop-down-menu ul {
     padding: 0;
 }
 
-main .drop-down-menu ul::-webkit-scrollbar { width: 0.9vmin; }
+main .drop-down-menu ul::-webkit-scrollbar { width: 9px; }
 
 main .drop-down-menu ul::-webkit-scrollbar-thumb {
     background-color: #BABABA;
-    border-top: 0.3vmin solid white;
-    border-bottom: 0.6vmin solid white;
+    border-top: 3px solid white;
+    border-bottom: 6px solid white;
 }
 
 main .drop-down-menu ul li {
@@ -75,7 +75,7 @@ main .drop-down-menu .title {
     position: relative;
     padding-left: 6.9%;
     box-sizing: border-box;
-    border-bottom: 0.1vmin solid #D5D4D4;
+    border-bottom: 1px solid #D5D4D4;
 }
 
 main .drop-down-menu .title::after {
@@ -139,15 +139,15 @@ main .info .synopsis {
     color: #626262;
     font-size: 1.05rem;
     font-weight: 300;
-    padding-right: 0.6vw;
+    padding-right: 6px;
 }
 
-main .info .synopsis::-webkit-scrollbar { width: 0.8vmin; }
+main .info .synopsis::-webkit-scrollbar {width: 5px;}
 
 main .info .synopsis::-webkit-scrollbar-thumb {
     background-color: #BABABA;
-    border-top: 0.4vmin solid white;
-    border-bottom: 0.4vmin solid white;
+    border-top: 4px solid white;
+    border-bottom: 5px solid white;
 }
 
 main .info .rating {
@@ -176,7 +176,7 @@ main .info .rating::before {
 
 main .info .love {
     position: absolute;
-    left: 87%;
+    left: 43rem;
     white-space: nowrap;
     top: 20.5rem;
     cursor: pointer;

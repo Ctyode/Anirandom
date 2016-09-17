@@ -97,7 +97,7 @@ main section .info .anime-title {
 
 main section .info .stars {
     margin-top: 11px;
-    margin-left: 11px;
+    margin-left: 13px;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
     width: 28rem;
