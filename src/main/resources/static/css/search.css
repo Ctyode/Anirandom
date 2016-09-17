@@ -1,443 +1,210 @@
-@media screen and (min-aspect-ratio: 13/9) {
-
-    .search {
-        z-index: 100500;
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        background: #FFFFFF;
-        box-shadow: 0 0 0.3vmin 0 rgba(0,0,0,0.12), 0 0.3vmin 0.3vmin 0 rgba(0,0,0,0.24);
-        border-radius: 0.1vw;
-    }
-
-    .search-icon {
-        background-image: url("../images/search.svg");
-        margin-left: 0.9vw;
-        top: 10px;
-        width: 1.9rem;
-        background-size: cover;
-        height: 1.9rem;
-        background-repeat: no-repeat;
-        position: absolute;
-        opacity: 0.3;
-    }
-
-    .search ul {
-        display: none;
-    }
-
-    .search ul li .image {
-        width: 53px;
-        float: left;
-        height: 100%;
-        background-color: #6D6D6D;
-        position: absolute;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .search ul li .title {
-        overflow: hidden;
-        max-width: 82%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        margin-left: 68px;
-        float: left;
-    }
-
-    .search ul li .rating {
-        top: 38px;
-        left: 397px;
-        font-family: "Lato-Regular";
-        font-size: 1.3rem;
-        color: #2D2D2D;
-        position: absolute;
-    }
-
-    .search ul li .year {width: 59px;float: left;margin-left: 4px;}
-
-    .search ul::-webkit-scrollbar {
-        width: 7px;
-    }
-
-    .search ul::-webkit-scrollbar-thumb {
-        background-color: #BABABA;
-        border-top: 4px solid white;
-        border-bottom: 4px solid white;
-        border-right: 3px solid white;
-    }
-
-    .search ul li {
-        position: relative;
-        height: 4.6rem;
-        width: 47.2rem;
-        display: block;
-    }
-
-    .search .stars {
-        position: absolute;
-        left: 65px;
-        top: 2rem;
-        background-repeat: repeat-x;
-        background-image: url("../images/star.svg");
-        width: 327px;
-        height: 33px;
-    }
-
-    .search .stars-fill {
-        background-repeat: repeat-x;
-        background-image: url("../images/star-filled.svg");
-        height: 100%;
-    }
-
-    .search ul {
-        position: relative;
-        border-top: 1px solid #DEDEDE;
-        top: 1px;
-        overflow: auto;
-        max-height: 325px;
-        height: auto;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        padding: 0;
-        margin: 0;
-    }
-
-    .search input[type="text"] {
-        font-family: "Lato-Light";
-        border: none;
-        width: 93%;
-        margin-left: 3rem;
-        height: 2.9rem;
-        font-size: 1.1rem;
-        padding-left: 8px;
-        background: none;
-    }
-
-    ::-webkit-input-placeholder { color: gray; }
-    ::-moz-placeholder          { color: gray; }
-    :-moz-placeholder           { color: gray; }
-    :-ms-input-placeholder      { color: gray; }
-
-    .title-container {
-        color: #2D2D2D;
-        display: inline-block;
-        width: 100%;
-        font-family: "Lato-Regular";
-        font-size: 1.25rem;
-        cursor: pointer;
-        position: absolute;
-        top: 10%;
-    }
-
-    ul li .drop-down-search .more {
-        right: -2rem;
-        top: 0;
-        background: url("../images/more.svg");
-        margin-top: 0.2rem;
-        width: 1.6rem;
-        background-size: cover;
-        height: 1.6rem;
-        background-repeat: no-repeat;
-        position: absolute;
-        opacity: 0.4;
-        transition: 0.2s ease;
-        cursor: pointer;
-    }
-
-    ul li:hover .drop-down-search .more {
-        opacity: 0.7;
-    }
-
-    ul li .drop-down-search .bubble-search {
-        height: 0;
-        overflow: hidden;
-    }
-
-    ul li .drop-down-search.show .bubble-search {
-        right: 4.5vmin;
-        position: absolute;
-        margin-top: 5vmin;
-        height: 9vmin;
-        width: 25vmin;
-        background: white;
-        border-radius: 0.4vmin;
-        box-shadow: 0 0.1vmin 0.7vmin 0 rgba(0,0,0,0.10), 0 0.3vmin 1.1vmin 0 rgba(52,52,52,0.12);
-    }
-
-    ul li .drop-down-search.show .bubble-search {
-        margin-right: -2rem;
-        margin-top: 0.6vw;
-        height: 3.5rem;
-        width: 9rem;
-        background: white;
-        border-radius: 2px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.10), 0 1px 4px 0 rgba(52,52,52,0.12);
-    }
-
-    ul li .drop-down-search.show .bubble-search .search-add-to {
-        font-family: "Lato-Regular";
-        margin-left: 0.5rem;
-        font-size: 1rem;
-        color: #6D6D6D;
-        cursor: pointer;
-    }
-
-    ul li .drop-down-search.show .bubble-search .search-add-to:hover {
-        color: #020202;
-    }
-
-    ul li .drop-down-search.show .bubble-search .search-add-to.add-to-plan-to-watch {
-        margin-top: 0.48rem;
-    }
-
-    ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed {
-        margin-top: 0.2rem;
-    }
-
-    .no-image {
-        position: relative;
-        top: 77px;
-        height: 10rem;
-        width: 10rem;
-        margin: auto;
-        background-size: cover;
-        background-image: url("/images/logo.svg");
-    }
-
-    .no-text {
-        text-align: center;
-        width: 97%;
-        font-family: "Lato-Light";
-        color: #777777;
-        font-size: 1.45rem;
-        line-height: 1.8rem;
-        position: relative;
-        top: 98px;
-        margin: auto;
-    }
-
+.search {
+    z-index: 100500;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 0 0.3vmin 0 rgba(0,0,0,0.12), 0 0.3vmin 0.3vmin 0 rgba(0,0,0,0.24);
+    border-radius: 0.1vw;
 }
 
-@media screen and (max-aspect-ratio: 13/9) {
+.search-icon {
+    background-image: url("../images/search.svg");
+    margin-left: 0.9vw;
+    top: 10px;
+    width: 1.9rem;
+    background-size: cover;
+    height: 1.9rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.3;
+}
 
-    main {
-        width: 100%;
-    }
+.search ul { display: none; }
 
-    .search {
-        z-index: 100500;
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        background: #FFFFFF;
-        box-shadow: 0 0 0.3vmin 0 rgba(0,0,0,0.12), 0 0.3vmin 0.3vmin 0 rgba(0,0,0,0.24);
-        border-radius: 0.1vw;
-    }
+.search ul li .image {
+    width: 53px;
+    float: left;
+    height: 100%;
+    background-color: #6D6D6D;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
-    .search-icon {
-        background-image: url("../images/search.svg");
-        margin-left: 1.9vw;
-        top: 2vw;
-        width: 6.2vw;
-        background-size: cover;
-        height: 6.2vw;
-        background-repeat: no-repeat;
-        position: absolute;
-        opacity: 0.3;
-    }
+.search ul li .title {
+    overflow: hidden;
+    max-width: 82%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 68px;
+    float: left;
+}
 
-    .search ul {
-        display: none;
-    }
+.search ul li .rating {
+    top: 38px;
+    left: 397px;
+    font-family: "Lato-Regular";
+    font-size: 1.3rem;
+    color: #2D2D2D;
+    position: absolute;
+}
 
-    .search ul li .image {
-        width: 9.9vw;
-        float: left;
-        height: 16.5vw;
-        background-color: #6D6D6D;
-        position: absolute;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+.search ul li .year {width: 59px;float: left;margin-left: 4px;}
 
-    .search ul li .title {
-        overflow: hidden;
-        max-width: 66vw;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        margin-left: 12vw;
-        float: left;
-    }
+.search ul::-webkit-scrollbar { width: 7px; }
 
-    .search ul li .rating {
-        top: 7.85vw;
-        left: 78.3vw;
-        font-family: "Lato-Regular";
-        font-size: 4.5vw;
-        color: #2D2D2D;
-        position: absolute;
-    }
+.search ul::-webkit-scrollbar-thumb {
+    background-color: #BABABA;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-right: 3px solid white;
+}
 
-    .search ul li .year {width: 4vw;float: left;margin-left: 1vw;}
+.search ul li {
+    position: relative;
+    height: 4.6rem;
+    width: 47.2rem;
+    display: block;
+}
 
-    .search ul::-webkit-scrollbar {
-        width: 0.8vmin;
-    }
+.search .stars {
+    position: absolute;
+    left: 65px;
+    top: 2rem;
+    background-repeat: repeat-x;
+    background-image: url("../images/star.svg");
+    width: 327px;
+    height: 33px;
+}
 
-    .search ul::-webkit-scrollbar-thumb {
-        background-color: #BABABA;
-        border-top: 0.3vmin solid white;
-        border-bottom: 0.4vmin solid white;
-    }
+.search .stars-fill {
+    background-repeat: repeat-x;
+    background-image: url("../images/star-filled.svg");
+    height: 100%;
+}
 
-    .search ul li {
-        position: relative;
-        height: 16.5vw;
-        width: 55vw;
-        display: block;
-    }
+.search ul {
+    position: relative;
+    border-top: 1px solid #DEDEDE;
+    top: 1px;
+    overflow: auto;
+    max-height: 325px;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+}
 
-    .search .stars {
-        position: absolute;
-        left: 11.8vw;
-        top: 7.4vw;
-        background-repeat: repeat-x;
-        background-image: url("../images/star.svg");
-        width: 64.2vw;
-        height: 6.4vw;
-    }
+.search input[type="text"] {
+    font-family: "Lato-Light";
+    border: none;
+    width: 93%;
+    margin-left: 3rem;
+    height: 2.9rem;
+    font-size: 1.1rem;
+    padding-left: 8px;
+    background: none;
+}
 
-    .search .stars-fill {
-        background-repeat: repeat-x;
-        background-image: url("../images/star-filled.svg");
-        height: 100%;
-    }
+::-webkit-input-placeholder { color: gray; }
+::-moz-placeholder          { color: gray; }
+:-moz-placeholder           { color: gray; }
+:-ms-input-placeholder      { color: gray; }
 
-    .search ul {
-        position: relative;
-        border-top: 0.1vw solid #DEDEDE;
-        top: 0.1vw;
-        overflow: auto;
-        max-height: 75vw;
-        height: auto;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        padding: 0;
-        margin: 0;
-    }
+.title-container {
+    color: #2D2D2D;
+    display: inline-block;
+    width: 100%;
+    font-family: "Lato-Regular";
+    font-size: 1.25rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+}
 
-    .search input[type="text"] {
-        font-family: "Lato-Light";
-        border: none;
-        width: 90vw;
-        margin-left: 3.8vw;
-        height: 9.4vw;
-        font-size: 4vw;
-        padding-left: 6vw;
-        background: none;
-    }
+ul li .drop-down-search .more {
+    right: -2rem;
+    top: 0;
+    background: url("../images/more.svg");
+    margin-top: 0.2rem;
+    width: 1.6rem;
+    background-size: cover;
+    height: 1.6rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.4;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
 
-    ::-webkit-input-placeholder { color: gray; }
-    ::-moz-placeholder          { color: gray; }
-    :-moz-placeholder           { color: gray; }
-    :-ms-input-placeholder      { color: gray; }
+ul li:hover .drop-down-search .more {
+    opacity: 0.7;
+}
 
-    .title-container {
-        color: #2D2D2D;
-        display: inline-block;
-        width: 93vw;
-        font-family: "Lato-Regular";
-        font-size: 4.1vw;
-        cursor: pointer;
-        position: absolute;
-        top: 1vw;
-    }
+ul li .drop-down-search .bubble-search {
+    height: 0;
+    overflow: hidden;
+}
 
-    ul li .drop-down-search .more {
-        left: 93vw;
-        top: 0;
-        background: url("../images/more.svg");
-        margin-top: 1.5vw;
-        width: 5vw;
-        background-size: cover;
-        height: 5vw;
-        background-repeat: no-repeat;
-        position: absolute;
-        opacity: 0.7;
-        transition: 0.2s ease;
-        cursor: pointer;
-    }
+ul li .drop-down-search.show .bubble-search {
+    right: 4.5vmin;
+    position: absolute;
+    margin-top: 5vmin;
+    height: 9vmin;
+    width: 25vmin;
+    background: white;
+    border-radius: 0.4vmin;
+    box-shadow: 0 0.1vmin 0.7vmin 0 rgba(0,0,0,0.10), 0 0.3vmin 1.1vmin 0 rgba(52,52,52,0.12);
+}
 
-    ul li:hover .drop-down-search .more {
-        opacity: 0.7;
-    }
+ul li .drop-down-search.show .bubble-search {
+    margin-right: -2rem;
+    margin-top: 0.6vw;
+    height: 3.5rem;
+    width: 9rem;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.10), 0 1px 4px 0 rgba(52,52,52,0.12);
+}
 
-    ul li .drop-down-search .bubble-search {
-        height: 0;
-        overflow: hidden;
-    }
+ul li .drop-down-search.show .bubble-search .search-add-to {
+    font-family: "Lato-Regular";
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: #6D6D6D;
+    cursor: pointer;
+}
 
-    ul li .drop-down-search.show .bubble-search {
-        right: 4.5vmin;
-        position: absolute;
-        margin-top: 5vmin;
-        height: 9vmin;
-        width: 25vmin;
-        background: white;
-        border-radius: 0.4vmin;
-        box-shadow: 0 0.1vmin 0.7vmin 0 rgba(0,0,0,0.10), 0 0.3vmin 1.1vmin 0 rgba(52,52,52,0.12);
-    }
+ul li .drop-down-search.show .bubble-search .search-add-to:hover {
+    color: #020202;
+}
 
-    ul li .drop-down-search.show .bubble-search {
-        margin-right: -42vw;
-        margin-top: 0.6vw;
-        height: 12.4vw;
-        width: 29vw;
-        background: white;
-        border-radius: 0.05vw;
-        box-shadow: 0vmin 0.2vmin 0.8vmin 0vmin rgba(0,0,0,0.10), 0vmin 0.5vmin 1.1vmin 0vmin rgba(52,52,52,0.12);
-    }
+ul li .drop-down-search.show .bubble-search .search-add-to.add-to-plan-to-watch {
+    margin-top: 0.48rem;
+}
 
-    ul li .drop-down-search.show .bubble-search .search-add-to {
-        font-family: "Lato-Regular";
-        margin-left: 1.5vw;
-        font-size: 3.8vw;
-        color: #6D6D6D;
-        cursor: pointer;
-    }
+ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed { margin-top: 0.2rem; }
 
-    ul li .drop-down-search.show .bubble-search .search-add-to:hover {
-        color: #020202;
-    }
+.no-image {
+    position: relative;
+    top: 77px;
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+    background-size: cover;
+    background-image: url("/images/logo.svg");
+}
 
-    ul li .drop-down-search.show .bubble-search .search-add-to.add-to-plan-to-watch {
-        margin-top: 1.3vw;
-    }
-
-    ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed {
-        margin-top: 0.4vw;
-    }
-
-    .no-image {
-        position: absolute;
-        top: 6.5vw;
-        left: 22vw;
-        height: 14vw;
-        width: 14.5vw;
-        background-size: cover;
-        background-image: url(http://data.whicdn.com/images/11666052/original.jpg);
-    }
-
-    .no-text {
-        text-align: center;
-        width: 56vw;
-        font-family: "Lato-Light";
-        color: #777777;
-        font-size: 1.67vw;
-        position: absolute;
-        left: 1.6vw;
-        top: 21vw;
-    }
-
+.no-text {
+    text-align: center;
+    width: 97%;
+    font-family: "Lato-Light";
+    color: #777777;
+    font-size: 1.45rem;
+    line-height: 1.8rem;
+    position: relative;
+    top: 98px;
+    margin: auto;
 }

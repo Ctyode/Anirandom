@@ -1,22 +1,7 @@
-@font-face {
-  font-family: "Lato-Light";
-  src: url('../lato/fonts/Lato-Light.woff');
-}
-
-@font-face {
-  font-family: "Lato-Regular";
-  src: url('../lato/fonts/Lato-Regular.woff');
-}
-
-@font-face {
-  font-family: "Lato-Medium";
-  src: url('../lato/fonts/Lato-Medium.woff');
-}
-
-@font-face {
-  font-family: "Lato-Black";
-  src: url('../lato/fonts/Lato-Black.woff');
-}
+@font-face { font-family: "Lato-Light"; src: url('../lato/fonts/Lato-Light.woff'); }
+@font-face { font-family: "Lato-Regular"; src: url('../lato/fonts/Lato-Regular.woff'); }
+@font-face { font-family: "Lato-Medium"; src: url('../lato/fonts/Lato-Medium.woff'); }
+@font-face { font-family: "Lato-Black"; src: url('../lato/fonts/Lato-Black.woff'); }
 
 * { outline: none !important; }
 
@@ -37,9 +22,10 @@ body { margin: 0; }
 
 main {
   position: relative;
-  width: 50rem;
+  min-width: 50rem;
   margin: auto;
   margin-top: 75px;
+  width: 60%;
 }
 
 .auth {
@@ -69,13 +55,9 @@ main {
   cursor: pointer;
 }
 
-.auth .auth-text a:not(:first-child) {
-  margin-left: 2vmin;
-}
+.auth .auth-text a:not(:first-child) { margin-left: 2vmin; }
 
-.auth .auth-text a:hover {
-  color: #020202;
-}
+.auth .auth-text a:hover { color: #020202; }
 
 .auth .auth-bubble {
   position: relative;

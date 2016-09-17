@@ -1,51 +1,21 @@
-@media screen and (min-aspect-ratio: 13/9) {
-
-    h1 {
-        margin-left: -8rem;
-        font-family: "Lato-Medium";
-        font-size: 3.4rem;
-        color: #64d08f;
-    }
-
-    p {
-        color: #6d6d6d;
-        font-family: "Lato-Light";
-        margin-top: -27px;
-        font-size: 1.7rem;
-        margin-left: -8rem;
-    }
-
-    .image {
-        width: 8.5rem;
-        height: 8.5rem;
-        margin-top: 12rem;
-        margin-left: 100%;
-    }
-
+h1 {
+    margin-left: -8rem;
+    font-family: "Lato-Medium";
+    font-size: 3.4rem;
+    color: #64d08f;
 }
 
-@media screen and (max-aspect-ratio: 13/9) {
+p {
+    color: #6d6d6d;
+    font-family: "Lato-Light";
+    margin-top: -27px;
+    font-size: 1.7rem;
+    margin-left: -8rem;
+}
 
-    h1 {
-        margin-left: -10vw;
-        font-family: "Lato-Medium";
-        font-size: 4vw;
-        color: #64d08f;
-    }
-
-    p {
-        color: #6d6d6d;
-        font-family: "Lato-Light";
-        margin-top: -2vw;
-        font-size: 2vw;
-        margin-left: -10vw;
-    }
-
-    .image {
-       width: 10vw;
-       height: 10vw;
-       margin-top: 14vw;
-       margin-left: 60vw;
-    }
-
+.image {
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-top: 12rem;
+    margin-left: 100%;
 }
