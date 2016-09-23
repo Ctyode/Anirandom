@@ -178,7 +178,7 @@ main .info .title span {
     text-overflow: ellipsis;
 }
 
-@media screen and (min-aspect-ratio: 13/9) {
+@media screen and (min-aspect-ratio: 9/9) {
 
     main .gray_text {
         width: 100%;
@@ -258,7 +258,7 @@ main .info .title span {
     }
 
     main .info .love {
-        left: 43rem;
+        left: 87%;
         top: 20.5rem;
     }
 
@@ -291,5 +291,127 @@ main .info .title span {
     main .info .love.show .bubble .add-to.add-to-plan-to-watch { margin-top: 8px; }
 
     main .info .love.show .bubble .add-to.add-to-completed { margin-top: 3px; }
+
+}
+
+@media screen and (max-aspect-ratio: 9/9) {
+
+    main .gray_text {
+        display: none;
+    }
+
+    main .randomize-button {
+        width: 180px;
+        font-size: 1.4rem;
+        padding: 15px 0;
+        top: -14rem;
+        margin-bottom: 15px;
+    }
+
+    main .drop-down-menu {
+        margin: 0;
+        padding: 0;
+        line-height: 3.25rem;
+        left: 16%;
+        font-size: 1.05rem;
+        width: 65%;
+        height: 3.25rem;
+    }
+
+    main .drop-down-menu ul li {
+        height: 3.4rem;
+        padding-left: 7%;
+        display: block;
+    }
+
+    main .drop-down-menu .title::after {
+        right: 1.1rem;
+        top: 1.45rem;
+    }
+
+    main .drop-down-menu.open { height: 20.5rem; }
+
+    main /*.drop-down-menu*/ #genre {position: absolute;z-index: 150;}
+    main /*.drop-down-menu*/ #year {position: absolute;top: 4rem;z-index: 149;}
+    main /*.drop-down-menu*/ #rating {position: absolute;top: 8rem;}
+
+    main .info .image {
+        width: 200px;
+        height: 264px;
+        margin: auto;
+        position: relative;
+        top: 12.5rem;
+    }
+
+    main .info .title {
+        top: 13.5rem;
+        left: 3%;
+        position: relative;
+        width: 90%;
+    }
+
+    main .info .synopsis {
+        top: 13.5rem;
+        width: 93%;
+        margin: auto;
+        position: relative;
+        height: 10.2rem;
+        font-size: 1rem;
+        padding-right: 6px;
+    }
+
+    main .info .rating {
+        padding-left: 48px;
+        font-size: 1.6rem;
+        left: 0%;
+        position: relative;
+        top: 15rem;
+    }
+
+    main .info .rating::before {
+        left: 2%;
+        top: -20%;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    main .info .love {
+        top: 44rem;
+        position: absolute;
+        width: 5rem;
+        left: 76%;
+    }
+
+    main .info .love .love-button {
+        font-size: 1.6rem;
+        transition: 0.2s ease;
+    }
+
+    main .info .love .love-button::before {
+        width: 2.2rem;
+        height: 2rem;
+        left: -2.8rem;
+    }
+
+    main .info .love.show .bubble {
+        margin-top: -103px;
+        height: 3.6rem;
+        width: 10rem;
+        border-radius: 2px;
+        margin-left: -4.8rem;
+    }
+
+    main .info .love.show .bubble .add-to {
+        margin-left: 9px;
+        font-size: 1rem;
+    }
+
+    main .info .title span {font-size: 2rem;}
+
+    main .info .love.show .bubble .add-to.add-to-plan-to-watch { margin-top: 8px; }
+
+    main .info .love.show .bubble .add-to.add-to-completed { margin-top: 3px; }
+
+    main .randomize-button.randomized {top: 17rem;}
 
 }
