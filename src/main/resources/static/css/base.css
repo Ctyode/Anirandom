@@ -27,7 +27,7 @@ main {
   margin-top: 75px;
 }
 
-@media screen and (max-aspect-ratio: 13/9) { main {width: 95%;} }
+@media screen and (max-aspect-ratio: 12/9) { main {width: 95%;} }
 
 .auth {
   position: absolute;
