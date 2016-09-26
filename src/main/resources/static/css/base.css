@@ -181,18 +181,6 @@ main {
 
 .auth .auth-bubble .logout-text:hover { color: #292929; }
 
-.logo {
-    margin-top: 0.5rem;
-    border-top: 1px solid #efefef;
-    background-position: center;
-    background-image: url("../images/logo.svg");
-    height: 3rem;
-    background-repeat: no-repeat;
-    width: 49rem;
-    background-size: auto 72%;
-    opacity: 0.5;
-}
-
 .plus {
     background-image: url("../images/plus.svg");
     width: 1.7rem;
@@ -202,4 +190,20 @@ main {
     position: absolute;
     background-size: cover;
     opacity: 0.7;
+}
+
+@media screen and (min-aspect-ratio: 9/9) {
+
+    .logo {
+        margin-top: 0.5rem;
+        border-top: 1px solid #efefef;
+        background-position: center;
+        background-image: url("../images/logo.svg");
+        height: 3rem;
+        background-repeat: no-repeat;
+        width: 49rem;
+        background-size: auto 72%;
+        opacity: 0.5;
+    }
+
 }

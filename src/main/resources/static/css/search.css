@@ -10,11 +10,7 @@
 
 .search-icon {
     background-image: url("../images/search.svg");
-    margin-left: 0.8rem;
-    top: 0.6rem;
-    width: 1.9rem;
     background-size: cover;
-    height: 1.9rem;
     background-repeat: no-repeat;
     position: absolute;
     opacity: 0.3;
@@ -23,7 +19,6 @@
 .search ul { display: none; }
 
 .search ul li .image {
-    width: 53px;
     float: left;
     height: 100%;
     background-color: #6D6D6D;
@@ -34,25 +29,18 @@
 
 .search ul li .title {
     overflow: hidden;
-    max-width: 82%;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-left: 68px;
     float: left;
 }
 
 .search ul li .rating {
-    top: 38px;
-    left: 397px;
     font-family: "Lato-Regular";
-    font-size: 1.3rem;
     color: #2D2D2D;
     position: absolute;
 }
 
-.search ul li .year {width: 59px;float: left;margin-left: 4px;}
-
-.search ul::-webkit-scrollbar {width: 8px;}
+.search ul::-webkit-scrollbar { width: 8px; }
 
 .search ul::-webkit-scrollbar-thumb {
     background-color: #BABABA;
@@ -63,19 +51,13 @@
 
 .search ul li {
     position: relative;
-    height: 4.6rem;
-    width: 47.2rem;
     display: block;
 }
 
 .search .stars {
     position: absolute;
-    left: 65px;
-    top: 2rem;
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");
-    width: 327px;
-    height: 33px;
 }
 
 .search .stars-fill {
@@ -89,7 +71,6 @@
     border-top: 1px solid #DEDEDE;
     top: 1px;
     overflow: auto;
-    max-height: 325px;
     height: auto;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -100,11 +81,6 @@
 .search input[type="text"] {
     font-family: "Lato-Light";
     border: none;
-    width: 93%;
-    margin-left: 3rem;
-    height: 2.9rem;
-    font-size: 1.1rem;
-    padding-left: 8px;
     background: none;
 }
 
@@ -118,20 +94,14 @@
     display: inline-block;
     width: 100%;
     font-family: "Lato-Regular";
-    font-size: 1.25rem;
     cursor: pointer;
     position: absolute;
-    top: 10%;
 }
 
 ul li .drop-down-search .more {
-    right: -2rem;
     top: 0;
     background: url("../images/more.svg");
-    margin-top: 0.5rem;
-    width: 1.6rem;
     background-size: cover;
-    height: 1.6rem;
     background-repeat: no-repeat;
     position: absolute;
     opacity: 0.3;
@@ -139,14 +109,9 @@ ul li .drop-down-search .more {
     cursor: pointer;
 }
 
-ul li:hover .drop-down-search .more {
-    opacity: 0.7;
-}
+ul li:hover .drop-down-search .more { opacity: 0.7; }
 
-ul li .drop-down-search .bubble-search {
-    height: 0;
-    overflow: hidden;
-}
+ul li .drop-down-search .bubble-search { height: 0; overflow: hidden; }
 
 ul li .drop-down-search.show .bubble-search {
     right: 4.5vmin;
@@ -185,9 +150,6 @@ ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed { ma
 
 .no-image {
     position: relative;
-    top: 77px;
-    height: 10rem;
-    width: 10rem;
     margin: auto;
     background-size: cover;
     background-image: url("/images/logo.svg");
@@ -195,12 +157,149 @@ ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed { ma
 
 .no-text {
     text-align: center;
-    width: 97%;
     font-family: "Lato-Light";
     color: #777777;
-    font-size: 1.45rem;
-    line-height: 1.8rem;
     position: relative;
-    top: 98px;
     margin: auto;
+}
+
+@media screen and (min-aspect-ratio: 9/9) {
+
+    .search-icon {
+        margin-left: 0.8rem;
+        top: 0.6rem;
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+
+    .search ul li .image { width: 53px; }
+
+    .search ul li .title {
+        max-width: 82%;
+        margin-left: 68px;
+    }
+
+    .search ul li .rating {
+        top: 38px;
+        left: 397px;
+        font-size: 1.3rem;
+    }
+
+    .search ul li .year { width: 59px; float: left; margin-left: 4px; }
+
+    .search ul li {
+        height: 4.6rem;
+        width: 47.2rem;
+    }
+
+    .search .stars {
+        left: 65px;
+        top: 2rem;
+        width: 327px;
+        height: 33px;
+    }
+
+    .search ul { max-height: 325px; }
+
+    .search input[type="text"] {
+        width: 93%;
+        margin-left: 3rem;
+        height: 2.9rem;
+        font-size: 1.1rem;
+        padding-left: 8px;
+    }
+
+    .title-container {
+        font-size: 1.25rem;
+        top: 10%;
+    }
+
+    ul li .drop-down-search .more {
+        right: -2rem;
+        margin-top: 0.5rem;
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .no-image {
+        top: 77px;
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .no-text {
+        width: 97%;
+        font-size: 1.45rem;
+        line-height: 1.8rem;
+        top: 98px;
+    }
+
+}
+
+@media screen and (max-aspect-ratio: 9/9) {
+
+    main { width: 100%; }
+
+    .search-icon {
+        margin-left: 0.8rem;
+        top: 0.6rem;
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+
+    .search ul li .image { width: 53px; }
+
+    .search ul li .title {
+        max-width: 59%;
+        margin-left: 68px;
+    }
+
+    .search ul li .rating {
+        top: 40px;
+        left: 116px;
+        font-size: 1.5rem;
+    }
+
+    .search ul li .year { width: 59px; float: left; margin-left: 4px; }
+
+    .search ul li {
+        height: 4.6rem;
+        width: 90%;
+    }
+
+    .search .stars {
+        left: 65px;
+        top: 1.7rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .search ul { max-height: 28.75rem; }
+
+    .search input[type="text"] {
+        width: 93%;
+        margin-left: 3rem;
+        height: 2.9rem;
+        font-size: 1.1rem;
+        padding-left: 8px;
+    }
+
+    .title-container {
+        font-size: 1.1rem;
+        top: 10%;
+    }
+
+    ul li .drop-down-search .more {
+        right: -2.2rem;
+        margin-top: 0.5rem;
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .no-image { visibility: hidden; }
+
+    .no-text { visibility: hidden; }
+
+    .stars-fill { width: 100% !important; }
+
 }
