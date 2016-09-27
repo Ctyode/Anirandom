@@ -10,9 +10,36 @@ body { margin: 0; }
 .anirandom-title {
   font-family: "Lato-Black";
   line-height: 3.2rem;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: 15px;
   font-size: 3.2rem;
+  margin-bottom: 75px;
+}
+
+.anirandom-logo {
+    background-image: url(/images/logo.svg);
+    background-size: cover;
+    visibility: hidden;
+}
+
+@media screen and (max-aspect-ratio: 9/9) {
+
+    .anirandom-title {
+      margin-bottom: 20px;
+      visibility: hidden;
+    }
+
+    .anirandom-logo {
+        position: absolute;
+        visibility: visible;
+        width: 3rem;
+        height: 3rem;
+        top: 10px;
+        left: 10px;
+    }
+
+
+
 }
 
 .anirandom-title a {
@@ -24,7 +51,6 @@ main {
   position: relative;
   width: 50rem;
   margin: auto;
-  margin-top: 75px;
 }
 
 @media screen and (max-aspect-ratio: 12/9) { main {width: 95%;} }
