@@ -22,7 +22,7 @@ body { margin: 0; }
     visibility: hidden;
 }
 
-@media screen and (max-aspect-ratio: 9/9) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-aspect-ratio: 1/1) {
 
     .anirandom-title {
       margin-bottom: 20px;
@@ -37,8 +37,6 @@ body { margin: 0; }
         top: 10px;
         left: 10px;
     }
-
-
 
 }
 

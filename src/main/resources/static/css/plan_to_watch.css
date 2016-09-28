@@ -98,7 +98,7 @@ main section .info .rating {
     color: #777777;
 }
 
-@media screen and (min-aspect-ratio: 9/9) {
+@media only screen and (min-width: 480px), only screen and (min-device-width: 480px) {
 
     main .plan_to_watch {
         font-size: 1.8rem;
@@ -192,7 +192,7 @@ main section .info .rating {
 
 }
 
-@media screen and (max-aspect-ratio: 9/9) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-aspect-ratio: 1/1) {
 
     main { width: 100%; }
 

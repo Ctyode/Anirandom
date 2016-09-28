@@ -228,7 +228,7 @@ main section.no-review.edit .stars {
     background-image: url("/images/logo.svg");
 }
 
-@media screen and (min-aspect-ratio: 9/9) {
+@media only screen and (min-width: 480px), only screen and (min-device-width: 480px) {
 
     main .completed {
         font-size: 1.75rem;
@@ -418,7 +418,7 @@ main section.no-review.edit .stars {
 
 }
 
-@media screen and (max-aspect-ratio: 9/9) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-aspect-ratio: 1/1) {
 
     main { width: 100%; }
 

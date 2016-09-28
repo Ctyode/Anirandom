@@ -163,7 +163,7 @@ ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed { ma
     margin: auto;
 }
 
-@media screen and (min-aspect-ratio: 9/9) {
+@media only screen and (min-width: 480px), only screen and (min-device-width: 480px) {
 
     .search-icon {
         margin-left: 0.8rem;
@@ -236,7 +236,7 @@ ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed { ma
 
 }
 
-@media screen and (max-aspect-ratio: 9/9) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-aspect-ratio: 1/1) {
 
     main { width: 100%; }
 
