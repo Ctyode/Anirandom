@@ -194,13 +194,13 @@ main {
   text-align: left;
   position: absolute;
   font-family: "Lato-Regular";
-  font-size: 2.6vmin;
+  font-size: 1.05rem;
   color: #6D6D6D;
-  line-height: 3.1vmin;
+  line-height: 1.2rem;
   text-decoration: none;
-  width: 16vmin;
-  left: 2vmin;
-  top: 1.9vmin;
+  width: 5rem;
+  left: 0.8rem;
+  top: 0.8rem;
 }
 
 .auth .auth-bubble .logout-text:hover { color: #292929; }
