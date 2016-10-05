@@ -216,18 +216,26 @@ main {
     opacity: 0.7;
 }
 
-@media screen and (min-aspect-ratio: 9/9) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-aspect-ratio: 1/1) {
 
     .logo {
-        margin-top: 0.5rem;
-        border-top: 1px solid #efefef;
-        background-position: center;
-        background-image: url("../images/logo.svg");
-        height: 3rem;
-        background-repeat: no-repeat;
-        width: 49rem;
-        background-size: auto 72%;
-        opacity: 0.5;
+        visibility: hidden;
     }
 
+    .plus {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-top: 0.2rem;
+    }
+
+    .auth .auth-text { font-size: 1rem; right: -5px; }
+
+}
+
+main .synopsis::-webkit-scrollbar { width: 5px; }
+
+main .synopsis::-webkit-scrollbar-thumb {
+    background-color: #BABABA;
+    border-top: 4px solid white;
+    border-bottom: 5px solid white;
 }

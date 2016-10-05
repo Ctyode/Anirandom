@@ -294,9 +294,9 @@ main .info .title span {
 
 }
 
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-aspect-ratio: 1/1) {
 
-    main { width: 100%; }
+    main {width: 100%;}
 
     main .gray_text {
         display: none;
@@ -334,8 +334,8 @@ main .info .title span {
     main .drop-down-menu.open { height: 20.5rem; }
 
     main /*.drop-down-menu*/ #genre {position: absolute;z-index: 150;}
-    main /*.drop-down-menu*/ #year {position: absolute;top: 4rem;z-index: 149;}
-    main /*.drop-down-menu*/ #rating {position: absolute;top: 8rem;}
+    main /*.drop-down-menu*/ #year {position: absolute;top: 4rem;left: 16%;z-index: 149;}
+    main /*.drop-down-menu*/ #rating {position: absolute;top: 8rem;left: 16%;}
 
     main .info .image {
         width: 200px;
@@ -356,6 +356,7 @@ main .info .title span {
         top: 13.5rem;
         width: 93%;
         margin: auto;
+        left: 1%;
         position: relative;
         height: 10.2rem;
         font-size: 1rem;

@@ -1,3 +1,11 @@
+main .drop-down-menu ul::-webkit-scrollbar { width: 6px; }
+
+main .drop-down-menu ul::-webkit-scrollbar-thumb {
+    background-color: #BABABA;
+    border-top: 3px solid white;
+    border-bottom: 6px solid white;
+}
+
 main .completed {
     overflow: hidden;
     font-family: "Lato-Regular";
@@ -5,7 +13,6 @@ main .completed {
 }
 
 main .completed ul li.menuElement {
-    /* display: block; */
     float: right;
     font-family: "Lato-Medium";
     cursor: pointer;
@@ -440,10 +447,11 @@ main section.no-review.edit .stars {
     }
 
     main .completed ul li.menuElement {
-        margin-top: -1.4rem;
+        margin-top: -0.85rem;
+        margin-right: 1rem;
         margin-left: 1.5rem;
         font-size: 1.05rem;
-        height: 3rem;
+        height: 2rem;
     }
 
     main section {
@@ -452,10 +460,18 @@ main section.no-review.edit .stars {
         margin-bottom: 1rem;
     }
 
+    main section.reviewed-anime.edit {
+        width: 100%;
+        height: 15.5rem;
+        margin-bottom: 1rem;
+    }
+
     main section .cover {
         width: 93px;
         height: 100%;
     }
+
+    main section.edit .cover { visibility: hidden; }
 
     main section .drop-down-more .more {
         right: 4px;
@@ -480,8 +496,14 @@ main section.no-review.edit .stars {
     main section .anime-title {
         top: 16px;
         left: 109px;
-        width: 67%;
+        width: 58%;
         font-size: 1.2rem;
+    }
+
+    main section.reviewed-anime.edit .anime-title {
+        top: 16px;
+        left: 16px;
+        width: 67%;
     }
 
     main section .anime-title span { height: 1.7rem; }
@@ -512,7 +534,7 @@ main section.no-review.edit .stars {
         top: 2.8rem;
         left: 6.9rem;
         font-size: 0.9rem;
-        width: 68%;
+        width: 60%;
         height: 45%;
         line-height: 1rem;
         overflow-y: scroll;
@@ -529,6 +551,17 @@ main section.no-review.edit .stars {
         margin-left: 106px;
     }
 
+    main #reviewed section .stars-fill {
+        width: 100%;
+    }
+
+    main #reviewed section.reviewed-anime.edit .stars {
+        width: 291px;
+        margin-top: 162px;
+        left: -93px;
+        height: 29px;
+    }
+
     main section .stars label {
         top: -2.5rem;
         width: 2.2rem;
@@ -536,7 +569,7 @@ main section.no-review.edit .stars {
         margin-right: 0.35rem;
     }
 
-    main section .rating { width: 26px; }
+    main section .rating {width: 26px;font-size: 1.5rem;margin-left: 9.2rem;margin-top: 7.4rem;}
 
     main section .hidden-edit textarea {
         top: 3rem;
@@ -549,10 +582,10 @@ main section.no-review.edit .stars {
 
     main section .hidden-edit input[type="submit"] {
         top: 83%;
-        right: 6%;
+        left: 4%;
         padding: 6px 24px;
         font-size: 1rem;
-        width: 24%;
+        width: 90%;
     }
 
     main section.no-review {
@@ -560,7 +593,11 @@ main section.no-review.edit .stars {
         margin-bottom: 1rem;
     }
 
-    main section.no-review.edit {height: 15.5rem;}
+    main section.no-review .stars-fill {
+        width: 100% !important;
+    }
+
+    main section.no-review.edit { height: 15.5rem; }
 
     main section.no-review .anime-title {
         top: 20px;
@@ -574,7 +611,7 @@ main section.no-review.edit .stars {
 
     main section.no-review .cover-no-review {width: 73px;}
 
-    main section.no-review.edit .cover-no-review-large {visibility: hidden;}
+    main section.no-review.edit .cover-no-review-large { visibility: hidden; }
 
     main section.no-review .stars {
         top: 43px;
@@ -584,8 +621,8 @@ main section.no-review.edit .stars {
     }
 
     main section.no-review .rating {
-        left: 8.7rem;
-        top: -43px;
+        left: -0.4rem;
+        top: -87px;
         line-height: 1.6rem;
         font-size: 1.8rem;
     }
@@ -593,8 +630,8 @@ main section.no-review.edit .stars {
     main section.no-review.edit .stars {
         top: 10rem;
         left: 0.6rem;
-        width: 21rem;
-        height: 2.1rem;
+        width: 18rem;
+        height: 1.8rem;
     }
 
     main section.no-review.edit .rating {

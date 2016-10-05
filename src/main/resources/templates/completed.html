@@ -23,7 +23,7 @@
           {% if has_reviewed_animes %}
             {% for review in completed_list %}
               {% if review.review is not empty %}
-                <section>
+                <section class="reviewed-anime">
                   <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
                   {% if not other %}
                   <div class="drop-down-more">
@@ -41,6 +41,7 @@
                   <div class="stars">
                     <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
                   </div>
+                  <div class="rating">{{ review.rating }}</div>
                   <form class="hidden-edit">
                     <div class="stars" data-checked="{{ review.rating }}">
                       <div class="stars-fill"></div>
