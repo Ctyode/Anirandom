@@ -53,3 +53,8 @@ task wrapper(type: Wrapper) {
 run {
     jvmArgs = ['-Dspring.config.name=application.properties']
 }
+
+bootRun {
+    jvmArgs = ['-Dspring.config.name=application.properties']
+    addResources = true
+}

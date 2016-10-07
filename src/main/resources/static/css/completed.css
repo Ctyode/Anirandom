@@ -506,6 +506,11 @@ main section.no-review.edit .stars {
         width: 67%;
     }
 
+    main section.reviewed-anime .stars .wrap {
+        position: relative;
+        top: -266px;
+    }
+
     main section .anime-title span { height: 1.7rem; }
 
     main section .anime-title span::after {
@@ -563,10 +568,10 @@ main section.no-review.edit .stars {
     }
 
     main section .stars label {
-        top: -2.5rem;
-        width: 2.2rem;
-        height: 2.2rem;
-        margin-right: 0.35rem;
+        top: -1.8rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 0.015rem;
     }
 
     main section .rating {width: 26px;font-size: 1.5rem;margin-left: 9.2rem;margin-top: 7.4rem;}
