@@ -9,10 +9,10 @@
   {% if authorized or other %}
     {% if completed_list is not empty %}
       <div class="completed">
-        Completed
+        <h1>Completed</h1>
         <ul>
-          <li class="menuElement" data-tab="reviewed">Reviewed</li>
-          <li class="active menuElement" data-tab="unreviewed">Unreviewed</li>
+          <li data-tab="reviewed">Reviewed</li>
+          <li class="active" data-tab="unreviewed">Unreviewed</li>
         </ul>
       </div>
       <a href="/search">
@@ -23,45 +23,42 @@
           {% if has_reviewed_animes %}
             {% for review in completed_list %}
               {% if review.review is not empty %}
-                <section class="reviewed-anime">
-                  <div class="cover" style="background-image:url({{ review.anime.image }})"></div>
+                <section class="reviewed">
                   {% if not other %}
-                  <div class="drop-down-more">
-                    <div class="more"></div>
-                    <div class="bubble">
-                      <div class="options edit">Edit review</div>
-                      <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
-                    </div>
-                  </div>
-                  {% endif %}
-                  <div class="anime-title">
-                    <span>{{ review.anime.title }}</span>
-                  </div>
-                  <div class="synopsis">{{ review.review }}</div>
-                  <div class="stars">
-                    <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
-                  </div>
-                  <div class="rating">{{ review.rating }}</div>
-                  <form class="hidden-edit">
-                    <div class="stars" data-checked="{{ review.rating }}">
-                      <div class="stars-fill"></div>
-                      <div class="wrap">
-                        <label><input type="radio" name="rating" value="1"></label>
-                        <label><input type="radio" name="rating" value="2"></label>
-                        <label><input type="radio" name="rating" value="3"></label>
-                        <label><input type="radio" name="rating" value="4"></label>
-                        <label><input type="radio" name="rating" value="5"></label>
-                        <label><input type="radio" name="rating" value="6"></label>
-                        <label><input type="radio" name="rating" value="7"></label>
-                        <label><input type="radio" name="rating" value="8"></label>
-                        <label><input type="radio" name="rating" value="9"></label>
-                        <label><input type="radio" name="rating" value="10"></label>
+                    <div class="drop-down-more">
+                      <div class="more"></div>
+                      <div class="bubble">
+                        <div class="options edit">Edit review</div>
+                        <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
                       </div>
                     </div>
-                    <div class="rating">{{ review.rating }}</div>
-                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                    <textarea name="review" placeholder="napishi svoe voshititelnoe mnenie">{{ review.review }}</textarea>
-                    <input type="submit" value="Davai">
+                  {% endif %}
+                  <div class="info-view">
+                    <div class="anime-cover" style="background-image: url({{ review.anime.image }})"></div>
+                    <div class="anime-title">{{ review.anime.title }}</div>
+                    <div class="anime-synopsis">{{ review.review }}</div>
+                    <div class="anime-rating">
+                      <div class="stars">
+                        <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                      </div>
+                      <div class="rating-number">{{ review.rating }}</div>
+                    </div>
+                  </div>
+                  <form class="hidden-edit">
+                    <textarea name="review"></textarea>
+                    <div class="edit-stars">
+                      <label><input type="radio" name="rating" value="1"></label>
+                      <label><input type="radio" name="rating" value="2"></label>
+                      <label><input type="radio" name="rating" value="3"></label>
+                      <label><input type="radio" name="rating" value="4"></label>
+                      <label><input type="radio" name="rating" value="5"></label>
+                      <label><input type="radio" name="rating" value="6"></label>
+                      <label><input type="radio" name="rating" value="7"></label>
+                      <label><input type="radio" name="rating" value="8"></label>
+                      <label><input type="radio" name="rating" value="9"></label>
+                      <label><input type="radio" name="rating" value="10"></label>
+                    </div>
+                    <input type="submit" value="save!">
                   </form>
                 </section>
               {% endif %}
@@ -77,24 +74,30 @@
           {% if has_unreviewed_animes %}
             {% for review in completed_list %}
               {% if review.review is empty %}
-                <section class="no-review">
-                  <div class="cover-no-review" style="background-image:url({{ review.anime.image }})"></div>
-                  <div class="cover-no-review-large" style="background-image:url({{ review.anime.image }})"></div>
+                <section class="unreviewed">
                   {% if not other %}
-                  <div class="drop-down-more">
-                    <div class="more"></div>
-                    <div class="bubble">
-                      <div class="options edit">Edit review</div>
-                      <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
+                    <div class="drop-down-more">
+                      <div class="more"></div>
+                      <div class="bubble">
+                        <div class="options edit">Edit review</div>
+                        <div class="options remove" data-anime-id="{{ review.anime._id }}">Remove from list</div>
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="info-view">
+                    <div class="anime-cover" style="background-image: url({{ review.anime.image }})"></div>
+                    <div class="anime-title">{{ review.anime.title }}</div>
+                    <!-- <div class="anime-synopsis">/*{-{ review.review }-}*/</div> -->
+                    <div class="anime-rating">
+                      <div class="stars">
+                        <div class="stars-fill" style="width: {{ review.rating * 10 }}%"></div>
+                      </div>
+                      <div class="rating-number">{{ review.rating }}</div>
                     </div>
                   </div>
-                  {% endif %}
-                  <div class="anime-title">
-                    <span>{{ review.anime.title }}</span>
-                  </div>
-                  <div class="stars" data-checked="{{ review.rating }}">
-                    <div class="stars-fill"></div>
-                    <div class="wrap">
+                  <form class="hidden-edit">
+                    <textarea name="review"></textarea>
+                    <div class="edit-stars">
                       <label><input type="radio" name="rating" value="1"></label>
                       <label><input type="radio" name="rating" value="2"></label>
                       <label><input type="radio" name="rating" value="3"></label>
@@ -106,12 +109,7 @@
                       <label><input type="radio" name="rating" value="9"></label>
                       <label><input type="radio" name="rating" value="10"></label>
                     </div>
-                  </div>
-                  <div class="rating">{{ review.rating }}</div>
-                  <form class="hidden-edit">
-                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
-                    <textarea name="review" placeholder="napishi svoe ebanoe mnenie"></textarea>
-                    <input type="submit" value="Blyad">
+                    <input type="submit" value="save!">
                   </form>
                 </section>
               {% endif %}
