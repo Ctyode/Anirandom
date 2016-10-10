@@ -11,8 +11,8 @@
       <div class="completed">
         <h1>Completed</h1>
         <ul>
-          <li data-tab="reviewed">Reviewed</li>
-          <li class="active" data-tab="unreviewed">Unreviewed</li>
+          <li class="menuElement" data-tab="reviewed">Reviewed</li>
+          <li class="active menuElement" data-tab="unreviewed">Unreviewed</li>
         </ul>
       </div>
       <a href="/search">
@@ -45,19 +45,25 @@
                     </div>
                   </div>
                   <form class="hidden-edit">
-                    <textarea name="review"></textarea>
-                    <div class="edit-stars">
-                      <label><input type="radio" name="rating" value="1"></label>
-                      <label><input type="radio" name="rating" value="2"></label>
-                      <label><input type="radio" name="rating" value="3"></label>
-                      <label><input type="radio" name="rating" value="4"></label>
-                      <label><input type="radio" name="rating" value="5"></label>
-                      <label><input type="radio" name="rating" value="6"></label>
-                      <label><input type="radio" name="rating" value="7"></label>
-                      <label><input type="radio" name="rating" value="8"></label>
-                      <label><input type="radio" name="rating" value="9"></label>
-                      <label><input type="radio" name="rating" value="10"></label>
+                    <textarea name="review">{{ review.review }}</textarea>
+                    <div class="edit-stars" data-checked="{{ review.rating }}">
+                      <div class="edit-stars-background">
+                        <div class="edit-stars-background-fill"></div>
+                      </div>
+                      <div class="edit-stars-labels">
+                        <label><input type="radio" name="rating" value="1"></label>
+                        <label><input type="radio" name="rating" value="2"></label>
+                        <label><input type="radio" name="rating" value="3"></label>
+                        <label><input type="radio" name="rating" value="4"></label>
+                        <label><input type="radio" name="rating" value="5"></label>
+                        <label><input type="radio" name="rating" value="6"></label>
+                        <label><input type="radio" name="rating" value="7"></label>
+                        <label><input type="radio" name="rating" value="8"></label>
+                        <label><input type="radio" name="rating" value="9"></label>
+                        <label><input type="radio" name="rating" value="10"></label>
+                      </div>
                     </div>
+                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
                     <input type="submit" value="save!">
                   </form>
                 </section>
@@ -96,21 +102,28 @@
                     </div>
                   </div>
                   <form class="hidden-edit">
-                    <textarea name="review"></textarea>
+                    <textarea name="review"><!--/*{-{ review.review }-}*/--></textarea>
                     <div class="edit-stars">
-                      <label><input type="radio" name="rating" value="1"></label>
-                      <label><input type="radio" name="rating" value="2"></label>
-                      <label><input type="radio" name="rating" value="3"></label>
-                      <label><input type="radio" name="rating" value="4"></label>
-                      <label><input type="radio" name="rating" value="5"></label>
-                      <label><input type="radio" name="rating" value="6"></label>
-                      <label><input type="radio" name="rating" value="7"></label>
-                      <label><input type="radio" name="rating" value="8"></label>
-                      <label><input type="radio" name="rating" value="9"></label>
-                      <label><input type="radio" name="rating" value="10"></label>
+                      <div class="edit-stars-background">
+                        <div class="edit-stars-background-fill"></div>
+                      </div>
+                      <div class="edit-stars-labels">
+                        <label><input type="radio" name="rating" value="1"></label>
+                        <label><input type="radio" name="rating" value="2"></label>
+                        <label><input type="radio" name="rating" value="3"></label>
+                        <label><input type="radio" name="rating" value="4"></label>
+                        <label><input type="radio" name="rating" value="5"></label>
+                        <label><input type="radio" name="rating" value="6"></label>
+                        <label><input type="radio" name="rating" value="7"></label>
+                        <label><input type="radio" name="rating" value="8"></label>
+                        <label><input type="radio" name="rating" value="9"></label>
+                        <label><input type="radio" name="rating" value="10"></label>
+                      </div>
                     </div>
+                    <input type="hidden" name="anime" value="{{ review.anime._id }}">
                     <input type="submit" value="save!">
                   </form>
+                </section>
                 </section>
               {% endif %}
             {% endfor %}

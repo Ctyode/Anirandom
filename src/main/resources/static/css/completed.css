@@ -153,3 +153,70 @@ main section .hidden-edit {
 main section.edit .hidden-edit {
     visibility: visible;
 }
+
+main section .hidden-edit textarea {
+    position: absolute;
+    left: 130px;
+    top: 30px;
+}
+
+main section .hidden-edit .edit-stars {
+    position: absolute;
+    left: 120px;
+    bottom: 0;
+}
+
+main section .hidden-edit .edit-stars .edit-stars-background {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 400px;
+    height: 40px;
+    background-color: white;
+    background-repeat: repeat-x;
+    background-image: url("../images/star.svg");
+}
+
+main section .hidden-edit .edit-stars .edit-stars-background .edit-stars-background-fill {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 400px;
+    height: 40px;
+    background-repeat: repeat-x;
+    background-image: url("../images/star-filled.svg");
+    width: 0%;
+    height: 100%;
+}
+
+main section .hidden-edit .edit-stars[data-checked="0"] .edit-stars-background .edit-stars-background-fill { width: 0%; }
+main section .hidden-edit .edit-stars[data-checked="1"] .edit-stars-background .edit-stars-background-fill { width: 10%; }
+main section .hidden-edit .edit-stars[data-checked="2"] .edit-stars-background .edit-stars-background-fill { width: 20%; }
+main section .hidden-edit .edit-stars[data-checked="3"] .edit-stars-background .edit-stars-background-fill { width: 30%; }
+main section .hidden-edit .edit-stars[data-checked="4"] .edit-stars-background .edit-stars-background-fill { width: 40%; }
+main section .hidden-edit .edit-stars[data-checked="5"] .edit-stars-background .edit-stars-background-fill { width: 50%; }
+main section .hidden-edit .edit-stars[data-checked="6"] .edit-stars-background .edit-stars-background-fill { width: 60%; }
+main section .hidden-edit .edit-stars[data-checked="7"] .edit-stars-background .edit-stars-background-fill { width: 70%; }
+main section .hidden-edit .edit-stars[data-checked="8"] .edit-stars-background .edit-stars-background-fill { width: 80%; }
+main section .hidden-edit .edit-stars[data-checked="9"] .edit-stars-background .edit-stars-background-fill { width: 90%; }
+main section .hidden-edit .edit-stars[data-checked="10"] .edit-stars-background .edit-stars-background-fill { width: 100%; }
+
+main section .hidden-edit .edit-stars .edit-stars-labels {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 400px;
+}
+
+main section .hidden-edit .edit-stars .edit-stars-labels label {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+main section .hidden-edit input[type=submit] {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
