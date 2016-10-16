@@ -58,3 +58,4 @@ bootRun {
     jvmArgs = ['-Dspring.config.name=application.properties']
     addResources = true
 }
+
