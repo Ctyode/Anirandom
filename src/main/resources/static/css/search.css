@@ -114,19 +114,9 @@ ul li:hover .drop-down-search .more { opacity: 0.7; }
 ul li .drop-down-search .bubble-search { height: 0; overflow: hidden; }
 
 ul li .drop-down-search.show .bubble-search {
-    right: 4.5vmin;
     position: absolute;
-    margin-top: 5vmin;
-    height: 9vmin;
-    width: 25vmin;
-    background: white;
-    border-radius: 0.4vmin;
-    box-shadow: 0 0.1vmin 0.7vmin 0 rgba(0,0,0,0.10), 0 0.3vmin 1.1vmin 0 rgba(52,52,52,0.12);
-}
-
-ul li .drop-down-search.show .bubble-search {
-    margin-right: -2rem;
-    margin-top: 0.6vw;
+    margin-top: 10px;
+    right: 0%;
     height: 3.5rem;
     width: 9rem;
     background: white;
@@ -189,7 +179,7 @@ ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed { ma
 
     .search ul li {
         height: 4.6rem;
-        width: 47.2rem;
+        width: 95%;
     }
 
     .search .stars {
@@ -250,7 +240,7 @@ ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed { ma
     .search ul li .image { width: 53px; }
 
     .search ul li .title {
-        max-width: 59%;
+        max-width: 53%;
         margin-left: 68px;
     }
 
@@ -303,3 +293,5 @@ ul li .drop-down-search.show .bubble-search .search-add-to.add-to-completed { ma
     .stars-fill { width: 100% !important; }
 
 }
+
+@media screen and (max-aspect-ratio: 12/9) { main {width: 100%;} section { width: 100% !important; } }
