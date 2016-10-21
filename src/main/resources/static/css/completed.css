@@ -85,7 +85,6 @@ main section .info-view .anime-cover {
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: 0.3s ease;
 }
 
 main section .info-view .anime-title {
@@ -109,7 +108,6 @@ main section .info-view .anime-synopsis {
 
 main section .info-view .anime-rating {
     position: absolute;
-    right: 0;
     bottom: 0;
     transition: 0.3s ease;
 }
@@ -252,6 +250,7 @@ main section .hidden-edit input[type=submit] {
     main section .info-view .anime-cover {
         width: 120px;
     } main section.unreviewed .info-view .anime-cover {
+        transition: 0.3s ease;
         width: 73px;
     } main section.edit .info-view .anime-cover {
         background-position: center;
@@ -278,14 +277,14 @@ main section .hidden-edit input[type=submit] {
     } main section.unreviewed .info-view .anime-synopsis {
         left: 70px;
     } main section.edit .info-view .anime-synopsis {
-    visibility: hidden;
-    transition: 0.3s ease;
+        visibility: hidden;
+        transition: 0.3s ease;
     }
 
     main section .info-view .anime-rating {
-        left: 135px;
-        height: 40px;
-        bottom: 1rem;
+        left: 138px;
+        height: 2.8rem;
+        bottom: 0.5rem;
     } main section.unreviewed .info-view .anime-rating {
         left: 85px;
     } main section.edit .info-view .anime-rating {
@@ -321,15 +320,14 @@ main section .hidden-edit input[type=submit] {
     }
 
     main section .hidden-edit .edit-stars {
-        left: 119px;
-        margin-top: 0;
+        left: 138px;
+        height: 2.8rem;
+        bottom: 0.5rem;
     }
 
     main section .hidden-edit .edit-stars .edit-stars-background {
         width: 28rem;
         height: 2.8rem;
-        margin-left: 19px;
-        bottom: 0.5rem;
     }
 
     main section .hidden-edit .edit-stars .edit-stars-background .edit-stars-background-fill {
@@ -338,20 +336,18 @@ main section .hidden-edit input[type=submit] {
     }
 
     main section .hidden-edit .edit-stars .edit-stars-labels {
-        width: 29rem;
-        margin-left: 0.5rem;
+        width: 28rem;
     }
 
     main section .hidden-edit .edit-stars .edit-stars-labels label {
-        width: 2rem;
-        margin-left: 0.9rem;
-        height: 40px;
+        width: 2.8rem;
+        height: 2.8rem;
         opacity: 0.0;
     }
 
     main section .hidden-edit input[type=submit] {
         bottom: 0.8rem;
-        left: 84.5%;
+        right: 2.6rem;
         width: 5rem;
         height: 2rem;
         font-size: 1.2rem;
@@ -418,6 +414,7 @@ main section .hidden-edit input[type=submit] {
 
     main section .info-view .anime-cover {
         width: 97px;
+        transition: none;
     } main section.unreviewed .info-view .anime-cover {
         width: 73px;
     } main section.edit .info-view .anime-cover {
@@ -504,15 +501,14 @@ main section .hidden-edit input[type=submit] {
     }
 
     main section .hidden-edit .edit-stars {
-        left: 119px;
-        margin-top: 0rem;
+        left: 1rem;
+        bottom: 3.2rem;
+        height: 1.8rem;
     }
 
     main section .hidden-edit .edit-stars .edit-stars-background {
         width: 18rem;
         height: 1.8rem;
-        margin-left: -104px;
-        bottom: 3.2rem;
     }
 
     main section .hidden-edit .edit-stars .edit-stars-background .edit-stars-background-fill {
@@ -521,17 +517,14 @@ main section .hidden-edit input[type=submit] {
     }
 
     main section .hidden-edit .edit-stars .edit-stars-labels {
-        width: 20rem;
-        height: 2rem;
-        bottom: 3rem;
-        left: -7.5rem;
+        width: 18rem;
+        height: 1.8rem;
         opacity: 0.0;
     }
 
     main section .hidden-edit .edit-stars .edit-stars-labels label {
-        width: 1rem;
-        height: 37px;
-        margin-left: 13px;
+        width: 1.8rem;
+        height: 1.8rem;
     }
 
     main section .hidden-edit input[type=submit] {
@@ -540,10 +533,6 @@ main section .hidden-edit input[type=submit] {
         width: 88%;
         height: 2rem;
         font-size: 1.2rem;
-    }
-
-    main section.edit .info-view .anime-cover {
-        visibility: hidden;
     }
 
     main section .info-view .anime-rating .stars .stars-fill {
