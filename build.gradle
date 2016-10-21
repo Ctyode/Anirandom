@@ -18,6 +18,9 @@ mainClassName = 'org.flamierawieo.anirandom.Anirandom'
 jar {
     baseName = 'gs-rest-service'
     version =  '0.1.0'
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
 }
 
 repositories {
@@ -58,4 +61,3 @@ bootRun {
     jvmArgs = ['-Dspring.config.name=application.properties']
     addResources = true
 }
-

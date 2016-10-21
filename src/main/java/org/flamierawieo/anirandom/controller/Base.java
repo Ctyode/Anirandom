@@ -2,7 +2,7 @@ package org.flamierawieo.anirandom.controller;
 
 import com.mitchellbosecke.pebble.PebbleEngine;
 import com.mitchellbosecke.pebble.error.PebbleException;
-import com.mitchellbosecke.pebble.loader.FileLoader;
+import com.mitchellbosecke.pebble.loader.ClasspathLoader;
 import com.mitchellbosecke.pebble.template.PebbleTemplate;
 import org.flamierawieo.anirandom.orm.dao.UserDao;
 import org.flamierawieo.anirandom.orm.mapping.User;
@@ -17,13 +17,13 @@ import java.util.Map;
 
 public class Base {
 
-    private static FileLoader loader;
+    private static ClasspathLoader loader;
     private static PebbleEngine engine;
     private static Map<String, PebbleTemplate> templateCache;
 
     static {
-        loader = new FileLoader();
-        loader.setPrefix("src/main/resources/templates/");
+        loader = new ClasspathLoader();
+        loader.setPrefix("templates/");
         engine = new PebbleEngine.Builder().loader(loader).build();
         templateCache = new HashMap<>();
     }

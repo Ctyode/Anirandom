@@ -1,11 +1,17 @@
 package org.flamierawieo.anirandom;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+import java.io.File;
+
+@Configuration
+@ComponentScan
+@EnableAutoConfiguration
 public class Anirandom extends SpringBootServletInitializer {
 
     @Override
@@ -14,6 +20,7 @@ public class Anirandom extends SpringBootServletInitializer {
     }
 
     public static void main(String[] args) throws Exception {
+        System.out.println(new File("data.json").exists());
         SpringApplication.run(Anirandom.class, args);
     }
 
