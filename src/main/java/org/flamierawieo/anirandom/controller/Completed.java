@@ -85,6 +85,12 @@ public class Completed extends Base {
         Review review = new Review();
         review.anime = anime;
         reviewText = reviewText.replaceAll("\\s+", " ").trim();
+        if(reviewText.length() > 200) {
+            return jsonify(new LinkedHashMap() {{
+                put("status", "fail");
+                put("error", "review is too long");
+            }});
+        }
         if(reviewText.length() > 0) {
             review.review = reviewText;
         }

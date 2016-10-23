@@ -32,6 +32,20 @@ $(function() {
                 $stars.attr("data-checked", this.value);
             }
         });
+        /* counter */ {
+            var $textarea = $hidden_edit.find("textarea")
+            var $reviewCharCount = $hidden_edit.find(".review-char-count")
+            $reviewCharCount.text($textarea.text().length);
+            $textarea.keydown(function(e) {
+                var len = e.target.value.length;
+                $reviewCharCount.text(len);
+                if (len > 200) {
+                    $reviewCharCount.addClass("red");
+                } else {
+                    $reviewCharCount.removeClass("red");
+                }
+            });
+        }
         $hidden_edit.find("input[type=submit]").click(function() {
             var anime = $hidden_edit.find("input[name=anime]").val();
             var rating = $stars.attr("data-checked");

@@ -136,6 +136,18 @@ main section.edit .hidden-edit {
 
 main section .hidden-edit textarea { position: absolute; }
 
+main section .hidden-edit .review-char-count {
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    color: #5B5B5B;
+    transition: 0.2s ease;
+}
+
+main section .hidden-edit .review-char-count.red {
+    color: #f44242;
+}
+
 main section .hidden-edit .edit-stars {
     position: absolute;
     bottom: 0;
@@ -319,6 +331,11 @@ main section .hidden-edit input[type=submit] {
         font-family: "Lato-Light";
     }
 
+    main section .hidden-edit .review-char-count {
+        right: 54px;
+        bottom: 67px;
+    }
+
     main section .hidden-edit .edit-stars {
         left: 138px;
         height: 2.8rem;
@@ -498,6 +515,11 @@ main section .hidden-edit input[type=submit] {
         padding-top: 5px;
         resize: none;
         font-family: "Lato-Light";
+    }
+
+    main section .hidden-edit .review-char-count {
+        right: 48px;
+        bottom: 90px;
     }
 
     main section .hidden-edit .edit-stars {
