@@ -35,7 +35,7 @@
                   {% endif %}
                   <div class="info-view">
                     <div class="anime-cover" style="background-image: url({{ review.anime.image }})"></div>
-                    <div class="anime-title"><a href="{{ review.anime.myAnimeListLink }}">{{ review.anime.title }}</a></div>
+                    <div class="anime-title"><a target="_blank" href="{{ review.anime.myAnimeListLink }}">{{ review.anime.title }}</a></div>
                     <div class="anime-synopsis">{{ review.review }}</div>
                     <div class="anime-rating">
                       <div class="stars">
@@ -93,7 +93,7 @@
                   {% endif %}
                   <div class="info-view">
                     <div class="anime-cover" style="background-image: url({{ review.anime.image }})"></div>
-                    <div class="anime-title">{{ review.anime.title }}</div>
+                    <div class="anime-title"><a target="_blank" href="{{ review.anime.myAnimeListLink }}">{{ review.anime.title }}</a></div>
                     <!-- <div class="anime-synopsis">/*{-{ review.review }-}*/</div> -->
                     <div class="anime-rating">
                       <div class="stars">
@@ -103,7 +103,7 @@
                     </div>
                   </div>
                   <form class="hidden-edit">
-                    <textarea name="review"><!--/*{-{ review.review }-}*/--></textarea>
+                    <textarea name="review"></textarea><!--/*{-{ review.review }-}*/-->
                     <div class="review-char-count"></div>
                     <div class="edit-stars">
                       <div class="edit-stars-background">

@@ -52,6 +52,7 @@ $(function () {
                             $info.addClass("show");
                             $info.find(".image").css("background-image", "url(\"" + data["image"] + "\")");
                             $info.find(".title span").text(data["title"]);
+                            $info.find(".title a").attr("href", data["myAnimeListLink"]);
                             $info.find(".synopsis").text(data["synopsis"]);
                             $info.find(".rating").text(data["rating"].toString());
                             $info.attr("data-anime-id", data["_id"]);
