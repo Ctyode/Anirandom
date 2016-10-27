@@ -20,7 +20,6 @@ public class Anirandom extends SpringBootServletInitializer {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(new File("data.json").exists());
         SpringApplication.run(Anirandom.class, args);
     }
 

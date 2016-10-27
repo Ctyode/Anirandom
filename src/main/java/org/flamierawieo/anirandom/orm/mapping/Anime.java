@@ -14,6 +14,7 @@ public class Anime {
 
     @Id
     public ObjectId id;
+    public String myAnimeListLink;
     public String title;
     public String synopsis;
     public String image;
@@ -25,6 +26,7 @@ public class Anime {
         Map<String, Object> map = new LinkedHashMap<>();
         map.put("_id", id.toHexString());
         map.put("title", title);
+        map.put("myAnimeListLink", myAnimeListLink);
         map.put("synopsis", synopsis);
         map.put("image", image);
         map.put("rating", rating);
