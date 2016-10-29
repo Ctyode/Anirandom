@@ -353,7 +353,7 @@ main .info .title span {
     }
 
     main .info .synopsis {
-        top: 13.5rem;
+        top: 13.7rem;
         width: 93%;
         margin: auto;
         left: 1%;
@@ -382,7 +382,7 @@ main .info .title span {
         top: 44rem;
         position: absolute;
         width: 5rem;
-        left: 76%;
+        right: 5%;
     }
 
     main .info .love .love-button {

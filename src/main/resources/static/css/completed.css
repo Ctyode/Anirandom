@@ -68,11 +68,11 @@ main section .drop-down-more.show .bubble .options:hover { color: #020202; }
 
 main section .drop-down-more.show .bubble .options.edit { margin-top: 9px; }
 
-main section .info-view * {
-    visibility: visible;
-} main section.edit .info-view * {
+main section .info-view * {visibility: visible;color: #585858;} main section.edit .info-view * {
     visibility: hidden;
 } main section.edit .info-view .anime-title {
+    visibility: visible;
+} main section.edit .info-view .anime-title a {
     visibility: visible;
 } main section.edit .info-view .anime-cover {
     visibility: visible;
@@ -207,12 +207,29 @@ main section .hidden-edit input[type=submit] {
     background-color: #7a84b5;
 }
 
+.no-image {
+    background-size: cover;
+    background-image: url("/images/logo.svg");
+}
+
+.no-text {
+    text-align: center;
+    font-family: "Lato-Light";
+    color: #777777;
+}
+
+.go_to_search {
+    display: block;
+    text-align: center;
+    border-radius: 3px;
+    background: #64D08F;
+    color: white;
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 480px), only screen and (min-device-width: 480px) {
 
-    main .completed {
-        margin-bottom: 0.3rem;
-        height: 2.2rem;
-    }
+    main .completed {margin-bottom: 0.3rem;height: 2.2rem;font-size: 1.8rem;}
 
     main .completed h1 {
         font-size: 1.75rem;
@@ -281,12 +298,7 @@ main section .hidden-edit input[type=submit] {
         left: 139px;
     }
 
-    main section .info-view .anime-synopsis {
-        top: 53px;
-        left: 140px;
-        bottom: 40px;
-        width: 75%;
-    } main section.unreviewed .info-view .anime-synopsis {
+    main section .info-view .anime-synopsis {top: 53px;left: 140px;bottom: 40px;width: 75%;word-wrap: break-word;} main section.unreviewed .info-view .anime-synopsis {
         left: 70px;
     } main section.edit .info-view .anime-synopsis {
         visibility: hidden;
@@ -370,6 +382,25 @@ main section .hidden-edit input[type=submit] {
         font-size: 1.2rem;
     }
 
+    .no-image {
+        margin: -15px auto;
+        height: 129px;
+        width: 133px;
+    }
+
+    .no-text {
+        margin: 30px auto 25px auto;
+        width: 95%;
+        font-family: "Lato-Light";
+        font-size: 1.45rem;
+    }
+
+    .go_to_search {
+        margin: 1.5rem auto 0 auto;
+        line-height: 6.5vh;
+        width: 120px;
+        font-size: 1.05rem;
+    }
 }
 
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px), only screen and (max-aspect-ratio: 1/1) {
@@ -559,6 +590,25 @@ main section .hidden-edit input[type=submit] {
 
     main section .info-view .anime-rating .stars .stars-fill {
         width: 100% !important;
+    }
+
+    .no-image {
+        margin: 20px auto;
+        height: 7.5rem;
+        width: 7.5rem;
+    }
+
+    .no-text {
+        margin: 30px auto 25px auto;
+        width: 82%;
+        font-size: 1.3rem;
+    }
+
+    .go_to_search {
+        margin: 1.5rem auto 0 auto;
+        line-height: 2.75rem;
+        width: 7rem;
+        font-size: 1rem;
     }
 
 }
