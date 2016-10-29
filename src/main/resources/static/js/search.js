@@ -28,7 +28,7 @@ $(function() {
     var item = function(p) {
         return '<li>' + '<div class="image" style="background-image:url('+ p["image"] +')"></div>' +
                '<div class="title-container">' +
-               '<div class="title">' + p["title"] + '</div>' +
+               '<div class="title"><a target="_blank" href="' + p["myAnimeListLink"] + '">' + p["title"] + '</a></div>' +
                '<div class="year">('+ p["year"] + ')</div>' +
                '</div>' +
                '<div class="stars"><div class="stars-fill" style="width: ' + (p["rating"] * 10) +'%"></div></div>' +
