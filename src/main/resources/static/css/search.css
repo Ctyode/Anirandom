@@ -34,6 +34,10 @@
     float: left;
 }
 
+.search ul li .title a {
+    color: #2D2D2D;
+}
+
 .search ul li .rating {
     font-family: "Lato-Regular";
     color: #2D2D2D;
