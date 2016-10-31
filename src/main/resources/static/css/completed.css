@@ -549,8 +549,8 @@ main section .hidden-edit input[type=submit] {
     }
 
     main section .hidden-edit .review-char-count {
-        right: 48px;
         bottom: 90px;
+        right: 9%;
     }
 
     main section .hidden-edit .edit-stars {
