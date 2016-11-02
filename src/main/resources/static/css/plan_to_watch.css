@@ -58,6 +58,10 @@ main section .info .anime-title {
     color: #5B5B5B;
 }
 
+main section .info .anime-title a {
+    color: #5B5B5B;
+}
+
 main section .info .stars {
     background-repeat: repeat-x;
     background-image: url("../images/star.svg");

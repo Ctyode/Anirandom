@@ -6,42 +6,37 @@
 {% endblock %}
 
 {% block main %}
-  {% if authorized %}
-    {% if plan_to_watch_list is not empty %}
-      <div class="plan_to_watch">Plan to watch</div>
-      <a href="/search">
-        <div class="plus"></div>
-      </a>
-      {% for anime in plan_to_watch_list %}
-        <section>
-          <div class="cover" style="background-image:url({{ anime.image }})"></div>
-          <div class="info">
-            <div class="drop-down-more">
-              <div class="more"></div>
-              <div class="bubble">
-                <div class="options move" data-anime-id="{{ anime._id }}">Move to completed</div>
-                <div class="options remove" data-anime-id="{{ anime._id }}">Remove from list</div>
-              </div>
+  {% if plan_to_watch_list is not empty %}
+    <div class="plan_to_watch">Plan to watch</div>
+    <a href="/search">
+      <div class="plus"></div>
+    </a>
+    {% for anime in plan_to_watch_list %}
+      <section>
+        <div class="cover" style="background-image:url({{ anime.image }})"></div>
+        <div class="info">
+          <div class="drop-down-more">
+            <div class="more"></div>
+            <div class="bubble">
+              <div class="options move" data-anime-id="{{ anime._id }}">Move to completed</div>
+              <div class="options remove" data-anime-id="{{ anime._id }}">Remove from list</div>
             </div>
-            <div class="anime-title"><a target="_blank" href="{{ anime.myAnimeListLink }}">{{ anime.title }}</a></div>
-            <div class="stars">
-              <div class="stars-fill" style="width: {{ anime.rating * 10 }}%"></div>
-            </div>
-            <div class="rating">{{ anime.rating }}</div>
           </div>
-        </section>
-      {% endfor %}
-      <div class="line"></div>
-      <div class="logo"></div>
-    {% else %}
-      <div class="plan_to_watch">Plan to watch</div>
-      <div class="no-image" style="background-image: url('/images/logo.svg')"></div>
-      <div class="no-text">You haven't added anything to the "Plan to watch" list. You're not a true weeb! A true weeb should watch at least one title a day. Just use the search.</div>
-      <a href="/search" class="go_to_search">SEARCH</a>
-    {% endif %}
+          <div class="anime-title"><a target="_blank" href="{{ anime.myAnimeListLink }}">{{ anime.title }}</a></div>
+          <div class="stars">
+            <div class="stars-fill" style="width: {{ anime.rating * 10 }}%"></div>
+          </div>
+          <div class="rating">{{ anime.rating }}</div>
+        </div>
+      </section>
+    {% endfor %}
+    <div class="line"></div>
+    <div class="logo"></div>
   {% else %}
-    <div class="no-auth-text"></div>
-    <div class="no-auth-image"></div>
+    <div class="plan_to_watch">Plan to watch</div>
+    <div class="no-image" style="background-image: url('/images/logo.svg')"></div>
+    <div class="no-text">You haven't added anything to the "Plan to watch" list. You're not a true weeb! A true weeb should watch at least one title a day. Just use the search.</div>
+    <a href="/search" class="go_to_search">SEARCH</a>
   {% endif %}
 {% endblock %}
 
