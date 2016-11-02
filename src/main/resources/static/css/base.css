@@ -209,9 +209,9 @@ main {
 
 .plus {
     background-image: url("../images/plus.svg");
-    width: 1.7rem;
-    height: 1.7rem;
-    top: 0.2rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    top: 0.1rem;
     right: 0.8rem;
     position: absolute;
     background-size: cover;

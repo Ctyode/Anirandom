@@ -106,7 +106,7 @@ main section .info .rating {
 
     main .plan_to_watch {
         font-size: 1.8rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.4rem;
     }
 
     main section {
@@ -201,8 +201,8 @@ main section .info .rating {
 
     main .plan_to_watch {
         margin-left: 0.5rem;
-        padding-bottom: 0.5rem;
         padding-top: 1.1rem;
+        margin-bottom: 0.5rem;
         margin-top: -1rem;
         font-size: 1.5rem;
     }
