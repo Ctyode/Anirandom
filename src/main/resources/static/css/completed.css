@@ -98,6 +98,15 @@ main section .info-view .anime-title {
     overflow: hidden;
 }
 
+main section .info-view .anime-title a {
+    opacity: 0.6;
+    transition: 0.2s ease;
+}
+
+main section .info-view .anime-title a:hover {
+    opacity: 1.0;
+}
+
 main section .info-view .anime-synopsis {
     position: absolute;
     right: 0;

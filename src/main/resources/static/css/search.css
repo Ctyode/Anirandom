@@ -36,6 +36,12 @@
 
 .search ul li .title a {
     color: #2D2D2D;
+    opacity: 0.6;
+    transition: 0.2s ease;
+}
+
+.search ul li .title a:hover {
+    opacity: 1.0;
 }
 
 .search ul li .rating {
