@@ -50,11 +50,18 @@ public class Completed extends Base {
         UserDao userDao = new UserDao();
         User user = getAuthorizedUser(request);
         Anime anime = animeDao.getAnimeById(new ObjectId(animeId));
-        BaseDao.DaoResponse response = userDao.addToCompleted(user, anime);
-        return jsonify(new LinkedHashMap() {{
-            put("success", response.isSuccess());
-            put("info", response.getInfo());
-        }});
+        if (user != null) {
+            BaseDao.DaoResponse daoResponse = userDao.addToCompleted(user, anime);
+            return jsonify(new LinkedHashMap() {{
+                put("success", daoResponse.isSuccess());
+                put("info", daoResponse.getInfo());
+            }});
+        } else {
+            return jsonify(new LinkedHashMap() {{
+                put("success", false);
+                put("info", "not authorized");
+            }});
+        }
     }
 
     @RequestMapping("/anime/remove_from_completed")

@@ -46,11 +46,18 @@ public class PlanToWatch extends Base {
         UserDao dao = new UserDao();
         User user = getAuthorizedUser(request);
         Anime anime = new AnimeDao().getAnimeById(new ObjectId(animeId));
-        BaseDao.DaoResponse daoResponse = dao.addToPlanToWatch(user, anime);
-        return jsonify(new LinkedHashMap() {{
-            put("success", daoResponse.isSuccess());
-            put("info", daoResponse.getInfo());
-        }});
+        if (user != null) {
+            BaseDao.DaoResponse daoResponse = dao.addToPlanToWatch(user, anime);
+            return jsonify(new LinkedHashMap() {{
+                put("success", daoResponse.isSuccess());
+                put("info", daoResponse.getInfo());
+            }});
+        } else {
+            return jsonify(new LinkedHashMap() {{
+                put("success", false);
+                put("info", "not authorized");
+            }});
+        }
     }
 
     @RequestMapping("/anime/move_to_completed")

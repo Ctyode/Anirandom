@@ -23,12 +23,16 @@ $(function () {
     });
     $(".add-to-plan-to-watch").click(function () {
         $.getJSON("/anime/add_to_plan_to_watch_list", {anime: $(".info").attr("data-anime-id")}, function (data) {
-            console.log(data);
+            if (!data["success"]) {
+                sweetAlert("NO!", data["info"], "error");
+            }
         });
     });
     $(".add-to-completed").click(function () {
         $.getJSON("/anime/add_to_completed_list", {anime: $(".info").attr("data-anime-id")}, function (data) {
-            console.log(data);
+            if (!data["success"]) {
+                sweetAlert("NO!", data["info"], "error");
+            }
         });
     });
     var randomizing = false;
