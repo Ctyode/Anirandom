@@ -129,17 +129,29 @@
             {% endfor %}
               <div class="logo"></div>
           {% else %}
-            <div class="no-image"></div>
-            <div class="no-text">Your unreviewed list is empty! Either you were a good boy and left a comment about every single title, or you just haven't added anything yet. If you want to add something here, use the search function.</div>
-            <a href="/search" class="go_to_search">SEARCH</a>
+            {% if other %}
+              <div class="no-image"></div>
+              <div class="no-text">oh...</div>
+              <a href="/search" class="go_to_search">SEARCH</a>
+            {% else %}
+              <div class="no-image"></div>
+              <div class="no-text">Your unreviewed list is empty! Either you were a good boy and left a comment about every single title, or you just haven't added anything yet. If you want to add something here, use the search function.</div>
+              <a href="/search" class="go_to_search">SEARCH</a>
+            {% endif %}
           {% endif %}
         </div>
       </div>
     {% else %}
-      <div class="completed">Completed</div>
-      <div class="no-image"></div>
-      <div class="no-text">You haven't added anything to the "Plan to watch" list. You're not a true weeb! A true weeb should watch at least one title a day. Just use the search.</div>
-      <a href="/search" class="go_to_search">SEARCH</a>
+      {% if other %}
+        <div class="completed">Completed</div>
+        <div class="no-image"></div>
+        <div class="no-text">nothing...</div>
+      {% else %}
+        <div class="completed">Completed</div>
+        <div class="no-image"></div>
+        <div class="no-text">You haven't added anything to the "Plan to watch" list. You're not a true weeb! A true weeb should watch at least one title a day. Just use the search.</div>
+        <a href="/search" class="go_to_search">SEARCH</a>
+      {% endif %}
     {% endif %}
   {% else %}
       <div class="no-auth-text"></div>

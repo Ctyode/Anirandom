@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -28,11 +29,17 @@ public class Completed extends Base {
         Map<String, Object> context = super.getContext(request);
         User authorizedUser = getAuthorizedUser(request);
         User user = new UserDao().getUserByUsername(username);
-        if (user != null && user.completedList != null) {
+        if (user != null) {
             context.put("other", !user.equals(authorizedUser));
-            context.put("completed_list", user.completedList.stream().map(Review::toMap).collect(Collectors.toList()));
-            context.put("has_unreviewed_animes", user.completedList.stream().filter(a -> a.review == null).findFirst().isPresent());
-            context.put("has_reviewed_animes", user.completedList.stream().filter(a -> a.review != null && a.review.length() > 0).findFirst().isPresent());
+            if (user.completedList != null) {
+                context.put("completed_list", user.completedList.stream().map(Review::toMap).collect(Collectors.toList()));
+                context.put("has_unreviewed_animes", user.completedList.stream().filter(a -> a.review == null).findFirst().isPresent());
+                context.put("has_reviewed_animes", user.completedList.stream().filter(a -> a.review != null && a.review.length() > 0).findFirst().isPresent());
+            } else {
+                context.put("completed_list", Collections.emptyList());
+                context.put("has_unreviewed_animes", false);
+                context.put("has_reviewed_animes", false);
+            }
         }
         return context;
     }

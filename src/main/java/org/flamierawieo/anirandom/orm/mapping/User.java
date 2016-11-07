@@ -29,6 +29,7 @@ public class User {
     public Map<String, Object> toMap() {
         Map<String, Object> map = new LinkedHashMap<>();
         map.put("_id", id.toHexString());
+        map.put("username", username);
         map.put("completedList", completedList);
         return map;
     }
