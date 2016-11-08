@@ -88,13 +88,12 @@ main .info .title .wrap {
 main .info .title span {
     white-space: nowrap;
     font-weight: 400;
-    color: #5B5B5B;
-    opacity: 0.6;
+    color: #6D6D6D;
     transition: 0.2s ease;
 }
 
 main .info .title span:hover {
-    opacity: 1.0 !important;
+    color: #020202;
 }
 
 main .info .synopsis {

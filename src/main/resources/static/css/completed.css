@@ -91,7 +91,7 @@ main section .info-view .anime-title {
     position: absolute;
     top: 0;
     font-family: "Lato-Regular";
-    color: #5B5B5B;
+    color: #6D6D6D;
     transition: 0.3s ease;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -99,12 +99,11 @@ main section .info-view .anime-title {
 }
 
 main section .info-view .anime-title a {
-    opacity: 0.6;
     transition: 0.2s ease;
 }
 
 main section .info-view .anime-title a:hover {
-    opacity: 1.0;
+    color: #020202;
 }
 
 main section .info-view .anime-synopsis {

@@ -35,13 +35,12 @@
 }
 
 .search ul li .title a {
-    color: #2D2D2D;
-    opacity: 0.6;
+    color: #6D6D6D;
     transition: 0.2s ease;
 }
 
 .search ul li .title a:hover {
-    opacity: 1.0;
+    color: #020202;
 }
 
 .search ul li .rating {
