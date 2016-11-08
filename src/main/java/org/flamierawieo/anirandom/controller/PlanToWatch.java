@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -30,6 +31,9 @@ public class PlanToWatch extends Base {
         if (user != null && user.planToWatchList != null) {
             context.put("other", !user.equals(authorizedUser));
             context.put("plan_to_watch_list", user.planToWatchList.stream().map(Anime::toMap).collect(Collectors.toList()));
+        } else {
+            context.put("other", true);
+            context.put("plan_to_watch_list", Collections.emptyList());
         }
         return context;
     }
