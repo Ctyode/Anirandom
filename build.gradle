@@ -16,7 +16,7 @@ apply plugin: 'application'
 mainClassName = 'org.flamierawieo.anirandom.Anirandom'
 
 jar {
-    baseName = 'gs-rest-service'
+    baseName = 'Anirandom'
     version =  '0.1.0'
     manifest {
         attributes "Main-Class": "$mainClassName"
